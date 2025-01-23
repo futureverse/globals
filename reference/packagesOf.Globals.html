@@ -23,7 +23,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">globals</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.16.3</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.16.3-9001</span>
       </span>
     </div>
 
@@ -102,7 +102,7 @@
   </a>
 </li>
 <li>
-  <a href="https://github.com/HenrikBengtsson/globals/" class="external-link">
+  <a href="https://github.com/futureverse/globals/" class="external-link">
     <span class="fab fa-github fa-lg"></span>
 
   </a>
@@ -122,7 +122,7 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Identify the packages of the globals</h1>
-    <small class="dont-index">Source: <a href="https://github.com/HenrikBengtsson/globals/blob/develop/R/packagesOf.R" class="external-link"><code>R/packagesOf.R</code></a></small>
+    <small class="dont-index">Source: <a href="https://github.com/futureverse/globals/blob/HEAD/R/packagesOf.R" class="external-link"><code>R/packagesOf.R</code></a></small>
     <div class="hidden name"><code>packagesOf.Globals.Rd</code></div>
     </div>
 
@@ -164,7 +164,7 @@
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1</p> and <a href="https://github.com/HenrikBengtsson/pkgdown.extras/">pkgdown.extras</a> 0.0.0.9007.</p>
 </div>
 
       </footer></div>
@@ -176,6 +176,7 @@
 
     apiKey: 'aa6e02fc501886fb0f7c91ac4e300456',
     indexName: 'futureverse',
+    algoliaOptions: { 'facetFilters': ['project:globals'] },
     inputSelector: 'input#search-input.form-control',
     transformData: function(hits) {
       return hits.map(function (hit) {
