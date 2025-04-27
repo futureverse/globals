@@ -13,7 +13,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">globals</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.17.0-9010</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.17.0-9009</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -71,11 +71,6 @@
 <h3 id="new-features-development-version">New Features<a class="anchor" aria-label="anchor" href="#new-features-development-version"></a></h3>
 <ul><li><p>Add <code>findGlobals(..., method = "tree")</code>, which finds globals in R expressions by walking its abstract syntax tree (AST) using depth-first search. This new approach does a better job in emulating how the R engine identifies global variables. Analogously, <code><a href="../reference/globalsOf.html">globalsOf()</a></code> gained support for <code>method = "tree"</code></p></li>
 <li><p>Now <code><a href="../reference/globalsOf.html">findGlobals()</a></code> supports <code>expression</code> objects, e.g. <code>findGlobals(expression(x + y))</code>.</p></li>
-</ul></div>
-<div class="section level3">
-<h3 id="bug-fixes-development-version">Bug Fixes<a class="anchor" aria-label="anchor" href="#bug-fixes-development-version"></a></h3>
-<ul><li>
-<code><a href="../reference/globalsOf.html">findGlobals()</a></code> could return reserved R keywords, specifically “break”, “if”, “for”, “next”, “repeat”, and “while”.</li>
 </ul></div>
 </div>
     <div class="section level2">
