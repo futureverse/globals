@@ -13,7 +13,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">globals</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.17.0-9014</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.17.0-9015</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -71,6 +71,7 @@
 <h3 id="new-features-development-version">New Features<a class="anchor" aria-label="anchor" href="#new-features-development-version"></a></h3>
 <ul><li><p>Add <code>findGlobals(..., method = "dfs")</code>, which finds globals in R expressions by walking its abstract syntax tree (AST) using depth-first search. This new approach does a better job in emulating how the R engine identifies global variables. For example, the new <code>"dfs"</code> method picks up <code>x</code> in <code>local({    function(x) x; x })</code> as a global variable, which the <code>"ordered"</code> method fails to do. Analogously, <code><a href="../reference/globalsOf.html">globalsOf()</a></code> gained support for <code>method = "dfs"</code></p></li>
 <li><p>Now <code><a href="../reference/globalsOf.html">findGlobals()</a></code> supports <code>expression</code> objects, e.g. <code>findGlobals(expression(x + y))</code>.</p></li>
+<li><p>It is now possible to specify multiple <code>method</code> search algorithms for <code><a href="../reference/globalsOf.html">findGlobals()</a></code> and <code><a href="../reference/globalsOf.html">globalsOf()</a></code>, which then will combine the results from all of them, e.g. <code>findGlobals(expr, method = c("dfs",    "ordered")</code>.</p></li>
 </ul></div>
 </div>
     <div class="section level2">
