@@ -13,7 +13,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">globals</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.17.0-9010</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.17.0-9011</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -85,7 +85,7 @@
 <ul><li>
 <code><a href="../reference/walkAST.html">walkAST()</a></code> did not recognize objects of type <code>object</code>, leading to an error on <code>Cannot walk expression. Unknown object type 'object'</code>.</li>
 <li>
-<code><a href="../reference/globalsOf.html">findGlobals()</a></code> would produce <code>Error in e[[4]] : subscript out of  expressions of format</code> for expressions of type <code>LHS INFIX_OP  `$&lt;-`(name, value)</code>, e.g. <code>x %&gt;% `$&lt;-`("a", 42)</code>. This is due to a bug in the <strong>codetools</strong> package, which <code><a href="../reference/globalsOf.html">findGlobals()</a></code> now works around internally.</li>
+<code><a href="../reference/globalsOf.html">findGlobals()</a></code> would produce <code>Error in e[[4]] : subscript out of    expressions of format</code> for expressions of type <code>LHS INFIX_OP    `$&lt;-`(name, value)</code>, e.g. <code>x %&gt;% `$&lt;-`("a", 42)</code>. This is due to a bug in the <strong>codetools</strong> package, which <code><a href="../reference/globalsOf.html">findGlobals()</a></code> now works around internally.</li>
 </ul></div>
 </div>
     <div class="section level2">
