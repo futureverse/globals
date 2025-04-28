@@ -69,7 +69,7 @@
 <h2 class="pkg-version" data-toc-text="development version" id="version-development-version">Version (development version)<a class="anchor" aria-label="anchor" href="#version-development-version"></a></h2>
 <div class="section level3">
 <h3 id="new-features-development-version">New Features<a class="anchor" aria-label="anchor" href="#new-features-development-version"></a></h3>
-<ul><li><p>Add <code>findGlobals(..., method = "tree")</code>, which finds globals in R expressions by walking its abstract syntax tree (AST) using depth-first search. This new approach does a better job in emulating how the R engine identifies global variables. For example, consider <code>local({ function(x) x; x })</code>. Then <code>"ordered"</code> method fails to identify <code>x</code> as a global variable, which <code>"tree"</code> picks it up. Analogously, <code><a href="../reference/globalsOf.html">globalsOf()</a></code> gained support for <code>method    = "tree"</code></p></li>
+<ul><li><p>Add <code>findGlobals(..., method = "tree")</code>, which finds globals in R expressions by walking its abstract syntax tree (AST) using depth-first search. This new approach does a better job in emulating how the R engine identifies global variables. For example, the new <code>"tree"</code> method picks up <code>x</code> in <code>local({    function(x) x; x })</code> as a global variable, which the <code>"ordered"</code> method fails to do. Analogously, <code><a href="../reference/globalsOf.html">globalsOf()</a></code> gained support for <code>method = "tree"</code></p></li>
 <li><p>Now <code><a href="../reference/globalsOf.html">findGlobals()</a></code> supports <code>expression</code> objects, e.g. <code>findGlobals(expression(x + y))</code>.</p></li>
 </ul></div>
 </div>
