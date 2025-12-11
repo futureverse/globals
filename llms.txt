@@ -1,0 +1,44 @@
+# globals: Identify Global Objects in R Expressions
+
+## Installation
+
+R package globals is available on
+[CRAN](https://cran.r-project.org/package=globals) and can be installed
+in R as:
+
+``` r
+install.packages("globals")
+```
+
+### Pre-release version
+
+To install the pre-release version that is available in Git branch
+`develop` on GitHub, use:
+
+``` r
+remotes::install_github("futureverse/globals", ref="develop")
+```
+
+This will install the package from source.
+
+## Contributing
+
+To contribute to this package, please see
+[CONTRIBUTING.md](https://globals.futureverse.org/CONTRIBUTING.md).
+
+# Package index
+
+## All functions
+
+- [`Globals()`](https://globals.futureverse.org/reference/Globals.md) :
+  A representation of a set of globals
+- [`cleanup(`*`<Globals>`*`)`](https://globals.futureverse.org/reference/cleanup.Globals.md)
+  : Drop certain types of globals
+- [`globalsByName()`](https://globals.futureverse.org/reference/globalsByName.md)
+  : Locates and retrieves a set of global variables by their names
+- [`findGlobals()`](https://globals.futureverse.org/reference/globalsOf.md)
+  [`globalsOf()`](https://globals.futureverse.org/reference/globalsOf.md)
+  : Get all global objects of an expression
+- [`packagesOf(`*`<Globals>`*`)`](https://globals.futureverse.org/reference/packagesOf.Globals.md)
+  : Identify the packages of the globals
+
