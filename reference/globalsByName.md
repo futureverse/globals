@@ -30,7 +30,7 @@ globalsByName(names, envir = parent.frame(), mustExist = TRUE, ...)
 ## Value
 
 A [Globals](https://globals.futureverse.org/reference/Globals.md) object
-of named elements and an attribute `where` with named elements. Both of
+of named elements and an attribute `where` with named elements. Both
 sets have names according to `names`.
 
 ## Special "argument" globals
@@ -40,7 +40,7 @@ interpreted as arguments `...`, `..1`, `..2`, ..., respectively. If
 specified, then the corresponding elements in the results are lists of
 class `DotDotDotList` comprising the value of the latter. If the special
 argument does not exist, then the value is `NA`, and the corresponding
-`where` attributes is `NULL`.
+`where` attribute is `NULL`.
 
 ## Examples
 
@@ -54,7 +54,7 @@ str(globals)
 #> List of 1
 #>  $ x: num 42
 #>  - attr(*, "where")=List of 1
-#>   ..$ x:<environment: 0x55cd5e946c98> 
+#>   ..$ x:<environment: 0x55c058606400> 
 #>  - attr(*, "class")= chr [1:2] "Globals" "list"
 
 globals <- f(3.14)
@@ -62,7 +62,7 @@ str(globals)
 #> List of 1
 #>  $ x: num 3.14
 #>  - attr(*, "where")=List of 1
-#>   ..$ x:<environment: 0x55cd5e0059b0> 
+#>   ..$ x:<environment: 0x55c05898b0f0> 
 #>  - attr(*, "class")= chr [1:2] "Globals" "list"
 
 
@@ -76,7 +76,7 @@ str(globals)
 #>  $ ...: list()
 #>   ..- attr(*, "class")= chr [1:2] "DotDotDotList" "list"
 #>  - attr(*, "where")=List of 1
-#>   ..$ ...:<environment: 0x55cd5daa77e8> 
+#>   ..$ ...:<environment: 0x55c058f21f28> 
 #>  - attr(*, "class")= chr [1:2] "Globals" "list"
 
 globals <- g(3.14)
@@ -85,7 +85,7 @@ str(globals)
 #>  $ ...: list()
 #>   ..- attr(*, "class")= chr [1:2] "DotDotDotList" "list"
 #>  - attr(*, "where")=List of 1
-#>   ..$ ...:<environment: 0x55cd5c4d85c0> 
+#>   ..$ ...:<environment: 0x55c0591b3ca8> 
 #>  - attr(*, "class")= chr [1:2] "Globals" "list"
 
 globals <- g(3.14, 1L, b = 2L, c = 3L)
@@ -97,7 +97,7 @@ str(globals)
 #>   ..$ c: int 3
 #>   ..- attr(*, "class")= chr [1:2] "DotDotDotList" "list"
 #>  - attr(*, "where")=List of 1
-#>   ..$ ...:<environment: 0x55cd5f6d7528> 
+#>   ..$ ...:<environment: 0x55c059549570> 
 #>  - attr(*, "class")= chr [1:2] "Globals" "list"
 
 
@@ -112,7 +112,7 @@ str(globals)
 #>   ..$ : num 2
 #>   ..- attr(*, "class")= chr [1:2] "DotDotDotList" "list"
 #>  - attr(*, "where")=List of 1
-#>   ..$ ..2:<environment: 0x55cd5fa378b0> 
+#>   ..$ ..2:<environment: 0x55c059aead40> 
 #>  - attr(*, "class")= chr [1:2] "Globals" "list"
 
 globals <- g(3.14)
@@ -121,7 +121,7 @@ str(globals)
 #>  $ ...: list()
 #>   ..- attr(*, "class")= chr [1:2] "DotDotDotList" "list"
 #>  - attr(*, "where")=List of 1
-#>   ..$ ...:<environment: 0x55cd5fd1e6c8> 
+#>   ..$ ...:<environment: 0x55c059ce3e00> 
 #>  - attr(*, "class")= chr [1:2] "Globals" "list"
 
 globals <- g(3.14, 1L, b = 2L, c = 3L)
@@ -133,6 +133,6 @@ str(globals)
 #>   ..$ c: int 3
 #>   ..- attr(*, "class")= chr [1:2] "DotDotDotList" "list"
 #>  - attr(*, "where")=List of 1
-#>   ..$ ...:<environment: 0x55cd5fec0188> 
+#>   ..$ ...:<environment: 0x55c059e8a2c0> 
 #>  - attr(*, "class")= chr [1:2] "Globals" "list"
 ```

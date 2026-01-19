@@ -24,7 +24,7 @@ walkAST(
 - atomic, name, call, pairlist:
 
   single-argument function that takes an atomic, name, call and pairlist
-  expression, respectively. Have to return a valid R expression.
+  expression, respectively. Must return a valid R expression.
 
 - substitute:
 

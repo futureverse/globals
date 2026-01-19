@@ -47,9 +47,9 @@ globalsOf(
 
   If TRUE (default), attributes of `expr` are also searched. If FALSE,
   they are not. If a character vector, then attributes with matching
-  names are searched. Note, the attributes of the attributes elements
+  names are searched. Note, the attributes of the attributes' elements
   are not searched, that is, attributes are not searched recursively.
-  Also, attributes are searched with \`dotdotdot = "ignore".
+  Also, attributes are searched with `dotdotdot = "ignore"`.
 
 - tweak:
 
@@ -91,8 +91,10 @@ globalsOf(
 
 - recursive:
 
-  If TRUE, globals that are closures (functions) and that exist outside
-  of namespaces ("packages"), will be recursively scanned for globals.
+  If TRUE, found globals are searched for additional globals. For
+  example, a closure (function) that exists outside a package namespace,
+  may contain additional globals. Similarly, a formula may depend on
+  globals.
 
 - skip:
 
@@ -112,17 +114,17 @@ globalsOf(
 
 ## Details
 
-There currently three strategies for identifying global objects.
+There are currently three strategies for identifying global objects.
 
 The `method = "ordered"` search method identifies globals such that a
 global variable preceding a local variable with the same name is not
 dropped (which the `"conservative"` method would).
 
 The `method = "conservative"` search method tries to keep the number of
-false positive to a minimum, i.e. the identified objects are most likely
-true global objects. At the same time, there is a risk that some true
-globals are not identified (see example). This search method returns the
-exact same result as the
+false positives to a minimum, i.e. the identified objects are most
+likely true global objects. At the same time, there is a risk that some
+true globals are not identified (see example). This search method
+returns the exact same result as the
 [`findGlobals()`](https://rdrr.io/pkg/codetools/man/findGlobals.html)
 function of the codetools package.
 
