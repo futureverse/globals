@@ -9,7 +9,7 @@
 ## Citation
 
 Source:
-[`DESCRIPTION`](https://github.com/futureverse/globals/blob/develop/DESCRIPTION)
+[`DESCRIPTION`](https://github.com/futureverse/globals/blob/HEAD/DESCRIPTION)
 
 Bengtsson H (2026). *globals: Identify Global Objects in R Expressions*.
 R package version 0.18.0-9005, <https://globals.futureverse.org>.
