@@ -96,7 +96,7 @@ CRAN release: 2022-08-28
   for `Globals` failed to return the package of the globals if the
   global doesn’t have a closure,
   e.g. [`base::pi`](https://rdrr.io/r/base/Constants.html) and
-  [`data.table::.N`](https://rdatatable.gitlab.io/data.table/reference/special-symbols.html).
+  [`data.table::.N`](https://rdrr.io/pkg/data.table/man/special-symbols.html).
 
 ## Version 0.16.0
 
