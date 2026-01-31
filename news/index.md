@@ -50,7 +50,7 @@ CRAN release: 2025-04-16
 ### New Features
 
 - [`walkAST()`](https://globals.futureverse.org/reference/walkAST.md)
-  now walks also the body of closures (“functions”).
+  now also walks the body of closures (“functions”).
 
 ### Bug Fixes
 

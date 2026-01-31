@@ -92,7 +92,7 @@ globalsOf(
 - recursive:
 
   If TRUE, found globals are searched for additional globals. For
-  example, a closure (function) that exists outside a package namespace,
+  example, a closure (function) that exists outside a package namespace
   may contain additional globals. Similarly, a formula may depend on
   globals.
 
@@ -118,7 +118,7 @@ There are currently three strategies for identifying global objects.
 
 The `method = "ordered"` search method identifies globals such that a
 global variable preceding a local variable with the same name is not
-dropped (which the `"conservative"` method would).
+dropped (unlike the `"conservative"` method).
 
 The `method = "conservative"` search method tries to keep the number of
 false positives to a minimum, i.e. the identified objects are most
