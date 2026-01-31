@@ -2,7 +2,10 @@
 
 ## Version (development version)
 
-- …
+### Bug Fixes
+
+- `findGlobals(alist(x = a), method = "dfs")` failed to identify `a` as
+  global variable.
 
 ## Version 0.18.0 \[2025-05-09\]
 
