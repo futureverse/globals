@@ -20,8 +20,8 @@ A non-negative integer.
 
 ## Details
 
-This function returns `length(unclass(x))`, but tries to avoid calling
-`unclass(x)` unless necessary.
+This function returns `length(unclass(x))`, but avoids calling
+`unclass(x)` when the object isn't classed.
 
 ## See also
 
