@@ -1,8643 +1,3404 @@
-# activAnalyzer
+# activAnalyzer (2.1.2)
 
-<details>
-
-* Version: 2.1.2
-* GitHub: https://github.com/pydemull/activAnalyzer
-* Source code: https://github.com/cran/activAnalyzer
-* Date/Publication: 2024-09-23 23:40:02 UTC
-* Number of recursive dependencies: 145
+* GitHub: <https://github.com/pydemull/activAnalyzer>
+* Email: <mailto:pydemull@uco.fr>
+* GitHub mirror: <https://github.com/cran/activAnalyzer>
 
 Run `revdepcheck::revdep_details(, "activAnalyzer")` for more info
 
-</details>
+## In both
+
+*   checking DESCRIPTION meta-information ... NOTE
+     ```
+       Missing dependency on R >= 4.1.0 because package code uses the pipe
+       |> or function shorthand \(...) syntax added in R 4.1.0.
+       File(s) using such syntax:
+         ‘compute_accumulation_metrics.R’
+     ```
+
+# adestr (1.0.0)
+
+* Email: <mailto:meis@imbi.uni-heidelberg.de>
+* GitHub mirror: <https://github.com/cran/adestr>
+
+Run `revdepcheck::revdep_details(, "adestr")` for more info
 
 ## In both
 
-*   checking installed package size ... NOTE
-    ```
-      installed size is  5.7Mb
-      sub-directories of 1Mb or more:
-        R         1.5Mb
-        doc       1.0Mb
-        extdata   2.0Mb
-    ```
+*   checking DESCRIPTION meta-information ... NOTE
+     ```
+       Missing dependency on R >= 4.1.0 because package code uses the pipe
+       |> or function shorthand \(...) syntax added in R 4.1.0.
+       File(s) using such syntax:
+         ‘IntervalEstimator-class.Rd’ ‘PValue-class.Rd’
+         ‘PointEstimator-class.Rd’ ‘analyze.R’ ‘estimators.R’
+         ‘evaluate_estimator.R’ ‘fisher_information.R’
+         ‘integrate_over_sample_space.R’ ‘mle_distribution.R’ ‘n2c2_helpers.R’
+         ‘plot.R’ ‘print.R’ ‘reference_implementation.R’
+     ```
 
-# agcounts
+# arkdb (0.0.18)
 
-<details>
+* GitHub: <https://github.com/ropensci/arkdb>
+* Email: <mailto:cboettig@gmail.com>
+* GitHub mirror: <https://github.com/cran/arkdb>
 
-* Version: 0.6.6
-* GitHub: NA
-* Source code: https://github.com/cran/agcounts
-* Date/Publication: 2024-02-29 20:12:36 UTC
-* Number of recursive dependencies: 186
-
-Run `revdepcheck::revdep_details(, "agcounts")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... ERROR
-    ```
-    Package required but not available: ‘GGIR’
-    
-    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
-    manual.
-    ```
-
-# aifeducation
-
-<details>
-
-* Version: 1.0.2
-* GitHub: https://github.com/cran/aifeducation
-* Source code: https://github.com/cran/aifeducation
-* Date/Publication: 2025-02-05 13:00:02 UTC
-* Number of recursive dependencies: 141
-
-Run `revdepcheck::revdep_details(, "aifeducation")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  8.0Mb
-      sub-directories of 1Mb or more:
-        R      1.5Mb
-        data   3.5Mb
-        help   1.0Mb
-        libs   1.5Mb
-    ```
-
-*   checking data for non-ASCII characters ... NOTE
-    ```
-      Note: found 33 marked UTF-8 strings
-    ```
-
-# AIscreenR
-
-<details>
-
-* Version: 0.1.1
-* GitHub: https://github.com/MikkelVembye/AIscreenR
-* Source code: https://github.com/cran/AIscreenR
-* Date/Publication: 2024-11-26 14:00:02 UTC
-* Number of recursive dependencies: 77
-
-Run `revdepcheck::revdep_details(, "AIscreenR")` for more info
-
-</details>
-
-## In both
-
-*   checking data for non-ASCII characters ... NOTE
-    ```
-      Note: found 1 marked Latin-1 string
-      Note: found 5 marked UTF-8 strings
-    ```
-
-# altdoc
-
-<details>
-
-* Version: 0.5.0
-* GitHub: https://github.com/etiennebacher/altdoc
-* Source code: https://github.com/cran/altdoc
-* Date/Publication: 2025-01-23 16:40:07 UTC
-* Number of recursive dependencies: 80
-
-Run `revdepcheck::revdep_details(, "altdoc")` for more info
-
-</details>
+Run `revdepcheck::revdep_details(, "arkdb")` for more info
 
 ## In both
 
 *   checking tests ...
-    ```
-      Running ‘spelling.R’
-      Running ‘testthat.R’
-     ERROR
-    Running the tests in ‘tests/testthat.R’ failed.
-    Last 50 lines of output:
-        5. │     │ └─base::withCallingHandlers(...)
-        6. │     └─rlang::eval_bare(quo_get_expr(.quo), quo_get_env(.quo))
-        7. └─altdoc::render_docs(path = getwd())
-        8.   └─altdoc:::.import_vignettes(...)
-        9.     └─base::vapply(...)
-    ...
-       2.   └─altdoc:::.import_vignettes(...)
-       3.     └─base::vapply(...)
-       4.       └─altdoc (local) FUN(X[[i]], ...)
-       5.         └─altdoc:::.render_one_vignette(...)
-       6.           └─altdoc:::.qmd2md(origin, tar_dir, verbose = verbose, preamble = pre)
-       7.             └─base::cat(out[[2]])
-      
-      [ FAIL 8 | WARN 0 | SKIP 8 | PASS 55 ]
-      Error: Test failures
-      Execution halted
-    ```
+     ```
+     ...
+       > 
+       > test_check("arkdb")
+       [1] "Testing using backend duckdb_connection"
+       Saving _problems/test-streamable-44.R
+       [ FAIL 1 | WARN 6 | SKIP 8 | PASS 53 ]
+       
+       ══ Skipped tests (8) ═══════════════════════════════════════════════════════════
+       • On CRAN (6): 'test-arkdb.R:287:3', 'test-bulk-import.R:6:3',
+         'test-bulk-import.R:72:3', 'test-errors.R:12:3', 'test-errors.R:34:3',
+         'test-errors.R:53:3'
+       • {MonetDBLite} is not installed (2): 'test-arkdb.R:132:3',
+         'test-local_db.R:24:3'
+       
+       ══ Failed tests ════════════════════════════════════════════════════════════════
+       ── Error ('test-streamable.R:44:3'): streamable_vroom ──────────────────────────
+       Error in `write_tsv(x = x, path = path, append = omit_header)`: unused argument (path = path)
+       Backtrace:
+           ▆
+        1. └─arkdb (local) test_stream(streamable_vroom()) at test-streamable.R:44:3
+        2.   └─stream$write(data, con, omit_header = FALSE) at test-streamable.R:12:3
+       
+       [ FAIL 1 | WARN 6 | SKIP 8 | PASS 53 ]
+       Error:
+       ! Test failures.
+       Execution halted
+     ```
 
-# amapGeocode
+# bamm (0.5.0)
 
-<details>
-
-* Version: 0.6.0
-* GitHub: https://github.com/womeimingzi11/amapGeocode
-* Source code: https://github.com/cran/amapGeocode
-* Date/Publication: 2021-04-19 07:20:02 UTC
-* Number of recursive dependencies: 77
-
-Run `revdepcheck::revdep_details(, "amapGeocode")` for more info
-
-</details>
-
-## In both
-
-*   checking dependencies in R code ... NOTE
-    ```
-    Namespace in Imports field not imported from: ‘jsonlite’
-      All declared Imports should be used.
-    ```
-
-*   checking Rd files ... NOTE
-    ```
-    checkRd: (-1) convertCoord.Rd:32: Lost braces
-        32 | Please check here{https://lbs.amap.com/faq/account/key/72}}
-           |                  ^
-    checkRd: (-1) convertCoord.individual.Rd:33: Lost braces
-        33 | Please check here{https://lbs.amap.com/faq/account/key/72}}
-           |                  ^
-    checkRd: (-1) getCoord.Rd:39: Lost braces
-        39 | Please check here{https://lbs.amap.com/faq/account/key/72}}
-           |                  ^
-    checkRd: (-1) getCoord.individual.Rd:39: Lost braces
-        39 | here{https://lbs.amap.com/faq/account/key/72}}
-           |     ^
-    checkRd: (-1) getLocation.Rd:60: Lost braces; missing escapes or markup?
-        60 | {https://lbs.amap.com/faq/account/key/72}}
-           | ^
-    checkRd: (-1) getLocation.individual.Rd:60: Lost braces
-        60 | Please check here{https://lbs.amap.com/faq/account/key/72}}
-           |                  ^
-    ```
-
-# apsimx
-
-<details>
-
-* Version: 2.8.235
-* GitHub: https://github.com/femiguez/apsimx
-* Source code: https://github.com/cran/apsimx
-* Date/Publication: 2025-03-10 05:40:02 UTC
-* Number of recursive dependencies: 185
-
-Run `revdepcheck::revdep_details(, "apsimx")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  7.7Mb
-      sub-directories of 1Mb or more:
-        R         1.5Mb
-        extdata   5.4Mb
-    ```
-
-# aroma.affymetrix
-
-<details>
-
-* Version: 3.2.2
-* GitHub: https://github.com/HenrikBengtsson/aroma.affymetrix
-* Source code: https://github.com/cran/aroma.affymetrix
-* Date/Publication: 2024-02-18 20:40:03 UTC
-* Number of recursive dependencies: 85
-
-Run `revdepcheck::revdep_details(, "aroma.affymetrix")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  7.2Mb
-      sub-directories of 1Mb or more:
-        R             3.5Mb
-        help          1.6Mb
-        testScripts   1.1Mb
-    ```
-
-# aroma.core
-
-<details>
-
-* Version: 3.3.1
-* GitHub: https://github.com/HenrikBengtsson/aroma.core
-* Source code: https://github.com/cran/aroma.core
-* Date/Publication: 2024-02-19 08:40:02 UTC
-* Number of recursive dependencies: 67
-
-Run `revdepcheck::revdep_details(, "aroma.core")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... NOTE
-    ```
-    Packages suggested but not available for checking:
-      'sfit', 'expectile', 'HaarSeg', 'mpcbs'
-    ```
-
-# autostats
-
-<details>
-
-* Version: 0.4.1
-* GitHub: https://github.com/Harrison4192/autostats
-* Source code: https://github.com/cran/autostats
-* Date/Publication: 2024-06-04 09:44:44 UTC
-* Number of recursive dependencies: 200
-
-Run `revdepcheck::revdep_details(, "autostats")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... ERROR
-    ```
-    Package required but not available: ‘presenter’
-    
-    Package suggested but not available for checking: ‘XICOR’
-    
-    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
-    manual.
-    ```
-
-# BAMBI
-
-<details>
-
-* Version: 2.3.6
-* GitHub: https://github.com/c7rishi/BAMBI
-* Source code: https://github.com/cran/BAMBI
-* Date/Publication: 2024-10-25 13:30:02 UTC
-* Number of recursive dependencies: 51
-
-Run `revdepcheck::revdep_details(, "BAMBI")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  8.0Mb
-      sub-directories of 1Mb or more:
-        libs   7.4Mb
-    ```
-
-# bamm
-
-<details>
-
-* Version: 0.5.0
-* GitHub: https://github.com/luismurao/bamm
-* Source code: https://github.com/cran/bamm
-* Date/Publication: 2024-07-06 20:22:11 UTC
-* Number of recursive dependencies: 101
+* GitHub: <https://github.com/luismurao/bamm>
+* Email: <mailto:luismurao@gmail.com>
+* GitHub mirror: <https://github.com/cran/bamm>
 
 Run `revdepcheck::revdep_details(, "bamm")` for more info
 
-</details>
+## In both
+
+*   checking dependencies in R code ... NOTE
+     ```
+     Namespaces in Imports field not imported from:
+       ‘crosstalk’ ‘plotly’
+       All declared Imports should be used.
+     ```
+
+# baseballr (1.6.0)
+
+* GitHub: <https://github.com/BillPetti/baseballr>
+* Email: <mailto:saiem.gilani@gmail.com>
+* GitHub mirror: <https://github.com/cran/baseballr>
+
+Run `revdepcheck::revdep_details(, "baseballr")` for more info
 
 ## In both
 
-*   checking installed package size ... NOTE
-    ```
-      installed size is  6.1Mb
-      sub-directories of 1Mb or more:
-        R      1.5Mb
-        libs   2.9Mb
-    ```
+*   checking DESCRIPTION meta-information ... NOTE
+     ```
+       Missing dependency on R >= 4.1.0 because package code uses the pipe
+       |> or function shorthand \(...) syntax added in R 4.1.0.
+       File(s) using such syntax:
+         ‘chadwick_installation.R’
+     ```
 
-*   checking dependencies in R code ... NOTE
-    ```
-    Namespaces in Imports field not imported from:
-      ‘crosstalk’ ‘plotly’
-      All declared Imports should be used.
-    ```
+# baskexact (1.0.1)
 
-# baskexact
-
-<details>
-
-* Version: 1.0.1
-* GitHub: https://github.com/lbau7/baskexact
-* Source code: https://github.com/cran/baskexact
-* Date/Publication: 2024-04-09 13:30:02 UTC
-* Number of recursive dependencies: 83
+* GitHub: <https://github.com/lbau7/baskexact>
+* Email: <mailto:baumann@imbi.uni-heidelberg.de>
+* GitHub mirror: <https://github.com/cran/baskexact>
 
 Run `revdepcheck::revdep_details(, "baskexact")` for more info
 
-</details>
-
 ## In both
 
 *   checking dependencies in R code ... NOTE
-    ```
-    Namespace in Imports field not imported from: ‘ggplot2’
-      All declared Imports should be used.
-    ```
-
-# batchtools
-
-<details>
-
-* Version: 0.9.17
-* GitHub: https://github.com/mllg/batchtools
-* Source code: https://github.com/cran/batchtools
-* Date/Publication: 2023-04-20 14:20:06 UTC
-* Number of recursive dependencies: 81
-
-Run `revdepcheck::revdep_details(, "batchtools")` for more info
-
-</details>
-
-## In both
-
-*   checking dependencies in R code ... NOTE
-    ```
-    [c4-n43:810678] OPAL ERROR: Not initialized in file ext2x_client.c at line 112
-    --------------------------------------------------------------------------
-    The application appears to have been direct launched using "srun",
-    but OMPI was not built with SLURM's PMI support and therefore cannot
-    execute. There are several options for building PMI support under
-    SLURM, depending upon the SLURM version you are using:
-    
-      version 16.05 or later: you can use SLURM's PMIx support. This
-      requires that you configure and build SLURM --with-pmix.
-    
-      Versions earlier than 16.05: you must use either SLURM's PMI-1 or
-      PMI-2 support. SLURM builds PMI-1 by default, or you can manually
-      install PMI-2. You must then build Open MPI using --with-pmi pointing
-      to the SLURM PMI library location.
-    
-    Please configure as appropriate and try again.
-    --------------------------------------------------------------------------
-    ```
-
-*   checking Rd files ... NOTE
-    ```
-    checkRd: (-1) JobCollection.Rd:41: Lost braces
-        41 |  \item{namespaces}{code{character} with required packages to load via \code{\link[base]{requireNamespace}}.}
-           |                        ^
-    checkRd: (-1) addAlgorithm.Rd:31: Lost braces
-        31 | Algorithms are functions which get the code{data} part as well as the problem instance (the return value of the
-           |                                            ^
-    ```
-
-# bayesmove
-
-<details>
-
-* Version: 0.2.1
-* GitHub: https://github.com/joshcullen/bayesmove
-* Source code: https://github.com/cran/bayesmove
-* Date/Publication: 2021-10-22 08:50:09 UTC
-* Number of recursive dependencies: 163
-
-Run `revdepcheck::revdep_details(, "bayesmove")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  5.2Mb
-      sub-directories of 1Mb or more:
-        data   2.0Mb
-        libs   2.8Mb
-    ```
-
-*   checking Rd files ... NOTE
-    ```
-    checkRd: (-1) insert_NAs.Rd:22: Lost braces; missing escapes or markup?
-        22 | A data frame where new rows have been inserted to regularize the \code{date} column. This results in values provided for \code{id}, \code{date}, and {dt} while inserting NAs for all other columns. Additionally, observations with duplicate date-times are removed.
-           |                                                                                                                                                      ^
-    ```
-
-# bbknnR
-
-<details>
-
-* Version: 1.1.1
-* GitHub: https://github.com/ycli1995/bbknnR
-* Source code: https://github.com/cran/bbknnR
-* Date/Publication: 2024-02-13 10:20:03 UTC
-* Number of recursive dependencies: 160
-
-Run `revdepcheck::revdep_details(, "bbknnR")` for more info
-
-</details>
-
-## In both
-
-*   checking whether package ‘bbknnR’ can be installed ... WARNING
-    ```
-    Found the following significant warnings:
-      Warning: namespace ‘colorspace’ is not available and has been replaced
-    See ‘/scratch/henrik/revdep/globals/checks/bbknnR/new/bbknnR.Rcheck/00install.out’ for details.
-    ```
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  5.1Mb
-      sub-directories of 1Mb or more:
-        data   3.0Mb
-        libs   1.6Mb
-    ```
-
-# BEKKs
-
-<details>
-
-* Version: 1.4.5
-* GitHub: NA
-* Source code: https://github.com/cran/BEKKs
-* Date/Publication: 2024-11-25 08:50:06 UTC
-* Number of recursive dependencies: 83
-
-Run `revdepcheck::revdep_details(, "BEKKs")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is 18.8Mb
-      sub-directories of 1Mb or more:
-        libs  17.7Mb
-    ```
-
-# bigDM
-
-<details>
-
-* Version: 0.5.6
-* GitHub: https://github.com/spatialstatisticsupna/bigDM
-* Source code: https://github.com/cran/bigDM
-* Date/Publication: 2025-03-25 09:30:06 UTC
-* Number of recursive dependencies: 134
-
-Run `revdepcheck::revdep_details(, "bigDM")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... NOTE
-    ```
-    Package suggested but not available for checking: ‘INLA’
-    ```
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  8.9Mb
-      sub-directories of 1Mb or more:
-        data   8.5Mb
-    ```
-
-*   checking data for non-ASCII characters ... NOTE
-    ```
-      Note: found 940 marked Latin-1 strings
-    ```
-
-# BiocHubsShiny
-
-<details>
-
-* Version: 1.6.2
-* GitHub: https://github.com/Bioconductor/BiocHubsShiny
-* Source code: https://github.com/cran/BiocHubsShiny
-* Date/Publication: 2025-01-27
-* Number of recursive dependencies: 115
-
-Run `revdepcheck::revdep_details(, "BiocHubsShiny")` for more info
-
-</details>
-
-## In both
-
-*   checking R code for possible problems ... NOTE
-    ```
-    BiocHubsShiny : server : <anonymous>: no visible global function
-      definition for ‘write.table’
-    Undefined global functions or variables:
-      write.table
-    Consider adding
-      importFrom("utils", "write.table")
-    to your NAMESPACE file.
-    ```
-
-# bistablehistory
-
-<details>
-
-* Version: 1.1.2
-* GitHub: https://github.com/alexander-pastukhov/bistablehistory
-* Source code: https://github.com/cran/bistablehistory
-* Date/Publication: 2023-09-13 13:20:09 UTC
-* Number of recursive dependencies: 93
-
-Run `revdepcheck::revdep_details(, "bistablehistory")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is 71.8Mb
-      sub-directories of 1Mb or more:
-        libs  70.7Mb
-    ```
-
-*   checking for GNU extensions in Makefiles ... NOTE
-    ```
-    GNU make is a SystemRequirements.
-    ```
-
-# blavaan
-
-<details>
-
-* Version: 0.5-8
-* GitHub: https://github.com/ecmerkle/blavaan
-* Source code: https://github.com/cran/blavaan
-* Date/Publication: 2025-01-08 19:20:09 UTC
-* Number of recursive dependencies: 99
-
-Run `revdepcheck::revdep_details(, "blavaan")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... NOTE
-    ```
-    Packages suggested but not available for checking: 'cmdstanr', 'blavsam'
-    ```
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is 186.9Mb
-      sub-directories of 1Mb or more:
-        R           1.5Mb
-        libs      183.6Mb
-        testdata    1.4Mb
-    ```
-
-*   checking for GNU extensions in Makefiles ... NOTE
-    ```
-    GNU make is a SystemRequirements.
-    ```
-
-# bonsai
-
-<details>
-
-* Version: 0.3.2
-* GitHub: https://github.com/tidymodels/bonsai
-* Source code: https://github.com/cran/bonsai
-* Date/Publication: 2025-02-11 23:30:06 UTC
-* Number of recursive dependencies: 134
+     ```
+     Namespace in Imports field not imported from: ‘ggplot2’
+       All declared Imports should be used.
+     ```
+
+# bonsai (0.4.0)
+
+* GitHub: <https://github.com/tidymodels/bonsai>
+* Email: <mailto:emil.hvitfeldt@posit.co>
+* GitHub mirror: <https://github.com/cran/bonsai>
 
 Run `revdepcheck::revdep_details(, "bonsai")` for more info
 
-</details>
+## In both
 
-## Newly broken
+*   R CMD check timed out
 
-*   checking re-building of vignette outputs ...sh: line 1: 1333462 Terminated              '/software/c4/cbi/software/_rocky8/R-4.4.3-gcc13/lib64/R/bin/R' --vanilla --no-echo > '/scratch/henrik/revdep/globals/checks/bonsai/new/bonsai.Rcheck/build_vignettes.log' 2>&1 < '/scratch/henrik/RtmpDvduM2/file1284a36dd2fed9'
-    ```
-     ERROR
-    Error(s) in re-building vignettes:
-      ...
-    --- re-building ‘bonsai.Rmd’ using rmarkdown
-    ```
 
-## Newly fixed
+# BPrinStratTTE (0.0.7)
 
-*   checking re-building of vignette outputs ...sh: line 1: 1333591 Terminated              '/software/c4/cbi/software/_rocky8/R-4.4.3-gcc13/lib64/R/bin/R' --vanilla --no-echo > '/scratch/henrik/revdep/globals/checks/bonsai/old/bonsai.Rcheck/build_vignettes.log' 2>&1 < '/scratch/henrik/RtmpThuyNC/file128477fcc2bfd'
-    ```
-     ERROR
-    Error(s) in re-building vignettes:
-      ...
-    --- re-building ‘bonsai.Rmd’ using rmarkdown
-    ```
-
-# BPrinStratTTE
-
-<details>
-
-* Version: 0.0.7
-* GitHub: https://github.com/Boehringer-Ingelheim/BPrinStratTTE
-* Source code: https://github.com/cran/BPrinStratTTE
-* Date/Publication: 2024-04-13 09:20:02 UTC
-* Number of recursive dependencies: 72
+* GitHub: <https://github.com/Boehringer-Ingelheim/BPrinStratTTE>
+* Email: <mailto:christian.stock@boehringer-ingelheim.com>
+* GitHub mirror: <https://github.com/cran/BPrinStratTTE>
 
 Run `revdepcheck::revdep_details(, "BPrinStratTTE")` for more info
 
-</details>
-
 ## In both
 
-*   checking installed package size ... NOTE
-    ```
-      installed size is 82.7Mb
-      sub-directories of 1Mb or more:
-        libs  82.3Mb
-    ```
+*   checking DESCRIPTION meta-information ... NOTE
+     ```
+       Missing dependency on R >= 4.1.0 because package code uses the pipe
+       |> or function shorthand \(...) syntax added in R 4.1.0.
+       File(s) using such syntax:
+         ‘sim_dat_one_trial_exp_covar.R’ ‘sim_dat_one_trial_exp_nocovar.R’
+     ```
 
-*   checking for GNU extensions in Makefiles ... NOTE
-    ```
-    GNU make is a SystemRequirements.
-    ```
+# broom.mixed (0.2.9.6)
 
-# brms
-
-<details>
-
-* Version: 2.22.0
-* GitHub: https://github.com/paul-buerkner/brms
-* Source code: https://github.com/cran/brms
-* Date/Publication: 2024-09-23 13:00:29 UTC
-* Number of recursive dependencies: 205
-
-Run `revdepcheck::revdep_details(, "brms")` for more info
-
-</details>
-
-## In both
-
-*   checking whether package ‘brms’ can be installed ... WARNING
-    ```
-    Found the following significant warnings:
-      Warning: namespace ‘colorspace’ is not available and has been replaced
-    See ‘/scratch/henrik/revdep/globals/checks/brms/new/brms.Rcheck/00install.out’ for details.
-    ```
-
-*   checking package dependencies ... NOTE
-    ```
-    Package suggested but not available for checking: ‘cmdstanr’
-    ```
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is 12.9Mb
-      sub-directories of 1Mb or more:
-        R      7.0Mb
-        doc    3.6Mb
-        help   1.7Mb
-    ```
-
-# broom.helpers
-
-<details>
-
-* Version: 1.21.0
-* GitHub: https://github.com/larmarange/broom.helpers
-* Source code: https://github.com/cran/broom.helpers
-* Date/Publication: 2025-04-24 08:50:02 UTC
-* Number of recursive dependencies: 248
-
-Run `revdepcheck::revdep_details(, "broom.helpers")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... NOTE
-    ```
-    Packages suggested but not available for checking: 'margins', 'multgee'
-    ```
-
-# broom.mixed
-
-<details>
-
-* Version: 0.2.9.6
-* GitHub: https://github.com/bbolker/broom.mixed
-* Source code: https://github.com/cran/broom.mixed
-* Date/Publication: 2024-10-15 22:20:02 UTC
-* Number of recursive dependencies: 186
+* GitHub: <https://github.com/bbolker/broom.mixed>
+* Email: <mailto:bolker@mcmaster.ca>
+* GitHub mirror: <https://github.com/cran/broom.mixed>
 
 Run `revdepcheck::revdep_details(, "broom.mixed")` for more info
 
-</details>
-
 ## In both
 
-*   checking package dependencies ... NOTE
-    ```
-    Packages suggested but not available for checking: 'dotwhisker', 'glmmADMB'
-    ```
+*   checking DESCRIPTION meta-information ... NOTE
+     ```
+       Missing dependency on R >= 4.1.0 because package code uses the pipe
+       |> or function shorthand \(...) syntax added in R 4.1.0.
+       File(s) using such syntax:
+         ‘glmm_tidiers.R’ ‘rstanarm_tidiers.Rd’
+     ```
 
-*   checking installed package size ... NOTE
-    ```
-      installed size is  5.5Mb
-      sub-directories of 1Mb or more:
-        extdata   5.0Mb
-    ```
+# card (0.1.1)
 
-# bsitar
-
-<details>
-
-* Version: 0.3.2
-* GitHub: https://github.com/Sandhu-SS/bsitar
-* Source code: https://github.com/cran/bsitar
-* Date/Publication: 2025-02-07 06:50:02 UTC
-* Number of recursive dependencies: 167
-
-Run `revdepcheck::revdep_details(, "bsitar")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is 10.6Mb
-      sub-directories of 1Mb or more:
-        R      1.5Mb
-        data   8.0Mb
-    ```
-
-# bslib
-
-<details>
-
-* Version: 0.9.0
-* GitHub: https://github.com/rstudio/bslib
-* Source code: https://github.com/cran/bslib
-* Date/Publication: 2025-01-30 23:20:02 UTC
-* Number of recursive dependencies: 76
-
-Run `revdepcheck::revdep_details(, "bslib")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is 12.6Mb
-      sub-directories of 1Mb or more:
-        components   1.0Mb
-        fonts        2.4Mb
-        lib          5.3Mb
-    ```
-
-# butcher
-
-<details>
-
-* Version: 0.3.5
-* GitHub: https://github.com/tidymodels/butcher
-* Source code: https://github.com/cran/butcher
-* Date/Publication: 2025-03-18 23:00:02 UTC
-* Number of recursive dependencies: 223
-
-Run `revdepcheck::revdep_details(, "butcher")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... NOTE
-    ```
-    Package suggested but not available for checking: ‘xrf’
-    ```
-
-# CAESAR.Suite
-
-<details>
-
-* Version: 0.2.2
-* GitHub: https://github.com/XiaoZhangryy/CAESAR.Suite
-* Source code: https://github.com/cran/CAESAR.Suite
-* Date/Publication: 2025-04-01 09:00:07 UTC
-* Number of recursive dependencies: 254
-
-Run `revdepcheck::revdep_details(, "CAESAR.Suite")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is 10.6Mb
-      sub-directories of 1Mb or more:
-        data   1.5Mb
-        doc    1.2Mb
-        libs   7.6Mb
-    ```
-
-# card
-
-<details>
-
-* Version: 0.1.1
-* GitHub: https://github.com/shah-in-boots/card
-* Source code: https://github.com/cran/card
-* Date/Publication: 2024-11-06 07:40:02 UTC
-* Number of recursive dependencies: 99
+* GitHub: <https://github.com/shah-in-boots/card>
+* Email: <mailto:shah.in.boots@gmail.com>
+* GitHub mirror: <https://github.com/cran/card>
 
 Run `revdepcheck::revdep_details(, "card")` for more info
 
-</details>
-
 ## In both
 
-*   checking Rd cross-references ... NOTE
-    ```
-    Package unavailable to check Rd xrefs: ‘recipes’
-    ```
+*   checking DESCRIPTION meta-information ... NOTE
+     ```
+       Missing dependency on R >= 4.2.0 because package code uses the pipe
+       placeholder syntax added in R 4.2.0.
+       File(s) using such syntax:
+         ‘cosinor-constructor.R’
+     ```
 
-# ceRNAnetsim
+# ceRNAnetsim (1.22.0)
 
-<details>
-
-* Version: 1.18.0
-* GitHub: https://github.com/selcenari/ceRNAnetsim
-* Source code: https://github.com/cran/ceRNAnetsim
-* Date/Publication: 2024-10-29
-* Number of recursive dependencies: 97
+* GitHub: <https://github.com/selcenari/ceRNAnetsim>
+* Email: <mailto:selcenarii@gmail.com>
 
 Run `revdepcheck::revdep_details(, "ceRNAnetsim")` for more info
-
-</details>
 
 ## In both
 
 *   checking R code for possible problems ... NOTE
-    ```
-    find_node_perturbation: no visible binding for global variable
-      ‘perturbation_efficiency’
-    find_node_perturbation: no visible binding for global variable
-      ‘perturbed_count’
-    simulate: no visible binding for global variable ‘avg_count_current’
-    simulate: no visible binding for global variable ‘avg_count_pre’
-    Undefined global functions or variables:
-      avg_count_current avg_count_pre perturbation_efficiency
-      perturbed_count
-    ```
+     ```
+     find_node_perturbation: no visible binding for global variable
+       ‘perturbation_efficiency’
+     find_node_perturbation: no visible binding for global variable
+       ‘perturbed_count’
+     simulate: no visible binding for global variable ‘avg_count_current’
+     simulate: no visible binding for global variable ‘avg_count_pre’
+     Undefined global functions or variables:
+       avg_count_current avg_count_pre perturbation_efficiency
+       perturbed_count
+     ```
 
-# ChromSCape
+# Certara.RsNLME.ModelExecutor (3.0.2)
 
-<details>
+* Email: <mailto:james.craig@certara.com>
+* GitHub mirror: <https://github.com/cran/Certara.RsNLME.ModelExecutor>
 
-* Version: 1.16.0
-* GitHub: https://github.com/vallotlab/ChromSCape
-* Source code: https://github.com/cran/ChromSCape
-* Date/Publication: 2024-10-29
-* Number of recursive dependencies: 230
+Run `revdepcheck::revdep_details(, "Certara.RsNLME.ModelExecutor")` for more info
+
+## In both
+
+*   checking R code for possible problems ... NOTE
+     ```
+     .run_shiny_RsNLME : server: no visible global function definition for
+       ‘addTablesToColumnMapping’
+     Undefined global functions or variables:
+       addTablesToColumnMapping
+     ```
+
+# chevreulShiny (1.2.0)
+
+* GitHub: <https://github.com/cobriniklab/chevreulShiny>
+* Email: <mailto:kevin.stachelek@gmail.com>
+
+Run `revdepcheck::revdep_details(, "chevreulShiny")` for more info
+
+## In both
+
+*   checking DESCRIPTION meta-information ... NOTE
+     ```
+     License stub is invalid DCF.
+     ```
+
+# ChromSCape (1.20.0)
+
+* GitHub: <https://github.com/vallotlab/ChromSCape>
+* Email: <mailto:pacome.pr@gmail.com>
 
 Run `revdepcheck::revdep_details(, "ChromSCape")` for more info
 
-</details>
+## In both
+
+*   checking dependencies in R code ... WARNING
+     ```
+     'loadNamespace' or 'requireNamespace' call not declared from: ‘flexdashboard’
+     ```
+
+*   checking for hidden files and directories ... NOTE
+     ```
+     Found the following hidden files and directories:
+       .BBSoptions
+     These were most likely included in error. See section ‘Package
+     structure’ in the ‘Writing R Extensions’ manual.
+     ```
+
+*   checking R code for possible problems ... NOTE
+     ```
+     ...
+       ‘genes’
+     plot_percent_active_feature_scExp: no visible binding for global
+       variable ‘group’
+     plot_percent_active_feature_scExp: no visible binding for global
+       variable ‘percent_active’
+     plot_pie_most_contributing_chr: no visible binding for global variable
+       ‘absolute_value’
+     plot_reduced_dim_scExp: no visible binding for global variable ‘V1’
+     plot_reduced_dim_scExp: no visible binding for global variable ‘V2’
+     plot_reduced_dim_scExp: no visible binding for global variable
+       ‘cluster’
+     plot_top_TF_scExp: no visible binding for global variable ‘TF’
+     rebin_helper: no visible binding for global variable ‘new_row’
+     rebin_helper: no visible binding for global variable ‘origin_value’
+     rebin_matrix: no visible binding for global variable ‘group’
+     subset_bam_call_peaks: no visible binding for global variable
+       ‘merged_bam’
+     Undefined global functions or variables:
+       CheA3_TF_nTargets Component Fri_cyto Gain_or_Loss Gene TF V1 V2
+       absolute_value cluster clusterConsensus cytoBand files_dir_list genes
+       group head k merged_bam molecule ncells new_row orientation
+       origin_value percent_active run_tsne sample_id total_counts
+     Consider adding
+       importFrom("utils", "head")
+     to your NAMESPACE file.
+     ```
+
+# clustermq (0.9.9)
+
+* GitHub: <https://github.com/mschubert/clustermq>
+* Email: <mailto:mschu.dev@gmail.com>
+* GitHub mirror: <https://github.com/cran/clustermq>
+
+Run `revdepcheck::revdep_details(, "clustermq")` for more info
+
+## In both
+
+*   checking compiled code ... WARNING
+     ```
+     File ‘clustermq/libs/clustermq.so’:
+       Found ‘abort’, possibly from ‘abort’ (C)
+         Object: ‘libzmq/src/.libs/libzmq.a’
+       Found ‘rand’, possibly from ‘rand’ (C)
+         Object: ‘libzmq/src/.libs/libzmq.a’
+       Found ‘srand’, possibly from ‘srand’ (C)
+         Object: ‘libzmq/src/.libs/libzmq.a’
+       Found ‘stderr’, possibly from ‘stderr’ (C)
+         Object: ‘libzmq/src/.libs/libzmq.a’
+     
+     Compiled code should not call entry points which might terminate R nor
+     write to stdout/stderr instead of to the console, nor use Fortran I/O
+     nor system RNGs nor [v]sprintf.
+     
+     See ‘Writing portable packages’ in the ‘Writing R Extensions’ manual.
+     ```
+
+*   checking dependencies in R code ... NOTE
+     ```
+     Namespace in Imports field not imported from: ‘R6’
+       All declared Imports should be used.
+     ```
+
+# ClustIRR (1.8.0)
+
+* GitHub: <https://github.com/snaketron/ClustIRR>
+* Email: <mailto:simokitanovski@gmail.com>
+
+Run `revdepcheck::revdep_details(, "ClustIRR")` for more info
+
+## In both
+
+*   checking DESCRIPTION meta-information ... NOTE
+     ```
+     Package listed in more than one of Depends, Imports, Suggests, Enhances:
+       ‘ggplot2’
+     A package should be listed in only one of these fields.
+     ```
+
+*   checking R code for possible problems ... NOTE
+     ```
+     get_ag_gene_hits: no visible binding for global variable ‘cells’
+     get_ag_gene_hits: no visible binding for global variable ‘clones’
+     get_ag_gene_hits: no visible binding for global variable ‘community’
+     get_ag_gene_hits: no visible binding for global variable ‘ag’
+     get_ag_species_hits: no visible binding for global variable ‘cells’
+     get_ag_species_hits: no visible binding for global variable ‘clones’
+     get_ag_species_hits: no visible binding for global variable ‘community’
+     get_ag_species_hits: no visible binding for global variable ‘ag’
+     get_beta_violin: no visible binding for global variable ‘spec’
+     get_beta_violin: no visible binding for global variable ‘size’
+     get_honeycombs: no visible binding for global variable ‘x_adj’
+     get_honeycombs: no visible binding for global variable ‘y_adj’
+     get_honeycombs: no visible binding for global variable ‘..count..’
+     Undefined global functions or variables:
+       ..count.. ag cells clones community size spec x_adj y_adj
+     ```
+
+# ConfusionTableR (1.0.4)
+
+* Email: <mailto:hutsons-hacks@outlook.com>
+* GitHub mirror: <https://github.com/cran/ConfusionTableR>
+
+Run `revdepcheck::revdep_details(, "ConfusionTableR")` for more info
+
+## In both
+
+*   checking Rd files ... NOTE
+     ```
+     checkRd: (-1) binary_class_cm.Rd:19: Lost braces in \itemize; \value handles \item{}{} directly
+     checkRd: (-1) binary_class_cm.Rd:20: Lost braces in \itemize; \value handles \item{}{} directly
+     checkRd: (-1) binary_class_cm.Rd:21: Lost braces in \itemize; \value handles \item{}{} directly
+     checkRd: (-1) binary_class_cm.Rd:22: Lost braces in \itemize; \value handles \item{}{} directly
+     checkRd: (-1) multi_class_cm.Rd:19: Lost braces in \itemize; \value handles \item{}{} directly
+     checkRd: (-1) multi_class_cm.Rd:20: Lost braces in \itemize; \value handles \item{}{} directly
+     checkRd: (-1) multi_class_cm.Rd:21: Lost braces in \itemize; \value handles \item{}{} directly
+     checkRd: (-1) multi_class_cm.Rd:22: Lost braces in \itemize; \value handles \item{}{} directly
+     ```
+
+# corporaexplorer (0.9.0)
+
+* GitHub: <https://github.com/kgjerde/corporaexplorer>
+* Email: <mailto:kristian.gjerde@gmail.com>
+* GitHub mirror: <https://github.com/cran/corporaexplorer>
+
+Run `revdepcheck::revdep_details(, "corporaexplorer")` for more info
+
+## In both
+
+*   checking dependencies in R code ... NOTE
+     ```
+     Namespaces in Imports field not imported from:
+       ‘RColorBrewer’ ‘ggplot2’ ‘re2’ ‘rmarkdown’ ‘shinyWidgets’
+       ‘shinydashboard’ ‘shinyjs’
+       All declared Imports should be used.
+     ```
+
+# cSEM (0.6.1)
+
+* GitHub: <https://github.com/FloSchuberth/cSEM>
+* Email: <mailto:f.schuberth@utwente.nl>
+* GitHub mirror: <https://github.com/cran/cSEM>
+
+Run `revdepcheck::revdep_details(, "cSEM")` for more info
+
+## In both
+
+*   checking dependencies in R code ... NOTE
+     ```
+     Namespace in Imports field not imported from: ‘Rdpack’
+       All declared Imports should be used.
+     ```
+
+# ctsem (3.10.6)
+
+* GitHub: <https://github.com/cdriveraus/ctsem>
+* Email: <mailto:charles.driver2@uzh.ch>
+* GitHub mirror: <https://github.com/cran/ctsem>
+
+Run `revdepcheck::revdep_details(, "ctsem")` for more info
+
+## In both
+
+*   checking whether package ‘ctsem’ can be installed ... WARNING
+     ```
+     Found the following significant warnings:
+       Warning: namespace ‘colorspace’ is not available and has been replaced
+     See ‘/scratch/henrik/revdep/globals/checks/ctsem/new/ctsem.Rcheck/00install.out’ for details.
+     ```
+
+*   checking re-building of vignette outputs ... WARNING
+     ```
+     ...
+       ...
+     --- re-building ‘hierarchicalmanual.rnw’ using knitr_notangle
+     Warning in texi2dvi(file = file, pdf = TRUE, clean = clean, quiet = quiet,  :
+       texi2dvi script/program not available, using emulation
+     Error: processing vignette 'hierarchicalmanual.rnw' failed with diagnostics:
+     unable to run pdflatex on 'hierarchicalmanual.tex'
+     LaTeX errors:
+     ! LaTeX Error: File `apacite.sty' not found.
+     
+     Type X to quit or <RETURN> to proceed,
+     or enter new name. (Default extension: sty)
+     
+     ! Emergency stop.
+     <read *> 
+              
+     l.62 \bibliographystyle
+                            {apacite}     % Set bibliography style^^M
+     !  ==> Fatal error occurred, no output PDF file produced!
+     --- failed re-building ‘hierarchicalmanual.rnw’
+     
+     SUMMARY: processing the following file failed:
+       ‘hierarchicalmanual.rnw’
+     
+     Error: Vignette re-building failed.
+     Execution halted
+     ```
+
+# cuda.ml (0.3.2)
+
+* GitHub: <https://github.com/mlverse/cuda.ml>
+* Email: <mailto:daniel@rstudio.com>
+* GitHub mirror: <https://github.com/cran/cuda.ml>
+
+Run `revdepcheck::revdep_details(, "cuda.ml")` for more info
+
+## In both
+
+*   checking Rd files ... NOTE
+     ```
+     ...
+            | ^
+     checkRd: (-1) cuda_ml_tsvd.Rd:40: Lost braces; missing escapes or markup?
+         40 | {"off", "critical", "error", "warn", "info", "debug", "trace"}.
+            | ^
+     checkRd: (-1) cuda_ml_umap.Rd:51: Lost braces; missing escapes or markup?
+         51 | one of {"spectral", "random"}. Default: "spectral".}
+            |        ^
+     checkRd: (-1) cuda_ml_umap.Rd:91: Lost braces; missing escapes or markup?
+         91 | Must be one of {"categorical", "euclidean"}. Default: "categorical".}
+            |                ^
+     checkRd: (-1) cuda_ml_umap.Rd:109: Lost braces; missing escapes or markup?
+        109 | {"off", "critical", "error", "warn", "info", "debug", "trace"}.
+            | ^
+     checkRd: (-1) has_cuML.Rd:5: Lost braces; missing escapes or markup?
+          5 | \title{Determine whether {cuda.ml} was linked to a valid version of the RAPIDS cuML
+            |                          ^
+     checkRd: (-1) has_cuML.Rd:15: Lost braces; missing escapes or markup?
+         15 | Determine whether {cuda.ml} was linked to a valid version of the RAPIDS cuML
+            |                   ^
+     checkRd: (-1) has_cuML.Rd:11: Lost braces; missing escapes or markup?
+         11 | A logical value indicating whether the current installation {cuda.ml}
+            |                                                             ^
+     checkRd: (-1) predict.cuda_ml_rand_forest.Rd:30: Lost braces; missing escapes or markup?
+         30 | {"off", "critical", "error", "warn", "info", "debug", "trace"}.
+            | ^
+     ```
+
+# dar (1.6.0)
+
+* GitHub: <https://github.com/MicrobialGenomics-IrsicaixaOrg/dar>
+* Email: <mailto:fcatala@irsicaixa.es>
+
+Run `revdepcheck::revdep_details(, "dar")` for more info
 
 ## In both
 
 *   checking examples ... ERROR
-    ```
-    Running examples in ‘ChromSCape-Ex.R’ failed
-    The error most likely occurred in:
-    
-    > ### Name: get_pathway_mat_scExp
-    > ### Title: Get pathway matrix
-    > ### Aliases: get_pathway_mat_scExp
-    > 
-    > ### ** Examples
-    > 
-    > data(scExp)
-    ...
-      4. │   └─tibble:::`[.tbl_df`(msigdbr::msigdbr("Homo sapiens"), , columns)
-      5. │     └─tibble:::vectbl_as_col_location(...)
-      6. │       ├─tibble:::subclass_col_index_errors(...)
-      7. │       │ └─base::withCallingHandlers(...)
-      8. │       └─vctrs::vec_as_location(j, n, names, missing = "error", call = call)
-      9. └─vctrs (local) `<fn>`()
-     10.   └─vctrs:::stop_subscript_oob(...)
-     11.     └─vctrs:::stop_subscript(...)
-     12.       └─rlang::abort(...)
-    Execution halted
-    ```
-
-*   checking dependencies in R code ... WARNING
-    ```
-    'library' or 'require' call not declared from: ‘dplyr’
-    'library' or 'require' call to ‘dplyr’ in package code.
-      Please use :: or requireNamespace() instead.
-      See section 'Suggested packages' in the 'Writing R Extensions' manual.
-    ```
-
-*   checking for code/documentation mismatches ... WARNING
-    ```
-    Codoc mismatches from Rd file 'generate_analysis.Rd':
-    generate_analysis
-      Code: function(input_data_folder, analysis_name = "Analysis_1",
-                     output_directory = "./", input_data_type = c("scBED",
-                     "DenseMatrix", "SparseMatrix", "scBAM")[1],
-                     feature_count_on = c("bins", "genebody", "peaks")[1],
-                     feature_count_parameter = 50000, rebin_sparse_matrix =
-                     FALSE, ref_genome = c("hg38", "mm10")[1], run =
-                     c("filter", "CNA", "cluster", "consensus", "coverage",
-                     "DA", "GSA", "report")[c(1, 3, 5, 6, 7, 8)],
-    ...
-      Mismatches in argument names:
-        Position: 5 Code: feature_count_on Docs: rebin_sparse_matrix
-        Position: 6 Code: feature_count_parameter Docs: feature_count_on
-        Position: 7 Code: rebin_sparse_matrix Docs: feature_count_parameter
-      Mismatches in argument default values:
-        Name: 'run'
-        Code: c("filter", "CNA", "cluster", "consensus", "coverage", "DA", 
-              "GSA", "report")[c(1, 3, 5, 6, 7, 8)]
-        Docs: c("filter", "CNA", "cluster", "consensus", "peak_call", "coverage", 
-              "DA", "GSA", "report")[c(1, 3, 6, 7, 8, 9)]
-    ```
-
-*   checking Rd \usage sections ... WARNING
-    ```
-    Undocumented arguments in Rd file 'rebin_matrix.Rd'
-      ‘rebin_function’
-    
-    Functions with \usage entries need to have the appropriate \alias
-    entries, and all their arguments documented.
-    The \usage entries must correspond to syntactically valid R code.
-    See chapter ‘Writing R documentation files’ in the ‘Writing R
-    Extensions’ manual.
-    ```
-
-*   checking for hidden files and directories ... NOTE
-    ```
-    Found the following hidden files and directories:
-      .BBSoptions
-    These were most likely included in error. See section ‘Package
-    structure’ in the ‘Writing R Extensions’ manual.
-    ```
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  8.6Mb
-      sub-directories of 1Mb or more:
-        data   1.5Mb
-        doc    2.9Mb
-        libs   1.1Mb
-        www    2.1Mb
-    ```
-
-*   checking R code for possible problems ... NOTE
-    ```
-    bams_to_matrix_indexes: no visible binding for global variable
-      ‘files_dir_list’
-    enrich_TF_ChEA3_genes: no visible binding for global variable
-      ‘CheA3_TF_nTargets’
-    filter_correlated_cell_scExp: no visible binding for global variable
-      ‘run_tsne’
-    generate_analysis: no visible global function definition for ‘head’
-    generate_analysis: no visible binding for global variable ‘k’
-    generate_analysis: no visible binding for global variable
-      ‘clusterConsensus’
-    ...
-    subset_bam_call_peaks: no visible binding for global variable
-      ‘merged_bam’
-    Undefined global functions or variables:
-      CheA3_TF_nTargets Component Fri_cyto Gain_or_Loss Gene TF V1 V2
-      absolute_value cluster clusterConsensus cytoBand files_dir_list genes
-      group head k merged_bam molecule ncells new_row orientation
-      origin_value percent_active run_tsne sample_id total_counts
-    Consider adding
-      importFrom("utils", "head")
-    to your NAMESPACE file.
-    ```
-
-*   checking Rd files ... NOTE
-    ```
-    prepare_Rd: raw_counts_to_sparse_matrix.Rd:6-8: Dropping empty section \source
-    ```
-
-# civis
-
-<details>
-
-* Version: 3.1.2
-* GitHub: https://github.com/civisanalytics/civis-r
-* Source code: https://github.com/cran/civis
-* Date/Publication: 2023-03-31 08:00:03 UTC
-* Number of recursive dependencies: 86
-
-Run `revdepcheck::revdep_details(, "civis")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  5.8Mb
-      sub-directories of 1Mb or more:
-        R      1.5Mb
-        help   3.6Mb
-    ```
-
-*   checking Rd files ... NOTE
-    ```
-    checkRd: (-1) enhancements_get_civis_data_match.Rd:60: Lost braces; missing escapes or markup?
-        60 | \item{inputFieldMapping}{list, The field (i.e., column) mapping for the input table. See https://api.civisanalytics.com/enhancements/field-mapping for a list of valid field types and descriptions. Each field type should be mapped to a string specifying a column name in the input table. For field types that support multiple values (e.g., the "phone" field), a list of column names can be provided (e.g., {"phone": ["home_phone", "mobile_phone"], ...}).}
-           |                                                                                                                                                                                                                                                                                                                                                                                                                      ^
-    checkRd: (-1) enhancements_patch_civis_data_match.Rd:53: Lost braces; missing escapes or markup?
-        53 | \item{input_field_mapping}{list optional. The field (i.e., column) mapping for the input table. See https://api.civisanalytics.com/enhancements/field-mapping for a list of valid field types and descriptions. Each field type should be mapped to a string specifying a column name in the input table. For field types that support multiple values (e.g., the "phone" field), a list of column names can be provided (e.g., {"phone": ["home_phone", "mobile_phone"], ...}).}
-           |                                                                                                                                                                                                                                                                                                                                                                                                                                 ^
-    checkRd: (-1) enhancements_patch_civis_data_match.Rd:125: Lost braces; missing escapes or markup?
-       125 | \item{inputFieldMapping}{list, The field (i.e., column) mapping for the input table. See https://api.civisanalytics.com/enhancements/field-mapping for a list of valid field types and descriptions. Each field type should be mapped to a string specifying a column name in the input table. For field types that support multiple values (e.g., the "phone" field), a list of column names can be provided (e.g., {"phone": ["home_phone", "mobile_phone"], ...}).}
-           |                                                                                                                                                                                                                                                                                                                                                                                                                      ^
-    checkRd: (-1) enhancements_post_civis_data_match.Rd:24: Lost braces; missing escapes or markup?
-    ...
-           |                                                                                                                                                                                         ^
-    checkRd: (-1) templates_patch_scripts.Rd:42: Lost braces; missing escapes or markup?
-        42 | \item allowedValues array, The possible values this parameter can take, effectively making this an enumerable parameter. Allowed values is an array of hashes of the following format: `{label: 'Import', 'value': 'import'}`
-           |                                                                                                                                                                                         ^
-    checkRd: (-1) templates_post_scripts.Rd:45: Lost braces; missing escapes or markup?
-        45 | \item allowedValues array, The possible values this parameter can take, effectively making this an enumerable parameter. Allowed values is an array of hashes of the following format: `{label: 'Import', 'value': 'import'}`
-           |                                                                                                                                                                                         ^
-    checkRd: (-1) templates_put_scripts.Rd:42: Lost braces; missing escapes or markup?
-        42 | \item allowedValues array, The possible values this parameter can take, effectively making this an enumerable parameter. Allowed values is an array of hashes of the following format: `{label: 'Import', 'value': 'import'}`
-           |                                                                                                                                                                                         ^
-    ```
-
-# clustermq
-
-<details>
-
-* Version: 0.9.9
-* GitHub: https://github.com/mschubert/clustermq
-* Source code: https://github.com/cran/clustermq
-* Date/Publication: 2025-04-20 13:30:02 UTC
-* Number of recursive dependencies: 107
-
-Run `revdepcheck::revdep_details(, "clustermq")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is 23.4Mb
-      sub-directories of 1Mb or more:
-        libs  22.8Mb
-    ```
-
-*   checking dependencies in R code ... NOTE
-    ```
-    Namespace in Imports field not imported from: ‘R6’
-      All declared Imports should be used.
-    ```
-
-# ClustIRR
-
-<details>
-
-* Version: 1.4.0
-* GitHub: https://github.com/snaketron/ClustIRR
-* Source code: https://github.com/cran/ClustIRR
-* Date/Publication: 2024-10-29
-* Number of recursive dependencies: 116
-
-Run `revdepcheck::revdep_details(, "ClustIRR")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is 85.4Mb
-      sub-directories of 1Mb or more:
-        data   1.1Mb
-        doc    3.9Mb
-        libs  79.4Mb
-    ```
-
-*   checking for GNU extensions in Makefiles ... NOTE
-    ```
-    GNU make is a SystemRequirements.
-    ```
-
-# codalm
-
-<details>
-
-* Version: 0.1.2
-* GitHub: https://github.com/jfiksel/codalm
-* Source code: https://github.com/cran/codalm
-* Date/Publication: 2021-07-26 18:40:02 UTC
-* Number of recursive dependencies: 50
-
-Run `revdepcheck::revdep_details(, "codalm")` for more info
-
-</details>
-
-## In both
-
-*   checking Rd files ... NOTE
-    ```
-    checkRd: (-1) educFM.Rd:22: Lost braces in \itemize; meant \describe ?
-    checkRd: (-1) educFM.Rd:23: Lost braces in \itemize; meant \describe ?
-    checkRd: (-1) educFM.Rd:24: Lost braces in \itemize; meant \describe ?
-    checkRd: (-1) educFM.Rd:25: Lost braces in \itemize; meant \describe ?
-    checkRd: (-1) educFM.Rd:26: Lost braces in \itemize; meant \describe ?
-    checkRd: (-1) educFM.Rd:27: Lost braces in \itemize; meant \describe ?
-    checkRd: (-1) educFM.Rd:28: Lost braces in \itemize; meant \describe ?
-    ```
-
-# codebook
-
-<details>
-
-* Version: 0.9.6
-* GitHub: https://github.com/rubenarslan/codebook
-* Source code: https://github.com/cran/codebook
-* Date/Publication: 2025-01-08 08:10:08 UTC
-* Number of recursive dependencies: 188
-
-Run `revdepcheck::revdep_details(, "codebook")` for more info
-
-</details>
-
-## In both
-
-*   checking data for non-ASCII characters ... NOTE
-    ```
-      Note: found 65 marked UTF-8 strings
-    ```
-
-# collinear
-
-<details>
-
-* Version: 2.0.0
-* GitHub: https://github.com/blasbenito/collinear
-* Source code: https://github.com/cran/collinear
-* Date/Publication: 2024-11-08 13:50:02 UTC
-* Number of recursive dependencies: 47
-
-Run `revdepcheck::revdep_details(, "collinear")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  8.4Mb
-      sub-directories of 1Mb or more:
-        data   8.0Mb
-    ```
-
-*   checking data for non-ASCII characters ... NOTE
-    ```
-      Note: found 89 marked Latin-1 strings
-      Note: found 1203 marked UTF-8 strings
-    ```
-
-# colocr
-
-<details>
-
-* Version: 0.1.1
-* GitHub: https://github.com/ropensci/colocr
-* Source code: https://github.com/cran/colocr
-* Date/Publication: 2020-05-08 13:20:06 UTC
-* Number of recursive dependencies: 123
-
-Run `revdepcheck::revdep_details(, "colocr")` for more info
-
-</details>
-
-## In both
-
-*   checking LazyData ... NOTE
-    ```
-      'LazyData' is specified without a 'data' directory
-    ```
-
-# ConfusionTableR
-
-<details>
-
-* Version: 1.0.4
-* GitHub: NA
-* Source code: https://github.com/cran/ConfusionTableR
-* Date/Publication: 2021-12-01 16:30:01 UTC
-* Number of recursive dependencies: 98
-
-Run `revdepcheck::revdep_details(, "ConfusionTableR")` for more info
-
-</details>
-
-## In both
-
-*   checking Rd files ... NOTE
-    ```
-    checkRd: (-1) binary_class_cm.Rd:19: Lost braces in \itemize; \value handles \item{}{} directly
-    checkRd: (-1) binary_class_cm.Rd:20: Lost braces in \itemize; \value handles \item{}{} directly
-    checkRd: (-1) binary_class_cm.Rd:21: Lost braces in \itemize; \value handles \item{}{} directly
-    checkRd: (-1) binary_class_cm.Rd:22: Lost braces in \itemize; \value handles \item{}{} directly
-    checkRd: (-1) multi_class_cm.Rd:19: Lost braces in \itemize; \value handles \item{}{} directly
-    checkRd: (-1) multi_class_cm.Rd:20: Lost braces in \itemize; \value handles \item{}{} directly
-    checkRd: (-1) multi_class_cm.Rd:21: Lost braces in \itemize; \value handles \item{}{} directly
-    checkRd: (-1) multi_class_cm.Rd:22: Lost braces in \itemize; \value handles \item{}{} directly
-    ```
-
-# corporaexplorer
-
-<details>
-
-* Version: 0.9.0
-* GitHub: https://github.com/kgjerde/corporaexplorer
-* Source code: https://github.com/cran/corporaexplorer
-* Date/Publication: 2024-09-02 14:50:02 UTC
-* Number of recursive dependencies: 102
-
-Run `revdepcheck::revdep_details(, "corporaexplorer")` for more info
-
-</details>
-
-## In both
-
-*   checking dependencies in R code ... NOTE
-    ```
-    Namespaces in Imports field not imported from:
-      ‘RColorBrewer’ ‘ggplot2’ ‘re2’ ‘rmarkdown’ ‘shinyWidgets’
-      ‘shinydashboard’ ‘shinyjs’
-      All declared Imports should be used.
-    ```
-
-# Coxmos
-
-<details>
-
-* Version: 1.1.2
-* GitHub: https://github.com/BiostatOmics/Coxmos
-* Source code: https://github.com/cran/Coxmos
-* Date/Publication: 2025-03-05 16:30:02 UTC
-* Number of recursive dependencies: 202
-
-Run `revdepcheck::revdep_details(, "Coxmos")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  7.7Mb
-      sub-directories of 1Mb or more:
-        R      1.5Mb
-        data   2.5Mb
-        doc    3.1Mb
-    ```
-
-# crunchy
-
-<details>
-
-* Version: 0.3.3
-* GitHub: https://github.com/Crunch-io/crunchy
-* Source code: https://github.com/cran/crunchy
-* Date/Publication: 2021-01-13 21:20:06 UTC
-* Number of recursive dependencies: 76
-
-Run `revdepcheck::revdep_details(, "crunchy")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... ERROR
-    ```
-    Package required but not available: ‘crunch’
-    
-    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
-    manual.
-    ```
-
-# cSEM
-
-<details>
-
-* Version: 0.6.0
-* GitHub: https://github.com/FloSchuberth/cSEM
-* Source code: https://github.com/cran/cSEM
-* Date/Publication: 2025-02-25 10:00:02 UTC
-* Number of recursive dependencies: 144
-
-Run `revdepcheck::revdep_details(, "cSEM")` for more info
-
-</details>
-
-## In both
-
-*   checking dependencies in R code ... NOTE
-    ```
-    Namespace in Imports field not imported from: ‘Rdpack’
-      All declared Imports should be used.
-    ```
-
-# CSGo
-
-<details>
-
-* Version: 0.6.7
-* GitHub: https://github.com/adsoncostanzifilho/CSGo
-* Source code: https://github.com/cran/CSGo
-* Date/Publication: 2021-05-07 18:50:02 UTC
-* Number of recursive dependencies: 74
-
-Run `revdepcheck::revdep_details(, "CSGo")` for more info
-
-</details>
-
-## In both
-
-*   checking dependencies in R code ... NOTE
-    ```
-    Namespaces in Imports field not imported from:
-      ‘extrafont’ ‘future’
-      All declared Imports should be used.
-    ```
-
-# cuda.ml
-
-<details>
-
-* Version: 0.3.2
-* GitHub: https://github.com/mlverse/cuda.ml
-* Source code: https://github.com/cran/cuda.ml
-* Date/Publication: 2022-01-08 01:42:47 UTC
-* Number of recursive dependencies: 73
-
-Run `revdepcheck::revdep_details(, "cuda.ml")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  6.7Mb
-      sub-directories of 1Mb or more:
-        libs   6.3Mb
-    ```
-
-*   checking Rd files ... NOTE
-    ```
-    checkRd: (-1) cuML_major_version.Rd:5: Lost braces; missing escapes or markup?
-         5 | \title{Get the major version of the RAPIDS cuML shared library {cuda.ml} was linked
-           |                                                                ^
-    checkRd: (-1) cuML_major_version.Rd:16: Lost braces; missing escapes or markup?
-        16 | Get the major version of the RAPIDS cuML shared library {cuda.ml} was linked
-           |                                                         ^
-    checkRd: (-1) cuML_major_version.Rd:11: Lost braces; missing escapes or markup?
-        11 | The major version of the RAPIDS cuML shared library {cuda.ml} was
-           |                                                     ^
-    checkRd: (-1) cuML_major_version.Rd:12: Lost braces; missing escapes or markup?
-    ...
-           |                          ^
-    checkRd: (-1) has_cuML.Rd:15: Lost braces; missing escapes or markup?
-        15 | Determine whether {cuda.ml} was linked to a valid version of the RAPIDS cuML
-           |                   ^
-    checkRd: (-1) has_cuML.Rd:11: Lost braces; missing escapes or markup?
-        11 | A logical value indicating whether the current installation {cuda.ml}
-           |                                                             ^
-    checkRd: (-1) predict.cuda_ml_rand_forest.Rd:30: Lost braces; missing escapes or markup?
-        30 | {"off", "critical", "error", "warn", "info", "debug", "trace"}.
-           | ^
-    ```
-
-# cvms
-
-<details>
-
-* Version: 1.7.0
-* GitHub: https://github.com/ludvigolsen/cvms
-* Source code: https://github.com/cran/cvms
-* Date/Publication: 2025-03-07 11:30:07 UTC
-* Number of recursive dependencies: 152
-
-Run `revdepcheck::revdep_details(, "cvms")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... NOTE
-    ```
-    Package suggested but not available for checking: ‘merDeriv’
-    ```
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  7.2Mb
-      sub-directories of 1Mb or more:
-        data   3.5Mb
-        doc    2.4Mb
-    ```
-
-# cytomapper
-
-<details>
-
-* Version: 1.18.0
-* GitHub: https://github.com/BodenmillerGroup/cytomapper
-* Source code: https://github.com/cran/cytomapper
-* Date/Publication: 2024-10-29
-* Number of recursive dependencies: 161
-
-Run `revdepcheck::revdep_details(, "cytomapper")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  8.3Mb
-      sub-directories of 1Mb or more:
-        R     2.0Mb
-        doc   5.1Mb
-    ```
-
-*   checking Rd cross-references ... NOTE
-    ```
-    Package unavailable to check Rd xrefs: ‘CATALYST’
-    ```
-
-# dar
-
-<details>
-
-* Version: 1.2.0
-* GitHub: https://github.com/MicrobialGenomics-IrsicaixaOrg/dar
-* Source code: https://github.com/cran/dar
-* Date/Publication: 2024-10-29
-* Number of recursive dependencies: 394
-
-Run `revdepcheck::revdep_details(, "dar")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  6.8Mb
-      sub-directories of 1Mb or more:
-        R     1.5Mb
-        doc   4.4Mb
-    ```
-
-# dataquieR
-
-<details>
-
-* Version: 2.5.1
-* GitHub: NA
-* Source code: https://github.com/cran/dataquieR
-* Date/Publication: 2025-03-05 18:10:02 UTC
-* Number of recursive dependencies: 197
-
-Run `revdepcheck::revdep_details(, "dataquieR")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  5.7Mb
-      sub-directories of 1Mb or more:
-        R      3.5Mb
-        help   1.6Mb
-    ```
-
-# delimtools
-
-<details>
-
-* Version: 0.2.0
-* GitHub: https://github.com/legalLab/delimtools
-* Source code: https://github.com/cran/delimtools
-* Date/Publication: 2025-03-31 18:00:02 UTC
-* Number of recursive dependencies: 95
-
-Run `revdepcheck::revdep_details(, "delimtools")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... NOTE
-    ```
-    Packages suggested but not available for checking: 'bGMYC', 'splits'
-    ```
-
-*   checking Rd cross-references ... NOTE
-    ```
-    Packages unavailable to check Rd xrefs: ‘bGMYC’, ‘splits’
-    ```
-
-*   checking data for non-ASCII characters ... NOTE
-    ```
-      Note: found 222 marked UTF-8 strings
-    ```
-
-# deseats
-
-<details>
-
-* Version: 1.1.0
-* GitHub: NA
-* Source code: https://github.com/cran/deseats
-* Date/Publication: 2024-07-12 10:50:15 UTC
-* Number of recursive dependencies: 112
-
-Run `revdepcheck::revdep_details(, "deseats")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  9.1Mb
-      sub-directories of 1Mb or more:
-        libs   8.3Mb
-    ```
-
-# dipsaus
-
-<details>
-
-* Version: 0.3.1
-* GitHub: https://github.com/dipterix/dipsaus
-* Source code: https://github.com/cran/dipsaus
-* Date/Publication: 2025-04-03 16:50:02 UTC
-* Number of recursive dependencies: 62
-
-Run `revdepcheck::revdep_details(, "dipsaus")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  7.3Mb
-      sub-directories of 1Mb or more:
-        R      1.5Mb
-        libs   4.3Mb
-    ```
-
-# discrim
-
-<details>
-
-* Version: 1.0.1
-* GitHub: https://github.com/tidymodels/discrim
-* Source code: https://github.com/cran/discrim
-* Date/Publication: 2023-03-08 22:00:15 UTC
-* Number of recursive dependencies: 137
-
-Run `revdepcheck::revdep_details(, "discrim")` for more info
-
-</details>
-
-## In both
+     ```
+     ...
+     > 
+     > ## Create a Recipe with steps
+     > rec <- 
+     +   recipe(metaHIV_phy, "RiskGroup2", "Species") |>
+     +   step_subset_taxa(tax_level = "Kingdom", taxa = c("Bacteria", "Archaea")) |>
+     +   step_filter_taxa(.f = "function(x) sum(x > 0) >= (0.3 * length(x))") |>
+     +   step_filter_by_prevalence(0.4) |>
+     +   step_maaslin()
+     ℹ 1 package is needed for step_maaslin() and is not installed: (Maaslin2)
+     • Start a clean R session then run: BiocManager::install(c("Maaslin2"))
+     >  
+     > ## Prep Recipe   
+     > rec <- prep(rec, parallel = TRUE)
+     ℹ 1 package is needed for step_maaslin() and is not installed: (Maaslin2)
+     • Start a clean R session then run: BiocManager::install(c("Maaslin2"))
+     Error in (function (.x, .f, ..., .progress = FALSE)  : ℹ In index: 1.
+     Caused by error in `purrr::map()`:
+     ℹ In index: 1.
+     ℹ With name: RiskGroup2.
+     Caused by error in `map()`:
+     ℹ In index: 1.
+     Caused by error in `loadNamespace()`:
+     ! there is no package called ‘Maaslin2’
+     Calls: prep ... furrr_map_template -> furrr_template -> <Anonymous> -> value.list
+     Execution halted
+     ```
 
 *   checking tests ...
-    ```
-      Running ‘spelling.R’
-      Running ‘testthat.R’
-     ERROR
-    Running the tests in ‘tests/testthat.R’ failed.
-    Complete output:
-      > library(testthat)
-      > library(discrim)
-      Loading required package: parsnip
-      > 
-      > test_check("discrim")
-    ...
-      Backtrace:
-          ▆
-       1. └─base::loadNamespace(x) at test-linear-sda.R:2:3
-       2.   └─base::withRestarts(stop(cond), retry_loadNamespace = function() NULL)
-       3.     └─base (local) withOneRestart(expr, restarts[[1L]])
-       4.       └─base (local) doWithOneRestart(return(expr), restart)
-      
-      [ FAIL 2 | WARN 0 | SKIP 6 | PASS 706 ]
-      Error: Test failures
-      Execution halted
-    ```
+     ```
+     ...
+        77. ├─purrr::pluck(., "results")
+        78. │ └─purrr:::pluck_raw(.x, list2(...), .default = .default)
+        79. ├─base::loadNamespace(x)
+        80. │ ├─base::withRestarts(stop(cond), retry_loadNamespace = function() NULL)
+        81. │ │ └─base (local) withOneRestart(expr, restarts[[1L]])
+        82. │ │   └─base (local) doWithOneRestart(return(expr), restart)
+        83. │ └─base::stop(cond)
+        84. ├─purrr (local) `<fn>`(`<pckgNtFE>`)
+        85. │ └─cli::cli_abort(...)
+        86. │   └─rlang::abort(...)
+        87. │     └─rlang:::signal_abort(cnd, .file)
+        88. │       └─base::signalCondition(cnd)
+        89. ├─purrr (local) `<fn>`(`<prrr_rr_>`)
+        90. │ └─cli::cli_abort(...)
+        91. │   └─rlang::abort(...)
+        92. │     └─rlang:::signal_abort(cnd, .file)
+        93. │       └─base::signalCondition(cnd)
+        94. └─purrr (local) `<fn>`(`<prrr_rr_>`)
+        95.   └─cli::cli_abort(...)
+        96.     └─rlang::abort(...)
+       
+       [ FAIL 2 | WARN 3 | SKIP 8 | PASS 95 ]
+       Error:
+       ! Test failures.
+       Execution halted
+     ```
 
-*   checking package dependencies ... NOTE
-    ```
-    Package suggested but not available for checking: ‘sda’
-    ```
+*   checking re-building of vignette outputs ... ERROR
+     ```
+     ...
+      59. ├─purrr (local) `<fn>`(`<prrr_rr_>`)
+      60. │ └─cli::cli_abort(...)
+      61. │   └─rlang::abort(...)
+      62. │     └─rlang:::signal_abort(cnd, .file)
+      63. │       └─base::signalCondition(cnd)
+      64. └─base (local) `<fn>`(`<prrr_rr_>`)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     
+     Error: processing vignette 'import_export_recipes.Rmd' failed with diagnostics:
+     error in evaluating the argument 'rec' in selecting a method for function 'bake': ℹ In index: 1.
+     Caused by error in `purrr::map()`:
+     ℹ In index: 1.
+     ℹ With name: RiskGroup2.
+     Caused by error in `map()`:
+     ℹ In index: 1.
+     Caused by error in `loadNamespace()`:
+     ! there is no package called 'Maaslin2'
+     --- failed re-building ‘import_export_recipes.Rmd’
+     
+     SUMMARY: processing the following files failed:
+       ‘article.Rmd’ ‘bioinformatics_vignette.Rmd’ ‘dar.Rmd’
+       ‘import_export_recipes.Rmd’
+     
+     Error: Vignette re-building failed.
+     Execution halted
+     ```
 
-# disk.frame
+# designer (0.3.0)
 
-<details>
+* GitHub: <https://github.com/ashbaldry/designer>
+* Email: <mailto:arbaldry91@gmail.com>
+* GitHub mirror: <https://github.com/cran/designer>
 
-* Version: 0.8.3
-* GitHub: https://github.com/DiskFrame/disk.frame
-* Source code: https://github.com/cran/disk.frame
-* Date/Publication: 2023-08-24 16:20:10 UTC
-* Number of recursive dependencies: 96
+Run `revdepcheck::revdep_details(, "designer")` for more info
+
+## In both
+
+*   checking DESCRIPTION meta-information ... NOTE
+     ```
+       Missing dependency on R >= 4.1.0 because package code uses the pipe
+       |> or function shorthand \(...) syntax added in R 4.1.0.
+       File(s) using such syntax:
+         ‘mod_template_srv.R’
+     ```
+
+# disk.frame (0.8.3)
+
+* GitHub: <https://github.com/DiskFrame/disk.frame>
+* Email: <mailto:zhuojia.dai@gmail.com>
+* GitHub mirror: <https://github.com/cran/disk.frame>
 
 Run `revdepcheck::revdep_details(, "disk.frame")` for more info
 
-</details>
-
 ## In both
 
 *   checking Rd files ... NOTE
-    ```
-    checkRd: (-1) csv_to_disk.frame.Rd:56: Lost braces; missing escapes or markup?
-        56 | strings, and you are encouraged to use {fasttime} to convert the strings to
-           |                                        ^
-    checkRd: (-1) purrr_as_mapper.Rd:10: Lost braces; missing escapes or markup?
-        10 | \item{.f}{a normal function or purrr syntax function i.e. `~{ ...code...}`}
-           |                                                             ^
-    ```
+     ```
+     checkRd: (-1) csv_to_disk.frame.Rd:56: Lost braces; missing escapes or markup?
+         56 | strings, and you are encouraged to use {fasttime} to convert the strings to
+            |                                        ^
+     checkRd: (-1) purrr_as_mapper.Rd:10: Lost braces; missing escapes or markup?
+         10 | \item{.f}{a normal function or purrr syntax function i.e. `~{ ...code...}`}
+            |                                                             ^
+     ```
 
-# dispositionEffect
+# dispositionEffect (1.0.1)
 
-<details>
-
-* Version: 1.0.1
-* GitHub: https://github.com/marcozanotti/dispositionEffect
-* Source code: https://github.com/cran/dispositionEffect
-* Date/Publication: 2022-05-30 07:50:02 UTC
-* Number of recursive dependencies: 133
+* GitHub: <https://github.com/marcozanotti/dispositionEffect>
+* Email: <mailto:zanottimarco17@gmail.com>
+* GitHub mirror: <https://github.com/cran/dispositionEffect>
 
 Run `revdepcheck::revdep_details(, "dispositionEffect")` for more info
-
-</details>
 
 ## In both
 
 *   checking tests ...
-    ```
-      Running ‘testthat.R’
-     ERROR
-    Running the tests in ‘tests/testthat.R’ failed.
-    Last 50 lines of output:
-      ── Failure ('test-realized_duration.R:113:2'): realized_duration works (realized_only = TRUE) ──
-      realized_duration(...) not equal to c(...).
-      1/4 mismatches
-      [2] 34 - 28 == 6
-      ── Failure ('test-realized_duration.R:116:2'): realized_duration works (realized_only = TRUE) ──
-      realized_duration(...) not equal to c(...).
-    ...
-      1/4 mismatches
-      [2] 34 - 28 == 6
-      ── Failure ('test-realized_duration.R:161:2'): realized_duration works (realized_only = TRUE) ──
-      realized_duration(...) not equal to c(...).
-      1/4 mismatches
-      [1] 34 - 28 == 6
-      
-      [ FAIL 36 | WARN 0 | SKIP 0 | PASS 331 ]
-      Error: Test failures
-      Execution halted
-    ```
+     ```
+     ...
+       ── Failure ('test-realized_duration.R:152:2'): realized_duration works (realized_only = TRUE) ──
+       Expected `realized_duration(...)` to equal `c(...)`.
+       Differences:
+       1/4 mismatches
+       [2] 34 - 28 == 6
+       ── Failure ('test-realized_duration.R:155:2'): realized_duration works (realized_only = TRUE) ──
+       Expected `realized_duration(...)` to equal `c(...)`.
+       Differences:
+       1/4 mismatches
+       [1] 34 - 28 == 6
+       ── Failure ('test-realized_duration.R:158:2'): realized_duration works (realized_only = TRUE) ──
+       Expected `realized_duration(...)` to equal `c(...)`.
+       Differences:
+       1/4 mismatches
+       [2] 34 - 28 == 6
+       ── Failure ('test-realized_duration.R:161:2'): realized_duration works (realized_only = TRUE) ──
+       Expected `realized_duration(...)` to equal `c(...)`.
+       Differences:
+       1/4 mismatches
+       [1] 34 - 28 == 6
+       
+       [ FAIL 36 | WARN 0 | SKIP 0 | PASS 331 ]
+       Error:
+       ! Test failures.
+       Execution halted
+     ```
 
-# distantia
+# EFAtools (0.6.1)
 
-<details>
-
-* Version: 2.0.2
-* GitHub: https://github.com/BlasBenito/distantia
-* Source code: https://github.com/cran/distantia
-* Date/Publication: 2025-02-01 19:50:02 UTC
-* Number of recursive dependencies: 68
-
-Run `revdepcheck::revdep_details(, "distantia")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is 11.8Mb
-      sub-directories of 1Mb or more:
-        data   2.0Mb
-        help   1.5Mb
-        libs   7.8Mb
-    ```
-
-*   checking Rd cross-references ... NOTE
-    ```
-    Package unavailable to check Rd xrefs: ‘fields’
-    ```
-
-*   checking data for non-ASCII characters ... NOTE
-    ```
-      Note: found 844 marked UTF-8 strings
-    ```
-
-# DrugExposureDiagnostics
-
-<details>
-
-* Version: 1.1.2
-* GitHub: https://github.com/darwin-eu/DrugExposureDiagnostics
-* Source code: https://github.com/cran/DrugExposureDiagnostics
-* Date/Publication: 2025-03-13 15:20:07 UTC
-* Number of recursive dependencies: 129
-
-Run `revdepcheck::revdep_details(, "DrugExposureDiagnostics")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... ERROR
-    ```
-    Packages required but not available: 'CDMConnector', 'DrugUtilisation'
-    
-    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
-    manual.
-    ```
-
-# DT
-
-<details>
-
-* Version: 0.33
-* GitHub: https://github.com/rstudio/DT
-* Source code: https://github.com/cran/DT
-* Date/Publication: 2024-04-04 05:03:17 UTC
-* Number of recursive dependencies: 52
-
-Run `revdepcheck::revdep_details(, "DT")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  6.5Mb
-      sub-directories of 1Mb or more:
-        htmlwidgets   5.6Mb
-    ```
-
-# easysurv
-
-<details>
-
-* Version: 2.0.1
-* GitHub: https://github.com/Maple-Health-Group/easysurv
-* Source code: https://github.com/cran/easysurv
-* Date/Publication: 2024-06-21 10:30:06 UTC
-* Number of recursive dependencies: 154
-
-Run `revdepcheck::revdep_details(, "easysurv")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... ERROR
-    ```
-    Packages required but not available: 'bshazard', 'flexsurvcure'
-    
-    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
-    manual.
-    ```
-
-# eCerto
-
-<details>
-
-* Version: 0.8.5
-* GitHub: https://github.com/janlisec/eCerto
-* Source code: https://github.com/cran/eCerto
-* Date/Publication: 2025-03-28 13:00:02 UTC
-* Number of recursive dependencies: 99
-
-Run `revdepcheck::revdep_details(, "eCerto")` for more info
-
-</details>
-
-## In both
-
-*   checking data for non-ASCII characters ... NOTE
-    ```
-      Note: found 1 marked UTF-8 string
-    ```
-
-# EFAtools
-
-<details>
-
-* Version: 0.4.6
-* GitHub: https://github.com/mdsteiner/EFAtools
-* Source code: https://github.com/cran/EFAtools
-* Date/Publication: 2025-03-21 18:00:13 UTC
-* Number of recursive dependencies: 90
+* GitHub: <https://github.com/mdsteiner/EFAtools>
+* Email: <mailto:markus.d.steiner@gmail.com>
+* GitHub mirror: <https://github.com/cran/EFAtools>
 
 Run `revdepcheck::revdep_details(, "EFAtools")` for more info
 
-</details>
-
 ## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  7.7Mb
-      sub-directories of 1Mb or more:
-        libs   6.3Mb
-    ```
 
 *   checking dependencies in R code ... NOTE
-    ```
-    Namespace in Imports field not imported from: ‘progress’
-      All declared Imports should be used.
-    ```
+     ```
+     Namespace in Imports field not imported from: ‘progress’
+       All declared Imports should be used.
+     ```
 
-# EGAnet
+# envi (1.0.1)
 
-<details>
-
-* Version: 2.3.0
-* GitHub: https://github.com/hfgolino/EGAnet
-* Source code: https://github.com/cran/EGAnet
-* Date/Publication: 2025-04-09 23:10:15 UTC
-* Number of recursive dependencies: 185
-
-Run `revdepcheck::revdep_details(, "EGAnet")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  6.2Mb
-      sub-directories of 1Mb or more:
-        R      1.5Mb
-        data   4.0Mb
-    ```
-
-# envi
-
-<details>
-
-* Version: 1.0.0
-* GitHub: https://github.com/lance-waller-lab/envi
-* Source code: https://github.com/cran/envi
-* Date/Publication: 2024-11-06 19:00:03 UTC
-* Number of recursive dependencies: 151
+* GitHub: <https://github.com/lance-waller-lab/envi>
+* Email: <mailto:ian.buller@alumni.emory.edu>
+* GitHub mirror: <https://github.com/cran/envi>
 
 Run `revdepcheck::revdep_details(, "envi")` for more info
-
-</details>
 
 ## In both
 
 *   checking whether package ‘envi’ can be installed ... WARNING
-    ```
-    Found the following significant warnings:
-      Warning: no DISPLAY variable so Tk is not available
-    See ‘/scratch/henrik/revdep/globals/checks/envi/new/envi.Rcheck/00install.out’ for details.
-    ```
+     ```
+     Found the following significant warnings:
+       Warning: no DISPLAY variable so Tk is not available
+     See ‘/scratch/henrik/revdep/globals/checks/envi/new/envi.Rcheck/00install.out’ for details.
+     ```
 
-# EpiNow2
+# evalITR (1.0.0)
 
-<details>
-
-* Version: 1.7.1
-* GitHub: https://github.com/epiforecasts/EpiNow2
-* Source code: https://github.com/cran/EpiNow2
-* Date/Publication: 2025-02-19 23:40:09 UTC
-* Number of recursive dependencies: 129
-
-Run `revdepcheck::revdep_details(, "EpiNow2")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... NOTE
-    ```
-    Package suggested but not available for checking: ‘cmdstanr’
-    ```
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is 265.7Mb
-      sub-directories of 1Mb or more:
-        R       1.5Mb
-        doc     1.5Mb
-        libs  261.1Mb
-    ```
-
-*   checking Rd cross-references ... NOTE
-    ```
-    Package unavailable to check Rd xrefs: ‘cmdstanr’
-    ```
-
-*   checking for GNU extensions in Makefiles ... NOTE
-    ```
-    GNU make is a SystemRequirements.
-    ```
-
-# epitweetr
-
-<details>
-
-* Version: 2.2.16
-* GitHub: https://github.com/EU-ECDC/epitweetr
-* Source code: https://github.com/cran/epitweetr
-* Date/Publication: 2023-11-15 09:30:08 UTC
-* Number of recursive dependencies: 146
-
-Run `revdepcheck::revdep_details(, "epitweetr")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... NOTE
-    ```
-    Package suggested but not available for checking: ‘taskscheduleR’
-    ```
-
-*   checking dependencies in R code ... NOTE
-    ```
-    Namespaces in Imports field not imported from:
-      ‘httpuv’ ‘knitr’ ‘plyr’ ‘tidyverse’ ‘xml2’
-      All declared Imports should be used.
-    ```
-
-# epoxy
-
-<details>
-
-* Version: 1.0.0
-* GitHub: https://github.com/gadenbuie/epoxy
-* Source code: https://github.com/cran/epoxy
-* Date/Publication: 2023-09-20 00:00:02 UTC
-* Number of recursive dependencies: 91
-
-Run `revdepcheck::revdep_details(, "epoxy")` for more info
-
-</details>
-
-## In both
-
-*   checking data for non-ASCII characters ... NOTE
-    ```
-      Note: found 1 marked UTF-8 string
-    ```
-
-# EQRN
-
-<details>
-
-* Version: 0.1.1
-* GitHub: https://github.com/opasche/EQRN
-* Source code: https://github.com/cran/EQRN
-* Date/Publication: 2025-03-17 20:40:02 UTC
-* Number of recursive dependencies: 39
-
-Run `revdepcheck::revdep_details(, "EQRN")` for more info
-
-</details>
-
-## In both
-
-*   checking examples ... ERROR
-    ```
-    Running examples in ‘EQRN-Ex.R’ failed
-    The error most likely occurred in:
-    
-    > ### Name: default_device
-    > ### Title: Default torch device
-    > ### Aliases: default_device
-    > 
-    > ### ** Examples
-    > 
-    > device <- default_device()
-    Error in cpp_cuda_is_available() : 
-      Lantern is not loaded. Please use `install_torch()` to install additional dependencies.
-    Calls: default_device -> <Anonymous> -> cpp_cuda_is_available
-    Execution halted
-    ```
-
-*   checking whether package ‘EQRN’ can be installed ... WARNING
-    ```
-    Found the following significant warnings:
-      Warning: ℹ torch failed to start, restart your R session to try again.
-    See ‘/scratch/henrik/revdep/globals/checks/EQRN/new/EQRN.Rcheck/00install.out’ for details.
-    ```
-
-# evalITR
-
-<details>
-
-* Version: 1.0.0
-* GitHub: https://github.com/MichaelLLi/evalITR
-* Source code: https://github.com/cran/evalITR
-* Date/Publication: 2023-08-25 23:10:06 UTC
-* Number of recursive dependencies: 165
+* GitHub: <https://github.com/MichaelLLi/evalITR>
+* Email: <mailto:mili@hbs.edu>
+* GitHub mirror: <https://github.com/cran/evalITR>
 
 Run `revdepcheck::revdep_details(, "evalITR")` for more info
 
-</details>
-
 ## In both
 
-*   checking package dependencies ... ERROR
-    ```
-    Packages required but not available: 'rqPen', 'bartCause'
-    
-    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
-    manual.
-    ```
+*   checking dependencies in R code ... NOTE
+     ```
+     Namespaces in Imports field not imported from:
+       ‘forcats’ ‘rqPen’ ‘utils’
+       All declared Imports should be used.
+     ```
 
-# EventDetectGUI
+# fastRhockey (0.4.0)
 
-<details>
-
-* Version: 0.3.0
-* GitHub: NA
-* Source code: https://github.com/cran/EventDetectGUI
-* Date/Publication: 2020-04-03 17:50:08 UTC
-* Number of recursive dependencies: 155
-
-Run `revdepcheck::revdep_details(, "EventDetectGUI")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... ERROR
-    ```
-    Package required but not available: ‘EventDetectR’
-    
-    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
-    manual.
-    ```
-
-# fastRhockey
-
-<details>
-
-* Version: 0.4.0
-* GitHub: https://github.com/sportsdataverse/fastRhockey
-* Source code: https://github.com/cran/fastRhockey
-* Date/Publication: 2022-10-25 20:55:15 UTC
-* Number of recursive dependencies: 113
+* GitHub: <https://github.com/sportsdataverse/fastRhockey>
+* Email: <mailto:saiem.gilani@gmail.com>
+* GitHub mirror: <https://github.com/cran/fastRhockey>
 
 Run `revdepcheck::revdep_details(, "fastRhockey")` for more info
 
-</details>
-
 ## In both
 
 *   checking Rd files ... NOTE
-    ```
-    checkRd: (-1) update_nhl_db.Rd:51-53: Lost braces in \itemize; meant \describe ?
-    checkRd: (-1) update_nhl_db.Rd:54-57: Lost braces in \itemize; meant \describe ?
-    checkRd: (-1) update_phf_db.Rd:51-53: Lost braces in \itemize; meant \describe ?
-    checkRd: (-1) update_phf_db.Rd:54-57: Lost braces in \itemize; meant \describe ?
-    ```
+     ```
+     checkRd: (-1) update_nhl_db.Rd:51-53: Lost braces in \itemize; meant \describe ?
+     checkRd: (-1) update_nhl_db.Rd:54-57: Lost braces in \itemize; meant \describe ?
+     checkRd: (-1) update_phf_db.Rd:51-53: Lost braces in \itemize; meant \describe ?
+     checkRd: (-1) update_phf_db.Rd:54-57: Lost braces in \itemize; meant \describe ?
+     ```
 
-# fdacluster
+# flowGraph (1.18.0)
 
-<details>
-
-* Version: 0.4.1
-* GitHub: https://github.com/astamm/fdacluster
-* Source code: https://github.com/cran/fdacluster
-* Date/Publication: 2025-01-14 16:50:09 UTC
-* Number of recursive dependencies: 124
-
-Run `revdepcheck::revdep_details(, "fdacluster")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is 24.0Mb
-      sub-directories of 1Mb or more:
-        R      2.1Mb
-        doc    1.5Mb
-        help   2.2Mb
-        libs  17.7Mb
-    ```
-
-# fect
-
-<details>
-
-* Version: 1.0.0
-* GitHub: NA
-* Source code: https://github.com/cran/fect
-* Date/Publication: 2022-10-14 09:52:32 UTC
-* Number of recursive dependencies: 67
-
-Run `revdepcheck::revdep_details(, "fect")` for more info
-
-</details>
-
-## In both
-
-*   checking C++ specification ... NOTE
-    ```
-      Specified C++11: please drop specification unless essential
-    ```
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is 14.8Mb
-      sub-directories of 1Mb or more:
-        libs  13.5Mb
-    ```
-
-*   checking dependencies in R code ... NOTE
-    ```
-    Namespace in Imports field not imported from: ‘panelView’
-      All declared Imports should be used.
-    ```
-
-# finetune
-
-<details>
-
-* Version: 1.2.0
-* GitHub: https://github.com/tidymodels/finetune
-* Source code: https://github.com/cran/finetune
-* Date/Publication: 2024-03-21 03:30:02 UTC
-* Number of recursive dependencies: 173
-
-Run `revdepcheck::revdep_details(, "finetune")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... NOTE
-    ```
-    Package suggested but not available for checking: ‘BradleyTerry2’
-    ```
-
-# finnts
-
-<details>
-
-* Version: 0.5.0
-* GitHub: https://github.com/microsoft/finnts
-* Source code: https://github.com/cran/finnts
-* Date/Publication: 2024-10-25 17:50:02 UTC
-* Number of recursive dependencies: 246
-
-Run `revdepcheck::revdep_details(, "finnts")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... NOTE
-    ```
-    Packages suggested but not available for checking:
-      'AzureStor', 'Microsoft365R'
-    ```
-
-# FLAMES
-
-<details>
-
-* Version: 2.0.2
-* GitHub: https://github.com/mritchielab/FLAMES
-* Source code: https://github.com/cran/FLAMES
-* Date/Publication: 2024-12-09
-* Number of recursive dependencies: 260
-
-Run `revdepcheck::revdep_details(, "FLAMES")` for more info
-
-</details>
-
-## In both
-
-*   checking examples ... ERROR
-    ```
-    Running examples in ‘FLAMES-Ex.R’ failed
-    The error most likely occurred in:
-    
-    > ### Name: create_sce_from_dir
-    > ### Title: Create 'SingleCellExperiment' object from 'FLAMES' output folder
-    > ### Aliases: create_sce_from_dir
-    > 
-    > ### ** Examples
-    > 
-    > outdir <- tempfile()
-    ...
-        return _find_and_load(name, import_)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-      File "/scratch/henrik/revdep/globals/checks/FLAMES/new/FLAMES.Rcheck/FLAMES/python/count_gene.py", line 8, in <module>
-        import pandas as pd
-      File "/scratch/henrik/revdep/globals/library/FLAMES/reticulate/python/rpytools/loader.py", line 122, in _find_and_load_hook
-        return _run_hook(name, _hook)
-               ^^^^^^^^^^^^^^^^^^^^^^
-      File "/scratch/henrik/revdep/globals/libra
-    Calls: <Anonymous> ... tryCatch -> tryCatchList -> tryCatchOne -> <Anonymous>
-    Execution halted
-    ```
-
-*   checking whether package ‘FLAMES’ can be installed ... NOTE
-    ```
-    Found the following notes/warnings:
-      Non-staged installation was used
-    See ‘/scratch/henrik/revdep/globals/checks/FLAMES/new/FLAMES.Rcheck/00install.out’ for details.
-    ```
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  8.6Mb
-      sub-directories of 1Mb or more:
-        data   4.0Mb
-        doc    2.0Mb
-        libs   1.4Mb
-    ```
-
-*   checking R code for possible problems ... NOTE
-    ```
-    create_spe: no visible binding for global variable 'barcode'
-    filter_coverage: no visible global function definition for
-      'starts_with'
-    filter_coverage: no visible binding for global variable 'filter_res'
-    find_barcode: no visible binding for global variable 'Sample'
-    find_barcode: no visible binding for global variable 'Outfile'
-    find_variants_grange: no visible binding for global variable
-      'which_label'
-    find_variants_grange: no visible binding for global variable
-      'nucleotide'
-    ...
-      filter_res gene_id head imageX imageY input label length_bin
-      max_length min_length multi-matching reads mutation_index n_reads
-      name nucleotide output pct pos read1_with_adapter read_counts ref
-      region single match reads starts_with total reads total_counts tr_id
-      tr_length transcript type undemultiplexted reads value which_label x
-      y
-    Consider adding
-      importFrom("base", "match", "single")
-      importFrom("utils", "head")
-    to your NAMESPACE file.
-    ```
-
-*   checking for GNU extensions in Makefiles ... NOTE
-    ```
-    GNU make is a SystemRequirements.
-    ```
-
-# flowGraph
-
-<details>
-
-* Version: 1.14.0
-* GitHub: https://github.com/aya49/flowGraph
-* Source code: https://github.com/cran/flowGraph
-* Date/Publication: 2024-10-29
-* Number of recursive dependencies: 90
+* GitHub: <https://github.com/aya49/flowGraph>
+* Email: <mailto:aya43@sfu.ca>
 
 Run `revdepcheck::revdep_details(, "flowGraph")` for more info
 
-</details>
-
 ## In both
 
 *   checking R code for possible problems ... NOTE
-    ```
-    get_child: no visible binding for global variable ‘no_cores’
-    get_paren: no visible binding for global variable ‘no_cores’
-    ms_psig: no visible binding for global variable ‘meta’
-    Undefined global functions or variables:
-      meta no_cores
-    ```
+     ```
+     get_child: no visible binding for global variable ‘no_cores’
+     get_paren: no visible binding for global variable ‘no_cores’
+     ms_psig: no visible binding for global variable ‘meta’
+     Undefined global functions or variables:
+       meta no_cores
+     ```
 
 *   checking Rd files ... NOTE
-    ```
-    checkRd: (-1) fg_get_graph.Rd:13: Lost braces
-        13 | A list containing two data frames (\code{v} and ]code{e})
-           |                                                      ^
-    checkRd: (-1) ggdf.Rd:22: Lost braces
-        22 | code{ggdf} adds to the data frames \code{v} and \code{e} in slot
-           |     ^
-    ```
+     ```
+     checkRd: (-1) fg_get_graph.Rd:13: Lost braces
+         13 | A list containing two data frames (\code{v} and ]code{e})
+            |                                                      ^
+     checkRd: (-1) ggdf.Rd:22: Lost braces
+         22 | code{ggdf} adds to the data frames \code{v} and \code{e} in slot
+            |     ^
+     ```
 
-*   checking Rd cross-references ... NOTE
-    ```
-    Package unavailable to check Rd xrefs: ‘doParallel’
-    ```
+# fmeffects (0.1.4)
 
-# flowml
+* GitHub: <https://github.com/holgstr/fmeffects>
+* Email: <mailto:hbj.loewe@gmail.com>
+* GitHub mirror: <https://github.com/cran/fmeffects>
 
-<details>
-
-* Version: 0.1.3
-* GitHub: https://github.com/Boehringer-Ingelheim/flowml
-* Source code: https://github.com/cran/flowml
-* Date/Publication: 2024-02-16 10:40:02 UTC
-* Number of recursive dependencies: 265
-
-Run `revdepcheck::revdep_details(, "flowml")` for more info
-
-</details>
+Run `revdepcheck::revdep_details(, "fmeffects")` for more info
 
 ## In both
 
-*   checking package dependencies ... NOTE
-    ```
-    Package suggested but not available for checking: ‘sda’
-    ```
+*   checking re-building of vignette outputs ... ERROR
+     ```
+     ...
+      50. │                   └─fmeffects (local) simpson(prediction.s, subintervals)
+      51. │                     └─fmeffects (local) f(0/s + m)
+      52. │                       └─predictor$predict(observation.t)
+      53. │                         ├─data.table::as.data.table(self$model$predict_newdata(newdata))
+      54. │                         └─self$model$predict_newdata(newdata)
+      55. │                           └─mlr3:::.__Learner__predict_newdata(...)
+      56. └─mlr3 (local) `<fn>`(base::quote(`<named list>`))
+      57.   └─mlr3:::.__Task__col_roles(...)
+      58.     └─checkmate::assert_names(names(rhs), "unique", permutation.of = mlr_reflections$task_col_roles[[self$task_type]])
+      59.       └─checkmate::makeAssertion(x, res, .var.name, add)
+      60.         └─checkmate:::mstop(...)
+      61.           └─base::stop(simpleError(sprintf(msg, ...), call.))
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     
+     Error: processing vignette 'fmeffects.Rmd' failed with diagnostics:
+     ℹ In index: 1.
+     Caused by error in `.__Task__col_roles()`:
+     ! Assertion on 'names(rhs)' failed: Names must be a permutation of set {'feature','target','name','order','stratum','group','offset','weights_learner','weights_measure'}, but has extra elements {'always_included'}.
+     --- failed re-building ‘fmeffects.Rmd’
+     
+     SUMMARY: processing the following file failed:
+       ‘fmeffects.Rmd’
+     
+     Error: Vignette re-building failed.
+     Execution halted
+     ```
 
-# forecastML
+# forecastML (0.9.0)
 
-<details>
-
-* Version: 0.9.0
-* GitHub: https://github.com/nredell/forecastML
-* Source code: https://github.com/cran/forecastML
-* Date/Publication: 2020-05-07 15:10:17 UTC
-* Number of recursive dependencies: 101
+* GitHub: <https://github.com/nredell/forecastML>
+* Email: <mailto:nickalusredell@gmail.com>
+* GitHub mirror: <https://github.com/cran/forecastML>
 
 Run `revdepcheck::revdep_details(, "forecastML")` for more info
 
-</details>
-
 ## In both
 
+*   checking re-building of vignette outputs ... ERROR
+     ```
+     ...
+     ---
+     Backtrace:
+         ▆
+      1. ├─base::summary(model_results_cv$horizon_1$window_1$model)
+      2. └─base::summary.default(model_results_cv$horizon_1$window_1$model)
+      3.   └─base::array(...)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     
+     Error: processing vignette 'grouped_forecast.Rmd' failed with diagnostics:
+     length of 'dimnames' [1] not equal to array extent
+     --- failed re-building ‘grouped_forecast.Rmd’
+     
+     --- re-building ‘lagged_features.Rmd’ using rmarkdown
+     [WARNING] Deprecated: --highlight-style. Use --syntax-highlighting instead.
+     --- finished re-building ‘lagged_features.Rmd’
+     
+     --- re-building ‘package_overview.Rmd’ using rmarkdown
+     [WARNING] Deprecated: --highlight-style. Use --syntax-highlighting instead.
+     --- finished re-building ‘package_overview.Rmd’
+     
+     SUMMARY: processing the following file failed:
+       ‘grouped_forecast.Rmd’
+     
+     Error: Vignette re-building failed.
+     Execution halted
+     ```
+
 *   checking dependencies in R code ... NOTE
-    ```
-    Namespace in Imports field not imported from: ‘dtplyr’
-      All declared Imports should be used.
-    ```
+     ```
+     Namespace in Imports field not imported from: ‘dtplyr’
+       All declared Imports should be used.
+     ```
 
-# GeDS
+# GeDS (0.3.3)
 
-<details>
-
-* Version: 0.3.1
-* GitHub: https://github.com/emilioluissaenzguillen/GeDS
-* Source code: https://github.com/cran/GeDS
-* Date/Publication: 2025-04-22 07:30:06 UTC
-* Number of recursive dependencies: 74
+* GitHub: <https://github.com/emilioluissaenzguillen/GeDS>
+* Email: <mailto:Emilio.Saenz-Guillen@citystgeorges.ac.uk>
+* GitHub mirror: <https://github.com/cran/GeDS>
 
 Run `revdepcheck::revdep_details(, "GeDS")` for more info
-
-</details>
 
 ## In both
 
 *   checking whether package ‘GeDS’ can be installed ... WARNING
-    ```
-    Found the following significant warnings:
-      Warning: no DISPLAY variable so Tk is not available
-    See ‘/scratch/henrik/revdep/globals/checks/GeDS/new/GeDS.Rcheck/00install.out’ for details.
-    ```
+     ```
+     Found the following significant warnings:
+       Warning: no DISPLAY variable so Tk is not available
+     See ‘/scratch/henrik/revdep/globals/checks/GeDS/new/GeDS.Rcheck/00install.out’ for details.
+     ```
 
-# geocmeans
+# geospark (0.3.1)
 
-<details>
-
-* Version: 0.3.4
-* GitHub: https://github.com/JeremyGelb/geocmeans
-* Source code: https://github.com/cran/geocmeans
-* Date/Publication: 2023-09-12 03:10:02 UTC
-* Number of recursive dependencies: 207
-
-Run `revdepcheck::revdep_details(, "geocmeans")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is 14.5Mb
-      sub-directories of 1Mb or more:
-        extdata   3.0Mb
-        libs      9.1Mb
-    ```
-
-# geohabnet
-
-<details>
-
-* Version: 2.1.3
-* GitHub: https://github.com/GarrettLab/HabitatConnectivity
-* Source code: https://github.com/cran/geohabnet
-* Date/Publication: 2024-06-27 11:50:02 UTC
-* Number of recursive dependencies: 142
-
-Run `revdepcheck::revdep_details(, "geohabnet")` for more info
-
-</details>
-
-## In both
-
-*   checking tests ...
-    ```
-      Running ‘testthat.R’
-     ERROR
-    Running the tests in ‘tests/testthat.R’ failed.
-    Complete output:
-      > # This file is part of the standard setup for testthat.
-      > # It is recommended that you do not modify it.
-      > #
-      > # Where should you do additional test configuration?
-      > # Learn more about the roles of various files in:
-      > # * https://r-pkgs.org/tests.html
-    ...
-        9.   └─geohabnet::get_rasters(cparams$`CCRI parameters`$Hosts)
-       10.     └─geohabnet::crops_rast(hosts)
-       11.       └─future.apply::future_lapply(...)
-       12.         └─future.apply:::future_xapply(...)
-       13.           ├─future::value(fs)
-       14.           └─future:::value.list(fs)
-      
-      [ FAIL 2 | WARN 0 | SKIP 0 | PASS 16 ]
-      Error: Test failures
-      Execution halted
-    ```
-
-*   checking re-building of vignette outputs ... ERROR
-    ```
-    Error(s) in re-building vignettes:
-    --- re-building ‘LinkWeightsAnalysis.Rmd’ using rmarkdown
-    trying URL 'https://s3.us-east-2.amazonaws.com/earthstatdata/HarvestedAreaYield175Crops_Indvidual_Geotiff/potato_HarvAreaYield_Geotiff.zip'
-    
-    Quitting from LinkWeightsAnalysis.Rmd:34-43 [run]
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    <error/rlang_error>
-    Error in `.getClassesFromCache()`:
-    ! class should be either a character-string name or a class definition
-    ---
-    ...
-    
-    Error: processing vignette 'analysis.Rmd' failed with diagnostics:
-    unable to find an inherited method for function 'wrap' for signature 'x = "NULL"'
-    --- failed re-building ‘analysis.Rmd’
-    
-    SUMMARY: processing the following files failed:
-      ‘LinkWeightsAnalysis.Rmd’ ‘analysis.Rmd’
-    
-    Error: Vignette re-building failed.
-    Execution halted
-    ```
-
-# GeoModels
-
-<details>
-
-* Version: 2.1.3
-* GitHub: https://github.com/vmoprojs/GeoModels
-* Source code: https://github.com/cran/GeoModels
-* Date/Publication: 2025-05-02 16:00:05 UTC
-* Number of recursive dependencies: 54
-
-Run `revdepcheck::revdep_details(, "GeoModels")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  5.6Mb
-      sub-directories of 1Mb or more:
-        R      1.5Mb
-        libs   2.8Mb
-    ```
-
-# geospark
-
-<details>
-
-* Version: 0.3.1
-* GitHub: https://github.com/harryprince/geospark
-* Source code: https://github.com/cran/geospark
-* Date/Publication: 2020-03-02 05:40:02 UTC
-* Number of recursive dependencies: 58
+* GitHub: <https://github.com/harryprince/geospark>
+* Email: <mailto:7harryprince@gmail.com>
+* GitHub mirror: <https://github.com/cran/geospark>
 
 Run `revdepcheck::revdep_details(, "geospark")` for more info
 
-</details>
-
 ## In both
 
 *   checking dependencies in R code ... NOTE
-    ```
-    Namespace in Imports field not imported from: ‘dbplyr’
-      All declared Imports should be used.
-    ```
+     ```
+     Namespace in Imports field not imported from: ‘dbplyr’
+       All declared Imports should be used.
+     ```
 
-*   checking LazyData ... NOTE
-    ```
-      'LazyData' is specified without a 'data' directory
-    ```
+# googleTagManageR (0.2.0)
 
-# googleComputeEngineR
-
-<details>
-
-* Version: 0.3.0
-* GitHub: https://github.com/cloudyr/googleComputeEngineR
-* Source code: https://github.com/cran/googleComputeEngineR
-* Date/Publication: 2019-05-04 22:40:02 UTC
-* Number of recursive dependencies: 59
-
-Run `revdepcheck::revdep_details(, "googleComputeEngineR")` for more info
-
-</details>
-
-## In both
-
-*   checking Rd files ... NOTE
-    ```
-    checkRd: (-1) docker_cmd.gce_instance.Rd:21: Lost braces; missing escapes or markup?
-        21 | \item{nvidia}{If true will use \code{nvidia-docker} instead of {docker}}
-           |                                                                ^
-    checkRd: (-1) gce_list_disks.Rd:11: Lost braces; missing escapes or markup?
-        11 | \item{filter}{Sets a filter expression for filtering listed resources, in the form filter={expression}}
-           |                                                                                           ^
-    checkRd: (-1) gce_list_disks_all.Rd:11: Lost braces; missing escapes or markup?
-        11 | \item{filter}{Sets a filter expression for filtering listed resources, in the form filter={expression}}
-           |                                                                                           ^
-    checkRd: (-1) gce_list_firewall_rules.Rd:11: Lost braces; missing escapes or markup?
-    ...
-           |                                                                                           ^
-    checkRd: (-1) gce_list_networks.Rd:11: Lost braces; missing escapes or markup?
-        11 | \item{filter}{Sets a filter expression for filtering listed resources, in the form filter={expression}}
-           |                                                                                           ^
-    checkRd: (-1) gce_list_zone_op.Rd:11: Lost braces; missing escapes or markup?
-        11 | \item{filter}{Sets a filter expression for filtering listed resources, in the form filter={expression}}
-           |                                                                                           ^
-    checkRd: (-1) gce_list_zones.Rd:13: Lost braces; missing escapes or markup?
-        13 | \item{filter}{Sets a filter expression for filtering listed resources, in the form filter={expression}}
-           |                                                                                           ^
-    ```
-
-*   checking LazyData ... NOTE
-    ```
-      'LazyData' is specified without a 'data' directory
-    ```
-
-# googleTagManageR
-
-<details>
-
-* Version: 0.2.0
-* GitHub: NA
-* Source code: https://github.com/cran/googleTagManageR
-* Date/Publication: 2022-04-16 18:12:29 UTC
-* Number of recursive dependencies: 67
+* Email: <mailto:r@jamescottrill.co.uk>
+* GitHub mirror: <https://github.com/cran/googleTagManageR>
 
 Run `revdepcheck::revdep_details(, "googleTagManageR")` for more info
 
-</details>
-
 ## In both
 
 *   checking dependencies in R code ... NOTE
-    ```
-    Namespaces in Imports field not imported from:
-      ‘assertthat’ ‘future’ ‘httr’
-      All declared Imports should be used.
-    ```
+     ```
+     Namespaces in Imports field not imported from:
+       ‘assertthat’ ‘future’ ‘httr’
+       All declared Imports should be used.
+     ```
 
-# gptstudio
+# gptstudio (0.4.0)
 
-<details>
-
-* Version: 0.4.0
-* GitHub: https://github.com/MichelNivard/gptstudio
-* Source code: https://github.com/cran/gptstudio
-* Date/Publication: 2024-05-21 11:21:21 UTC
-* Number of recursive dependencies: 94
+* GitHub: <https://github.com/MichelNivard/gptstudio>
+* Email: <mailto:github@jameshwade.com>
+* GitHub mirror: <https://github.com/cran/gptstudio>
 
 Run `revdepcheck::revdep_details(, "gptstudio")` for more info
 
-</details>
-
 ## In both
 
 *   checking examples ... ERROR
-    ```
-    Running examples in ‘gptstudio-Ex.R’ failed
-    The error most likely occurred in:
-    
-    > ### Name: gptstudio_sitrep
-    > ### Title: Current Configuration for gptstudio
-    > ### Aliases: gptstudio_sitrep
-    > 
-    > ### ** Examples
-    > 
-    > gptstudio_sitrep(verbose = FALSE) # Print basic settings, no API checks
-    ...
-    35. httr2:::check_response(resp)
-    36. httr2:::is_response(resp)
-    37. httr2::req_perform(request)
-    38. httr2:::handle_resp(req, resp, error_call = error_call)
-    39. rlang::cnd_signal(cnd)
-    40. rlang:::signal_abort(cnd)
-    41. base::signalCondition(cnd)
-    42. | (function (e) …
-    43. | cli:::throw_error(err, parent = e)
-    Execution halted
-    ```
+     ```
+     ...
+     20. cli::cli_alert_danger(cnd)
+     21. cli:::cli__message("alert_danger", list(text = glue_cmd(text, .envir = .envir, …
+     22. "id" %in% names(args)
+     23. cli:::glue_cmd(text, .envir = .envir, .call = sys.call())
+     24. cli:::glue(str, .envir = .envir, .transformer = transformer, .cli = TRUE, …
+     25. (function (expr) …
+     26. .transformer(expr, .envir) %||% character()
+     27. local .transformer(expr, .envir)
+     28. eval(expr, envir = envir) %??% cli_error(call. = caller, "Could not evalua…
+     29. cli:::chain_error(expr, err, srcref = utils::getSrcref(sys.call()))
+     30. | base::withCallingHandlers({ …
+     31. base::eval(expr, envir = envir)
+     32. base::eval(expr, envir = envir)
+     33. req_perform(request) %>% resp_body_string()
+     34. httr2::resp_body_string(.)
+     35. httr2:::check_response(resp)
+     36. httr2:::is_response(resp)
+     37. httr2::req_perform(request)
+     38. httr2:::handle_resp(req, resp, error_call = error_call)
+     39. rlang::cnd_signal(cnd)
+     40. rlang:::signal_abort(cnd)
+     41. base::signalCondition(cnd)
+     42. | (function (e) …
+     43. | cli:::throw_error(err, parent = e)
+     Execution halted
+     ```
 
-*   checking package dependencies ... NOTE
-    ```
-    Package suggested but not available for checking: ‘AzureRMR’
-    ```
+*   checking DESCRIPTION meta-information ... NOTE
+     ```
+       Missing dependency on R >= 4.1.0 because package code uses the pipe
+       |> or function shorthand \(...) syntax added in R 4.1.0.
+       File(s) using such syntax:
+         ‘service-cohere.R’
+     ```
 
-# grapesAgri1
+# grapesAgri1 (1.1.0)
 
-<details>
-
-* Version: 1.1.0
-* GitHub: https://github.com/pratheesh3780/grapesAgri1
-* Source code: https://github.com/cran/grapesAgri1
-* Date/Publication: 2021-08-14 12:50:02 UTC
-* Number of recursive dependencies: 167
+* GitHub: <https://github.com/pratheesh3780/grapesAgri1>
+* Email: <mailto:grapescoa@gmail.com>
+* GitHub mirror: <https://github.com/cran/grapesAgri1>
 
 Run `revdepcheck::revdep_details(, "grapesAgri1")` for more info
 
-</details>
-
 ## In both
 
-*   checking package dependencies ... ERROR
-    ```
-    Packages required but not available: 'summarytools', 'agricolae'
-    
-    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
-    manual.
-    ```
-
-# graphframes
-
-<details>
-
-* Version: 0.1.2
-* GitHub: https://github.com/rstudio/graphframes
-* Source code: https://github.com/cran/graphframes
-* Date/Publication: 2018-10-30 19:20:03 UTC
-* Number of recursive dependencies: 59
-
-Run `revdepcheck::revdep_details(, "graphframes")` for more info
-
-</details>
-
-## In both
-
-*   checking LazyData ... NOTE
-    ```
-      'LazyData' is specified without a 'data' directory
-    ```
-
-# greed
-
-<details>
-
-* Version: 0.6.1
-* GitHub: https://github.com/comeetie/greed
-* Source code: https://github.com/cran/greed
-* Date/Publication: 2022-10-03 22:00:05 UTC
-* Number of recursive dependencies: 94
-
-Run `revdepcheck::revdep_details(, "greed")` for more info
-
-</details>
-
-## In both
-
-*   checking C++ specification ... NOTE
-    ```
-      Specified C++11: please drop specification unless essential
-    ```
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is 39.7Mb
-      sub-directories of 1Mb or more:
-        data   2.0Mb
-        libs  36.3Mb
-    ```
-
-*   checking data for non-ASCII characters ... NOTE
-    ```
-      Note: found 989 marked UTF-8 strings
-    ```
-
-# greta
-
-<details>
-
-* Version: 0.5.0
-* GitHub: https://github.com/greta-dev/greta
-* Source code: https://github.com/cran/greta
-* Date/Publication: 2024-11-12 06:40:02 UTC
-* Number of recursive dependencies: 144
-
-Run `revdepcheck::revdep_details(, "greta")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  5.1Mb
-      sub-directories of 1Mb or more:
-        R   3.5Mb
-    ```
-
-# gsynth
-
-<details>
-
-* Version: 1.2.1
-* GitHub: NA
-* Source code: https://github.com/cran/gsynth
-* Date/Publication: 2021-08-06 07:50:05 UTC
-* Number of recursive dependencies: 63
-
-Run `revdepcheck::revdep_details(, "gsynth")` for more info
-
-</details>
-
-## In both
-
-*   checking C++ specification ... NOTE
-    ```
-      Specified C++11: please drop specification unless essential
-    ```
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  5.7Mb
-      sub-directories of 1Mb or more:
-        libs   5.3Mb
-    ```
-
-# gtfs2emis
-
-<details>
-
-* Version: 0.1.1
-* GitHub: https://github.com/ipeaGIT/gtfs2emis
-* Source code: https://github.com/cran/gtfs2emis
-* Date/Publication: 2024-12-02 15:40:12 UTC
-* Number of recursive dependencies: 92
-
-Run `revdepcheck::revdep_details(, "gtfs2emis")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  5.4Mb
-      sub-directories of 1Mb or more:
-        data   3.5Mb
-    ```
-
-# gtfs2gps
-
-<details>
-
-* Version: 2.1-2
-* GitHub: https://github.com/ipeaGIT/gtfs2gps
-* Source code: https://github.com/cran/gtfs2gps
-* Date/Publication: 2024-10-08 07:00:06 UTC
-* Number of recursive dependencies: 87
-
-Run `revdepcheck::revdep_details(, "gtfs2gps")` for more info
-
-</details>
-
-## In both
-
-*   checking tests ...
-    ```
-      Running ‘testthat.R’
-     ERROR
-    Running the tests in ‘tests/testthat.R’ failed.
-    Complete output:
-      > library(testthat)
-      > library(gtfs2gps)
-      gtfs2gps version 2.1-2 is now loaded
-      NOTE: All filter functions from gtfs2gps were removed
-      Please replace them by similar functions from gtfstools
-      > 
-    ...
-       4.     └─terra (local) .local(x, ...)
-       5.       ├─terra::makeValid(x)
-       6.       └─terra::makeValid(x)
-       7.         └─terra (local) .local(x, ...)
-       8.           └─terra:::messages(x)
-       9.             └─terra:::error(f, x@pntr$getError())
-      
-      [ FAIL 1 | WARN 28 | SKIP 0 | PASS 119 ]
-      Error: Test failures
-      Execution halted
-    ```
-
-# hacksig
-
-<details>
-
-* Version: 0.1.2
-* GitHub: https://github.com/Acare/hacksig
-* Source code: https://github.com/cran/hacksig
-* Date/Publication: 2022-02-17 14:22:02 UTC
-* Number of recursive dependencies: 73
-
-Run `revdepcheck::revdep_details(, "hacksig")` for more info
-
-</details>
-
-## In both
-
-*   checking re-building of vignette outputs ... ERROR
-    ```
-    Error(s) in re-building vignettes:
-    --- re-building ‘hacksig.Rmd’ using rmarkdown
-    
-    Quitting from hacksig.Rmd:215-225 [unnamed-chunk-19]
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    <error/rlang_error>
-    Error in `msigdbr()`:
-    ! Unknown subcollection.
-    ---
-    Backtrace:
-    ...
-    
-    Error: processing vignette 'hacksig.Rmd' failed with diagnostics:
-    Unknown subcollection.
-    --- failed re-building ‘hacksig.Rmd’
-    
-    SUMMARY: processing the following file failed:
-      ‘hacksig.Rmd’
-    
-    Error: Vignette re-building failed.
-    Execution halted
-    ```
-
-# hal9001
-
-<details>
-
-* Version: 0.4.6
-* GitHub: https://github.com/tlverse/hal9001
-* Source code: https://github.com/cran/hal9001
-* Date/Publication: 2023-11-14 15:00:02 UTC
-* Number of recursive dependencies: 96
-
-Run `revdepcheck::revdep_details(, "hal9001")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  5.4Mb
-      sub-directories of 1Mb or more:
-        libs   4.9Mb
-    ```
-
-# hbamr
-
-<details>
-
-* Version: 2.4.2
-* GitHub: https://github.com/jbolstad/hbamr
-* Source code: https://github.com/cran/hbamr
-* Date/Publication: 2025-03-05 11:40:03 UTC
-* Number of recursive dependencies: 89
-
-Run `revdepcheck::revdep_details(, "hbamr")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is 92.1Mb
-      sub-directories of 1Mb or more:
-        libs  90.7Mb
-    ```
-
-*   checking for GNU extensions in Makefiles ... NOTE
-    ```
-    GNU make is a SystemRequirements.
-    ```
-
-# healthyR.ts
-
-<details>
-
-* Version: 0.3.1
-* GitHub: https://github.com/spsanderson/healthyR.ts
-* Source code: https://github.com/cran/healthyR.ts
-* Date/Publication: 2024-10-11 23:00:03 UTC
-* Number of recursive dependencies: 210
-
-Run `revdepcheck::revdep_details(, "healthyR.ts")` for more info
-
-</details>
+*   checking dependencies in R code ... NOTE
+     ```
+     Namespaces in Imports field not imported from:
+       ‘Hmisc’ ‘PairedData’ ‘RColorBrewer’ ‘agricolae’ ‘corrplot’ ‘desplot’
+       ‘dplyr’ ‘ggplot2’ ‘ggpubr’ ‘gridGraphics’ ‘gtools’ ‘kableExtra’
+       ‘knitr’ ‘magrittr’ ‘pastecs’ ‘reshape2’ ‘rmarkdown’ ‘shinyWidgets’
+       ‘summarytools’
+       All declared Imports should be used.
+     ```
+
+*   checking Rd files ... NOTE
+     ```
+     checkRd: (-1) corrApp.Rd:40: Escaped LaTeX specials: \&
+     checkRd: (-1) crdApp.Rd:46: Escaped LaTeX specials: \&
+     checkRd: (-1) descApp.Rd:55: Escaped LaTeX specials: \&
+     checkRd: (-1) layoutApp.Rd:50: Escaped LaTeX specials: \&
+     checkRd: (-1) rbdApp.Rd:46: Escaped LaTeX specials: \&
+     checkRd: (-1) ttApp.Rd:43: Escaped LaTeX specials: \&
+     ```
+
+# greenSD (0.1.1)
+
+* GitHub: <https://github.com/billbillbilly/greenSD>
+* Email: <mailto:xiaohaoy111@gmail.com>
+* GitHub mirror: <https://github.com/cran/greenSD>
+
+Run `revdepcheck::revdep_details(, "greenSD")` for more info
 
 ## In both
 
 *   checking examples ... ERROR
-    ```
-    Running examples in ‘healthyR.ts-Ex.R’ failed
-    The error most likely occurred in:
-    
-    > ### Name: tidy_fft
-    > ### Title: Tidy Style FFT
-    > ### Aliases: tidy_fft
-    > 
-    > ### ** Examples
-    > 
-    > suppressPackageStartupMessages(library(dplyr))
-    ...
-    > a <- tidy_fft(
-    +   .data = data_tbl,
-    +   .value_col = value,
-    +   .date_col = date_col,
-    +   .harmonics = 3,
-    +   .frequency = 12
-    + )
-    Error in loadNamespace(x) : there is no package called ‘TSA’
-    Calls: tidy_fft ... loadNamespace -> withRestarts -> withOneRestart -> doWithOneRestart
-    Execution halted
-    ```
+     ```
+     ...
+     1008                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Boca del R\x92o, La Antigua, Manlio Fabio Altamirano, Medell\x92n, Veracruz
+     1009                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Matamoros, Cameron
+     1010                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       Amozoc, Atlixco, Coronango, Cuautinch\x87n, Cuautlancingo, Juan C. Bonilla, Nealtican, Ocoyucan, Puebla, San Andr\x8es Cholula, San Gregorio Atzompa, San Jer\x97nimo Tecuanipan, San Miguel Xoxtla, San Pedro Cholula, Santa Isabel Cholula, Tianguismanalco, Tlaltenango, Nat\x92vitas, Tepetitla de Lardiz\x87bal, Zacatelco
+     1011                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        R\x92o Bravo, Reynosa, Hidalgo
+     1012                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              Pachuca de Soto, San Agust\x92n Tlaxiaca
+     1013                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Alvaro Obreg\x97n, Azcapotzalco, Benito Ju\x87rez, Coyoac\x87n, Cuajimalpa de Morelos, Cuauht\x8emoc, Gustavo A. Madero, Iztacalco, Iztapalapa, Magdalena Contreras, Miguel Hidalgo, Tl\x87huac, Tlalpan, Venustiano Carranza, Xochimilco, Acolman, Atenco, Atizap\x87n de Zaragoza, Chalco, Chicoloapan, Chimalhuac\x87n, Coacalco de Berrioz\x87bal, Coyotepec, Cuautitl\x87n Izcalli, Cuautitl\x87n, Ecatepec de Morelos, Huehuetoca, Huixquilucan, Isidro Fabela, Ixtapaluca, Jaltenco, Jilotzingo, La Paz, Melchor Ocampo, Naucalpan de Ju\x87rez, Nextlalpan, Nezahualc\x97yotl, Nicol\x87s Romero, Tec\x87mac, Teoloyuc\x87n, Teotihuac\x87n, Tepotzotl\x87n, Texcoco, Timilpan, Tlalnepantla, Tultepec, Tultitl\x87n, Zumpango
+     1014                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Cuernavaca, Huitzilac, Jiutepec, Miacatl\x87n, Temixco, Xochitepec
+     1015                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Almoloya de Ju\x87rez, Lerma, Otzolotepec, Temoaya, Toluca, Xonacatl\x87n, Zinacatepec
+     1016                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         Apodaca, Carmen, Garc\x92a, General Escobedo, Guadalupe, Ju\x87rez, Monterrey, Pesquer\x92a, San Nicol\x87s de los Garza, San Pedro Garza Garc\x92a, Santa Catarina, Santiago
+     1017                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              Corregidora, El Marqu\x8es, Quer\x8etaro
+     1018                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       Arteaga, Ramos Arizpe, Saltillo
+     1019                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Mexquitic de Carmona, San Luis Potos\x92, Soledad de Graciano S\x87nchez, Villa de Reyes, Zaragoza
+     1020                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               Le\x97n
+     1021                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     Aguascalientes, Jes\x9cs Mar\x92a
+     1022                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            El Salto, Guadalajara, Ixtlahuac\x87n del R\x92o, Tlajomulco de Z\x9c\x96iga, Tlaquepaque, Tonal\x87, Zapopan, Zapotlanejo
+     1023                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Matamoros, Torre\x97n, Viesca, G\x97mez Palacio, Lerdo
+     1024                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          Aquiles Serd\x87n, Chihuahua
+     1025                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Ju\x87rez, El Paso
+     1026                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Hermosillo
+     1027                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Mexicali, Imperial
+     1028                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Tijuana, San Diego
+     > boundary <- check_urban_boundary(uid = 11)
+     Warning: GDAL/OGR not compiled with libcurl support, remote requests not supported. (GDAL error 6)
+     Error: Cannot open "https://raw.githubusercontent.com/billbillbilly/greenSD/main/scripts/city_urban_boundaries.geojson"; The file doesn't seem to exist.
+     Execution halted
+     ```
 
-*   checking re-building of vignette outputs ... ERROR
-    ```
-    Error(s) in re-building vignettes:
-    --- re-building ‘getting-started.Rmd’ using rmarkdown
-    --- finished re-building ‘getting-started.Rmd’
-    
-    --- re-building ‘using-tidy-fft.Rmd’ using rmarkdown
-    
-    Quitting from using-tidy-fft.Rmd:108-117 [run_func]
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    <error/rlang_error>
-    Error in `loadNamespace()`:
-    ...
-    
-    Error: processing vignette 'using-tidy-fft.Rmd' failed with diagnostics:
-    there is no package called 'TSA'
-    --- failed re-building ‘using-tidy-fft.Rmd’
-    
-    SUMMARY: processing the following file failed:
-      ‘using-tidy-fft.Rmd’
-    
-    Error: Vignette re-building failed.
-    Execution halted
-    ```
+# hero (0.6)
 
-*   checking package dependencies ... NOTE
-    ```
-    Package suggested but not available for checking: ‘TSA’
-    ```
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  6.3Mb
-      sub-directories of 1Mb or more:
-        doc   5.3Mb
-    ```
-
-# hero
-
-<details>
-
-* Version: 0.6
-* GitHub: NA
-* Source code: https://github.com/cran/hero
-* Date/Publication: 2023-07-15 21:10:09 UTC
-* Number of recursive dependencies: 157
+* Email: <mailto:joshua.french@ucdenver.edu>
+* GitHub mirror: <https://github.com/cran/hero>
 
 Run `revdepcheck::revdep_details(, "hero")` for more info
 
-</details>
-
 ## In both
-
-*   checking dependencies in R code ... NOTE
-    ```
-    [c4-n43:2576248] OPAL ERROR: Not initialized in file ext2x_client.c at line 112
-    --------------------------------------------------------------------------
-    The application appears to have been direct launched using "srun",
-    but OMPI was not built with SLURM's PMI support and therefore cannot
-    execute. There are several options for building PMI support under
-    SLURM, depending upon the SLURM version you are using:
-    
-      version 16.05 or later: you can use SLURM's PMIx support. This
-      requires that you configure and build SLURM --with-pmix.
-    
-      Versions earlier than 16.05: you must use either SLURM's PMI-1 or
-      PMI-2 support. SLURM builds PMI-1 by default, or you can manually
-      install PMI-2. You must then build Open MPI using --with-pmi pointing
-      to the SLURM PMI library location.
-    
-    Please configure as appropriate and try again.
-    --------------------------------------------------------------------------
-    ```
 
 *   checking Rd files ... NOTE
-    ```
-    checkRd: (-1) hero.Rd:67-68: Lost braces
-        67 | then \code{\link[pbapply]{pblapply}} is used. If code{package ==
-           |                                                      ^
-    checkRd: (-1) hero.Rd:69: Lost braces
-        69 | code{package == "Rmpi"}, then \code{\link[Rmpi]{mpi.applyLB}} is used.}
-           |     ^
-    ```
+     ```
+     checkRd: (-1) hero.Rd:67-68: Lost braces
+         67 | then \code{\link[pbapply]{pblapply}} is used. If code{package ==
+            |                                                      ^
+     checkRd: (-1) hero.Rd:69: Lost braces
+         69 | code{package == "Rmpi"}, then \code{\link[Rmpi]{mpi.applyLB}} is used.}
+            |     ^
+     ```
 
-# heterogen
+# igvShiny (1.6.0)
 
-<details>
-
-* Version: 1.2.33
-* GitHub: https://github.com/patauchi/heterogen
-* Source code: https://github.com/cran/heterogen
-* Date/Publication: 2023-08-17 07:42:33 UTC
-* Number of recursive dependencies: 53
-
-Run `revdepcheck::revdep_details(, "heterogen")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  8.8Mb
-      sub-directories of 1Mb or more:
-        extdata   2.6Mb
-        libs      6.0Mb
-    ```
-
-# hgwrr
-
-<details>
-
-* Version: 0.6-1
-* GitHub: https://github.com/HPDell/hgwrr
-* Source code: https://github.com/cran/hgwrr
-* Date/Publication: 2024-11-16 11:50:02 UTC
-* Number of recursive dependencies: 63
-
-Run `revdepcheck::revdep_details(, "hgwrr")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  9.5Mb
-      sub-directories of 1Mb or more:
-        libs   8.4Mb
-    ```
-
-*   checking Rd cross-references ... NOTE
-    ```
-    Package unavailable to check Rd xrefs: ‘lme4’
-    ```
-
-# historicalborrowlong
-
-<details>
-
-* Version: 0.1.0
-* GitHub: https://github.com/wlandau/historicalborrowlong
-* Source code: https://github.com/cran/historicalborrowlong
-* Date/Publication: 2024-09-25 17:40:05 UTC
-* Number of recursive dependencies: 106
-
-Run `revdepcheck::revdep_details(, "historicalborrowlong")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... ERROR
-    ```
-    Package required but not available: ‘trialr’
-    
-    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
-    manual.
-    ```
-
-# hoopR
-
-<details>
-
-* Version: 2.1.0
-* GitHub: https://github.com/sportsdataverse/hoopR
-* Source code: https://github.com/cran/hoopR
-* Date/Publication: 2023-11-25 23:40:20 UTC
-* Number of recursive dependencies: 113
-
-Run `revdepcheck::revdep_details(, "hoopR")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  5.2Mb
-      sub-directories of 1Mb or more:
-        R      1.5Mb
-        help   3.5Mb
-    ```
-
-# httpgd
-
-<details>
-
-* Version: 2.0.4
-* GitHub: https://github.com/nx10/httpgd
-* Source code: https://github.com/cran/httpgd
-* Date/Publication: 2025-03-16 00:50:01 UTC
-* Number of recursive dependencies: 59
-
-Run `revdepcheck::revdep_details(, "httpgd")` for more info
-
-</details>
-
-## In both
-
-*   checking tests ...
-    ```
-      Running ‘testthat.R’/software/c4/cbi/software/_rocky8/R-4.4.3-gcc13/lib64/R/bin/BATCH: line 60: 2398741 Aborted                 (core dumped) ${R_HOME}/bin/R -f ${in} ${opts} ${R_BATCH_OPTIONS} > ${out} 2>&1
-    
-     ERROR
-    Running the tests in ‘tests/testthat.R’ failed.
-    Complete output:
-      > library(testthat)
-      > library(httpgd)
-      > 
-      > test_check("httpgd")
-      terminate called after throwing an instance of 'std::system_error'
-        what():  epoll: Too many open files
-    ```
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is 12.4Mb
-      sub-directories of 1Mb or more:
-        libs  11.8Mb
-    ```
-
-# hwep
-
-<details>
-
-* Version: 2.0.2
-* GitHub: https://github.com/dcgerard/hwep
-* Source code: https://github.com/cran/hwep
-* Date/Publication: 2023-05-16 17:40:02 UTC
-* Number of recursive dependencies: 112
-
-Run `revdepcheck::revdep_details(, "hwep")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is 80.1Mb
-      sub-directories of 1Mb or more:
-        libs  79.4Mb
-    ```
-
-*   checking Rd files ... NOTE
-    ```
-    checkRd: (-1) simgl.Rd:50: Lost braces; missing escapes or markup?
-        50 | Uses the {updog} R package for simulating read counts and generating
-           |          ^
-    ```
-
-*   checking for GNU extensions in Makefiles ... NOTE
-    ```
-    GNU make is a SystemRequirements.
-    ```
-
-# igvShiny
-
-<details>
-
-* Version: 1.2.0
-* GitHub: https://github.com/gladkia/igvShiny
-* Source code: https://github.com/cran/igvShiny
-* Date/Publication: 2024-10-29
-* Number of recursive dependencies: 133
+* GitHub: <https://github.com/gladkia/igvShiny>
+* Email: <mailto:gladki.arkadiusz@gmail.com>
 
 Run `revdepcheck::revdep_details(, "igvShiny")` for more info
 
-</details>
+## In both
+
+*   checking dependencies in R code ... NOTE
+     ```
+     Unexported object imported by a ':::' call: ‘BiocGenerics:::testPackage’
+       See the note in ?`:::` about the use of this operator.
+     ```
+
+# infer (1.1.0)
+
+* GitHub: <https://github.com/tidymodels/infer>
+* Email: <mailto:simon.couch@posit.co>
+* GitHub mirror: <https://github.com/cran/infer>
+
+Run `revdepcheck::revdep_details(, "infer")` for more info
 
 ## In both
 
-*   checking installed package size ... NOTE
-    ```
-      installed size is 11.8Mb
-      sub-directories of 1Mb or more:
-        extdata       2.2Mb
-        htmlwidgets   8.7Mb
-    ```
-
 *   checking dependencies in R code ... NOTE
-    ```
-    Unexported object imported by a ':::' call: ‘BiocGenerics:::testPackage’
-      See the note in ?`:::` about the use of this operator.
-    ```
+     ```
+     Namespace in Imports field not imported from: ‘withr’
+       All declared Imports should be used.
+     ```
 
-# infercnv
+# infercnv (1.26.0)
 
-<details>
-
-* Version: 1.22.0
-* GitHub: https://github.com/broadinstitute/inferCNV
-* Source code: https://github.com/cran/infercnv
-* Date/Publication: 2024-10-29
-* Number of recursive dependencies: 202
+* GitHub: <https://github.com/broadinstitute/inferCNV>
+* Email: <mailto:cgeorges@broadinstitute.org>
 
 Run `revdepcheck::revdep_details(, "infercnv")` for more info
 
-</details>
-
 ## In both
 
-*   checking installed package size ... NOTE
-    ```
-      installed size is  7.5Mb
-      sub-directories of 1Mb or more:
-        R         1.5Mb
-        data      2.0Mb
-        extdata   3.1Mb
-    ```
-
 *   checking dependencies in R code ... NOTE
-    ```
-    Unexported object imported by a ':::' call: ‘HiddenMarkov:::makedensity’
-      See the note in ?`:::` about the use of this operator.
-    ```
+     ```
+     Unexported object imported by a ':::' call: ‘HiddenMarkov:::makedensity’
+       See the note in ?`:::` about the use of this operator.
+     ```
 
 *   checking Rd files ... NOTE
-    ```
-    checkRd: (-1) run.Rd:268: Lost braces; missing escapes or markup?
-       268 | \item{require_DE_all_normals}{If mask_nonDE_genes is set, those genes will be masked only if they are are found as DE according to test.use and mask_nonDE_pval in each of the comparisons to normal cells options: {"any", "most", "all"} (default: "any")
-           |                                                                                                                                                                                                                     ^
-    ```
+     ```
+     checkRd: (-1) run.Rd:268: Lost braces; missing escapes or markup?
+        268 | \item{require_DE_all_normals}{If mask_nonDE_genes is set, those genes will be masked only if they are are found as DE according to test.use and mask_nonDE_pval in each of the comparisons to normal cells options: {"any", "most", "all"} (default: "any")
+            |                                                                                                                                                                                                                     ^
+     ```
 
-# InPAS
+# InPAS (2.18.1)
 
-<details>
-
-* Version: 2.14.1
-* GitHub: NA
-* Source code: https://github.com/cran/InPAS
-* Date/Publication: 2024-12-23
-* Number of recursive dependencies: 164
+* Email: <mailto:jou@morgridge.org>
 
 Run `revdepcheck::revdep_details(, "InPAS")` for more info
 
-</details>
-
-## Newly broken
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  5.5Mb
-      sub-directories of 1Mb or more:
-        R      1.5Mb
-        data   2.1Mb
-    ```
-
 ## In both
 
-*   checking Rd cross-references ... WARNING
-    ```
-    Missing link or links in Rd file 'get_ssRleCov.Rd':
-      ‘[BSgenome:BSgenomeForge]{BSgenome::forgeBSgenomeDataPkg()}’
-    
-    Missing link or links in Rd file 'set_globals.Rd':
-      ‘[BSgenome:BSgenomeForge]{BSgenome::forgeBSgenomeDataPkg()}’
-    
-    See section 'Cross-references' in the 'Writing R Extensions' manual.
-    ```
-
 *   checking dependencies in R code ... NOTE
-    ```
-    There are ::: calls to the package's namespace in its code. A package
-      almost never needs to use ::: for its own objects:
-      ‘adjust_distalCPs’ ‘adjust_proximalCPs’ ‘adjust_proximalCPsByNBC’
-      ‘adjust_proximalCPsByPWM’ ‘calculate_mse’ ‘find_valleyBySpline’
-      ‘get_PAscore’ ‘get_PAscore2’ ‘remove_convergentUTR3s’
-      ‘search_distalCPs’ ‘search_proximalCPs’
-    ```
+     ```
+     There are ::: calls to the package's namespace in its code. A package
+       almost never needs to use ::: for its own objects:
+       ‘adjust_distalCPs’ ‘adjust_proximalCPs’ ‘adjust_proximalCPsByNBC’
+       ‘adjust_proximalCPsByPWM’ ‘calculate_mse’ ‘find_valleyBySpline’
+       ‘get_PAscore’ ‘get_PAscore2’ ‘remove_convergentUTR3s’
+       ‘search_distalCPs’ ‘search_proximalCPs’
+     ```
+
+*   checking Rd metadata ... NOTE
+     ```
+     Invalid package aliases in Rd file 'InPAS.Rd':
+       ‘-package’
+     ```
 
 *   checking Rd \usage sections ... NOTE
-    ```
-    Documented arguments not in \usage in Rd file 'get_UTR3TotalCov.Rd':
-      ‘gcCompensationensation’
-    
-    Functions with \usage entries need to have the appropriate \alias
-    entries, and all their arguments documented.
-    The \usage entries must correspond to syntactically valid R code.
-    See chapter ‘Writing R documentation files’ in the ‘Writing R
-    Extensions’ manual.
-    ```
+     ```
+     Documented arguments not in \usage in Rd file 'get_UTR3TotalCov.Rd':
+       ‘gcCompensationensation’
+     
+     Functions with \usage entries need to have the appropriate \alias
+     entries, and all their arguments documented.
+     The \usage entries must correspond to syntactically valid R code.
+     See chapter ‘Writing R documentation files’ in the ‘Writing R
+     Extensions’ manual.
+     ```
 
-# insight
+# ISAnalytics (1.20.0)
 
-<details>
-
-* Version: 1.2.0
-* GitHub: https://github.com/easystats/insight
-* Source code: https://github.com/cran/insight
-* Date/Publication: 2025-04-22 21:50:01 UTC
-* Number of recursive dependencies: 425
-
-Run `revdepcheck::revdep_details(, "insight")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... NOTE
-    ```
-    Packages suggested but not available for checking:
-      'censReg', 'cgam', 'epiR', 'gmnl', 'metaBMA', 'metaplus', 'multgee',
-      'panelr', 'PROreg'
-    ```
-
-# interflex
-
-<details>
-
-* Version: 1.2.6
-* GitHub: NA
-* Source code: https://github.com/cran/interflex
-* Date/Publication: 2021-05-18 11:40:02 UTC
-* Number of recursive dependencies: 89
-
-Run `revdepcheck::revdep_details(, "interflex")` for more info
-
-</details>
-
-## In both
-
-*   checking C++ specification ... NOTE
-    ```
-      Specified C++11: please drop specification unless essential
-    ```
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  6.1Mb
-      sub-directories of 1Mb or more:
-        libs   5.3Mb
-    ```
-
-# ISAnalytics
-
-<details>
-
-* Version: 1.16.1
-* GitHub: https://github.com/calabrialab/ISAnalytics
-* Source code: https://github.com/cran/ISAnalytics
-* Date/Publication: 2024-12-05
-* Number of recursive dependencies: 176
+* GitHub: <https://github.com/calabrialab/ISAnalytics>
+* Email: <mailto:gazzo.francesco@hsr.it>
 
 Run `revdepcheck::revdep_details(, "ISAnalytics")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  8.3Mb
-      sub-directories of 1Mb or more:
-        R      1.5Mb
-        data   1.4Mb
-        doc    3.8Mb
-    ```
-
-*   checking Rd files ... NOTE
-    ```
-    checkRd: (-1) refGenes_hg19.Rd:21: Lost braces; missing escapes or markup?
-        21 | \item Download from {http://hgdownload.soe.ucsc.edu/goldenPath/hg19/database/}
-           |                     ^
-    ```
-
-# ivmte
-
-<details>
-
-* Version: 1.4.0
-* GitHub: NA
-* Source code: https://github.com/cran/ivmte
-* Date/Publication: 2021-09-17 12:20:07 UTC
-* Number of recursive dependencies: 116
-
-Run `revdepcheck::revdep_details(, "ivmte")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... NOTE
-    ```
-    Packages suggested but not available for checking: 'gurobi', 'cplexAPI'
-    ```
-
-*   checking Rd files ... NOTE
-    ```
-    checkRd: (-1) sTsls.Rd:17: Lost braces; missing escapes or markup?
-        17 | \item{pi}{the matrix E[XZ']E[ZZ']^{-1}}
-           |                                   ^
-    checkRd: (-1) sTslsSplines.Rd:20: Lost braces; missing escapes or markup?
-        20 | \item{pi}{matrix, corresponds to E[XZ']E[ZZ']^{-1}, the first stage
-           |                                               ^
-    ```
-
-# JANE
-
-<details>
-
-* Version: 1.0.0
-* GitHub: https://github.com/a1arakkal/JANE
-* Source code: https://github.com/cran/JANE
-* Date/Publication: 2025-03-22 18:00:02 UTC
-* Number of recursive dependencies: 51
-
-Run `revdepcheck::revdep_details(, "JANE")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is 16.5Mb
-      sub-directories of 1Mb or more:
-        libs  16.2Mb
-    ```
-
-*   checking dependencies in R code ... NOTE
-    ```
-    Namespace in Imports field not imported from: ‘progress’
-      All declared Imports should be used.
-    ```
-
-# jsmodule
-
-<details>
-
-* Version: 1.6.8
-* GitHub: https://github.com/jinseob2kim/jsmodule
-* Source code: https://github.com/cran/jsmodule
-* Date/Publication: 2025-04-25 07:40:02 UTC
-* Number of recursive dependencies: 241
-
-Run `revdepcheck::revdep_details(, "jsmodule")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... ERROR
-    ```
-    Packages required but not available: 'jstable', 'survIDINRI', 'timeROC'
-    
-    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
-    manual.
-    ```
-
-# kernelshap
-
-<details>
-
-* Version: 0.7.0
-* GitHub: https://github.com/ModelOriented/kernelshap
-* Source code: https://github.com/cran/kernelshap
-* Date/Publication: 2024-08-17 16:00:02 UTC
-* Number of recursive dependencies: 34
-
-Run `revdepcheck::revdep_details(, "kernelshap")` for more info
-
-</details>
-
-## In both
-
-*   checking Rd cross-references ... NOTE
-    ```
-    Packages unavailable to check Rd xrefs: ‘mgcv’, ‘survival’
-    ```
-
-# keyATM
-
-<details>
-
-* Version: 0.5.3
-* GitHub: https://github.com/keyATM/keyATM
-* Source code: https://github.com/cran/keyATM
-* Date/Publication: 2025-03-30 12:20:02 UTC
-* Number of recursive dependencies: 98
-
-Run `revdepcheck::revdep_details(, "keyATM")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is 25.4Mb
-      sub-directories of 1Mb or more:
-        libs  24.9Mb
-    ```
-
-# kmeRtone
-
-<details>
-
-* Version: 1.0
-* GitHub: https://github.com/SahakyanLab/kmeRtone
-* Source code: https://github.com/cran/kmeRtone
-* Date/Publication: 2024-08-30 10:50:06 UTC
-* Number of recursive dependencies: 75
-
-Run `revdepcheck::revdep_details(, "kmeRtone")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  9.9Mb
-      sub-directories of 1Mb or more:
-        libs   8.4Mb
-    ```
-
-*   checking for GNU extensions in Makefiles ... NOTE
-    ```
-    GNU make is a SystemRequirements.
-    ```
-
-# latentcor
-
-<details>
-
-* Version: 2.0.1
-* GitHub: NA
-* Source code: https://github.com/cran/latentcor
-* Date/Publication: 2022-09-05 20:50:02 UTC
-* Number of recursive dependencies: 142
-
-Run `revdepcheck::revdep_details(, "latentcor")` for more info
-
-</details>
-
-## In both
-
-*   checking Rd files ... NOTE
-    ```
-    checkRd: (-1) evaluation.Rd:38: Lost braces in \itemize; \value handles \item{}{} directly
-    checkRd: (-1) evaluation.Rd:39: Lost braces in \itemize; \value handles \item{}{} directly
-    checkRd: (-1) evaluation.Rd:40: Lost braces in \itemize; \value handles \item{}{} directly
-    checkRd: (-1) evaluation.Rd:41: Lost braces in \itemize; \value handles \item{}{} directly
-    checkRd: (-1) evaluation.Rd:42: Lost braces in \itemize; \value handles \item{}{} directly
-    checkRd: (-1) evaluation.Rd:43: Lost braces in \itemize; \value handles \item{}{} directly
-    checkRd: (-1) evaluation.Rd:44: Lost braces in \itemize; \value handles \item{}{} directly
-    checkRd: (-1) evaluation.Rd:45: Lost braces in \itemize; \value handles \item{}{} directly
-    checkRd: (-1) evaluation.Rd:46: Lost braces in \itemize; \value handles \item{}{} directly
-    checkRd: (-1) evaluation.Rd:47: Lost braces in \itemize; \value handles \item{}{} directly
-    ...
-    checkRd: (-1) gen_data.Rd:35: Lost braces in \itemize; \value handles \item{}{} directly
-    checkRd: (-1) gen_data.Rd:36-37: Lost braces in \itemize; \value handles \item{}{} directly
-    checkRd: (-1) get_types.Rd:17: Lost braces in \itemize; \value handles \item{}{} directly
-    checkRd: (-1) interpolation.Rd:23: Lost braces in \itemize; \value handles \item{}{} directly
-    checkRd: (-1) interpolation.Rd:24: Lost braces in \itemize; \value handles \item{}{} directly
-    checkRd: (-1) latentcor.Rd:38: Lost braces in \itemize; \value handles \item{}{} directly
-    checkRd: (-1) latentcor.Rd:39: Lost braces in \itemize; \value handles \item{}{} directly
-    checkRd: (-1) latentcor.Rd:40: Lost braces in \itemize; \value handles \item{}{} directly
-    checkRd: (-1) latentcor.Rd:41: Lost braces in \itemize; \value handles \item{}{} directly
-    checkRd: (-1) latentcor.Rd:42: Lost braces in \itemize; \value handles \item{}{} directly
-    ```
-
-# layer
-
-<details>
-
-* Version: 0.0.3
-* GitHub: https://github.com/marcosci/layer
-* Source code: https://github.com/cran/layer
-* Date/Publication: 2025-01-29 17:30:05 UTC
-* Number of recursive dependencies: 59
-
-Run `revdepcheck::revdep_details(, "layer")` for more info
-
-</details>
-
-## In both
-
-*   checking Rd cross-references ... NOTE
-    ```
-    Package unavailable to check Rd xrefs: ‘viridis’
-    ```
-
-# ldsr
-
-<details>
-
-* Version: 0.0.2
-* GitHub: https://github.com/ntthung/ldsr
-* Source code: https://github.com/cran/ldsr
-* Date/Publication: 2020-05-04 14:40:09 UTC
-* Number of recursive dependencies: 74
-
-Run `revdepcheck::revdep_details(, "ldsr")` for more info
-
-</details>
-
-## In both
-
-*   checking C++ specification ... NOTE
-    ```
-      Specified C++11: please drop specification unless essential
-    ```
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  5.5Mb
-      sub-directories of 1Mb or more:
-        libs   4.9Mb
-    ```
-
-# leafdown
-
-<details>
-
-* Version: 1.2.0
-* GitHub: NA
-* Source code: https://github.com/cran/leafdown
-* Date/Publication: 2022-09-19 06:06:11 UTC
-* Number of recursive dependencies: 121
-
-Run `revdepcheck::revdep_details(, "leafdown")` for more info
-
-</details>
-
-## In both
-
-*   checking data for non-ASCII characters ... NOTE
-    ```
-      Note: found 75 marked UTF-8 strings
-    ```
-
-# lidR
-
-<details>
-
-* Version: 4.1.2
-* GitHub: https://github.com/r-lidar/lidR
-* Source code: https://github.com/cran/lidR
-* Date/Publication: 2024-07-09 08:40:02 UTC
-* Number of recursive dependencies: 153
-
-Run `revdepcheck::revdep_details(, "lidR")` for more info
-
-</details>
 
 ## In both
 
 *   checking tests ...
-    ```
-      Running ‘testthat.R’/software/c4/cbi/software/_rocky8/R-4.4.3-gcc13/lib64/R/bin/BATCH: line 60: 2956029 Aborted                 (core dumped) ${R_HOME}/bin/R -f ${in} ${opts} ${R_BATCH_OPTIONS} > ${out} 2>&1
-    
-     ERROR
-    Running the tests in ‘tests/testthat.R’ failed.
-    Complete output:
-      > Sys.setenv("R_TESTS" = "")
-      > 
-      > library(testthat)
-      > library(lidR)
-      > test_check("lidR")
-      Tests using raster: terra 
-      Tests using future: TRUE 
-      Tests using OpenMP thread: 48 
-      Tests using rlas: 1.8.0 
-      OGR: Unsupported geometry type
-      OGR: Unsupported geometry type
-      Chunk 1 of 1 (100%): state ✓
-      terminate called after throwing an instance of 'std::length_error'
-        what():  basic_string::_M_create
-    ```
+     ```
+     ...
+       > test_check("ISAnalytics")
+       Loading required namespace: plotly
+       Loading required namespace: rmarkdown
+       [WARNING] Deprecated: --highlight-style. Use --syntax-highlighting instead.
+       Report correctly saved
+       i Report saved to: /scratch/henrik/1020031/RtmplnCRza/file230ccf29f37bad/2026-01-31_collision_removal_report.html
+       Saving _problems/test-population-size-estimate-631.R
+       [WARNING] Deprecated: --highlight-style. Use --syntax-highlighting instead.
+       Report correctly saved
+       i Report saved to: /scratch/henrik/1020031/RtmplnCRza/file230ccf7fce8999/2026-01-31_outlier_test_pool_fragments_report.html
+       [ FAIL 1 | WARN 0 | SKIP 0 | PASS 832 ]
+       
+       ══ Failed tests ════════════════════════════════════════════════════════════════
+       ── Error ('test-population-size-estimate.R:605:5'): .re_agg_and_estimate works as expected - less tps ──
+       Error: Invalid index: out of bounds
+       Backtrace:
+           ▆
+        1. └─ISAnalytics:::.re_agg_and_estimate(...) at test-population-size-estimate.R:605:5
+        2.   ├─groups_dfs[[i]]
+        3.   └─vctrs:::`[[.vctrs_list_of`(groups_dfs, i)
+       
+       [ FAIL 1 | WARN 0 | SKIP 0 | PASS 832 ]
+       Error:
+       ! Test failures.
+       Execution halted
+     ```
 
-*   checking installed package size ... NOTE
-    ```
-      installed size is 19.6Mb
-      sub-directories of 1Mb or more:
-        R         1.5Mb
-        doc       1.0Mb
-        extdata   1.2Mb
-        libs     15.4Mb
-    ```
+*   checking whether package ‘ISAnalytics’ can be installed ... WARNING
+     ```
+     Found the following significant warnings:
+       Warning: replacing previous import ‘bslib::show_toast’ by ‘shinyWidgets::show_toast’ when loading ‘ISAnalytics’
+     See ‘/scratch/henrik/revdep/globals/checks/ISAnalytics/new/ISAnalytics.Rcheck/00install.out’ for details.
+     ```
 
-# lnmixsurv
+*   checking Rd files ... NOTE
+     ```
+     checkRd: (-1) refGenes_hg19.Rd:21: Lost braces; missing escapes or markup?
+         21 | \item Download from {http://hgdownload.soe.ucsc.edu/goldenPath/hg19/database/}
+            |                     ^
+     ```
 
-<details>
+# ivmte (1.4.0)
 
-* Version: 3.1.6
-* GitHub: NA
-* Source code: https://github.com/cran/lnmixsurv
-* Date/Publication: 2024-09-03 15:20:08 UTC
-* Number of recursive dependencies: 195
+* Email: <mailto:jkcshea@uchicago.edu>
+* GitHub mirror: <https://github.com/cran/ivmte>
 
-Run `revdepcheck::revdep_details(, "lnmixsurv")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is 11.2Mb
-      sub-directories of 1Mb or more:
-        doc    4.0Mb
-        libs   6.8Mb
-    ```
-
-*   checking dependencies in R code ... NOTE
-    ```
-    Namespaces in Imports field not imported from:
-      ‘purrr’ ‘readr’
-      All declared Imports should be used.
-    ```
-
-*   checking Rd cross-references ... NOTE
-    ```
-    Package unavailable to check Rd xrefs: ‘rstanarm’
-    ```
-
-*   checking for GNU extensions in Makefiles ... NOTE
-    ```
-    GNU make is a SystemRequirements.
-    ```
-
-# MachineShop
-
-<details>
-
-* Version: 3.8.0
-* GitHub: https://github.com/brian-j-smith/MachineShop
-* Source code: https://github.com/cran/MachineShop
-* Date/Publication: 2024-08-19 17:40:16 UTC
-* Number of recursive dependencies: 234
-
-Run `revdepcheck::revdep_details(, "MachineShop")` for more info
-
-</details>
+Run `revdepcheck::revdep_details(, "ivmte")` for more info
 
 ## In both
 
-*   checking package dependencies ... NOTE
-    ```
-    Package suggested but not available for checking: ‘randomForestSRC’
-    ```
+*   checking Rd files ... NOTE
+     ```
+     checkRd: (-1) sTsls.Rd:17: Lost braces; missing escapes or markup?
+         17 | \item{pi}{the matrix E[XZ']E[ZZ']^{-1}}
+            |                                   ^
+     checkRd: (-1) sTslsSplines.Rd:20: Lost braces; missing escapes or markup?
+         20 | \item{pi}{matrix, corresponds to E[XZ']E[ZZ']^{-1}, the first stage
+            |                                               ^
+     ```
 
-*   checking installed package size ... NOTE
-    ```
-      installed size is  5.2Mb
-      sub-directories of 1Mb or more:
-        R   3.5Mb
-    ```
+# kappaGold (0.4.0)
 
-*   checking Rd cross-references ... NOTE
-    ```
-    Package unavailable to check Rd xrefs: ‘randomForestSRC’
-    ```
+* Email: <mailto:matthias.kuhn@tu-dresden.de>
+* GitHub mirror: <https://github.com/cran/kappaGold>
 
-# MAI
+Run `revdepcheck::revdep_details(, "kappaGold")` for more info
 
-<details>
+## In both
 
-* Version: 1.12.0
-* GitHub: https://github.com/KechrisLab/MAI
-* Source code: https://github.com/cran/MAI
-* Date/Publication: 2024-10-29
-* Number of recursive dependencies: 175
+*   checking DESCRIPTION meta-information ... NOTE
+     ```
+       Missing dependency on R >= 4.1.0 because package code uses the pipe
+       |> or function shorthand \(...) syntax added in R 4.1.0.
+       File(s) using such syntax:
+         ‘kappa_inference.R’
+     ```
+
+# lavDiag (0.1.0)
+
+* GitHub: <https://github.com/reckak/lavDiag>
+* Email: <mailto:reckak@mail.muni.cz>
+* GitHub mirror: <https://github.com/cran/lavDiag>
+
+Run `revdepcheck::revdep_details(, "lavDiag")` for more info
+
+## In both
+
+*   checking tests ...
+     ```
+     ...
+         6. │     └─furrr:::furrr_template(...)
+         7. │       ├─future::nbrOfWorkers()
+         8. │       └─future:::nbrOfWorkers.NULL()
+         9. │         └─future::plan("backend")
+        10. │           └─future:::plan_init(strategy, debug = debug)
+        11. │             └─future:::makeFutureBackend(evaluator, debug = debug)
+        12. │               └─base::do.call(factory, args = args, envir = envir)
+        13. └─future (local) `<fn>`(workers = 255L)
+        14.   └─future::ClusterFutureBackend(...)
+        15.     └─clusterRegistry$startCluster(...)
+        16.       └─future (local) makeCluster(workers, ...)
+        17.         ├─base::do.call(makeClusterPSOCK, args = args, quote = TRUE)
+        18.         └─parallelly (local) `<fn>`(base::quote(255L), rscript_libs = base::quote(`<chr>`))
+        19.           └─parallelly:::stopf(msg)
+       ── Error ('test-prepare.R:12:3'): prepare merges branches for mixed model ──────
+       Error in `prepare(fit, length.out = 15)`: Neither continuous nor ordinal branch succeeded - check model/functions.
+       Backtrace:
+           ▆
+        1. └─lavDiag::prepare(fit, length.out = 15) at test-prepare.R:12:3
+        2.   └─rlang::abort("Neither continuous nor ordinal branch succeeded - check model/functions.")
+       
+       [ FAIL 3 | WARN 26 | SKIP 1 | PASS 28 ]
+       Error:
+       ! Test failures.
+       Execution halted
+     ```
+
+# ldmppr (1.1.1)
+
+* GitHub: <https://github.com/lanedrew/ldmppr>
+* Email: <mailto:lanetdrew@gmail.com>
+* GitHub mirror: <https://github.com/cran/ldmppr>
+
+Run `revdepcheck::revdep_details(, "ldmppr")` for more info
+
+## In both
+
+*   R CMD check timed out
+
+
+# ldsr (0.0.2)
+
+* GitHub: <https://github.com/ntthung/ldsr>
+* Email: <mailto:ntthung@gmail.com>
+* GitHub mirror: <https://github.com/cran/ldsr>
+
+Run `revdepcheck::revdep_details(, "ldsr")` for more info
+
+## In both
+
+*   checking C++ specification ... NOTE
+     ```
+       Specified C++11: please drop specification unless essential
+     ```
+
+# MAI (1.16.0)
+
+* GitHub: <https://github.com/KechrisLab/MAI>
+* Email: <mailto:Jonathan.Dekermanjian@CUAnschutz.edu>
 
 Run `revdepcheck::revdep_details(, "MAI")` for more info
-
-</details>
 
 ## In both
 
 *   checking top-level files ... NOTE
-    ```
-    File
-      LICENSE
-    is not mentioned in the DESCRIPTION file.
-    ```
+     ```
+     File
+       LICENSE
+     is not mentioned in the DESCRIPTION file.
+     ```
 
-# manynet
+# mapme.biodiversity (0.9.5)
 
-<details>
-
-* Version: 1.3.2
-* GitHub: https://github.com/stocnet/manynet
-* Source code: https://github.com/cran/manynet
-* Date/Publication: 2024-11-05 20:50:02 UTC
-* Number of recursive dependencies: 143
-
-Run `revdepcheck::revdep_details(, "manynet")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... NOTE
-    ```
-    Package which this enhances but not available for checking: ‘Rgraphviz’
-    ```
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  5.3Mb
-      sub-directories of 1Mb or more:
-        R           1.5Mb
-        tutorials   1.9Mb
-    ```
-
-*   checking data for non-ASCII characters ... NOTE
-    ```
-      Note: found 7 marked UTF-8 strings
-    ```
-
-# mapme.biodiversity
-
-<details>
-
-* Version: 0.9.4
-* GitHub: https://github.com/mapme-initiative/mapme.biodiversity
-* Source code: https://github.com/cran/mapme.biodiversity
-* Date/Publication: 2025-04-28 13:00:08 UTC
-* Number of recursive dependencies: 104
+* GitHub: <https://github.com/mapme-initiative/mapme.biodiversity>
+* Email: <mailto:sven.bergtold@gmail.com>
+* GitHub mirror: <https://github.com/cran/mapme.biodiversity>
 
 Run `revdepcheck::revdep_details(, "mapme.biodiversity")` for more info
-
-</details>
 
 ## In both
 
 *   checking tests ...
-    ```
-      Running ‘testthat.R’
-     ERROR
-    Running the tests in ‘tests/testthat.R’ failed.
-    Last 50 lines of output:
-      ══ Failed tests ════════════════════════════════════════════════════════════════
-      ── Failure ('test-calc_deforestation_drivers.R:16:3'): deforestation drivers works ──
-      `.check_single_asset(result)` produced warnings.
-      ── Failure ('test-calc_deforestation_drivers.R:17:3'): deforestation drivers works ──
-      unique(result$variable) (`actual`) not equal to c(...) (`expected`).
-      
-    ...
-       12. │               └─jsonlite:::parseJSON(txt, bigint_as_char)
-       13. │                 └─jsonlite:::parse_string(txt, bigint_as_char)
-       14. └─base::.handleSimpleError(...)
-       15.   └─purrr (local) h(simpleError(msg, call))
-       16.     └─cli::cli_abort(...)
-       17.       └─rlang::abort(...)
-      
-      [ FAIL 5 | WARN 1 | SKIP 38 | PASS 563 ]
-      Error: Test failures
-      Execution halted
-    ```
+     ```
+     ...
+         'test-get_carbon.R:2:3', 'test-get_carbon.R:29:3', 'test-get_chelsa.R:2:3',
+         'test-get_esalandcover.R:2:3', 'test-get_fritz_et_al.R:2:3',
+         'test-get_gfw_emissions.R:2:3', 'test-get_gfw_lossyear.R:2:3',
+         'test-get_gfw_treecover.R:7:3', 'test-get_gmw.R:2:3', 'test-get_gsw.R:2:3',
+         'test-get_hfp.R:10:3', 'test-get_mcd64A1.R:2:3', 'test-get_nasa_grace.R:2:3',
+         'test-get_nasa_srtm.R:2:3', 'test-get_nelson_et_al.R:2:3',
+         'test-get_resources.R:2:3', 'test-get_soilgrids.R:2:3',
+         'test-get_teow.R:2:3', 'test-get_ucdp_ged.R:3:3', 'test-get_worldpop.R:2:3',
+         'test-ipbes.R:2:3', 'test-ipbes.R:11:3'
+       
+       ══ Failed tests ════════════════════════════════════════════════════════════════
+       ── Failure ('test-chunking.R:7:3'): .crosses_dateline and .split_dateline works ──
+       Expected `x2 <- .split_dateline(x)` to run silently.
+       Actual noise: warnings.
+       ── Failure ('test-chunking.R:8:3'): .crosses_dateline and .split_dateline works ──
+       Expected `nrow(x2)` to equal 2.
+       Differences:
+         `actual`: 1.0
+       `expected`: 2.0
+       
+       
+       [ FAIL 2 | WARN 0 | SKIP 43 | PASS 543 ]
+       Error:
+       ! Test failures.
+       Execution halted
+     ```
 
-# marginaleffects
+# mbbe (0.1.0)
 
-<details>
+* GitHub: <https://github.com/certara/mbbe>
+* Email: <mailto:mark.sale@certara.com>
+* GitHub mirror: <https://github.com/cran/mbbe>
 
-* Version: 0.25.1
-* GitHub: https://github.com/vincentarelbundock/marginaleffects
-* Source code: https://github.com/cran/marginaleffects
-* Date/Publication: 2025-03-29 18:10:02 UTC
-* Number of recursive dependencies: 454
-
-Run `revdepcheck::revdep_details(, "marginaleffects")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  5.1Mb
-      sub-directories of 1Mb or more:
-        R      1.5Mb
-        help   1.6Mb
-        libs   1.8Mb
-    ```
-
-# metaGE
-
-<details>
-
-* Version: 1.2.1
-* GitHub: NA
-* Source code: https://github.com/cran/metaGE
-* Date/Publication: 2025-02-22 23:10:02 UTC
-* Number of recursive dependencies: 160
-
-Run `revdepcheck::revdep_details(, "metaGE")` for more info
-
-</details>
+Run `revdepcheck::revdep_details(, "mbbe")` for more info
 
 ## In both
 
-*   checking installed package size ... NOTE
-    ```
-      installed size is 13.6Mb
-      sub-directories of 1Mb or more:
-        data  12.5Mb
-    ```
+*   checking tests ...
+     ```
+     ...
+       > # * https://testthat.r-lib.org/articles/special-files.html
+       > 
+       > library(testthat)
+       > library(mbbe)
+       > 
+       > test_check("mbbe")
+       Saving _problems/test-check_requirements-52.R
+       [ FAIL 1 | WARN 0 | SKIP 0 | PASS 11 ]
+       
+       ══ Failed tests ════════════════════════════════════════════════════════════════
+       ── Error ('test-check_requirements.R:39:3'): check_requirements works ──────────
+       <lifecycle_error_deprecated/defunctError/rlang_error/error/condition>
+       Error: `with_mock()` was deprecated in testthat 3.2.0 and is now defunct.
+       ℹ Please use `with_mocked_bindings()` instead.
+       Backtrace:
+           ▆
+        1. └─testthat::with_mock(...) at test-check_requirements.R:39:3
+        2.   └─lifecycle::deprecate_stop("3.2.0", "with_mock()", "with_mocked_bindings()")
+        3.     └─lifecycle:::deprecate_stop0(msg)
+        4.       └─rlang::cnd_signal(...)
+       
+       [ FAIL 1 | WARN 0 | SKIP 0 | PASS 11 ]
+       Error:
+       ! Test failures.
+       Execution halted
+     ```
 
-# metasnf
+# mikropml (1.7.0)
 
-<details>
+* GitHub: <https://github.com/SchlossLab/mikropml>
+* Email: <mailto:sovacool@umich.edu>
+* GitHub mirror: <https://github.com/cran/mikropml>
 
-* Version: 2.1.2
-* GitHub: https://github.com/BRANCHlab/metasnf
-* Source code: https://github.com/cran/metasnf
-* Date/Publication: 2025-04-28 18:20:02 UTC
-* Number of recursive dependencies: 119
+Run `revdepcheck::revdep_details(, "mikropml")` for more info
 
-Run `revdepcheck::revdep_details(, "metasnf")` for more info
+## In both
 
-</details>
+*   checking dependencies in R code ... NOTE
+     ```
+     Namespace in Imports field not imported from: ‘methods’
+       All declared Imports should be used.
+     ```
+
+# MineICA (1.49.0)
+
+* Email: <mailto:anne.biton@gmail.com>
+
+Run `revdepcheck::revdep_details(, "MineICA")` for more info
 
 ## In both
 
 *   checking examples ... ERROR
-    ```
-    Running examples in ‘metasnf-Ex.R’ failed
-    The error most likely occurred in:
-    
-    > ### Name: alluvial_cluster_plot
-    > ### Title: Alluvial plot of patients across cluster counts and important
-    > ###   features
-    > ### Aliases: alluvial_cluster_plot
-    > 
-    > ### ** Examples
-    > 
-    ...
-    > 
-    > sc <- snf_config(input_dl, n_solutions = 1)
-    ℹ No distance functions specified. Using defaults.
-    ℹ No clustering functions specified. Using defaults.
-    > 
-    > sol_df <- batch_snf(input_dl, sc, return_sim_mats = TRUE)
-    Error in loadNamespace(j <- i[[1L]], c(lib.loc, .libPaths()), versionCheck = vI[[j]]) : 
-      there is no package called ‘ExPosition’
-    Calls: batch_snf ... loadNamespace -> withRestarts -> withOneRestart -> doWithOneRestart
-    Execution halted
-    ```
+     ```
+     ...
+     > nodeDescr <- nodeAttrs(nbAn = nbAn, nbComp = nbComp, labComp = labComp,
+     +                        labAn = c("toy1","toy2"), file = "nodeInfo.txt")
+     > 
+     > ## Plot correlation graph, slightly move the attached nodes to make the cliques visible
+     > ## use tkplot=TRUE to have an interactive graph
+     > res <- plotCorGraph(title = "Compare toy 1 and 2", dataGraph = dataGraph, nodeName = "indComp", tkplot = FALSE,
+     +                  nodeAttrs = nodeDescr, edgeWeight = "cor", nodeShape = "labAn", reciproCol = "reciprocal")
+     Warning in brewer.pal(nbAn, "Set3") :
+       minimal value for n is 3, returning requested palette with 3 different levels
+     
+     Error:
+     ! The `area` argument of `layout_with_fr()` was deprecated in igraph
+       0.8.0 and is now defunct.
+     Backtrace:
+         ▆
+      1. └─MineICA::plotCorGraph(...)
+      2.   └─igraph::layout.fruchterman.reingold(...)
+      3.     ├─igraph:::do_call(layout_with_fr, .args = c(list(...), params))
+      4.     │ └─base::eval(call, .env)
+      5.     │   └─base::eval(call, .env)
+      6.     └─igraph::layout_with_fr(...)
+      7.       └─lifecycle::deprecate_stop("0.8.0", "layout_with_fr(area = )")
+      8.         └─lifecycle:::deprecate_stop0(msg)
+      9.           └─rlang::cnd_signal(...)
+     Execution halted
+     ```
 
-*   checking tests ...
-    ```
-      Running ‘testthat.R’
-     ERROR
-    Running the tests in ‘tests/testthat.R’ failed.
-    Complete output:
-      > # This file is part of the standard setup for testthat.
-      > # It is recommended that you do not modify it.
-      > #
-      > # Where should you do additional test configuration?
-      > # Learn more about the roles of various files in:
-      > # * https://r-pkgs.org/tests.html
-    ...
-        9.   ├─base::namespaceImportFrom(...)
-       10.   │ └─base::asNamespace(ns)
-       11.   └─base::loadNamespace(j <- i[[1L]], c(lib.loc, .libPaths()), versionCheck = vI[[j]])
-       12.     └─base::withRestarts(stop(cond), retry_loadNamespace = function() NULL)
-       13.       └─base (local) withOneRestart(expr, restarts[[1L]])
-       14.         └─base (local) doWithOneRestart(return(expr), restart)
-      
-      [ FAIL 1 | WARN 0 | SKIP 0 | PASS 10 ]
-      Error: Test failures
-      Execution halted
-    ```
+*   checking dependencies in R code ... WARNING
+     ```
+     Namespace in Imports field not imported from: ‘lumiHumanAll.db’
+       All declared Imports should be used.
+     Packages in Depends field not imported from:
+       ‘GOstats’ ‘Hmisc’ ‘JADE’ ‘RColorBrewer’ ‘Rgraphviz’ ‘annotate’
+       ‘biomaRt’ ‘cluster’ ‘colorspace’ ‘fastICA’ ‘foreach’ ‘ggplot2’
+       ‘graph’ ‘gtools’ ‘igraph’ ‘marray’ ‘mclust’ ‘methods’ ‘plyr’ ‘scales’
+       ‘xtable’
+       These packages need to be imported from (in the NAMESPACE file)
+       for when this namespace is loaded but not attached.
+     Missing or unexported object: ‘GOstats::geneIdsByCategory’
+     ':::' calls which should be '::':
+       ‘Biobase:::annotation<-’ ‘Biobase:::validMsg’ ‘fpc:::pamk’
+       ‘lumi:::getChipInfo’ ‘mclust:::adjustedRandIndex’
+       See the note in ?`:::` about the use of this operator.
+     Unexported object imported by a ':::' call: ‘Biobase:::isValidVersion’
+       See the note in ?`:::` about the use of this operator.
+     ```
 
-*   checking re-building of vignette outputs ... ERROR
-    ```
-    Error(s) in re-building vignettes:
-    --- re-building ‘a_complete_example.Rmd’ using rmarkdown
-    
-    Quitting from a_complete_example.Rmd:949-963 [unnamed-chunk-48]
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    <error/rlang_error>
-    Error in `loadNamespace()`:
-    ! there is no package called 'ExPosition'
-    ---
-    Backtrace:
-    ...
-    --- re-building ‘troubleshooting.Rmd’ using rmarkdown
-    --- finished re-building ‘troubleshooting.Rmd’
-    
-    SUMMARY: processing the following files failed:
-      ‘a_complete_example.Rmd’ ‘a_simple_example.Rmd’ ‘alluvial_plots.Rmd’
-      ‘clustering_algorithms.Rmd’ ‘confounders.Rmd’ ‘feature_plots.Rmd’
-      ‘nmi_scores.Rmd’ ‘similarity_matrix_heatmap.Rmd’
-    
-    Error: Vignette re-building failed.
-    Execution halted
-    ```
+*   checking Rd cross-references ... WARNING
+     ```
+     Missing link(s) in Rd file 'Alist.Rd':
+       ‘class-IcaSet’
+     
+     Missing link(s) in Rd file 'Slist.Rd':
+       ‘class-IcaSet’
+     
+     Missing link(s) in Rd file 'class-IcaSet.Rd':
+       ‘class-IcaSet’
+     
+     Missing link(s) in Rd file 'getComp.Rd':
+       ‘class-IcaSet’
+     
+     Missing link(s) in Rd file 'runAn.Rd':
+       ‘[Category:class-GOHyperGParams]{GOHyperGParams}’
+     
+     See section 'Cross-references' in the 'Writing R Extensions' manual.
+     ```
 
-*   checking installed package size ... NOTE
-    ```
-      installed size is  6.1Mb
-      sub-directories of 1Mb or more:
-        data   1.5Mb
-        doc    3.5Mb
-    ```
+*   checking for missing documentation entries ... WARNING
+     ```
+     Undocumented S4 classes:
+       ‘MineICAParams’
+     All user-level objects in a package (including S4 classes and methods)
+     should have documentation entries.
+     See chapter ‘Writing R documentation files’ in the ‘Writing R
+     Extensions’ manual.
+     ```
 
-# mice
+*   checking re-building of vignette outputs ... WARNING
+     ```
+     ...
+       The `axis.ticks.margin` theme element is not defined in the element hierarchy.
+     `geom_smooth()` using formula = 'y ~ x'
+     Warning in texi2dvi(file = file, pdf = TRUE, clean = clean, quiet = quiet,  :
+       texi2dvi script/program not available, using emulation
+     Error: processing vignette 'MineICA.Rnw' failed with diagnostics:
+     unable to run pdflatex on 'MineICA.tex'
+     LaTeX errors:
+     ! LaTeX Error: File `appendix.sty' not found.
+     
+     Type X to quit or <RETURN> to proceed,
+     or enter new name. (Default extension: sty)
+     
+     ! Emergency stop.
+     <read *> 
+              
+     l.23 \usepackage
+                     {subfig}^^M
+     !  ==> Fatal error occurred, no output PDF file produced!
+     --- failed re-building ‘MineICA.Rnw’
+     
+     SUMMARY: processing the following file failed:
+       ‘MineICA.Rnw’
+     
+     Error: Vignette re-building failed.
+     Execution halted
+     ```
 
-<details>
+*   checking DESCRIPTION meta-information ... NOTE
+     ```
+     Packages listed in more than one of Depends, Imports, Suggests, Enhances:
+       ‘biomaRt’ ‘GOstats’ ‘cluster’ ‘mclust’ ‘igraph’
+     A package should be listed in only one of these fields.
+     ```
 
-* Version: 3.17.0
-* GitHub: https://github.com/amices/mice
-* Source code: https://github.com/cran/mice
-* Date/Publication: 2024-11-27 18:00:02 UTC
-* Number of recursive dependencies: 133
-
-Run `revdepcheck::revdep_details(, "mice")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  5.3Mb
-      sub-directories of 1Mb or more:
-        help   1.5Mb
-        libs   2.8Mb
-    ```
-
-# mikropml
-
-<details>
-
-* Version: 1.6.1
-* GitHub: https://github.com/SchlossLab/mikropml
-* Source code: https://github.com/cran/mikropml
-* Date/Publication: 2023-08-21 15:10:05 UTC
-* Number of recursive dependencies: 128
-
-Run `revdepcheck::revdep_details(, "mikropml")` for more info
-
-</details>
-
-## In both
+*   checking R code for possible problems ... NOTE
+     ```
+     ...
+       igraph.from.graphNEL kmeans kruskal.test layout
+       layout.fruchterman.reingold legend listAttributes listFilters llply
+       lm maColorBar maPalette median mtext na.omit new odd order.dendrogram
+       p.adjust pam par pdf plot.new points position_jitter pushViewport
+       quantile rainbow_hcl rcorr read.table reorder scale_colour_gradientn
+       scale_colour_manual scale_fill_manual scale_linetype_manual
+       scale_shape_manual scale_x_continuous scale_x_discrete
+       scale_y_continuous shapiro.test sigCategories terrain_hcl theme
+       theme_bw title tkplot.fit.to.screen unit useMart validObject vcount
+       viewport wilcox.test write.table xlab xtable
+     Consider adding
+       importFrom("grDevices", "cm.colors", "dev.off", "graphics.off",
+                  "heat.colors", "pdf")
+       importFrom("graphics", "abline", "axis", "frame", "hist", "layout",
+                  "legend", "mtext", "par", "plot.new", "points", "title")
+       importFrom("methods", "callNextMethod", "new", "validObject")
+       importFrom("stats", "aggregate", "as.dendrogram", "as.dist",
+                  "as.hclust", "chisq.test", "cor", "cor.test", "cutree",
+                  "dist", "hclust", "kmeans", "kruskal.test", "lm", "median",
+                  "na.omit", "order.dendrogram", "p.adjust", "quantile",
+                  "reorder", "shapiro.test", "wilcox.test")
+       importFrom("utils", "capture.output", "combn", "read.table",
+                  "write.table")
+     to your NAMESPACE file (and ensure that your DESCRIPTION Imports field
+     contains 'methods').
+     ```
 
 *   checking Rd files ... NOTE
-    ```
-    checkRd: (-1) create_grouped_data_partition.Rd:60: Lost braces; missing escapes or markup?
-        60 | Zena Lapp, {zenalapp@umich.edu}
-           |            ^
-    checkRd: (-1) create_grouped_data_partition.Rd:62: Lost braces; missing escapes or markup?
-        62 | Kelly Sovacool, {sovacool@umich.edu}
-           |                 ^
-    checkRd: (-1) create_grouped_k_multifolds.Rd:30: Lost braces; missing escapes or markup?
-        30 | Zena Lapp, {zenalapp@umich.edu}
-           |            ^
-    checkRd: (-1) get_partition_indices.Rd:58: Lost braces; missing escapes or markup?
-        58 | Kelly Sovacool, {sovacool@umich.edu}
-           |                 ^
-    checkRd: (-1) set_hparams_glmnet.Rd:16: Lost braces; missing escapes or markup?
-        16 | Zena Lapp, {zenalapp@umich.edu}
-           |            ^
-    ```
+     ```
+     ...
+            |                                            ^
+     checkRd: (-1) clusterFastICARuns.Rd:52: Lost braces
+         52 |   item{W}{the estimated unmixing matrix}, \item{Iq}{Iq
+            |       ^
+     checkRd: (-1) clusterFastICARuns.Rd:52: Lost braces
+         52 |   item{W}{the estimated unmixing matrix}, \item{Iq}{Iq
+            |          ^
+     checkRd: (-1) plotDensOneAnnotInAllComp.Rd:104: Lost braces
+        104 |   code{\link{writeHtmlResTestsByAnnot}},
+            |       ^
+     checkRd: (-1) plotDensOneAnnotInAllComp.Rd:105: Lost braces
+        105 |   code{\link{wilcox.test}}, code{\link{kruskal.test}}
+            |       ^
+     checkRd: (-1) plotDensOneAnnotInAllComp.Rd:105: Lost braces
+        105 |   code{\link{wilcox.test}}, code{\link{kruskal.test}}
+            |                                 ^
+     checkRd: (-1) runICA.Rd:44: Lost braces
+         44 |   item{W}{the estimated unmixing matrix}}
+            |       ^
+     checkRd: (-1) runICA.Rd:44: Lost braces
+         44 |   item{W}{the estimated unmixing matrix}}
+            |          ^
+     checkRd: (-1) writeProjByComp.Rd:38: Lost braces
+         38 | their annotations, please remember to modify code{genesPath(params)}, or
+            |                                                  ^
+     ```
 
-# MineICA
+# mistyR (1.18.0)
 
-<details>
+* GitHub: <https://github.com/saezlab/mistyR>
+* Email: <mailto:jovan.tanevski@uni-heidelberg.de>
 
-* Version: 1.46.0
-* GitHub: NA
-* Source code: https://github.com/cran/MineICA
-* Date/Publication: 2024-10-29
-* Number of recursive dependencies: 219
+Run `revdepcheck::revdep_details(, "mistyR")` for more info
 
-Run `revdepcheck::revdep_details(, "MineICA")` for more info
+## In both
 
-</details>
+*   checking R code for possible problems ... NOTE
+     ```
+     ...
+       ‘total’
+     plot_view_contributions: no visible binding for global variable
+       ‘measure’
+     plot_view_contributions: no visible binding for global variable
+       ‘target’
+     plot_view_contributions: no visible binding for global variable
+       ‘fraction’
+     plot_view_contributions: no visible binding for global variable ‘view’
+     run_misty : <anonymous>: no visible binding for global variable ‘p’
+     run_misty : <anonymous>: no visible binding for global variable
+       ‘intra.RMSE’
+     run_misty : <anonymous>: no visible binding for global variable
+       ‘multi.RMSE’
+     run_misty : <anonymous>: no visible binding for global variable
+       ‘intra.R2’
+     run_misty : <anonymous>: no visible binding for global variable
+       ‘multi.R2’
+     svm_model: no visible binding for global variable ‘index’
+     Undefined global functions or variables:
+       .PT Importance Predictor Target fraction index intra.R2 intra.RMSE
+       measure multi.R2 multi.RMSE nsamples p prediction sd target total ts
+       value view
+     Consider adding
+       importFrom("stats", "sd", "ts")
+     to your NAMESPACE file.
+     ```
+
+*   checking Rd files ... NOTE
+     ```
+     checkRd: (-1) collect_results.Rd:32: Lost braces; missing escapes or markup?
+         32 |             for all performance measures for each {target} over all samples.}
+            |                                                   ^
+     ```
+
+# MLDataR (1.0.1)
+
+* GitHub: <https://github.com/StatsGary/MLDataR>
+* Email: <mailto:hutsons-hacks@outlook.com>
+* GitHub mirror: <https://github.com/cran/MLDataR>
+
+Run `revdepcheck::revdep_details(, "MLDataR")` for more info
+
+## In both
+
+*   checking dependencies in R code ... NOTE
+     ```
+     Namespaces in Imports field not imported from:
+       ‘ConfusionTableR’ ‘OddsPlotty’ ‘caret’ ‘dplyr’ ‘ggplot2’ ‘parsnip’
+       ‘ranger’ ‘recipes’ ‘rsample’ ‘varhandle’ ‘workflows’
+       All declared Imports should be used.
+     ```
+
+# mlflow (3.6.0)
+
+* GitHub: <https://github.com/mlflow/mlflow>
+* Email: <mailto:benjamin.wilson@databricks.com>
+* GitHub mirror: <https://github.com/cran/mlflow>
+
+Run `revdepcheck::revdep_details(, "mlflow")` for more info
+
+## In both
+
+*   checking package dependencies ... ERROR
+     ```
+     Package required but not available: ‘git2r’
+     
+     See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
+     manual.
+     ```
+
+# mlr3resampling (2025.11.19)
+
+* GitHub: <https://github.com/tdhock/mlr3resampling>
+* Email: <mailto:toby.hocking@r-project.org>
+* GitHub mirror: <https://github.com/cran/mlr3resampling>
+
+Run `revdepcheck::revdep_details(, "mlr3resampling")` for more info
+
+## In both
+
+*   checking examples ... ERROR
+     ```
+     ...
+             <fctr>        <char>  <int>     <int> <int>          <int>     <int>
+     1:       Alice           all     52         1     1             52         1
+     2:         Bob           all     52         1     1             52         2
+        Train_subsets
+               <fctr>
+     1:           all
+     2:           all
+     > mlr3resampling::proj_compute(1, pkg.proj.dir)
+     [c4-n43:3299822] OPAL ERROR: Not initialized in file ext2x_client.c at line 112
+     --------------------------------------------------------------------------
+     The application appears to have been direct launched using "srun",
+     but OMPI was not built with SLURM's PMI support and therefore cannot
+     execute. There are several options for building PMI support under
+     SLURM, depending upon the SLURM version you are using:
+     
+       version 16.05 or later: you can use SLURM's PMIx support. This
+       requires that you configure and build SLURM --with-pmix.
+     
+       Versions earlier than 16.05: you must use either SLURM's PMI-1 or
+       PMI-2 support. SLURM builds PMI-1 by default, or you can manually
+       install PMI-2. You must then build Open MPI using --with-pmi pointing
+       to the SLURM PMI library location.
+     
+     Please configure as appropriate and try again.
+     --------------------------------------------------------------------------
+     ```
+
+*   checking tests ...
+     ```
+     ...
+       > if(require(testthat))test_check("mlr3resampling")
+       Loading required package: testthat
+       Loading required package: mlr3resampling
+       [c4-n43:3303389] OPAL ERROR: Not initialized in file ext2x_client.c at line 112
+       --------------------------------------------------------------------------
+       The application appears to have been direct launched using "srun",
+       but OMPI was not built with SLURM's PMI support and therefore cannot
+       execute. There are several options for building PMI support under
+       SLURM, depending upon the SLURM version you are using:
+       
+         version 16.05 or later: you can use SLURM's PMIx support. This
+         requires that you configure and build SLURM --with-pmix.
+       
+         Versions earlier than 16.05: you must use either SLURM's PMI-1 or
+         PMI-2 support. SLURM builds PMI-1 by default, or you can manually
+         install PMI-2. You must then build Open MPI using --with-pmi pointing
+         to the SLURM PMI library location.
+       
+       Please configure as appropriate and try again.
+       --------------------------------------------------------------------------
+       *** An error occurred in MPI_Init
+       *** on a NULL communicator
+       *** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
+       ***    and potentially your MPI job)
+       [c4-n43:3303389] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+     ```
+
+*   checking dependencies in R code ... NOTE
+     ```
+     [c4-n43:3290102] OPAL ERROR: Not initialized in file ext2x_client.c at line 112
+     --------------------------------------------------------------------------
+     The application appears to have been direct launched using "srun",
+     but OMPI was not built with SLURM's PMI support and therefore cannot
+     execute. There are several options for building PMI support under
+     SLURM, depending upon the SLURM version you are using:
+     
+       version 16.05 or later: you can use SLURM's PMIx support. This
+       requires that you configure and build SLURM --with-pmix.
+     
+       Versions earlier than 16.05: you must use either SLURM's PMI-1 or
+       PMI-2 support. SLURM builds PMI-1 by default, or you can manually
+       install PMI-2. You must then build Open MPI using --with-pmi pointing
+       to the SLURM PMI library location.
+     
+     Please configure as appropriate and try again.
+     --------------------------------------------------------------------------
+     ```
+
+# mlr3shiny (0.5.0)
+
+* Email: <mailto:laurens.tetzlaff@outlook.de>
+* GitHub mirror: <https://github.com/cran/mlr3shiny>
+
+Run `revdepcheck::revdep_details(, "mlr3shiny")` for more info
+
+## In both
+
+*   checking dependencies in R code ... NOTE
+     ```
+     Namespaces in Imports field not imported from:
+       ‘DT’ ‘GGally’ ‘Metrics’ ‘data.table’ ‘dplyr’ ‘ggparty’ ‘mlr3’
+       ‘mlr3learners’ ‘mlr3measures’ ‘mlr3pipelines’ ‘mlr3viz’ ‘patchwork’
+       ‘plyr’ ‘purrr’ ‘shinyWidgets’ ‘shinyalert’ ‘shinydashboard’ ‘shinyjs’
+       ‘stats’ ‘stringr’
+       All declared Imports should be used.
+     ```
+
+# mmaqshiny (1.0.0)
+
+* GitHub: <https://github.com/meenakshi-kushwaha/mmaqshiny>
+* Email: <mailto:adithi@ilklabs.com>
+* GitHub mirror: <https://github.com/cran/mmaqshiny>
+
+Run `revdepcheck::revdep_details(, "mmaqshiny")` for more info
+
+## In both
+
+*   checking dependencies in R code ... NOTE
+     ```
+     Namespaces in Imports field not imported from:
+       ‘Cairo’ ‘DT’ ‘XML’ ‘caTools’ ‘data.table’ ‘dplyr’ ‘ggplot2’
+       ‘htmltools’ ‘leaflet’ ‘lubridate’ ‘plotly’ ‘shinyjs’ ‘stringr’ ‘xts’
+       ‘zoo’
+       All declared Imports should be used.
+     ```
+
+# MSstatsBig (1.8.1)
+
+* Email: <mailto:mtst@mstaniak.pl>
+
+Run `revdepcheck::revdep_details(, "MSstatsBig")` for more info
+
+## In both
+
+*   checking R code for possible problems ... NOTE
+     ```
+     ...
+     cleanSpectronautChunk: no visible binding for global variable
+       ‘Identified’
+     cleanSpectronautChunk: no visible binding for global variable
+       ‘EGQvalue’
+     cleanSpectronautChunk: no visible binding for global variable
+       ‘PGQvalue’
+     cleanSpectronautChunk: no visible binding for global variable
+       ‘FFrgLossType’
+     cleanSpectronautChunk: no visible binding for global variable
+       ‘LabeledSequence’
+     cleanSpectronautChunk: no visible global function definition for ‘:=’
+     cleanSpectronautChunk: no visible binding for global variable
+       ‘IsotopeLabelType’
+     cleanSpectronautChunk: no visible binding for global variable
+       ‘IsLabeled’
+     Undefined global functions or variables:
+       %>% := BioReplicate Condition EGQvalue Excluded FFrgLossType Feature
+       FragmentIon Identified Intensity IsLabeled IsotopeLabelType
+       LabeledSequence MeanAbundance NumObs NumProteins PGQvalue
+       PeptideSequence PrecursorCharge ProductCharge ProteinName Rank Run
+       across all_of feature_rank filter group_by inner_join input
+       max_intensity min_rank n_distinct select summarise tbl
+     Consider adding
+       importFrom("stats", "filter")
+     to your NAMESPACE file.
+     ```
+
+# MSstatsShiny (1.12.1)
+
+* GitHub: <https://github.com/Vitek-Lab/MSstatsShiny>
+* Email: <mailto:wu.anthon@northeastern.edu>
+
+Run `revdepcheck::revdep_details(, "MSstatsShiny")` for more info
 
 ## In both
 
 *   checking dependencies in R code ... WARNING
-    ```
-    Namespace in Imports field not imported from: ‘lumiHumanAll.db’
-      All declared Imports should be used.
-    Packages in Depends field not imported from:
-      ‘GOstats’ ‘Hmisc’ ‘JADE’ ‘RColorBrewer’ ‘Rgraphviz’ ‘annotate’
-      ‘biomaRt’ ‘cluster’ ‘colorspace’ ‘fastICA’ ‘foreach’ ‘ggplot2’
-      ‘graph’ ‘gtools’ ‘igraph’ ‘marray’ ‘mclust’ ‘methods’ ‘plyr’ ‘scales’
-      ‘xtable’
-      These packages need to be imported from (in the NAMESPACE file)
-      for when this namespace is loaded but not attached.
-    Missing or unexported object: ‘GOstats::geneIdsByCategory’
-    ':::' calls which should be '::':
-      ‘Biobase:::annotation<-’ ‘Biobase:::validMsg’ ‘fpc:::pamk’
-      ‘lumi:::getChipInfo’ ‘mclust:::adjustedRandIndex’
-      See the note in ?`:::` about the use of this operator.
-    Unexported object imported by a ':::' call: ‘Biobase:::isValidVersion’
-      See the note in ?`:::` about the use of this operator.
-    ```
+     ```
+     '::' or ':::' import not declared from: ‘httr’
+     Unexported objects imported by ':::' calls:
+       ‘MSstatsTMT:::.logSum’ ‘MSstatsTMT:::.summarizeSimpleStat’
+       ‘MSstatsTMT:::.summarizeTMP’
+       ‘MSstatsTMT:::MSstatsFitComparisonModelsTMT’
+       ‘MSstatsTMT:::MSstatsGroupComparisonOutputTMT’
+       ‘MSstatsTMT:::MSstatsModerateTTest’
+       ‘MSstatsTMT:::MSstatsNormalizeTMT’
+       ‘MSstatsTMT:::MSstatsPrepareForGroupComparisonTMT’
+       ‘MSstatsTMT:::MSstatsPrepareForSummarizationTMT’
+       ‘MSstatsTMT:::MSstatsSummarizationOutputTMT’
+       ‘MSstatsTMT:::MSstatsTestSingleProteinTMT’
+       ‘MSstatsTMT:::getProcessedTMT’ ‘MSstatsTMT:::getSummarizedTMT’
+       ‘shinyBS:::buildTooltipOrPopoverOptionsList’ ‘shinyBS:::shinyBSDep’
+       See the note in ?`:::` about the use of this operator.
+     ```
 
-*   checking Rd cross-references ... WARNING
-    ```
-    Missing link or links in Rd file 'Alist.Rd':
-      ‘class-IcaSet’
-    
-    Missing link or links in Rd file 'Slist.Rd':
-      ‘class-IcaSet’
-    
-    Missing link or links in Rd file 'class-IcaSet.Rd':
-      ‘class-IcaSet’
-    
-    Missing link or links in Rd file 'getComp.Rd':
-      ‘class-IcaSet’
-    
-    Missing link or links in Rd file 'runAn.Rd':
-      ‘[Category:class-GOHyperGParams]{GOHyperGParams}’
-    
-    See section 'Cross-references' in the 'Writing R Extensions' manual.
-    ```
+*   checking R code for possible problems ... NOTE
+     ```
+     ...
+       ‘Peptides_Proteins_min’
+     getSummary2: no visible binding for global variable
+       ‘Peptides_Proteins_max’
+     loadpageServer: no visible global function definition for
+       ‘moduleServer’
+     server: no visible global function definition for ‘callModule’
+     statmodelServer: no visible global function definition for
+       ‘moduleServer’
+     update_matrix_from_edit: no visible global function definition for ‘as’
+     visualizeNetworkServer: no visible global function definition for
+       ‘reactiveVal’
+     visualizeNetworkServer: no visible global function definition for
+       ‘updateTextInput’
+     Undefined global functions or variables:
+       BioReplicate BioReplicate_Run Charge Condition Condition_Run FEATURES
+       Features_Peptides_max Features_Peptides_min Fraction FragmentIon
+       Intensity Max_Intensity Min_Intensity Mixture Number of Fractions
+       PeptideSequence Peptides_Proteins_max Peptides_Proteins_min
+       PrecursorCharge ProductCharge ProteinName Run TechRepMixture
+       annotation.pd as callModule moduleServer nfea npep reactiveVal
+       updateTextInput
+     Consider adding
+       importFrom("methods", "as")
+     to your NAMESPACE file (and ensure that your DESCRIPTION Imports field
+     contains 'methods').
+     ```
 
-*   checking for missing documentation entries ... WARNING
-    ```
-    Undocumented S4 classes:
-      ‘MineICAParams’
-    All user-level objects in a package (including S4 classes and methods)
-    should have documentation entries.
-    See chapter ‘Writing R documentation files’ in the ‘Writing R
-    Extensions’ manual.
-    ```
+# multiverse (0.6.2)
 
-*   checking re-building of vignette outputs ... WARNING
-    ```
-    Error(s) in re-building vignettes:
-    --- re-building ‘MineICA.Rnw’ using Sweave
-    Loading required package: BiocGenerics
-    
-    Attaching package: ‘BiocGenerics’
-    
-    The following objects are masked from ‘package:stats’:
-    
-        IQR, mad, sd, var, xtabs
-    
-    ...
-    l.23 \usepackage
-                    {subfig}^^M
-    !  ==> Fatal error occurred, no output PDF file produced!
-    --- failed re-building ‘MineICA.Rnw’
-    
-    SUMMARY: processing the following file failed:
-      ‘MineICA.Rnw’
-    
-    Error: Vignette re-building failed.
-    Execution halted
-    ```
+* GitHub: <https://github.com/MUCollective/multiverse>
+* Email: <mailto:abhraneel@u.northwestern.edu>
+* GitHub mirror: <https://github.com/cran/multiverse>
 
-*   checking package dependencies ... NOTE
-    ```
-    Package which this enhances but not available for checking: ‘doMC’
-    
-    Depends: includes the non-default packages:
-      'BiocGenerics', 'Biobase', 'plyr', 'ggplot2', 'scales', 'foreach',
-      'xtable', 'biomaRt', 'gtools', 'GOstats', 'cluster', 'marray',
-      'mclust', 'RColorBrewer', 'colorspace', 'igraph', 'Rgraphviz',
-      'graph', 'annotate', 'Hmisc', 'fastICA', 'JADE'
-    Adding so many packages to the search path is excessive and importing
-    selectively is preferable.
-    ```
+Run `revdepcheck::revdep_details(, "multiverse")` for more info
+
+## In both
 
 *   checking DESCRIPTION meta-information ... NOTE
-    ```
-    Packages listed in more than one of Depends, Imports, Suggests, Enhances:
-      ‘biomaRt’ ‘GOstats’ ‘cluster’ ‘mclust’ ‘igraph’
-    A package should be listed in only one of these fields.
-    ```
+     ```
+       Missing dependency on R >= 4.1.0 because package code uses the pipe
+       |> or function shorthand \(...) syntax added in R 4.1.0.
+       File(s) using such syntax:
+         ‘accessors.R’ ‘export_json.R’ ‘extract.R’
+     ```
 
-*   checking R code for possible problems ... NOTE
-    ```
-    addGenesToGoReport: no visible global function definition for
-      ‘conditional’
-    addGenesToGoReport: no visible global function definition for
-      ‘sigCategories’
-    annot2Color: no visible global function definition for ‘brewer.pal’
-    annot2Color: no visible global function definition for ‘heat_hcl’
-    annot2Color: no visible global function definition for ‘terrain_hcl’
-    annot2Color: no visible global function definition for ‘cm.colors’
-    annot2Color: no visible global function definition for ‘rainbow_hcl’
-    annotFeatures: no visible global function definition for ‘na.omit’
-    ...
-      importFrom("methods", "callNextMethod", "new", "validObject")
-      importFrom("stats", "aggregate", "as.dendrogram", "as.dist",
-                 "as.hclust", "chisq.test", "cor", "cor.test", "cutree",
-                 "dist", "hclust", "kmeans", "kruskal.test", "lm", "median",
-                 "na.omit", "order.dendrogram", "p.adjust", "quantile",
-                 "reorder", "shapiro.test", "wilcox.test")
-      importFrom("utils", "capture.output", "combn", "read.table",
-                 "write.table")
-    to your NAMESPACE file (and ensure that your DESCRIPTION Imports field
-    contains 'methods').
-    ```
+# nevada (0.2.0)
 
-*   checking Rd files ... NOTE
-    ```
-    checkRd: (-1) clusterFastICARuns.Rd:47: Lost braces
-        47 |   \item{...}{Additional parameters for code{funClus}}
-           |                                            ^
-    checkRd: (-1) clusterFastICARuns.Rd:52: Lost braces
-        52 |   item{W}{the estimated unmixing matrix}, \item{Iq}{Iq
-           |       ^
-    checkRd: (-1) clusterFastICARuns.Rd:52: Lost braces
-        52 |   item{W}{the estimated unmixing matrix}, \item{Iq}{Iq
-           |          ^
-    checkRd: (-1) plotDensOneAnnotInAllComp.Rd:104: Lost braces
-    ...
-           |                                 ^
-    checkRd: (-1) runICA.Rd:44: Lost braces
-        44 |   item{W}{the estimated unmixing matrix}}
-           |       ^
-    checkRd: (-1) runICA.Rd:44: Lost braces
-        44 |   item{W}{the estimated unmixing matrix}}
-           |          ^
-    checkRd: (-1) writeProjByComp.Rd:38: Lost braces
-        38 | their annotations, please remember to modify code{genesPath(params)}, or
-           |                                                  ^
-    ```
+* GitHub: <https://github.com/astamm/nevada>
+* Email: <mailto:aymeric.stamm@cnrs.fr>
+* GitHub mirror: <https://github.com/cran/nevada>
 
-# missSBM
-
-<details>
-
-* Version: 1.0.5
-* GitHub: https://github.com/grossSBM/missSBM
-* Source code: https://github.com/cran/missSBM
-* Date/Publication: 2025-03-13 08:30:02 UTC
-* Number of recursive dependencies: 110
-
-Run `revdepcheck::revdep_details(, "missSBM")` for more info
-
-</details>
+Run `revdepcheck::revdep_details(, "nevada")` for more info
 
 ## In both
 
-*   checking installed package size ... NOTE
-    ```
-      installed size is 10.9Mb
-      sub-directories of 1Mb or more:
-        R      1.5Mb
-        libs   8.1Mb
-    ```
+*   checking DESCRIPTION meta-information ... NOTE
+     ```
+       Missing dependency on R >= 4.1.0 because package code uses the pipe
+       |> or function shorthand \(...) syntax added in R 4.1.0.
+       File(s) using such syntax:
+         ‘visualizations.R’
+     ```
 
-# mistyR
+# nixtlar (0.6.2)
 
-<details>
+* GitHub: <https://github.com/Nixtla/nixtlar>
+* Email: <mailto:mariana@nixtla.io>
+* GitHub mirror: <https://github.com/cran/nixtlar>
 
-* Version: 1.14.0
-* GitHub: https://github.com/saezlab/mistyR
-* Source code: https://github.com/cran/mistyR
-* Date/Publication: 2024-10-29
-* Number of recursive dependencies: 151
-
-Run `revdepcheck::revdep_details(, "mistyR")` for more info
-
-</details>
+Run `revdepcheck::revdep_details(, "nixtlar")` for more info
 
 ## In both
 
-*   checking R code for possible problems ... NOTE
-    ```
-    aggregate_results: no visible binding for global variable ‘measure’
-    aggregate_results: no visible binding for global variable ‘target’
-    aggregate_results: no visible binding for global variable ‘value’
-    aggregate_results: no visible binding for global variable ‘sd’
-    aggregate_results: no visible binding for global variable ‘view’
-    aggregate_results: no visible binding for global variable ‘.PT’
-    aggregate_results: no visible binding for global variable ‘Importance’
-    aggregate_results_subset: no visible binding for global variable ‘view’
-    aggregate_results_subset: no visible binding for global variable ‘.PT’
-    aggregate_results_subset: no visible binding for global variable
-    ...
-    run_misty : <anonymous>: no visible binding for global variable
-      ‘multi.R2’
-    svm_model: no visible binding for global variable ‘index’
-    Undefined global functions or variables:
-      .PT Importance Predictor Target fraction index intra.R2 intra.RMSE
-      measure multi.R2 multi.RMSE nsamples p prediction sd target total ts
-      value view
-    Consider adding
-      importFrom("stats", "sd", "ts")
-    to your NAMESPACE file.
-    ```
+*   checking DESCRIPTION meta-information ... NOTE
+     ```
+       Missing dependency on R >= 4.1.0 because package code uses the pipe
+       |> or function shorthand \(...) syntax added in R 4.1.0.
+       File(s) using such syntax:
+         ‘get_model_params.R’ ‘level_from_quantiles.R’ ‘make_request.R’
+         ‘nixtla_client_cross_validation.R’ ‘nixtla_client_detect_anomalies.R’
+         ‘nixtla_client_forecast.R’ ‘nixtla_client_historic.R’
+         ‘nixtla_client_plot.R’ ‘nixtla_validate_api_key.R’
+         ‘validate_exogenous.R’
+     ```
 
-*   checking Rd files ... NOTE
-    ```
-    checkRd: (-1) collect_results.Rd:32: Lost braces; missing escapes or markup?
-        32 |             for all performance measures for each {target} over all samples.}
-           |                                                   ^
-    ```
+# OutSeekR (1.1.0)
 
-# MLDataR
+* Email: <mailto:pboutros@sbpdiscovery.org>
+* GitHub mirror: <https://github.com/cran/OutSeekR>
 
-<details>
-
-* Version: 1.0.1
-* GitHub: https://github.com/StatsGary/MLDataR
-* Source code: https://github.com/cran/MLDataR
-* Date/Publication: 2022-10-03 15:10:02 UTC
-* Number of recursive dependencies: 126
-
-Run `revdepcheck::revdep_details(, "MLDataR")` for more info
-
-</details>
+Run `revdepcheck::revdep_details(, "OutSeekR")` for more info
 
 ## In both
 
 *   checking dependencies in R code ... NOTE
-    ```
-    Namespaces in Imports field not imported from:
-      ‘ConfusionTableR’ ‘OddsPlotty’ ‘caret’ ‘dplyr’ ‘ggplot2’ ‘parsnip’
-      ‘ranger’ ‘recipes’ ‘rsample’ ‘varhandle’ ‘workflows’
-      All declared Imports should be used.
-    ```
-
-# mlflow
-
-<details>
-
-* Version: 2.21.3
-* GitHub: https://github.com/mlflow/mlflow
-* Source code: https://github.com/cran/mlflow
-* Date/Publication: 2025-04-10 05:30:02 UTC
-* Number of recursive dependencies: 95
-
-Run `revdepcheck::revdep_details(, "mlflow")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... ERROR
-    ```
-    Package required but not available: ‘git2r’
-    
-    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
-    manual.
-    ```
-
-# mlr3
-
-<details>
-
-* Version: 0.23.0
-* GitHub: https://github.com/mlr-org/mlr3
-* Source code: https://github.com/cran/mlr3
-* Date/Publication: 2025-03-12 12:30:02 UTC
-* Number of recursive dependencies: 49
-
-Run `revdepcheck::revdep_details(, "mlr3")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  6.0Mb
-      sub-directories of 1Mb or more:
-        R      3.5Mb
-        help   1.7Mb
-    ```
-
-*   checking Rd cross-references ... NOTE
-    ```
-    Package unavailable to check Rd xrefs: ‘mlr3oml’
-    ```
-
-# mlr3pipelines
-
-<details>
-
-* Version: 0.7.2
-* GitHub: https://github.com/mlr-org/mlr3pipelines
-* Source code: https://github.com/cran/mlr3pipelines
-* Date/Publication: 2025-03-07 18:10:02 UTC
-* Number of recursive dependencies: 166
-
-Run `revdepcheck::revdep_details(, "mlr3pipelines")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  5.3Mb
-      sub-directories of 1Mb or more:
-        R      3.5Mb
-        help   1.5Mb
-    ```
-
-# mlr3shiny
-
-<details>
-
-* Version: 0.5.0
-* GitHub: NA
-* Source code: https://github.com/cran/mlr3shiny
-* Date/Publication: 2025-01-09 13:50:02 UTC
-* Number of recursive dependencies: 186
-
-Run `revdepcheck::revdep_details(, "mlr3shiny")` for more info
-
-</details>
-
-## In both
-
-*   checking dependencies in R code ... NOTE
-    ```
-    Namespaces in Imports field not imported from:
-      ‘DT’ ‘GGally’ ‘Metrics’ ‘data.table’ ‘dplyr’ ‘ggparty’ ‘mlr3’
-      ‘mlr3learners’ ‘mlr3measures’ ‘mlr3pipelines’ ‘mlr3viz’ ‘patchwork’
-      ‘plyr’ ‘purrr’ ‘shinyWidgets’ ‘shinyalert’ ‘shinydashboard’ ‘shinyjs’
-      ‘stats’ ‘stringr’
-      All declared Imports should be used.
-    ```
-
-# mlr3torch
-
-<details>
-
-* Version: 0.2.1
-* GitHub: https://github.com/mlr-org/mlr3torch
-* Source code: https://github.com/cran/mlr3torch
-* Date/Publication: 2025-02-13 16:00:02 UTC
-* Number of recursive dependencies: 105
-
-Run `revdepcheck::revdep_details(, "mlr3torch")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  5.8Mb
-      sub-directories of 1Mb or more:
-        R      3.5Mb
-        help   2.2Mb
-    ```
-
-# mlr3tuning
-
-<details>
-
-* Version: 1.3.0
-* GitHub: https://github.com/mlr-org/mlr3tuning
-* Source code: https://github.com/cran/mlr3tuning
-* Date/Publication: 2024-12-17 12:10:06 UTC
-* Number of recursive dependencies: 98
-
-Run `revdepcheck::revdep_details(, "mlr3tuning")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... NOTE
-    ```
-    Package suggested but not available for checking: ‘mlflow’
-    ```
-
-# mmaqshiny
-
-<details>
-
-* Version: 1.0.0
-* GitHub: https://github.com/meenakshi-kushwaha/mmaqshiny
-* Source code: https://github.com/cran/mmaqshiny
-* Date/Publication: 2020-06-26 16:00:23 UTC
-* Number of recursive dependencies: 140
-
-Run `revdepcheck::revdep_details(, "mmaqshiny")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is 15.6Mb
-      sub-directories of 1Mb or more:
-        images   1.1Mb
-        shiny   14.5Mb
-    ```
-
-*   checking dependencies in R code ... NOTE
-    ```
-    Namespaces in Imports field not imported from:
-      ‘Cairo’ ‘DT’ ‘XML’ ‘caTools’ ‘data.table’ ‘dplyr’ ‘ggplot2’
-      ‘htmltools’ ‘leaflet’ ‘lubridate’ ‘plotly’ ‘shinyjs’ ‘stringr’ ‘xts’
-      ‘zoo’
-      All declared Imports should be used.
-    ```
-
-*   checking LazyData ... NOTE
-    ```
-      'LazyData' is specified without a 'data' directory
-    ```
-
-# mmrm
-
-<details>
-
-* Version: 0.3.14
-* GitHub: https://github.com/openpharma/mmrm
-* Source code: https://github.com/cran/mmrm
-* Date/Publication: 2024-09-27 23:30:01 UTC
-* Number of recursive dependencies: 175
-
-Run `revdepcheck::revdep_details(, "mmrm")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is 188.6Mb
-      sub-directories of 1Mb or more:
-        libs  186.8Mb
-    ```
-
-# modeltime.resample
-
-<details>
-
-* Version: 0.2.3
-* GitHub: https://github.com/business-science/modeltime.resample
-* Source code: https://github.com/cran/modeltime.resample
-* Date/Publication: 2023-04-12 15:50:02 UTC
-* Number of recursive dependencies: 235
-
-Run `revdepcheck::revdep_details(, "modeltime.resample")` for more info
-
-</details>
-
-## In both
-
-*   checking dependencies in R code ... NOTE
-    ```
-    Namespaces in Imports field not imported from:
-      ‘crayon’ ‘dials’ ‘glue’ ‘parsnip’
-      All declared Imports should be used.
-    ```
-
-# momentuHMM
-
-<details>
-
-* Version: 1.5.5
-* GitHub: https://github.com/bmcclintock/momentuHMM
-* Source code: https://github.com/cran/momentuHMM
-* Date/Publication: 2022-10-18 20:52:35 UTC
-* Number of recursive dependencies: 150
-
-Run `revdepcheck::revdep_details(, "momentuHMM")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... NOTE
-    ```
-    Package suggested but not available for checking: ‘moveHMM’
-    ```
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is 11.1Mb
-      sub-directories of 1Mb or more:
-        R      1.5Mb
-        doc    1.7Mb
-        libs   7.1Mb
-    ```
-
-# MOSS
-
-<details>
-
-* Version: 0.2.2
-* GitHub: https://github.com/agugonrey/MOSS
-* Source code: https://github.com/cran/MOSS
-* Date/Publication: 2022-03-25 15:50:05 UTC
-* Number of recursive dependencies: 181
-
-Run `revdepcheck::revdep_details(, "MOSS")` for more info
-
-</details>
-
-## In both
-
-*   checking Rd files ... NOTE
-    ```
-    checkRd: (-1) ssvdEN_sol_path.Rd:58: Lost braces; missing escapes or markup?
-        58 | \item{tol}{Convergence is determined when ||U_j - U_{j-1}||_F < tol,
-           |                                                     ^
-    checkRd: (-1) ssvdEN_sol_path_par.Rd:59: Lost braces; missing escapes or markup?
-        59 | \item{tol}{Convergence is determined when ||U_j - U_{j-1}||_F < tol,
-           |                                                     ^
-    ```
-
-# MSstatsBig
-
-<details>
-
-* Version: 1.4.0
-* GitHub: NA
-* Source code: https://github.com/cran/MSstatsBig
-* Date/Publication: 2024-10-29
-* Number of recursive dependencies: 115
-
-Run `revdepcheck::revdep_details(, "MSstatsBig")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... ERROR
-    ```
-    Packages required but not available: 'MSstats', 'MSstatsConvert'
-    
-    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
-    manual.
-    ```
-
-# MSstatsShiny
-
-<details>
-
-* Version: 1.8.0
-* GitHub: https://github.com/Vitek-Lab/MSstatsShiny
-* Source code: https://github.com/cran/MSstatsShiny
-* Date/Publication: 2024-11-28
-* Number of recursive dependencies: 157
-
-Run `revdepcheck::revdep_details(, "MSstatsShiny")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... ERROR
-    ```
-    Packages required but not available:
-      'MSstats', 'MSstatsTMT', 'MSstatsPTM', 'MSstatsConvert'
-    
-    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
-    manual.
-    ```
-
-# MtreeRing
-
-<details>
-
-* Version: 1.4.5
-* GitHub: https://github.com/ropensci/MtreeRing
-* Source code: https://github.com/cran/MtreeRing
-* Date/Publication: 2021-04-19 22:10:06 UTC
-* Number of recursive dependencies: 119
-
-Run `revdepcheck::revdep_details(, "MtreeRing")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... ERROR
-    ```
-    Package required but not available: ‘measuRing’
-    
-    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
-    manual.
-    ```
-
-# multilevelcoda
-
-<details>
-
-* Version: 1.3.1
-* GitHub: https://github.com/florale/multilevelcoda
-* Source code: https://github.com/cran/multilevelcoda
-* Date/Publication: 2024-11-23 15:30:06 UTC
-* Number of recursive dependencies: 167
-
-Run `revdepcheck::revdep_details(, "multilevelcoda")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... NOTE
-    ```
-    Package suggested but not available for checking: ‘cmdstanr’
-    ```
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  9.1Mb
-      sub-directories of 1Mb or more:
-        data   2.0Mb
-        doc    6.4Mb
-    ```
-
-# multitool
-
-<details>
-
-* Version: 0.1.4
-* GitHub: https://github.com/ethan-young/multitool
-* Source code: https://github.com/cran/multitool
-* Date/Publication: 2024-02-08 17:40:02 UTC
-* Number of recursive dependencies: 150
-
-Run `revdepcheck::revdep_details(, "multitool")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  5.1Mb
-      sub-directories of 1Mb or more:
-        doc   4.3Mb
-    ```
-
-# nebula
-
-<details>
-
-* Version: 1.5.3
-* GitHub: https://github.com/lhe17/nebula
-* Source code: https://github.com/cran/nebula
-* Date/Publication: 2024-02-15 23:00:02 UTC
-* Number of recursive dependencies: 170
-
-Run `revdepcheck::revdep_details(, "nebula")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is 35.4Mb
-      sub-directories of 1Mb or more:
-        libs  33.7Mb
-    ```
-
-# neuroim2
-
-<details>
-
-* Version: 0.8.1
-* GitHub: https://github.com/bbuchsbaum/neuroim2
-* Source code: https://github.com/cran/neuroim2
-* Date/Publication: 2025-04-10 14:50:06 UTC
-* Number of recursive dependencies: 115
-
-Run `revdepcheck::revdep_details(, "neuroim2")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... ERROR
-    ```
-    Package required but not available: ‘RNiftyReg’
-    
-    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
-    manual.
-    ```
-
-# nflfastR
-
-<details>
-
-* Version: 5.0.0
-* GitHub: https://github.com/nflverse/nflfastR
-* Source code: https://github.com/cran/nflfastR
-* Date/Publication: 2024-11-26 23:10:02 UTC
-* Number of recursive dependencies: 87
-
-Run `revdepcheck::revdep_details(, "nflfastR")` for more info
-
-</details>
-
-## In both
-
-*   checking data for non-ASCII characters ... NOTE
-    ```
-      Note: found 1 marked UTF-8 string
-    ```
-
-# nhdplusTools
-
-<details>
-
-* Version: 1.3.1
-* GitHub: https://github.com/doi-usgs/nhdplusTools
-* Source code: https://github.com/cran/nhdplusTools
-* Date/Publication: 2025-02-14 23:20:02 UTC
-* Number of recursive dependencies: 136
-
-Run `revdepcheck::revdep_details(, "nhdplusTools")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  8.4Mb
-      sub-directories of 1Mb or more:
-        data   2.5Mb
-        doc    5.1Mb
-    ```
-
-# occupationMeasurement
-
-<details>
-
-* Version: 0.3.2
-* GitHub: https://github.com/occupationMeasurement/occupationMeasurement
-* Source code: https://github.com/cran/occupationMeasurement
-* Date/Publication: 2023-09-27 13:40:02 UTC
-* Number of recursive dependencies: 125
-
-Run `revdepcheck::revdep_details(, "occupationMeasurement")` for more info
-
-</details>
-
-## In both
-
-*   checking tests ...
-    ```
-      Running ‘testthat.R’
-     ERROR
-    Running the tests in ‘tests/testthat.R’ failed.
-    Last 50 lines of output:
-        5. ├─occupationMeasurement::get_job_suggestions("Arbeiter")
-        6. │ ├─base::do.call(step[["algorithm"]], parameters)
-        7. │ └─occupationMeasurement (local) `<fn>`(...)
-        8. │   └─occupationMeasurement:::create_document_term_matrix(text_processed)
-        9. └─base::loadNamespace(x)
-       10.   ├─base::namespaceImportFrom(...)
-    ...
-        9. └─base::loadNamespace(x)
-       10.   ├─base::namespaceImportFrom(...)
-       11.   │ └─base::asNamespace(ns)
-       12.   └─base::loadNamespace(j <- i[[1L]], c(lib.loc, .libPaths()), versionCheck = vI[[j]])
-       13.     └─base::library.dynam(lib, package, package.lib)
-       14.       └─base::dyn.load(file, DLLpath = DLLpath, ...)
-      
-      [ FAIL 5 | WARN 0 | SKIP 5 | PASS 22 ]
-      Error: Test failures
-      Execution halted
-    ```
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  6.0Mb
-      sub-directories of 1Mb or more:
-        data   3.5Mb
-        help   2.0Mb
-    ```
-
-*   checking data for non-ASCII characters ... NOTE
-    ```
-      Note: found 6986 marked UTF-8 strings
-    ```
-
-# oncomsm
-
-<details>
-
-* Version: 0.1.4
-* GitHub: https://github.com/Boehringer-Ingelheim/oncomsm
-* Source code: https://github.com/cran/oncomsm
-* Date/Publication: 2023-04-17 07:00:02 UTC
-* Number of recursive dependencies: 123
-
-Run `revdepcheck::revdep_details(, "oncomsm")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is 64.0Mb
-      sub-directories of 1Mb or more:
-        doc    1.1Mb
-        libs  61.8Mb
-    ```
-
-*   checking for GNU extensions in Makefiles ... NOTE
-    ```
-    GNU make is a SystemRequirements.
-    ```
-
-# oolong
-
-<details>
-
-* Version: 0.6.1
-* GitHub: https://github.com/gesistsa/oolong
-* Source code: https://github.com/cran/oolong
-* Date/Publication: 2024-04-15 12:40:04 UTC
-* Number of recursive dependencies: 142
-
-Run `revdepcheck::revdep_details(, "oolong")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  8.2Mb
-      sub-directories of 1Mb or more:
-        data   7.0Mb
-    ```
-
-# OOS
-
-<details>
-
-* Version: 1.0.0
-* GitHub: https://github.com/tylerJPike/OOS
-* Source code: https://github.com/cran/OOS
-* Date/Publication: 2021-03-17 13:20:20 UTC
-* Number of recursive dependencies: 136
-
-Run `revdepcheck::revdep_details(, "OOS")` for more info
-
-</details>
-
-## In both
-
-*   checking LazyData ... NOTE
-    ```
-      'LazyData' is specified without a 'data' directory
-    ```
-
-# OptimalGoldstandardDesigns
-
-<details>
-
-* Version: 1.0.1
-* GitHub: https://github.com/jan-imbi/OptimalGoldstandardDesigns
-* Source code: https://github.com/cran/OptimalGoldstandardDesigns
-* Date/Publication: 2023-09-11 10:40:05 UTC
-* Number of recursive dependencies: 71
-
-Run `revdepcheck::revdep_details(, "OptimalGoldstandardDesigns")` for more info
-
-</details>
-
-## In both
-
-*   checking Rd files ... NOTE
-    ```
-    checkRd: (-1) calc_n_from_c.Rd:5: Lost braces; missing escapes or markup?
-         5 | \title{Helper function to calculate other n's given n_{1,T} and allocation ratios}
-           |                                                       ^
-    checkRd: (-1) calc_n_from_c.Rd:15: Lost braces; missing escapes or markup?
-        15 | Helper function to calculate other n's given n_{1,T} and allocation ratios
-           |                                                ^
-    ```
-
-# PAMpal
-
-<details>
-
-* Version: 1.4.4
-* GitHub: NA
-* Source code: https://github.com/cran/PAMpal
-* Date/Publication: 2025-03-04 00:20:02 UTC
-* Number of recursive dependencies: 121
+     ```
+     Namespaces in Imports field not imported from:
+       ‘future’ ‘truncnorm’
+       All declared Imports should be used.
+     ```
+
+# PAMpal (1.4.4)
+
+* Email: <mailto:taiki.sakai@noaa.gov>
+* GitHub mirror: <https://github.com/cran/PAMpal>
 
 Run `revdepcheck::revdep_details(, "PAMpal")` for more info
-
-</details>
 
 ## In both
 
 *   checking whether package ‘PAMpal’ can be installed ... WARNING
-    ```
-    Found the following significant warnings:
-      Warning: no DISPLAY variable so Tk is not available
-    See ‘/scratch/henrik/revdep/globals/checks/PAMpal/new/PAMpal.Rcheck/00install.out’ for details.
-    ```
+     ```
+     Found the following significant warnings:
+       Warning: no DISPLAY variable so Tk is not available
+     See ‘/scratch/henrik/revdep/globals/checks/PAMpal/new/PAMpal.Rcheck/00install.out’ for details.
+     ```
 
-# PAMscapes
+# PAMscapes (0.14.5)
 
-<details>
-
-* Version: 0.11.3
-* GitHub: NA
-* Source code: https://github.com/cran/PAMscapes
-* Date/Publication: 2025-04-02 20:30:05 UTC
-* Number of recursive dependencies: 130
+* Email: <mailto:taiki.sakai@noaa.gov>
+* GitHub mirror: <https://github.com/cran/PAMscapes>
 
 Run `revdepcheck::revdep_details(, "PAMscapes")` for more info
-
-</details>
 
 ## In both
 
 *   checking whether package ‘PAMscapes’ can be installed ... WARNING
-    ```
-    Found the following significant warnings:
-      Warning: no DISPLAY variable so Tk is not available
-    See ‘/scratch/henrik/revdep/globals/checks/PAMscapes/new/PAMscapes.Rcheck/00install.out’ for details.
-    ```
+     ```
+     Found the following significant warnings:
+       Warning: no DISPLAY variable so Tk is not available
+     See ‘/scratch/henrik/revdep/globals/checks/PAMscapes/new/PAMscapes.Rcheck/00install.out’ for details.
+     ```
 
-# pareg
+# partR2 (0.9.2)
 
-<details>
-
-* Version: 1.8.0
-* GitHub: https://github.com/cbg-ethz/pareg
-* Source code: https://github.com/cran/pareg
-* Date/Publication: 2024-04-30
-* Number of recursive dependencies: 320
-
-Run `revdepcheck::revdep_details(, "pareg")` for more info
-
-</details>
-
-## In both
-
-*   checking examples ... ERROR
-    ```
-    Running examples in ‘pareg-Ex.R’ failed
-    The error most likely occurred in:
-    
-    > ### Name: as.data.frame.pareg
-    > ### Title: as.data.frame for an object of class 'pareg'.
-    > ### Aliases: as.data.frame.pareg
-    > 
-    > ### ** Examples
-    > 
-    > df_genes <- data.frame(
-    ...
-       │     └─ openssl >=1.1.1q,<1.1.2a , which conflicts with any installable versions previously reported;
-       ├─ tensorflow 2.10.0 would require
-       │  └─ tensorflow-base [2.10.0 eigen_py38h1969d1f_0|2.10.0 gpu_py38h6559e04_0|2.10.0 mkl_py38hb9daa73_0], which requires
-       │     └─ python >=3.8,<3.9.0a0 , which conflicts with any installable versions previously reported;
-       └─ tensorflow 2.10.0 would require
-          └─ tensorflow-base [2.10.0 eigen_py39h1969d1f_0|2.10.0 gpu_py39h6559e04_0|2.10.0 mkl_py39hb9daa73_0], which requires
-             └─ python >=3.9,<3.10.0a0 , which conflicts with any installable versions previously reported.
-    
-    Error: one or more Python packages failed to install [error code 1]
-    Execution halted
-    ```
-
-*   checking tests ...
-    ```
-      Running ‘testthat.R’
-     ERROR
-    Running the tests in ‘tests/testthat.R’ failed.
-    Last 50 lines of output:
-      
-      
-      Preparing transaction: ...working... done
-      Verifying transaction: ...working... done
-      Executing transaction: ...working... done
-      + /c4/home/henrik/.cache/R/basilisk/1.18.0/0/bin/conda install --yes --prefix /c4/home/henrik/.cache/R/basilisk/1.18.0/pareg/1.8.0/pareg 'python=3.10.14' -c anaconda --override-channels
-    ...
-            └─ tensorflow-base [2.10.0 eigen_py39h1969d1f_0|2.10.0 gpu_py39h6559e04_0|2.10.0 mkl_py39hb9daa73_0], which requires
-               └─ python >=3.9,<3.10.0a0 , which conflicts with any installable versions previously reported.
-      
-      Error: one or more Python packages failed to install [error code 1]
-      In addition: Warning messages:
-      1: In check_forbidden_install("Python packages") :
-        cannot install Python packages during R CMD check
-      2: In check_forbidden_install("Conda Environments") :
-        cannot install Conda Environments during R CMD check
-      Execution halted
-    ```
-
-*   checking re-building of vignette outputs ... ERROR
-    ```
-    Error(s) in re-building vignettes:
-    --- re-building ‘pareg.Rmd’ using rmarkdown
-    The magick package is required to crop "/scratch/henrik/revdep/globals/checks/pareg/new/pareg.Rcheck/vign_test/pareg/vignettes/pareg_files/figure-html/unnamed-chunk-4-1.png" but not available.
-    The magick package is required to crop "/scratch/henrik/revdep/globals/checks/pareg/new/pareg.Rcheck/vign_test/pareg/vignettes/pareg_files/figure-html/unnamed-chunk-5-1.png" but not available.
-    Channels:
-     - anaconda
-    Platform: linux-64
-    Collecting package metadata (repodata.json): ...working... done
-    Solving environment: ...working... done
-    
-    ...
-    --- re-building ‘pathway_similarities.Rmd’ using rmarkdown
-    The magick package is required to crop "/scratch/henrik/revdep/globals/checks/pareg/new/pareg.Rcheck/vign_test/pareg/vignettes/pathway_similarities_files/figure-html/unnamed-chunk-2-1.png" but not available.
-    The magick package is required to crop "/scratch/henrik/revdep/globals/checks/pareg/new/pareg.Rcheck/vign_test/pareg/vignettes/pathway_similarities_files/figure-html/unnamed-chunk-3-1.png" but not available.
-    --- finished re-building ‘pathway_similarities.Rmd’
-    
-    SUMMARY: processing the following file failed:
-      ‘pareg.Rmd’
-    
-    Error: Vignette re-building failed.
-    Execution halted
-    ```
-
-*   checking for portable file names ... NOTE
-    ```
-    Found the following non-portable file paths:
-      pareg/inst/scripts/synthetic_benchmark/resources/multi_config_workflow/config_ablation_study/config.yaml
-      pareg/inst/scripts/synthetic_benchmark/resources/multi_config_workflow/config_ablation_study/params.csv
-      pareg/inst/scripts/synthetic_benchmark/resources/multi_config_workflow/config_dispersion_fitting/config.yaml
-      pareg/inst/scripts/synthetic_benchmark/resources/multi_config_workflow/config_dispersion_fitting/params.csv
-      pareg/inst/scripts/synthetic_benchmark/resources/multi_config_workflow/config_real_datasets/config.yaml
-      pareg/inst/scripts/synthetic_benchmark/resources/multi_config_workflow/config_real_datasets/params.csv
-      pareg/inst/scripts/synthetic_benchmark/resources/multi_config_workflow/config_regularization_effect/config.yaml
-      pareg/inst/scripts/synthetic_benchmark/resources/multi_config_workflow/config_regularization_effect/params.csv
-      pareg/inst/scripts/synthetic_benchmark/resources/multi_config_workflow/config_regularization_parameter/config.yaml
-    ...
-      pareg/inst/scripts/synthetic_benchmark/resources/multi_config_workflow/config_response_distribution/params.csv
-      pareg/inst/scripts/synthetic_benchmark/resources/multi_config_workflow/config_similarity_measures/config.yaml
-      pareg/inst/scripts/synthetic_benchmark/resources/multi_config_workflow/config_similarity_measures/params.csv
-      pareg/inst/scripts/synthetic_benchmark/resources/multi_config_workflow/workflow/scripts/compare_rocauc_vs_loss.R
-      pareg/inst/scripts/synthetic_benchmark/resources/multi_config_workflow/config_regularization_parameter
-    
-    Tarballs are only required to store paths of up to 100 bytes and cannot
-    store those of more than 256 bytes, with restrictions including to 100
-    bytes for the final component.
-    See section ‘Package structure’ in the ‘Writing R Extensions’ manual.
-    ```
-
-*   checking whether package ‘pareg’ can be installed ... NOTE
-    ```
-    Found the following notes/warnings:
-      Non-staged installation was used
-    See ‘/scratch/henrik/revdep/globals/checks/pareg/new/pareg.Rcheck/00install.out’ for details.
-    ```
-
-# partR2
-
-<details>
-
-* Version: 0.9.2
-* GitHub: https://github.com/mastoffel/partR2
-* Source code: https://github.com/cran/partR2
-* Date/Publication: 2024-03-04 13:20:02 UTC
-* Number of recursive dependencies: 93
+* GitHub: <https://github.com/mastoffel/partR2>
+* Email: <mailto:martin.adam.stoffel@gmail.com>
+* GitHub mirror: <https://github.com/cran/partR2>
 
 Run `revdepcheck::revdep_details(, "partR2")` for more info
-
-</details>
 
 ## In both
 
 *   checking dependencies in R code ... NOTE
-    ```
-    Namespace in Imports field not imported from: ‘methods’
-      All declared Imports should be used.
-    ```
+     ```
+     Namespace in Imports field not imported from: ‘methods’
+       All declared Imports should be used.
+     ```
 
-# parttree
+# pavo (2.9.0)
 
-<details>
-
-* Version: 0.1.0
-* GitHub: https://github.com/grantmcdermott/parttree
-* Source code: https://github.com/cran/parttree
-* Date/Publication: 2025-01-16 10:30:02 UTC
-* Number of recursive dependencies: 128
-
-Run `revdepcheck::revdep_details(, "parttree")` for more info
-
-</details>
-
-## In both
-
-*   checking tests ...
-    ```
-      Running ‘tinytest.R’
-     ERROR
-    Running the tests in ‘tests/tinytest.R’ failed.
-    Last 50 lines of output:
-      test_rpart.R..................    0 tests    
-      test_rpart.R..................    0 tests    
-      test_rpart.R..................    0 tests    
-      test_rpart.R..................    0 tests    
-      test_rpart.R..................    0 tests    
-      test_rpart.R..................    0 tests    
-    ...
-       call| expect_snapshot_plot(f, label = "iris_regression")
-       diff| 6851
-       info| Diff plot saved to: _tinysnapshot_review/iris_regression.png
-      Error: 3 out of 10 tests failed
-      In addition: Warning messages:
-      1: In library(package, lib.loc = lib.loc, character.only = TRUE, logical.return = TRUE,  :
-        there is no package called 'tidymodels'
-      2: In library(package, lib.loc = lib.loc, character.only = TRUE, logical.return = TRUE,  :
-        there is no package called 'tidymodels'
-      Execution halted
-    ```
-
-# pavo
-
-<details>
-
-* Version: 2.9.0
-* GitHub: https://github.com/rmaia/pavo
-* Source code: https://github.com/cran/pavo
-* Date/Publication: 2023-09-24 10:10:02 UTC
-* Number of recursive dependencies: 98
+* GitHub: <https://github.com/rmaia/pavo>
+* Email: <mailto:thomas.white026@gmail.com>
+* GitHub mirror: <https://github.com/cran/pavo>
 
 Run `revdepcheck::revdep_details(, "pavo")` for more info
-
-</details>
 
 ## In both
 
 *   checking whether package ‘pavo’ can be installed ... WARNING
-    ```
-    Found the following significant warnings:
-      Warning: no DISPLAY variable so Tk is not available
-    See ‘/scratch/henrik/revdep/globals/checks/pavo/new/pavo.Rcheck/00install.out’ for details.
-    ```
+     ```
+     Found the following significant warnings:
+       Warning: no DISPLAY variable so Tk is not available
+     See ‘/scratch/henrik/revdep/globals/checks/pavo/new/pavo.Rcheck/00install.out’ for details.
+     ```
 
-# Pedixplorer
+# pgxRpi (1.6.0)
 
-<details>
-
-* Version: 1.2.0
-* GitHub: https://github.com/LouisLeNezet/Pedixplorer
-* Source code: https://github.com/cran/Pedixplorer
-* Date/Publication: 2024-10-29
-* Number of recursive dependencies: 154
-
-Run `revdepcheck::revdep_details(, "Pedixplorer")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  8.1Mb
-      sub-directories of 1Mb or more:
-        R     1.5Mb
-        doc   5.1Mb
-    ```
-
-# pgxRpi
-
-<details>
-
-* Version: 1.2.3
-* GitHub: https://github.com/progenetix/pgxRpi
-* Source code: https://github.com/cran/pgxRpi
-* Date/Publication: 2025-02-13
-* Number of recursive dependencies: 158
+* GitHub: <https://github.com/progenetix/pgxRpi>
+* Email: <mailto:hangjia.zhao@uzh.ch>
 
 Run `revdepcheck::revdep_details(, "pgxRpi")` for more info
-
-</details>
 
 ## In both
 
 *   checking re-building of vignette outputs ... ERROR
-    ```
-    Error(s) in re-building vignettes:
-    --- re-building ‘Introduction_1_load_metadata.Rmd’ using rmarkdown
-    The magick package is required to crop "/scratch/henrik/revdep/globals/checks/pgxRpi/new/pgxRpi.Rcheck/vign_test/pgxRpi/vignettes/Introduction_1_load_metadata_files/figure-html/unnamed-chunk-12-1.png" but not available.
-    --- finished re-building ‘Introduction_1_load_metadata.Rmd’
-    
-    --- re-building ‘Introduction_2_query_variants.Rmd’ using rmarkdown
-    
-    Quitting from Introduction_2_query_variants.Rmd:83-86 [unnamed-chunk-4]
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    <error/rlang_error>
-    ...
-    The magick package is required to crop "/scratch/henrik/revdep/globals/checks/pgxRpi/new/pgxRpi.Rcheck/vign_test/pgxRpi/vignettes/Introduction_4_process_pgxseg_files/figure-html/unnamed-chunk-14-1.png" but not available.
-    The magick package is required to crop "/scratch/henrik/revdep/globals/checks/pgxRpi/new/pgxRpi.Rcheck/vign_test/pgxRpi/vignettes/Introduction_4_process_pgxseg_files/figure-html/unnamed-chunk-15-1.png" but not available.
-    The magick package is required to crop "/scratch/henrik/revdep/globals/checks/pgxRpi/new/pgxRpi.Rcheck/vign_test/pgxRpi/vignettes/Introduction_4_process_pgxseg_files/figure-html/unnamed-chunk-16-1.png" but not available.
-    --- finished re-building ‘Introduction_4_process_pgxseg.Rmd’
-    
-    SUMMARY: processing the following file failed:
-      ‘Introduction_2_query_variants.Rmd’
-    
-    Error: Vignette re-building failed.
-    Execution halted
-    ```
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  5.4Mb
-      sub-directories of 1Mb or more:
-        doc   5.1Mb
-    ```
+     ```
+     ...
+     Backtrace:
+         ▆
+      1. └─pgxRpi::segtoFreq(segdata, cnv_column_idx = 6, cohort_name = "c1")
+      2.   └─base::colSums(bin.dup.data1)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     
+     Error: processing vignette 'Introduction_3_access_cnv_frequency.Rmd' failed with diagnostics:
+     'x' must be an array of at least two dimensions
+     --- failed re-building ‘Introduction_3_access_cnv_frequency.Rmd’
+     
+     --- re-building ‘Introduction_4_process_pgxseg.Rmd’ using rmarkdown
+     The magick package is required to crop "/scratch/henrik/revdep/globals/checks/pgxRpi/new/pgxRpi.Rcheck/vign_test/pgxRpi/vignettes/Introduction_4_process_pgxseg_files/figure-html/unnamed-chunk-6-1.png" but not available.
+     The magick package is required to crop "/scratch/henrik/revdep/globals/checks/pgxRpi/new/pgxRpi.Rcheck/vign_test/pgxRpi/vignettes/Introduction_4_process_pgxseg_files/figure-html/unnamed-chunk-7-1.png" but not available.
+     The magick package is required to crop "/scratch/henrik/revdep/globals/checks/pgxRpi/new/pgxRpi.Rcheck/vign_test/pgxRpi/vignettes/Introduction_4_process_pgxseg_files/figure-html/unnamed-chunk-8-1.png" but not available.
+     The magick package is required to crop "/scratch/henrik/revdep/globals/checks/pgxRpi/new/pgxRpi.Rcheck/vign_test/pgxRpi/vignettes/Introduction_4_process_pgxseg_files/figure-html/unnamed-chunk-13-1.png" but not available.
+     The magick package is required to crop "/scratch/henrik/revdep/globals/checks/pgxRpi/new/pgxRpi.Rcheck/vign_test/pgxRpi/vignettes/Introduction_4_process_pgxseg_files/figure-html/unnamed-chunk-14-1.png" but not available.
+     The magick package is required to crop "/scratch/henrik/revdep/globals/checks/pgxRpi/new/pgxRpi.Rcheck/vign_test/pgxRpi/vignettes/Introduction_4_process_pgxseg_files/figure-html/unnamed-chunk-15-1.png" but not available.
+     The magick package is required to crop "/scratch/henrik/revdep/globals/checks/pgxRpi/new/pgxRpi.Rcheck/vign_test/pgxRpi/vignettes/Introduction_4_process_pgxseg_files/figure-html/unnamed-chunk-16-1.png" but not available.
+     --- finished re-building ‘Introduction_4_process_pgxseg.Rmd’
+     
+     SUMMARY: processing the following file failed:
+       ‘Introduction_3_access_cnv_frequency.Rmd’
+     
+     Error: Vignette re-building failed.
+     Execution halted
+     ```
 
 *   checking R code for possible problems ... NOTE
-    ```
-    pgxSegprocess: no visible binding for global variable
-      ‘followup_state_id’
-    Undefined global functions or variables:
-      followup_state_id
-    ```
+     ```
+     pgxSegprocess: no visible binding for global variable
+       ‘followup_state_id’
+     Undefined global functions or variables:
+       followup_state_id
+     ```
 
-# phecodemap
+# photosynthesis (2.1.5)
 
-<details>
-
-* Version: 0.1.0
-* GitHub: https://github.com/celehs/phecodemap
-* Source code: https://github.com/cran/phecodemap
-* Date/Publication: 2022-01-15 09:02:44 UTC
-* Number of recursive dependencies: 119
-
-Run `revdepcheck::revdep_details(, "phecodemap")` for more info
-
-</details>
-
-## In both
-
-*   checking data for non-ASCII characters ... NOTE
-    ```
-      Note: found 114 marked UTF-8 strings
-    ```
-
-# photosynthesis
-
-<details>
-
-* Version: 2.1.5
-* GitHub: https://github.com/cdmuir/photosynthesis
-* Source code: https://github.com/cran/photosynthesis
-* Date/Publication: 2024-11-24 19:40:02 UTC
-* Number of recursive dependencies: 118
+* GitHub: <https://github.com/cdmuir/photosynthesis>
+* Email: <mailto:cdmuir@wisc.edu>
+* GitHub mirror: <https://github.com/cran/photosynthesis>
 
 Run `revdepcheck::revdep_details(, "photosynthesis")` for more info
 
-</details>
+## In both
+
+*   checking DESCRIPTION meta-information ... NOTE
+     ```
+       Missing dependency on R >= 4.1.0 because package code uses the pipe
+       |> or function shorthand \(...) syntax added in R 4.1.0.
+       File(s) using such syntax:
+         ‘bake-par.R’ ‘bake.R’ ‘calculated-parameters.R’ ‘conductance.R’
+         ‘constants.R’ ‘enviro-par.R’ ‘fit_aq_response.R’
+         ‘fit_aq_response2.Rd’ ‘fit_photosynthesis.R’ ‘fit_r_light.R’
+         ‘fit_r_light2.Rd’ ‘leaf-par.R’ ‘make_parameters.R’ ‘models.R’
+         ‘parameter_names.R’ ‘photosynthesis.R’ ‘read_licor.R’
+         ‘simulate_error.R’ ‘simulate_error.Rd’ ‘utils.R’
+     ```
+
+# powRICLPM (0.2.1)
+
+* GitHub: <https://github.com/JeroenDMulder/powRICLPM>
+* Email: <mailto:j.d.mulder@uu.nl>
+* GitHub mirror: <https://github.com/cran/powRICLPM>
+
+Run `revdepcheck::revdep_details(, "powRICLPM")` for more info
 
 ## In both
 
-*   checking installed package size ... NOTE
-    ```
-      installed size is  7.3Mb
-      sub-directories of 1Mb or more:
-        doc   6.2Mb
-    ```
-
-*   checking data for non-ASCII characters ... NOTE
-    ```
-      Note: found 13 marked UTF-8 strings
-    ```
-
-# phylolm
-
-<details>
-
-* Version: 2.6.5
-* GitHub: https://github.com/lamho86/phylolm
-* Source code: https://github.com/cran/phylolm
-* Date/Publication: 2024-09-30 19:00:02 UTC
-* Number of recursive dependencies: 34
-
-Run `revdepcheck::revdep_details(, "phylolm")` for more info
-
-</details>
-
-## In both
-
-*   checking Rd cross-references ... NOTE
-    ```
-    Packages unavailable to check Rd xrefs: ‘geiger’, ‘caper’
-    ```
-
-# PINstimation
-
-<details>
-
-* Version: 0.1.2
-* GitHub: https://github.com/monty-se/PINstimation
-* Source code: https://github.com/cran/PINstimation
-* Date/Publication: 2023-03-20 23:10:07 UTC
-* Number of recursive dependencies: 50
-
-Run `revdepcheck::revdep_details(, "PINstimation")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  5.1Mb
-      sub-directories of 1Mb or more:
-        R      1.5Mb
-        data   1.1Mb
-        doc    2.0Mb
-    ```
-
-# pliman
-
-<details>
-
-* Version: 3.0.0
-* GitHub: https://github.com/NA/NA
-* Source code: https://github.com/cran/pliman
-* Date/Publication: 2024-11-06 10:30:02 UTC
-* Number of recursive dependencies: 133
-
-Run `revdepcheck::revdep_details(, "pliman")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  9.4Mb
-      sub-directories of 1Mb or more:
-        R            1.5Mb
-        libs         5.4Mb
-        tmp_images   1.9Mb
-    ```
-
-# PLNmodels
-
-<details>
-
-* Version: 1.2.2
-* GitHub: https://github.com/pln-team/PLNmodels
-* Source code: https://github.com/cran/PLNmodels
-* Date/Publication: 2025-03-21 17:40:06 UTC
-* Number of recursive dependencies: 144
-
-Run `revdepcheck::revdep_details(, "PLNmodels")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is 31.7Mb
-      sub-directories of 1Mb or more:
-        R      1.5Mb
-        data   3.5Mb
-        doc    2.4Mb
-        libs  23.4Mb
-    ```
-
-# plotly
-
-<details>
-
-* Version: 4.10.4
-* GitHub: https://github.com/plotly/plotly.R
-* Source code: https://github.com/cran/plotly
-* Date/Publication: 2024-01-13 22:40:02 UTC
-* Number of recursive dependencies: 135
-
-Run `revdepcheck::revdep_details(, "plotly")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  7.1Mb
-      sub-directories of 1Mb or more:
-        R             1.0Mb
-        htmlwidgets   4.0Mb
-    ```
-
-# pointblank
-
-<details>
-
-* Version: 0.12.2
-* GitHub: https://github.com/rstudio/pointblank
-* Source code: https://github.com/cran/pointblank
-* Date/Publication: 2024-10-23 03:50:02 UTC
-* Number of recursive dependencies: 129
-
-Run `revdepcheck::revdep_details(, "pointblank")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... NOTE
-    ```
-    Package suggested but not available for checking: ‘RPostgres’
-    ```
-
-*   checking data for non-ASCII characters ... NOTE
-    ```
-      Note: found 1 marked UTF-8 string
-    ```
-
-# polykde
-
-<details>
-
-* Version: 1.1.3
-* GitHub: https://github.com/egarpor/polykde
-* Source code: https://github.com/cran/polykde
-* Date/Publication: 2025-04-15 23:10:02 UTC
-* Number of recursive dependencies: 173
-
-Run `revdepcheck::revdep_details(, "polykde")` for more info
-
-</details>
-
-## In both
-
-*   checking tests ...
-    ```
-      Running ‘testthat.R’
-     ERROR
-    Running the tests in ‘tests/testthat.R’ failed.
-    Last 50 lines of output:
-      
-      ══ Skipped tests (6) ═══════════════════════════════════════════════════════════
-      • No tests for euler ridges, just visualizations (1): 'tests_euler.R:504:1'
-      • Unstable (5): 'tests_kde.R:165:3', 'tests_kre.R:49:3', 'tests_tests.R:115:3',
-        'tests_tests.R:191:3', 'tests_tests.R:200:3'
-      
-    ...
-       3. │   └─rlang::eval_bare(expr, quo_get_env(quo))
-       4. ├─polykde (local) Bessel_asymp(x = c(50:100, 10000, 1e+05), d = d)
-       5. └─base::loadNamespace(x) at tests_utils.R:214:5
-       6.   └─base::withRestarts(stop(cond), retry_loadNamespace = function() NULL)
-       7.     └─base (local) withOneRestart(expr, restarts[[1L]])
-       8.       └─base (local) doWithOneRestart(return(expr), restart)
-      
-      [ FAIL 3 | WARN 0 | SKIP 6 | PASS 825 ]
-      Error: Test failures
-      Execution halted
-    ```
-
-*   checking package dependencies ... NOTE
-    ```
-    Package suggested but not available for checking: ‘Bessel’
-    ```
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is 17.7Mb
-      sub-directories of 1Mb or more:
-        R      6.7Mb
-        libs  10.8Mb
-    ```
-
-# portvine
-
-<details>
-
-* Version: 1.0.3
-* GitHub: https://github.com/EmanuelSommer/portvine
-* Source code: https://github.com/cran/portvine
-* Date/Publication: 2024-01-18 16:30:02 UTC
-* Number of recursive dependencies: 128
-
-Run `revdepcheck::revdep_details(, "portvine")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is 53.8Mb
-      sub-directories of 1Mb or more:
-        libs  52.7Mb
-    ```
-
-# ppseq
-
-<details>
-
-* Version: 0.2.5
-* GitHub: https://github.com/zabore/ppseq
-* Source code: https://github.com/cran/ppseq
-* Date/Publication: 2024-09-04 22:20:02 UTC
-* Number of recursive dependencies: 102
-
-Run `revdepcheck::revdep_details(, "ppseq")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is 11.0Mb
-      sub-directories of 1Mb or more:
-        doc  10.5Mb
-    ```
-
-# ppsr
-
-<details>
-
-* Version: 0.0.5
-* GitHub: NA
-* Source code: https://github.com/cran/ppsr
-* Date/Publication: 2024-02-18 12:30:02 UTC
-* Number of recursive dependencies: 59
+*   checking DESCRIPTION meta-information ... NOTE
+     ```
+       Missing dependency on R >= 4.1.0 because package code uses the pipe
+       |> or function shorthand \(...) syntax added in R 4.1.0.
+       File(s) using such syntax:
+         ‘save.R’
+     ```
+
+# ppsr (0.0.5)
+
+* Email: <mailto:paulvanderlaken@gmail.com>
+* GitHub mirror: <https://github.com/cran/ppsr>
 
 Run `revdepcheck::revdep_details(, "ppsr")` for more info
-
-</details>
 
 ## In both
 
 *   checking dependencies in R code ... NOTE
-    ```
-    Namespaces in Imports field not imported from:
-      ‘rpart’ ‘withr’
-      All declared Imports should be used.
-    ```
+     ```
+     Namespaces in Imports field not imported from:
+       ‘rpart’ ‘withr’
+       All declared Imports should be used.
+     ```
 
-# ProFAST
+# Prostar (1.42.0)
 
-<details>
-
-* Version: 1.6
-* GitHub: https://github.com/feiyoung/ProFAST
-* Source code: https://github.com/cran/ProFAST
-* Date/Publication: 2025-03-27 14:40:02 UTC
-* Number of recursive dependencies: 245
-
-Run `revdepcheck::revdep_details(, "ProFAST")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is 27.3Mb
-      sub-directories of 1Mb or more:
-        data   4.5Mb
-        libs  22.2Mb
-    ```
-
-# projpred
-
-<details>
-
-* Version: 2.8.0
-* GitHub: https://github.com/stan-dev/projpred
-* Source code: https://github.com/cran/projpred
-* Date/Publication: 2023-12-15 00:00:02 UTC
-* Number of recursive dependencies: 160
-
-Run `revdepcheck::revdep_details(, "projpred")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... NOTE
-    ```
-    Package suggested but not available for checking: ‘cmdstanr’
-    ```
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  6.0Mb
-      sub-directories of 1Mb or more:
-        doc    1.4Mb
-        libs   3.7Mb
-    ```
-
-# Prostar
-
-<details>
-
-* Version: 1.38.1
-* GitHub: https://github.com/edyp-lab/Prostar
-* Source code: https://github.com/cran/Prostar
-* Date/Publication: 2024-11-25
-* Number of recursive dependencies: 188
+* GitHub: <https://github.com/edyp-lab/Prostar>
+* Email: <mailto:samuel.wieczorek@cea.fr>
 
 Run `revdepcheck::revdep_details(, "Prostar")` for more info
-
-</details>
 
 ## In both
 
 *   checking whether package ‘Prostar’ can be installed ... WARNING
-    ```
-    Found the following significant warnings:
-      Warning: replacing previous import ‘future::reset’ by ‘shinyjs::reset’ when loading ‘Prostar’
-    See ‘/scratch/henrik/revdep/globals/checks/Prostar/new/Prostar.Rcheck/00install.out’ for details.
-    ```
+     ```
+     Found the following significant warnings:
+       Warning: replacing previous import ‘future::reset’ by ‘shinyjs::reset’ when loading ‘Prostar’
+     See ‘/scratch/henrik/revdep/globals/checks/Prostar/new/Prostar.Rcheck/00install.out’ for details.
+     ```
 
 *   checking for hidden files and directories ... NOTE
-    ```
-    Found the following hidden files and directories:
-      docs/.nojekyll
-    These were most likely included in error. See section ‘Package
-    structure’ in the ‘Writing R Extensions’ manual.
-    ```
+     ```
+     Found the following hidden files and directories:
+       docs/.nojekyll
+     These were most likely included in error. See section ‘Package
+     structure’ in the ‘Writing R Extensions’ manual.
+     ```
 
 *   checking dependencies in R code ... NOTE
-    ```
-    Namespaces in Imports field not imported from:
-      ‘DT’ ‘R.utils’ ‘RColorBrewer’ ‘XML’ ‘colourpicker’ ‘gtools’
-      ‘markdown’ ‘rclipboard’ ‘sass’ ‘shinyTree’ ‘shinyWidgets’
-      All declared Imports should be used.
-    ```
+     ```
+     Namespaces in Imports field not imported from:
+       ‘DT’ ‘R.utils’ ‘RColorBrewer’ ‘XML’ ‘colourpicker’ ‘gtools’
+       ‘markdown’ ‘rclipboard’ ‘sass’ ‘shinyTree’ ‘shinyWidgets’
+       All declared Imports should be used.
+     ```
 
 *   checking files in ‘vignettes’ ... NOTE
-    ```
-    The following files look like leftovers/mistakes:
-      ‘Prostar_UserManual.log’
-    Please remove them from your package.
-    ```
+     ```
+     The following files look like leftovers/mistakes:
+       ‘Prostar_UserManual.log’
+     Please remove them from your package.
+     ```
 
-# psborrow2
+# pseudohouseholds (0.1.1)
 
-<details>
-
-* Version: 0.0.4.0
-* GitHub: https://github.com/Genentech/psborrow2
-* Source code: https://github.com/cran/psborrow2
-* Date/Publication: 2025-02-12 15:20:02 UTC
-* Number of recursive dependencies: 153
-
-Run `revdepcheck::revdep_details(, "psborrow2")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... NOTE
-    ```
-    Package suggested but not available for checking: ‘cmdstanr’
-    ```
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  6.4Mb
-      sub-directories of 1Mb or more:
-        R     1.5Mb
-        doc   3.9Mb
-    ```
-
-# PSCBS
-
-<details>
-
-* Version: 0.68.0
-* GitHub: https://github.com/HenrikBengtsson/PSCBS
-* Source code: https://github.com/cran/PSCBS
-* Date/Publication: 2025-04-18 19:40:02 UTC
-* Number of recursive dependencies: 42
-
-Run `revdepcheck::revdep_details(, "PSCBS")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  5.4Mb
-      sub-directories of 1Mb or more:
-        R         1.5Mb
-        data-ex   2.6Mb
-    ```
-
-# pseudohouseholds
-
-<details>
-
-* Version: 0.1.1
-* GitHub: https://github.com/chris31415926535/pseudohouseholds
-* Source code: https://github.com/cran/pseudohouseholds
-* Date/Publication: 2023-07-19 09:30:02 UTC
-* Number of recursive dependencies: 101
+* GitHub: <https://github.com/chris31415926535/pseudohouseholds>
+* Email: <mailto:christopher.a.belanger@gmail.com>
+* GitHub mirror: <https://github.com/cran/pseudohouseholds>
 
 Run `revdepcheck::revdep_details(, "pseudohouseholds")` for more info
 
-</details>
-
 ## In both
 
-*   checking installed package size ... NOTE
-    ```
-      installed size is  6.8Mb
-      sub-directories of 1Mb or more:
-        data   6.5Mb
-    ```
+*   checking DESCRIPTION meta-information ... NOTE
+     ```
+       Missing dependency on R >= 4.1.0 because package code uses the pipe
+       |> or function shorthand \(...) syntax added in R 4.1.0.
+       File(s) using such syntax:
+         ‘pseudohouseholds.R’
+     ```
 
-*   checking data for non-ASCII characters ... NOTE
-    ```
-      Note: found 596 marked UTF-8 strings
-    ```
+# pvLRT (0.5.1)
 
-# pvLRT
-
-<details>
-
-* Version: 0.5.1
-* GitHub: https://github.com/c7rishi/pvLRT
-* Source code: https://github.com/cran/pvLRT
-* Date/Publication: 2023-03-06 23:30:02 UTC
-* Number of recursive dependencies: 90
+* GitHub: <https://github.com/c7rishi/pvLRT>
+* Email: <mailto:chakra.saptarshi@gmail.com>
+* GitHub mirror: <https://github.com/cran/pvLRT>
 
 Run `revdepcheck::revdep_details(, "pvLRT")` for more info
 
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  6.8Mb
-      sub-directories of 1Mb or more:
-        data   6.5Mb
-    ```
-
-*   checking Rd files ... NOTE
-    ```
-    checkRd: (-1) pvlrt.Rd:42: Lost braces; missing escapes or markup?
-        42 | \item{no_zi_idx}{List of pairs {(i, j)} where zero inflation is not allowed. To
-           |                                ^
-    checkRd: (-1) r_contin_table_zip.Rd:35: Lost braces; missing escapes or markup?
-        35 | \item{no_zi_idx}{List of pairs {(i, j)} where zero inflation is not allowed. To
-           |                                ^
-    ```
-
-# qape
-
-<details>
-
-* Version: 2.1
-* GitHub: NA
-* Source code: https://github.com/cran/qape
-* Date/Publication: 2023-08-21 14:10:12 UTC
-* Number of recursive dependencies: 42
-
-Run `revdepcheck::revdep_details(, "qape")` for more info
-
-</details>
-
 ## In both
 
 *   checking Rd files ... NOTE
-    ```
-    checkRd: (-1) srswrRe.Rd:10: Lost braces
-        10 |   \item{listRanef}{{\emph{ranef(model)}} object where {\emph{model}} is an { \emph{lmer}} object.}
-           |                                                                            ^
-    ```
-
-# QDNAseq
-
-<details>
-
-* Version: 1.42.0
-* GitHub: https://github.com/ccagc/QDNAseq
-* Source code: https://github.com/cran/QDNAseq
-* Date/Publication: 2024-10-29
-* Number of recursive dependencies: 94
-
-Run `revdepcheck::revdep_details(, "QDNAseq")` for more info
-
-</details>
-
-## In both
-
-*   checking re-building of vignette outputs ... WARNING
-    ```
-    Error(s) in re-building vignettes:
-    --- re-building ‘QDNAseq.Rnw’ using Sweave
-    EM algorithm started ... 
-    
-    Warning in allprior/tot :
-      Recycling array of length 1 in vector-array arithmetic is deprecated.
-      Use c() or as.vector() instead.
-    Warning in allprior/tot :
-      Recycling array of length 1 in vector-array arithmetic is deprecated.
-      Use c() or as.vector() instead.
-    ...
-    l.197 \RequirePackage
-                         {parnotes}^^M
-    !  ==> Fatal error occurred, no output PDF file produced!
-    --- failed re-building ‘QDNAseq.Rnw’
-    
-    SUMMARY: processing the following file failed:
-      ‘QDNAseq.Rnw’
-    
-    Error: Vignette re-building failed.
-    Execution halted
-    ```
-
-# RAINBOWR
-
-<details>
-
-* Version: 0.1.35
-* GitHub: NA
-* Source code: https://github.com/cran/RAINBOWR
-* Date/Publication: 2024-03-03 09:12:36 UTC
-* Number of recursive dependencies: 151
-
-Run `revdepcheck::revdep_details(, "RAINBOWR")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is 43.9Mb
-      sub-directories of 1Mb or more:
-        R      1.5Mb
-        libs  41.5Mb
-    ```
-
-# Rcurvep
-
-<details>
-
-* Version: 1.3.1
-* GitHub: https://github.com/moggces/Rcurvep
-* Source code: https://github.com/cran/Rcurvep
-* Date/Publication: 2024-01-09 08:20:32 UTC
-* Number of recursive dependencies: 126
-
-Run `revdepcheck::revdep_details(, "Rcurvep")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... NOTE
-    ```
-    Package suggested but not available for checking: ‘tcpl’
-    ```
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  6.8Mb
-      sub-directories of 1Mb or more:
-        data   3.5Mb
-        java   2.7Mb
-    ```
-
-*   checking Rd cross-references ... NOTE
-    ```
-    Package unavailable to check Rd xrefs: ‘tcpl’
-    ```
-
-# receptiviti
-
-<details>
-
-* Version: 0.1.8
-* GitHub: https://github.com/Receptiviti/receptiviti-r
-* Source code: https://github.com/cran/receptiviti
-* Date/Publication: 2024-03-29 18:00:03 UTC
-* Number of recursive dependencies: 65
-
-Run `revdepcheck::revdep_details(, "receptiviti")` for more info
-
-</details>
-
-## In both
-
-*   checking tests ...
-    ```
-      Running ‘testthat.R’
-     ERROR
-    Running the tests in ‘tests/testthat.R’ failed.
-    Complete output:
-      > library(testthat)
-      > library(receptiviti)
-      > 
-      > test_check("receptiviti")
-      Status: ERROR
-      Message: Invalid header received from client.
-    ...
-       7. └─receptiviti::receptiviti(...)
-      ── Failure ('test-receptiviti_status.R:5:3'): failures works ───────────────────
-      receptiviti_status(...) is not NULL
-      
-      `actual` is a list
-      `expected` is NULL
-      
-      [ FAIL 2 | WARN 0 | SKIP 2 | PASS 6 ]
-      Error: Test failures
-      Execution halted
-    ```
-
-# recipes
-
-<details>
-
-* Version: 1.3.0
-* GitHub: https://github.com/tidymodels/recipes
-* Source code: https://github.com/cran/recipes
-* Date/Publication: 2025-04-17 06:50:06 UTC
-* Number of recursive dependencies: 137
-
-Run `revdepcheck::revdep_details(, "recipes")` for more info
-
-</details>
-
-## In both
-
-*   checking Rd cross-references ... NOTE
-    ```
-    Package unavailable to check Rd xrefs: ‘fastICA’
-    ```
-
-# regmedint
-
-<details>
-
-* Version: 1.0.1
-* GitHub: https://github.com/kaz-yos/regmedint
-* Source code: https://github.com/cran/regmedint
-* Date/Publication: 2024-01-13 00:50:02 UTC
-* Number of recursive dependencies: 154
-
-Run `revdepcheck::revdep_details(, "regmedint")` for more info
-
-</details>
-
-## In both
-
-*   checking dependencies in R code ... NOTE
-    ```
-    Namespace in Imports field not imported from: ‘Deriv’
-      All declared Imports should be used.
-    ```
-
-# reproducible
-
-<details>
-
-* Version: 2.1.2
-* GitHub: https://github.com/PredictiveEcology/reproducible
-* Source code: https://github.com/cran/reproducible
-* Date/Publication: 2024-12-12 06:30:02 UTC
-* Number of recursive dependencies: 104
-
-Run `revdepcheck::revdep_details(, "reproducible")` for more info
-
-</details>
-
-## In both
-
-*   checking tests ...
-    ```
-      Running ‘test-all.R’
-     ERROR
-    Running the tests in ‘tests/test-all.R’ failed.
-    Last 50 lines of output:
-        'test-preProcessWorks.R:328:3', 'test-preProcessWorks.R:348:3',
-        'test-preProcessWorks.R:361:3', 'test-preProcessWorks.R:374:3',
-        'test-preProcessWorks.R:391:3', 'test-preProcessWorks.R:409:3',
-        'test-preProcessWorks.R:438:3', 'test-preProcessWorks.R:459:3',
-        'test-preProcessWorks.R:487:3', 'test-preProcessWorks.R:543:3',
-        'test-preProcessWorks.R:569:3', 'test-preProcessWorks.R:672:3',
-    ...
-       4.       └─reproducible:::makeVal(x)
-       5.         ├─terra::makeValid(x)
-       6.         └─terra::makeValid(x)
-       7.           └─terra (local) .local(x, ...)
-       8.             └─terra:::messages(x)
-       9.               └─terra:::error(f, x@pntr$getError())
-      
-      [ FAIL 2 | WARN 0 | SKIP 90 | PASS 391 ]
-      Error: Test failures
-      Execution halted
-    ```
-
-# reservr
-
-<details>
-
-* Version: 0.0.3
-* GitHub: https://github.com/AshesITR/reservr
-* Source code: https://github.com/cran/reservr
-* Date/Publication: 2024-06-24 16:40:02 UTC
-* Number of recursive dependencies: 133
-
-Run `revdepcheck::revdep_details(, "reservr")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... ERROR
-    ```
-    Package required but not available: ‘keras3’
-    
-    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
-    manual.
-    ```
-
-# rgee
-
-<details>
-
-* Version: 1.1.7
-* GitHub: https://github.com/r-spatial/rgee
-* Source code: https://github.com/cran/rgee
-* Date/Publication: 2023-09-27 08:30:02 UTC
-* Number of recursive dependencies: 133
-
-Run `revdepcheck::revdep_details(, "rgee")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  8.4Mb
-      sub-directories of 1Mb or more:
-        doc   6.9Mb
-    ```
-
-*   checking Rd files ... NOTE
-    ```
-    checkRd: (-1) ee_Authenticate.Rd:40: Lost braces in \itemize; meant \describe ?
-    checkRd: (-1) ee_Authenticate.Rd:41: Lost braces in \itemize; meant \describe ?
-    checkRd: (-1) ee_Authenticate.Rd:42: Lost braces in \itemize; meant \describe ?
-    checkRd: (-1) ee_Authenticate.Rd:43: Lost braces in \itemize; meant \describe ?
-    checkRd: (-1) ee_Authenticate.Rd:44: Lost braces in \itemize; meant \describe ?
-    checkRd: (-1) ee_Initialize.Rd:49: Lost braces in \itemize; meant \describe ?
-    checkRd: (-1) ee_Initialize.Rd:50: Lost braces in \itemize; meant \describe ?
-    checkRd: (-1) ee_Initialize.Rd:51: Lost braces in \itemize; meant \describe ?
-    checkRd: (-1) ee_Initialize.Rd:52: Lost braces in \itemize; meant \describe ?
-    checkRd: (-1) ee_Initialize.Rd:53: Lost braces in \itemize; meant \describe ?
-    ...
-    checkRd: (-1) ee_imagecollection_to_local.Rd:105: Lost braces in \itemize; meant \describe ?
-    checkRd: (-1) ee_imagecollection_to_local.Rd:106: Lost braces in \itemize; meant \describe ?
-    checkRd: (-1) ee_imagecollection_to_local.Rd:107: Lost braces in \itemize; meant \describe ?
-    checkRd: (-1) ee_imagecollection_to_local.Rd:108: Lost braces in \itemize; meant \describe ?
-    checkRd: (-1) ee_install.Rd:35-37: Lost braces in \itemize; meant \describe ?
-    checkRd: (-1) ee_install.Rd:38-39: Lost braces in \itemize; meant \describe ?
-    checkRd: (-1) ee_install.Rd:40: Lost braces in \itemize; meant \describe ?
-    checkRd: (-1) ee_install.Rd:41-44: Lost braces in \itemize; meant \describe ?
-    checkRd: (-1) ee_install.Rd:45: Lost braces in \itemize; meant \describe ?
-    checkRd: (-1) ee_install.Rd:46: Lost braces in \itemize; meant \describe ?
-    ```
-
-# rpm
-
-<details>
-
-* Version: 0.7-3
-* GitHub: https://github.com/handcock/rpm
-* Source code: https://github.com/cran/rpm
-* Date/Publication: 2024-04-18 08:20:03 UTC
-* Number of recursive dependencies: 63
-
-Run `revdepcheck::revdep_details(, "rpm")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is 13.6Mb
-      sub-directories of 1Mb or more:
-        libs  13.0Mb
-    ```
-
-# rsparkling
-
-<details>
-
-* Version: 0.2.19
-* GitHub: https://github.com/h2oai/sparkling-water
-* Source code: https://github.com/cran/rsparkling
-* Date/Publication: 2020-01-28 23:10:02 UTC
-* Number of recursive dependencies: 58
-
-Run `revdepcheck::revdep_details(, "rsparkling")` for more info
-
-</details>
-
-## In both
-
-*   checking dependencies in R code ... NOTE
-    ```
-    Namespace in Imports field not imported from: ‘h2o’
-      All declared Imports should be used.
-    ```
-
-*   checking LazyData ... NOTE
-    ```
-      'LazyData' is specified without a 'data' directory
-    ```
-
-# rules
-
-<details>
-
-* Version: 1.0.2
-* GitHub: https://github.com/tidymodels/rules
-* Source code: https://github.com/cran/rules
-* Date/Publication: 2023-03-08 23:40:02 UTC
-* Number of recursive dependencies: 135
-
-Run `revdepcheck::revdep_details(, "rules")` for more info
-
-</details>
-
-## In both
-
-*   checking tests ...
-    ```
-      Running ‘spelling.R’
-      Running ‘testthat.R’
-     ERROR
-    Running the tests in ‘tests/testthat.R’ failed.
-    Last 50 lines of output:
-       11.     └─cli::cli_abort(...)
-       12.       └─rlang::abort(...)
-      ── Error ('test-rule-fit-regression.R:184:3'): early stopping works in xrf_fit ──
-      Error in `fit(rf_mod_3, mpg ~ ., data = mtcars)`: Please install the xrf package to use this engine.
-      Backtrace:
-    ...
-       2. │ └─base::withCallingHandlers(...)
-       3. ├─generics::fit(rf_mod, mpg ~ ., data = mtcars)
-       4. └─parsnip::fit.model_spec(rf_mod, mpg ~ ., data = mtcars)
-       5.   └─parsnip:::check_installs(object)
-       6.     └─cli::cli_abort(...)
-       7.       └─rlang::abort(...)
-      
-      [ FAIL 6 | WARN 0 | SKIP 33 | PASS 17 ]
-      Error: Test failures
-      Execution halted
-    ```
-
-*   checking package dependencies ... NOTE
-    ```
-    Package suggested but not available for checking: ‘xrf’
-    ```
-
-# sae.projection
-
-<details>
-
-* Version: 0.1.3
-* GitHub: https://github.com/Alfrzlp/sae.projection
-* Source code: https://github.com/cran/sae.projection
-* Date/Publication: 2025-04-05 10:40:02 UTC
-* Number of recursive dependencies: 124
-
-Run `revdepcheck::revdep_details(, "sae.projection")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... ERROR
-    ```
-    Package required but not available: ‘FSelector’
-    
-    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
-    manual.
-    ```
-
-# safetyCharts
-
-<details>
-
-* Version: 0.3.0
-* GitHub: https://github.com/SafetyGraphics/safetyCharts
-* Source code: https://github.com/cran/safetyCharts
-* Date/Publication: 2022-03-22 20:00:02 UTC
-* Number of recursive dependencies: 147
-
-Run `revdepcheck::revdep_details(, "safetyCharts")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... ERROR
-    ```
-    Package required but not available: ‘pharmaRTF’
-    
-    Package suggested but not available for checking: ‘safetyGraphics’
-    
-    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
-    manual.
-    ```
-
-# safetyGraphics
-
-<details>
-
-* Version: 2.1.1
-* GitHub: https://github.com/SafetyGraphics/safetyGraphics
-* Source code: https://github.com/cran/safetyGraphics
-* Date/Publication: 2022-12-14 22:00:02 UTC
-* Number of recursive dependencies: 158
-
-Run `revdepcheck::revdep_details(, "safetyGraphics")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... ERROR
-    ```
-    Package required but not available: ‘safetyCharts’
-    
-    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
-    manual.
-    ```
-
-# sapfluxnetr
-
-<details>
-
-* Version: 0.1.4
-* GitHub: https://github.com/sapfluxnet/sapfluxnetr
-* Source code: https://github.com/cran/sapfluxnetr
-* Date/Publication: 2023-01-25 15:30:02 UTC
-* Number of recursive dependencies: 79
-
-Run `revdepcheck::revdep_details(, "sapfluxnetr")` for more info
-
-</details>
-
-## In both
-
-*   checking data for non-ASCII characters ... NOTE
-    ```
-      Note: found 4 marked UTF-8 strings
-    ```
-
-# scanMiRApp
-
-<details>
-
-* Version: 1.12.0
-* GitHub: NA
-* Source code: https://github.com/cran/scanMiRApp
-* Date/Publication: 2024-10-29
-* Number of recursive dependencies: 177
-
-Run `revdepcheck::revdep_details(, "scanMiRApp")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... ERROR
-    ```
-    Packages required but not available: 'scanMiR', 'scanMiRData'
-    
-    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
-    manual.
-    ```
-
-# SCArray.sat
-
-<details>
-
-* Version: 1.6.0
-* GitHub: https://github.com/AbbVie-ComputationalGenomics/SCArray
-* Source code: https://github.com/cran/SCArray.sat
-* Date/Publication: 2024-10-29
-* Number of recursive dependencies: 181
-
-Run `revdepcheck::revdep_details(, "SCArray.sat")` for more info
-
-</details>
-
-## In both
-
-*   checking dependencies in R code ... NOTE
-    ```
-    Unexported objects imported by ':::' calls:
-      ‘Seurat:::DEmethods_counts’ ‘Seurat:::DEmethods_nocorrect’
-      ‘Seurat:::FastExpMean’ ‘Seurat:::FastLogVMR’ ‘Seurat:::NBResiduals’
-      ‘Seurat:::UpdateKey’ ‘Seurat:::ValidateDataForMerge’
-      See the note in ?`:::` about the use of this operator.
-    ```
-
-# scDiffCom
-
-<details>
-
-* Version: 1.0.0
-* GitHub: NA
-* Source code: https://github.com/cran/scDiffCom
-* Date/Publication: 2023-11-03 18:40:02 UTC
-* Number of recursive dependencies: 261
-
-Run `revdepcheck::revdep_details(, "scDiffCom")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  7.5Mb
-      sub-directories of 1Mb or more:
-        data   6.5Mb
-    ```
-
-# scRNAseqApp
-
-<details>
-
-* Version: 1.6.1
-* GitHub: https://github.com/jianhong/scRNAseqApp
-* Source code: https://github.com/cran/scRNAseqApp
-* Date/Publication: 2025-01-23
-* Number of recursive dependencies: 240
-
-Run `revdepcheck::revdep_details(, "scRNAseqApp")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... NOTE
-    ```
-    Packages which this enhances but not available for checking:
-      'celldex', 'SingleR', 'tricycle'
-    ```
-
-# sctransform
-
-<details>
-
-* Version: 0.4.2
-* GitHub: https://github.com/satijalab/sctransform
-* Source code: https://github.com/cran/sctransform
-* Date/Publication: 2025-04-30 17:20:02 UTC
-* Number of recursive dependencies: 65
-
-Run `revdepcheck::revdep_details(, "sctransform")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... NOTE
-    ```
-    Package which this enhances but not available for checking: ‘glmGamPoi’
-    ```
-
-# sdmTMB
-
-<details>
-
-* Version: 0.7.0
-* GitHub: https://github.com/pbs-assess/sdmTMB
-* Source code: https://github.com/cran/sdmTMB
-* Date/Publication: 2025-04-01 21:30:06 UTC
-* Number of recursive dependencies: 151
-
-Run `revdepcheck::revdep_details(, "sdmTMB")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is 100.7Mb
-      sub-directories of 1Mb or more:
-        libs  98.6Mb
-    ```
-
-# selenider
-
-<details>
-
-* Version: 0.4.1
-* GitHub: https://github.com/ashbythorpe/selenider
-* Source code: https://github.com/cran/selenider
-* Date/Publication: 2025-01-12 14:40:01 UTC
-* Number of recursive dependencies: 90
-
-Run `revdepcheck::revdep_details(, "selenider")` for more info
-
-</details>
-
-## In both
-
-*   checking tests ...
-    ```
-      Running ‘testthat.R’
-     ERROR
-    Running the tests in ‘tests/testthat.R’ failed.
-    Last 50 lines of output:
-      ── Failure ('test-keys.R:27:5'): Each key has a selenium key definition ────────
-      Expected `get_rselenium_key(structure("F9", class = "selenider_key"))` to run without any errors.
-      i Actually got a <rlib_error_package_not_found> with text:
-        The package "RSelenium" is required.
-      Backtrace:
-          ▆
-    ...
-      i Actually got a <rlib_error_package_not_found> with text:
-        The package "RSelenium" is required.
-      Backtrace:
-          ▆
-       1. ├─rlang::inject(expect_no_error(get_rselenium_key(!!key))) at test-keys.R:27:5
-       2. └─testthat::expect_no_error(get_rselenium_key(`<slndr_ky>`))
-      
-      [ FAIL 29 | WARN 0 | SKIP 44 | PASS 127 ]
-      Error: Test failures
-      Execution halted
-    ```
-
-*   checking package dependencies ... NOTE
-    ```
-    Packages suggested but not available for checking: 'RSelenium', 'wdman'
-    ```
-
-*   checking Rd cross-references ... NOTE
-    ```
-    Packages unavailable to check Rd xrefs: ‘wdman’, ‘RSelenium’
-    ```
-
-# sentopics
-
-<details>
-
-* Version: 0.7.4
-* GitHub: https://github.com/odelmarcelle/sentopics
-* Source code: https://github.com/cran/sentopics
-* Date/Publication: 2024-09-20 12:20:02 UTC
-* Number of recursive dependencies: 170
-
-Run `revdepcheck::revdep_details(, "sentopics")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  9.7Mb
-      sub-directories of 1Mb or more:
-        data   2.5Mb
-        libs   6.2Mb
-    ```
-
-*   checking Rd cross-references ... NOTE
-    ```
-    Package unavailable to check Rd xrefs: ‘lexicon’
-    ```
-
-*   checking data for non-ASCII characters ... NOTE
-    ```
-      Note: found 3128 marked UTF-8 strings
-    ```
-
-# Seurat
-
-<details>
-
-* Version: 5.3.0
-* GitHub: https://github.com/satijalab/seurat
-* Source code: https://github.com/cran/Seurat
-* Date/Publication: 2025-04-23 22:10:02 UTC
-* Number of recursive dependencies: 279
-
-Run `revdepcheck::revdep_details(, "Seurat")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... NOTE
-    ```
-    Packages suggested but not available for checking:
-      'BPCells', 'hdf5r', 'presto', 'Rfast2'
-    ```
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is 18.8Mb
-      sub-directories of 1Mb or more:
-        R      3.5Mb
-        help   1.5Mb
-        libs  13.4Mb
-    ```
-
-*   checking Rd cross-references ... NOTE
-    ```
-    Package unavailable to check Rd xrefs: ‘Signac’
-    ```
-
-# SeuratObject
-
-<details>
-
-* Version: 5.1.0
-* GitHub: https://github.com/satijalab/seurat-object
-* Source code: https://github.com/cran/SeuratObject
-* Date/Publication: 2025-04-22 19:40:01 UTC
-* Number of recursive dependencies: 99
-
-Run `revdepcheck::revdep_details(, "SeuratObject")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... NOTE
-    ```
-    Package suggested but not available for checking: ‘BPCells’
-    ```
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  6.1Mb
-      sub-directories of 1Mb or more:
-        R      2.0Mb
-        libs   3.2Mb
-    ```
-
-*   checking Rd cross-references ... NOTE
-    ```
-    Package unavailable to check Rd xrefs: ‘plotly’
-    ```
-
-# shapr
-
-<details>
-
-* Version: 1.0.4
-* GitHub: https://github.com/NorskRegnesentral/shapr
-* Source code: https://github.com/cran/shapr
-* Date/Publication: 2025-04-28 13:00:02 UTC
-* Number of recursive dependencies: 166
-
-Run `revdepcheck::revdep_details(, "shapr")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is 13.5Mb
-      sub-directories of 1Mb or more:
-        doc    4.4Mb
-        libs   7.8Mb
-    ```
-
-*   checking Rd cross-references ... NOTE
-    ```
-    Package unavailable to check Rd xrefs: ‘devtools’
-    ```
-
-# sharp
-
-<details>
-
-* Version: 1.4.7
-* GitHub: https://github.com/barbarabodinier/sharp
-* Source code: https://github.com/cran/sharp
-* Date/Publication: 2025-04-11 08:20:02 UTC
-* Number of recursive dependencies: 157
-
-Run `revdepcheck::revdep_details(, "sharp")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... NOTE
-    ```
-    Package suggested but not available for checking: ‘rCOSA’
-    ```
-
-*   checking Rd cross-references ... NOTE
-    ```
-    Package unavailable to check Rd xrefs: ‘rCOSA’
-    ```
-
-# shiny
-
-<details>
-
-* Version: 1.10.0
-* GitHub: https://github.com/rstudio/shiny
-* Source code: https://github.com/cran/shiny
-* Date/Publication: 2024-12-14 00:10:02 UTC
-* Number of recursive dependencies: 92
-
-Run `revdepcheck::revdep_details(, "shiny")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is 16.5Mb
-      sub-directories of 1Mb or more:
-        R      3.5Mb
-        help   1.7Mb
-        www   10.4Mb
-    ```
-
-# shiny.worker
-
-<details>
-
-* Version: 0.0.1
-* GitHub: NA
-* Source code: https://github.com/cran/shiny.worker
-* Date/Publication: 2021-01-21 11:00:02 UTC
-* Number of recursive dependencies: 57
-
-Run `revdepcheck::revdep_details(, "shiny.worker")` for more info
-
-</details>
-
-## In both
-
-*   checking dependencies in R code ... NOTE
-    ```
-    Namespaces in Imports field not imported from:
-      ‘R6’ ‘shiny’
-      All declared Imports should be used.
-    ```
-
-*   checking LazyData ... NOTE
-    ```
-      'LazyData' is specified without a 'data' directory
-    ```
-
-# shinybrms
-
-<details>
-
-* Version: 1.8.0
-* GitHub: https://github.com/fweber144/shinybrms
-* Source code: https://github.com/cran/shinybrms
-* Date/Publication: 2022-08-05 22:50:07 UTC
-* Number of recursive dependencies: 152
-
-Run `revdepcheck::revdep_details(, "shinybrms")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... NOTE
-    ```
-    Package suggested but not available for checking: ‘cmdstanr’
-    ```
-
-# shinymgr
-
-<details>
-
-* Version: 1.1.0
-* GitHub: NA
-* Source code: https://github.com/cran/shinymgr
-* Date/Publication: 2024-05-10 17:50:03 UTC
-* Number of recursive dependencies: 85
-
-Run `revdepcheck::revdep_details(, "shinymgr")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  5.6Mb
-      sub-directories of 1Mb or more:
-        shinymgr    1.4Mb
-        tutorials   3.6Mb
-    ```
-
-*   checking dependencies in R code ... NOTE
-    ```
-    Namespace in Imports field not imported from: ‘shinydashboard’
-      All declared Imports should be used.
-    ```
-
-# shinyMixR
-
-<details>
-
-* Version: 0.5.0
-* GitHub: NA
-* Source code: https://github.com/cran/shinyMixR
-* Date/Publication: 2024-11-14 16:10:03 UTC
-* Number of recursive dependencies: 200
-
-Run `revdepcheck::revdep_details(, "shinyMixR")` for more info
-
-</details>
-
-## In both
-
-*   checking tests ...
-    ```
-      Running ‘testthat.R’
-     ERROR
-    Running the tests in ‘tests/testthat.R’ failed.
-    Last 50 lines of output:
-      > # see https://github.com/rstudio/shinytest2/issues/351 
-      > options(chromote.timeout = 120)
-      > 
-      > library(testthat)
-      > library(shinyMixR)
-      Loading required package: shiny
-    ...
-       2. │ └─base::withCallingHandlers(...)
-       3. ├─shinyMixR::gof_plot(res, ptype = "all", type = "xpose")
-       4. └─base::loadNamespace(x)
-       5.   └─base::withRestarts(stop(cond), retry_loadNamespace = function() NULL)
-       6.     └─base (local) withOneRestart(expr, restarts[[1L]])
-       7.       └─base (local) doWithOneRestart(return(expr), restart)
-      
-      [ FAIL 2 | WARN 0 | SKIP 11 | PASS 21 ]
-      Error: Test failures
-      Execution halted
-    ```
-
-*   checking package dependencies ... NOTE
-    ```
-    Package suggested but not available for checking: ‘xpose.nlmixr2’
-    ```
-
-# shinyML
-
-<details>
-
-* Version: 1.0.1
-* GitHub: https://github.com/JeanBertinR/shinyML
-* Source code: https://github.com/cran/shinyML
-* Date/Publication: 2021-02-24 17:00:02 UTC
-* Number of recursive dependencies: 112
-
-Run `revdepcheck::revdep_details(, "shinyML")` for more info
-
-</details>
-
-## In both
-
-*   checking LazyData ... NOTE
-    ```
-      'LazyData' is specified without a 'data' directory
-    ```
-
-# shinyNextUI
-
-<details>
-
-* Version: 0.1.0
-* GitHub: NA
-* Source code: https://github.com/cran/shinyNextUI
-* Date/Publication: 2025-03-17 08:50:02 UTC
-* Number of recursive dependencies: 97
-
-Run `revdepcheck::revdep_details(, "shinyNextUI")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... NOTE
-    ```
-    Package suggested but not available for checking: ‘roxy.shinylive’
-    ```
-
-*   checking data for non-ASCII characters ... NOTE
-    ```
-      Note: found 1973 marked UTF-8 strings
-    ```
-
-# sigminer
-
-<details>
-
-* Version: 2.3.1
-* GitHub: https://github.com/ShixiangWang/sigminer
-* Source code: https://github.com/cran/sigminer
-* Date/Publication: 2024-05-11 08:50:02 UTC
-* Number of recursive dependencies: 212
-
-Run `revdepcheck::revdep_details(, "sigminer")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  8.7Mb
-      sub-directories of 1Mb or more:
-        R         1.5Mb
-        data      2.0Mb
-        extdata   1.0Mb
-        help      1.7Mb
-        libs      1.6Mb
-    ```
-
-# Signac
-
-<details>
-
-* Version: 1.14.0
-* GitHub: https://github.com/stuart-lab/signac
-* Source code: https://github.com/cran/Signac
-* Date/Publication: 2024-08-21 07:40:02 UTC
-* Number of recursive dependencies: 245
-
-Run `revdepcheck::revdep_details(, "Signac")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  6.6Mb
-      sub-directories of 1Mb or more:
-        R      1.5Mb
-        data   1.5Mb
-        libs   2.9Mb
-    ```
-
-# signeR
-
-<details>
-
-* Version: 2.8.0
-* GitHub: https://github.com/TojalLab/signeR
-* Source code: https://github.com/cran/signeR
-* Date/Publication: 2024-10-29
-* Number of recursive dependencies: 237
-
-Run `revdepcheck::revdep_details(, "signeR")` for more info
-
-</details>
-
-## In both
-
-*   checking C++ specification ... NOTE
-    ```
-      Specified C++11: please drop specification unless essential
-    ```
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  8.0Mb
-      sub-directories of 1Mb or more:
-        R     1.9Mb
-        doc   5.2Mb
-    ```
-
-*   checking R code for possible problems ... NOTE
-    ```
-    covariate: no visible binding for global variable ‘.’
-    explorepage: no visible binding for global variable ‘.’
-    genCountMatrixFromMAF: no visible binding for global variable
-      ‘Variant_Type’
-    genCountMatrixFromMAF: no visible binding for global variable
-      ‘Reference_Allele’
-    genCountMatrixFromMAF: no visible binding for global variable
-      ‘Tumor_Seq_Allele2’
-    genCountMatrixFromMAF: no visible binding for global variable
-      ‘Tumor_Seq_Allele1’
-    ...
-    ExposureCorrelation,SignExp-numeric: no visible binding for global
-      variable ‘exposure’
-    ExposureCorrelation,matrix-numeric: no visible binding for global
-      variable ‘Feature’
-    ExposureCorrelation,matrix-numeric: no visible binding for global
-      variable ‘exposure’
-    Undefined global functions or variables:
-      . Col Feature Frequency Reference_Allele Row Samples Signatures
-      Tumor_Seq_Allele1 Tumor_Seq_Allele2 Variant_Type alt<- exposure fc
-      project sig sig_test
-    ```
-
-*   checking Rd files ... NOTE
-    ```
-    prepare_Rd: cosmic_data.Rd:91-93: Dropping empty section \details
-    prepare_Rd: cosmic_data.Rd:98-100: Dropping empty section \references
-    prepare_Rd: cosmic_data.Rd:101-102: Dropping empty section \examples
-    prepare_Rd: tcga_similarities.Rd:96-98: Dropping empty section \details
-    prepare_Rd: tcga_similarities.Rd:99-101: Dropping empty section \source
-    prepare_Rd: tcga_similarities.Rd:102-104: Dropping empty section \references
-    prepare_Rd: tcga_similarities.Rd:105-106: Dropping empty section \examples
-    prepare_Rd: tcga_tumors.Rd:18-20: Dropping empty section \details
-    prepare_Rd: tcga_tumors.Rd:21-23: Dropping empty section \source
-    prepare_Rd: tcga_tumors.Rd:24-26: Dropping empty section \references
-    prepare_Rd: tcga_tumors.Rd:27-28: Dropping empty section \examples
-    ```
-
-# SimDesign
-
-<details>
-
-* Version: 2.19.2
-* GitHub: https://github.com/philchalmers/SimDesign
-* Source code: https://github.com/cran/SimDesign
-* Date/Publication: 2025-03-28 15:30:02 UTC
-* Number of recursive dependencies: 136
-
-Run `revdepcheck::revdep_details(, "SimDesign")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  7.5Mb
-      sub-directories of 1Mb or more:
-        doc   6.6Mb
-    ```
-
-# simtrial
-
-<details>
-
-* Version: 0.4.2
-* GitHub: https://github.com/Merck/simtrial
-* Source code: https://github.com/cran/simtrial
-* Date/Publication: 2024-11-18 15:10:02 UTC
-* Number of recursive dependencies: 113
-
-Run `revdepcheck::revdep_details(, "simtrial")` for more info
-
-</details>
-
-## In both
-
-*   checking dependencies in R code ... NOTE
-    ```
-    Namespace in Imports field not imported from: ‘gsDesign2’
-      All declared Imports should be used.
-    ```
-
-# skpr
-
-<details>
-
-* Version: 1.8.2
-* GitHub: https://github.com/tylermorganwall/skpr
-* Source code: https://github.com/cran/skpr
-* Date/Publication: 2025-04-25 18:40:02 UTC
-* Number of recursive dependencies: 160
-
-Run `revdepcheck::revdep_details(, "skpr")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is 59.7Mb
-      sub-directories of 1Mb or more:
-        libs  59.0Mb
-    ```
-
-# SmCCNet
-
-<details>
-
-* Version: 2.0.3
-* GitHub: https://github.com/KechrisLab/SmCCNet
-* Source code: https://github.com/cran/SmCCNet
-* Date/Publication: 2024-04-16 05:20:02 UTC
-* Number of recursive dependencies: 160
-
-Run `revdepcheck::revdep_details(, "SmCCNet")` for more info
-
-</details>
-
-## In both
-
-*   checking re-building of vignette outputs ... WARNING
-    ```
-    Error(s) in re-building vignettes:
-    --- re-building ‘SmCCNet_Vignette_AutoSmCCNet.Rmd’ using rmarkdown
-    ! LaTeX Error: File `ucharcat.sty' not found.
-    
-    ! Emergency stop.
-    <read *> 
-    
-    Error: processing vignette 'SmCCNet_Vignette_AutoSmCCNet.Rmd' failed with diagnostics:
-    LaTeX failed to compile /scratch/henrik/revdep/globals/checks/SmCCNet/new/SmCCNet.Rcheck/vign_test/SmCCNet/vignettes/SmCCNet_Vignette_AutoSmCCNet.tex. See https://yihui.org/tinytex/r/#debugging for debugging tips. See SmCCNet_Vignette_AutoSmCCNet.log for more info.
-    --- failed re-building ‘SmCCNet_Vignette_AutoSmCCNet.Rmd’
-    ...
-    Error: processing vignette 'SmCCNet_Vignette_SingleOmics.Rmd' failed with diagnostics:
-    LaTeX failed to compile /scratch/henrik/revdep/globals/checks/SmCCNet/new/SmCCNet.Rcheck/vign_test/SmCCNet/vignettes/SmCCNet_Vignette_SingleOmics.tex. See https://yihui.org/tinytex/r/#debugging for debugging tips. See SmCCNet_Vignette_SingleOmics.log for more info.
-    --- failed re-building ‘SmCCNet_Vignette_SingleOmics.Rmd’
-    
-    SUMMARY: processing the following files failed:
-      ‘SmCCNet_Vignette_AutoSmCCNet.Rmd’ ‘SmCCNet_Vignette_MultiOmics.Rmd’
-      ‘SmCCNet_Vignette_SingleOmics.Rmd’
-    
-    Error: Vignette re-building failed.
-    Execution halted
-    ```
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  5.1Mb
-      sub-directories of 1Mb or more:
-        data   3.5Mb
-        doc    1.2Mb
-    ```
-
-# smoots
-
-<details>
-
-* Version: 1.1.4
-* GitHub: NA
-* Source code: https://github.com/cran/smoots
-* Date/Publication: 2023-09-11 08:50:02 UTC
-* Number of recursive dependencies: 70
-
-Run `revdepcheck::revdep_details(, "smoots")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  5.5Mb
-      sub-directories of 1Mb or more:
-        libs   4.6Mb
-    ```
-
-# solitude
-
-<details>
-
-* Version: 1.1.3
-* GitHub: https://github.com/talegari/solitude
-* Source code: https://github.com/cran/solitude
-* Date/Publication: 2021-07-29 20:00:02 UTC
-* Number of recursive dependencies: 129
-
-Run `revdepcheck::revdep_details(, "solitude")` for more info
-
-</details>
-
-## In both
-
-*   checking dependencies in R code ... NOTE
-    ```
-    Namespaces in Imports field not imported from:
-      ‘R6’ ‘lgr’
-      All declared Imports should be used.
-    ```
-
-# SpaDES.core
-
-<details>
-
-* Version: 2.1.0
-* GitHub: https://github.com/PredictiveEcology/SpaDES.core
-* Source code: https://github.com/cran/SpaDES.core
-* Date/Publication: 2024-06-02 11:02:47 UTC
-* Number of recursive dependencies: 133
-
-Run `revdepcheck::revdep_details(, "SpaDES.core")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... NOTE
-    ```
-    Package suggested but not available for checking: ‘NLMR’
-    ```
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  9.3Mb
-      sub-directories of 1Mb or more:
-        R   7.5Mb
-    ```
-
-# spaMM
-
-<details>
-
-* Version: 4.5.0
-* GitHub: NA
-* Source code: https://github.com/cran/spaMM
-* Date/Publication: 2024-06-09 22:20:02 UTC
-* Number of recursive dependencies: 88
-
-Run `revdepcheck::revdep_details(, "spaMM")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... NOTE
-    ```
-    Package suggested but not available for checking: ‘IsoriX’
-    
-    Packages which this enhances but not available for checking:
-      'multcomp', 'RLRsim', 'lmerTest'
-    ```
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is 56.0Mb
-      sub-directories of 1Mb or more:
-        R      3.6Mb
-        help   1.5Mb
-        libs  50.2Mb
-    ```
-
-# sparkavro
-
-<details>
-
-* Version: 0.3.0
-* GitHub: https://github.com/chezou/sparkavro
-* Source code: https://github.com/cran/sparkavro
-* Date/Publication: 2020-01-10 04:40:02 UTC
-* Number of recursive dependencies: 55
-
-Run `revdepcheck::revdep_details(, "sparkavro")` for more info
-
-</details>
-
-## In both
-
-*   checking LazyData ... NOTE
-    ```
-      'LazyData' is specified without a 'data' directory
-    ```
-
-# sparkbq
-
-<details>
-
-* Version: 0.1.1
-* GitHub: https://github.com/miraisolutions/sparkbq
-* Source code: https://github.com/cran/sparkbq
-* Date/Publication: 2019-12-18 18:00:02 UTC
-* Number of recursive dependencies: 39
-
-Run `revdepcheck::revdep_details(, "sparkbq")` for more info
-
-</details>
-
-## In both
-
-*   checking LazyData ... NOTE
-    ```
-      'LazyData' is specified without a 'data' directory
-    ```
-
-# sparkhail
-
-<details>
-
-* Version: 0.1.1
-* GitHub: NA
-* Source code: https://github.com/cran/sparkhail
-* Date/Publication: 2019-12-23 17:50:02 UTC
-* Number of recursive dependencies: 81
-
-Run `revdepcheck::revdep_details(, "sparkhail")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... ERROR
-    ```
-    Package required but not available: ‘sparklyr.nested’
-    
-    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
-    manual.
-    ```
-
-# sparklyr
-
-<details>
-
-* Version: 1.9.0
-* GitHub: https://github.com/sparklyr/sparklyr
-* Source code: https://github.com/cran/sparklyr
-* Date/Publication: 2025-03-18 13:40:02 UTC
-* Number of recursive dependencies: 113
-
-Run `revdepcheck::revdep_details(, "sparklyr")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  7.2Mb
-      sub-directories of 1Mb or more:
-        R      3.5Mb
-        help   1.5Mb
-        java   1.7Mb
-    ```
-
-# sparklyr.nested
-
-<details>
-
-* Version: 0.0.4
-* GitHub: https://github.com/mitre/sparklyr.nested
-* Source code: https://github.com/cran/sparklyr.nested
-* Date/Publication: 2023-02-20 22:00:03 UTC
-* Number of recursive dependencies: 81
-
-Run `revdepcheck::revdep_details(, "sparklyr.nested")` for more info
-
-</details>
-
-## In both
-
-*   checking Rd files ... NOTE
-    ```
-    checkRd: (-1) sdf_unnest.Rd:20: Lost braces
-        20 | \code{a1, a2, a3}, then code{sdf_explode(df, a)} will produce output with each record replicated
-           |                             ^
-    ```
-
-# sparktf
-
-<details>
-
-* Version: 0.1.0
-* GitHub: NA
-* Source code: https://github.com/cran/sparktf
-* Date/Publication: 2019-03-05 14:30:03 UTC
-* Number of recursive dependencies: 55
-
-Run `revdepcheck::revdep_details(, "sparktf")` for more info
-
-</details>
-
-## In both
-
-*   checking LazyData ... NOTE
-    ```
-      'LazyData' is specified without a 'data' directory
-    ```
-
-# sparkwarc
-
-<details>
-
-* Version: 0.1.6
-* GitHub: https://github.com/r-spark/sparkwarc
-* Source code: https://github.com/cran/sparkwarc
-* Date/Publication: 2022-01-11 08:50:02 UTC
-* Number of recursive dependencies: 40
-
-Run `revdepcheck::revdep_details(, "sparkwarc")` for more info
-
-</details>
-
-## In both
-
-*   checking C++ specification ... NOTE
-    ```
-      Specified C++11: please drop specification unless essential
-    ```
-
-# sparrpowR
-
-<details>
-
-* Version: 0.2.8
-* GitHub: https://github.com/machiela-lab/sparrpowR
-* Source code: https://github.com/cran/sparrpowR
-* Date/Publication: 2024-01-23 15:20:02 UTC
-* Number of recursive dependencies: 128
-
-Run `revdepcheck::revdep_details(, "sparrpowR")` for more info
-
-</details>
-
-## In both
-
-*   checking whether package ‘sparrpowR’ can be installed ... WARNING
-    ```
-    Found the following significant warnings:
-      Warning: no DISPLAY variable so Tk is not available
-    See ‘/scratch/henrik/revdep/globals/checks/sparrpowR/new/sparrpowR.Rcheck/00install.out’ for details.
-    ```
-
-# SPARSEMODr
-
-<details>
-
-* Version: 1.2.0
-* GitHub: https://github.com/NAU-CCL/SPARSEMODr
-* Source code: https://github.com/cran/SPARSEMODr
-* Date/Publication: 2022-07-19 20:50:02 UTC
-* Number of recursive dependencies: 124
-
-Run `revdepcheck::revdep_details(, "SPARSEMODr")` for more info
-
-</details>
-
-## In both
-
-*   checking dependencies in R code ... NOTE
-    ```
-    Namespaces in Imports field not imported from:
-      ‘future’ ‘geosphere’ ‘lubridate’ ‘tidyverse’ ‘viridis’
-      All declared Imports should be used.
-    ```
-
-# spatialTIME
-
-<details>
-
-* Version: 1.3.4-5
-* GitHub: https://github.com/FridleyLab/spatialTIME
-* Source code: https://github.com/cran/spatialTIME
-* Date/Publication: 2024-06-04 15:30:11 UTC
-* Number of recursive dependencies: 139
-
-Run `revdepcheck::revdep_details(, "spatialTIME")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  6.1Mb
-      sub-directories of 1Mb or more:
-        data   3.5Mb
-        doc    1.3Mb
-    ```
-
-# spatialwarnings
-
-<details>
-
-* Version: 3.1.0
-* GitHub: https://github.com/spatial-ews/spatialwarnings
-* Source code: https://github.com/cran/spatialwarnings
-* Date/Publication: 2024-09-06 14:50:02 UTC
-* Number of recursive dependencies: 94
-
-Run `revdepcheck::revdep_details(, "spatialwarnings")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  9.2Mb
-      sub-directories of 1Mb or more:
-        data   2.0Mb
-        libs   6.7Mb
-    ```
-
-# sperrorest
-
-<details>
-
-* Version: 3.0.5
-* GitHub: https://github.com/giscience-fsu/sperrorest
-* Source code: https://github.com/cran/sperrorest
-* Date/Publication: 2022-10-16 12:50:02 UTC
-* Number of recursive dependencies: 73
-
-Run `revdepcheck::revdep_details(, "sperrorest")` for more info
-
-</details>
-
-## In both
-
-*   checking Rd files ... NOTE
-    ```
-    checkRd: (-1) partition_cv.Rd:36: Lost braces; missing escapes or markup?
-        36 | if \code{TRUE} (used internally by other {sperrorest} functions), return a
-           |                                          ^
-    checkRd: (-1) partition_cv_strat.Rd:28: Lost braces; missing escapes or markup?
-        28 | if \code{TRUE} (used internally by other {sperrorest} functions), return a
-           |                                          ^
-    checkRd: (-1) partition_factor.Rd:28: Lost braces; missing escapes or markup?
-        28 | if \code{TRUE} (used internally by other {sperrorest} functions), return a
-           |                                          ^
-    checkRd: (-1) partition_factor_cv.Rd:43: Lost braces; missing escapes or markup?
-    ...
-           |                         ^
-    checkRd: (-1) sperrorest.Rd:148: Lost braces; missing escapes or markup?
-       148 | information about the {sperrorest} package version
-           |                       ^
-    checkRd: (-1) summary.sperroresterror.Rd:5: Lost braces; missing escapes or markup?
-         5 | \title{Summarize error statistics obtained by {sperrorest}}
-           |                                               ^
-    checkRd: (-1) summary.sperrorestimportance.Rd:5: Lost braces; missing escapes or markup?
-         5 | \title{Summarize variable importance statistics obtained by {sperrorest}}
-           |                                                             ^
-    ```
-
-# sphunif
-
-<details>
-
-* Version: 1.4.0
-* GitHub: https://github.com/egarpor/sphunif
-* Source code: https://github.com/cran/sphunif
-* Date/Publication: 2024-05-24 21:50:01 UTC
-* Number of recursive dependencies: 71
-
-Run `revdepcheck::revdep_details(, "sphunif")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is 26.0Mb
-      sub-directories of 1Mb or more:
-        libs  24.8Mb
-    ```
-
-*   checking data for non-ASCII characters ... NOTE
-    ```
-      Note: found 189 marked UTF-8 strings
-    ```
-
-# spNetwork
-
-<details>
-
-* Version: 0.4.4.6
-* GitHub: https://github.com/JeremyGelb/spNetwork
-* Source code: https://github.com/cran/spNetwork
-* Date/Publication: 2025-03-29 16:00:02 UTC
-* Number of recursive dependencies: 152
-
-Run `revdepcheck::revdep_details(, "spNetwork")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is 27.6Mb
-      sub-directories of 1Mb or more:
-        doc       1.1Mb
-        extdata   2.6Mb
-        libs     22.4Mb
-    ```
-
-# squat
-
-<details>
-
-* Version: 0.3.0
-* GitHub: https://github.com/LMJL-Alea/squat
-* Source code: https://github.com/cran/squat
-* Date/Publication: 2024-01-10 15:40:02 UTC
-* Number of recursive dependencies: 138
-
-Run `revdepcheck::revdep_details(, "squat")` for more info
-
-</details>
-
-## In both
-
-*   checking examples ... ERROR
-    ```
-    Running examples in ‘squat-Ex.R’ failed
-    The error most likely occurred in:
-    
-    > ### Name: autoplot.qtsclust
-    > ### Title: Plot for 'qtsclust' objects
-    > ### Aliases: autoplot.qtsclust
-    > 
-    > ### ** Examples
-    > 
-    > ## Don't show: 
-    ...
-      3. │   ├─base::withVisible(eval(ei, envir))
-      4. │   └─base::eval(ei, envir)
-      5. │     └─base::eval(ei, envir)
-      6. ├─squat::kmeans(vespa64$igp[1:10], n_clusters = 2)
-      7. └─squat:::kmeans.qts_sample(vespa64$igp[1:10], n_clusters = 2)
-      8.   └─fdacluster::fdakmeans(...)
-      9.     └─fdacluster:::check_option_compatibility(...)
-     10.       └─cli::cli_abort("The L2 metric is neither dilation-invariant nor affine-invariant.")
-     11.         └─rlang::abort(...)
-    Execution halted
-    ```
-
-*   checking tests ...
-    ```
-      Running ‘testthat.R’
-     ERROR
-    Running the tests in ‘tests/testthat.R’ failed.
-    Last 50 lines of output:
-          transformation = transformation, warping_class = warping_class, 
-          metric = metric)`: The L2 metric is neither dilation-invariant nor affine-invariant.
-      Backtrace:
-          ▆
-       1. ├─withr::with_seed(...) at test-qts-kmeans.R:7:3
-       2. │ └─withr::with_preserve_seed(...)
-    ...
-      Deleting unused snapshots:
-      • qts-class/qts-plot-with-change-points.svg
-      • qts-kmeans/k-means-plot.svg
-      • qts-prcomp/colored-score-plot.svg
-      • qts-prcomp/score-plot.svg
-      • qts-prcomp/screeplot.svg
-      • qts-sample-class/qts-sample-plot-with-highlighted-observations.svg
-      • qts-sample-class/qts-sample-plot-with-memberships.svg
-      Error: Test failures
-      Execution halted
-    ```
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is 21.3Mb
-      sub-directories of 1Mb or more:
-        data   2.5Mb
-        help   1.2Mb
-        libs  17.5Mb
-    ```
-
-# sRACIPE
-
-<details>
-
-* Version: 1.22.0
-* GitHub: https://github.com/vivekkohar/sRACIPE
-* Source code: https://github.com/cran/sRACIPE
-* Date/Publication: 2024-10-29
-* Number of recursive dependencies: 104
-
-Run `revdepcheck::revdep_details(, "sRACIPE")` for more info
-
-</details>
-
-## In both
-
-*   checking C++ specification ... NOTE
-    ```
-      Specified C++11: please drop specification unless essential
-    ```
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  5.5Mb
-      sub-directories of 1Mb or more:
-        doc    1.5Mb
-        libs   3.5Mb
-    ```
-
-*   checking DESCRIPTION meta-information ... NOTE
-    ```
-    License stub is invalid DCF.
-    ```
-
-*   checking R code for possible problems ... NOTE
-    ```
-    sracipeSimulate: no visible global function definition for
-      ‘registerDoFuture’
-    sracipeSimulate: no visible global function definition for ‘plan’
-    sracipeSimulate: no visible global function definition for ‘%dopar%’
-    sracipeSimulate: no visible global function definition for ‘foreach’
-    sracipeSimulate: no visible binding for global variable
-      ‘configurationTmp’
-    sracipeSimulate: no visible binding for global variable ‘outFileGETmp’
-    sracipeSimulate: no visible binding for global variable
-      ‘outFileParamsTmp’
-    sracipeSimulate: no visible binding for global variable ‘outFileICTmp’
-    Undefined global functions or variables:
-      %dopar% configurationTmp foreach outFileGETmp outFileICTmp
-      outFileParamsTmp plan registerDoFuture
-    ```
-
-*   checking Rd files ... NOTE
-    ```
-    checkRd: (-1) sracipeHeatmapSimilarity.Rd:31: Lost braces
-        31 | If clusterCut is missing, hierarchical clustering using /code{ward.D2}
-           |                                                              ^
-    checkRd: (-1) sracipeHeatmapSimilarity.Rd:32: Lost braces
-        32 | and /code{distance  = (1-cor(x, method = "spear"))/2} will be used to 
-           |          ^
-    ```
-
-# ssdtools
-
-<details>
-
-* Version: 2.3.0
-* GitHub: https://github.com/bcgov/ssdtools
-* Source code: https://github.com/cran/ssdtools
-* Date/Publication: 2025-02-20 13:20:02 UTC
-* Number of recursive dependencies: 126
-
-Run `revdepcheck::revdep_details(, "ssdtools")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is 38.5Mb
-      sub-directories of 1Mb or more:
-        libs  37.3Mb
-    ```
-
-# stars
-
-<details>
-
-* Version: 0.6-8
-* GitHub: https://github.com/r-spatial/stars
-* Source code: https://github.com/cran/stars
-* Date/Publication: 2025-02-01 18:50:02 UTC
-* Number of recursive dependencies: 163
-
-Run `revdepcheck::revdep_details(, "stars")` for more info
-
-</details>
-
-## In both
-
-*   checking tests ...
-    ```
-      Running ‘aggregate.R’
-      Comparing ‘aggregate.Rout’ to ‘aggregate.Rout.save’ ... OK
-      Running ‘align.R’
-      Comparing ‘align.Rout’ to ‘align.Rout.save’ ... OK
-      Running ‘area.R’
-      Comparing ‘area.Rout’ to ‘area.Rout.save’ ... OK
-      Running ‘crop.R’
-      Comparing ‘crop.Rout’ to ‘crop.Rout.save’ ... OK
-      Running ‘curvilinear.R’
-      Comparing ‘curvilinear.Rout’ to ‘curvilinear.Rout.save’ ... OK
-    ...
-      > 
-      > s = st_set_dimensions(s, st_dimensions(s), xy = NULL) 
-      > sfc = st_sfc(st_point(0:1), st_point(3:2))
-      > s = st_set_dimensions(s, 1, sfc) |> st_set_crs(4326)
-      > tm = as.POSIXct("2023-03-04 12:35") + c(0, 3600)
-      > s = st_set_dimensions(s, 2, tm)
-      > f = tempfile(fileext = ".nc")
-      > write_mdim(s, f, as_float = FALSE)
-      Error: requires GDAL >= 3.1.0 and 64-bit
-      Execution halted
-    ```
-
-*   checking package dependencies ... NOTE
-    ```
-    Package suggested but not available for checking: ‘starsdata’
-    ```
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  7.8Mb
-      sub-directories of 1Mb or more:
-        R     1.5Mb
-        doc   2.9Mb
-        nc    1.7Mb
-    ```
-
-# steps
-
-<details>
-
-* Version: 1.3.0
-* GitHub: https://github.com/steps-dev/steps
-* Source code: https://github.com/cran/steps
-* Date/Publication: 2022-10-04 23:30:02 UTC
-* Number of recursive dependencies: 71
-
-Run `revdepcheck::revdep_details(, "steps")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  5.3Mb
-      sub-directories of 1Mb or more:
-        data   1.5Mb
-        doc    1.2Mb
-        libs   2.3Mb
-    ```
-
-# stppSim
-
-<details>
-
-* Version: 1.3.4
-* GitHub: https://github.com/Manalytics/stppSim
-* Source code: https://github.com/cran/stppSim
-* Date/Publication: 2024-07-24 13:30:02 UTC
-* Number of recursive dependencies: 129
-
-Run `revdepcheck::revdep_details(, "stppSim")` for more info
-
-</details>
-
-## In both
-
-*   checking whether package ‘stppSim’ can be installed ... WARNING
-    ```
-    Found the following significant warnings:
-      Warning: no DISPLAY variable so Tk is not available
-    See ‘/scratch/henrik/revdep/globals/checks/stppSim/new/stppSim.Rcheck/00install.out’ for details.
-    ```
-
-# survex
-
-<details>
-
-* Version: 1.2.0
-* GitHub: https://github.com/ModelOriented/survex
-* Source code: https://github.com/cran/survex
-* Date/Publication: 2023-10-24 18:50:07 UTC
-* Number of recursive dependencies: 182
-
-Run `revdepcheck::revdep_details(, "survex")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... NOTE
-    ```
-    Package suggested but not available for checking: ‘randomForestSRC’
-    ```
-
-# survstan
-
-<details>
-
-* Version: 0.0.7.1
-* GitHub: https://github.com/fndemarqui/survstan
-* Source code: https://github.com/cran/survstan
-* Date/Publication: 2024-04-12 16:50:02 UTC
-* Number of recursive dependencies: 114
-
-Run `revdepcheck::revdep_details(, "survstan")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is 85.6Mb
-      sub-directories of 1Mb or more:
-        libs  85.0Mb
-    ```
-
-*   checking dependencies in R code ... NOTE
-    ```
-    Namespaces in Imports field not imported from:
-      ‘RcppParallel’ ‘rstantools’
-      All declared Imports should be used.
-    ```
-
-*   checking for GNU extensions in Makefiles ... NOTE
-    ```
-    GNU make is a SystemRequirements.
-    ```
-
-# synergyfinder
-
-<details>
-
-* Version: 3.14.0
-* GitHub: NA
-* Source code: https://github.com/cran/synergyfinder
-* Date/Publication: 2024-10-29
-* Number of recursive dependencies: 197
-
-Run `revdepcheck::revdep_details(, "synergyfinder")` for more info
-
-</details>
+     ```
+     checkRd: (-1) pvlrt.Rd:42: Lost braces; missing escapes or markup?
+         42 | \item{no_zi_idx}{List of pairs {(i, j)} where zero inflation is not allowed. To
+            |                                ^
+     checkRd: (-1) r_contin_table_zip.Rd:35: Lost braces; missing escapes or markup?
+         35 | \item{no_zi_idx}{List of pairs {(i, j)} where zero inflation is not allowed. To
+            |                                ^
+     ```
+
+# pysparklyr (0.2.0)
+
+* GitHub: <https://github.com/mlverse/pysparklyr>
+* Email: <mailto:edgar@posit.co>
+* GitHub mirror: <https://github.com/cran/pysparklyr>
+
+Run `revdepcheck::revdep_details(, "pysparklyr")` for more info
 
 ## In both
 
 *   checking dependencies in R code ... WARNING
-    ```
-    '::' or ':::' import not declared from: ‘scales’
-    Namespaces in Imports field not imported from:
-      ‘future’ ‘gstat’ ‘nleqslv’ ‘sp’ ‘tidyverse’
-      All declared Imports should be used.
-    ```
+     ```
+     '::' or ':::' import not declared from: ‘jsonlite’
+     ```
 
-*   checking installed package size ... NOTE
-    ```
-      installed size is  6.3Mb
-      sub-directories of 1Mb or more:
-        doc   5.8Mb
-    ```
+# qape (2.1)
 
-*   checking R code for possible problems ... NOTE
-    ```
-    .Extract2DrugPlotData: no visible binding for global variable
-      ‘input_type’
-    .Extract2DrugPlotData: no visible binding for global variable
-      ‘block_id’
-    .Extract2DrugPlotData: no visible binding for global variable ‘value’
-    .Extract2DrugPlotData: no visible binding for global variable ‘left’
-    .Extract2DrugPlotData: no visible binding for global variable ‘right’
-    .Extract2DrugPlotData: no visible binding for global variable ‘conc1’
-    .Extract2DrugPlotData: no visible binding for global variable ‘conc2’
-    .Extract2DrugPlotData: no visible binding for global variable ‘text’
-    ...
-      response_CI95 response_mean response_origin response_origin_CI95
-      response_origin_mean response_origin_sd response_origin_sem
-      response_sd response_sem right start synergy t.test text theta value
-      x y
-    Consider adding
-      importFrom("grDevices", "dev.list", "dev.off")
-      importFrom("graphics", "text")
-      importFrom("stats", "end", "predict", "start", "t.test")
-      importFrom("utils", "data", "head")
-    to your NAMESPACE file.
-    ```
+* Email: <mailto:alicja.wolny-dominiak@ue.katowice.pl>
+* GitHub mirror: <https://github.com/cran/qape>
 
-*   checking Rd files ... NOTE
-    ```
-    checkRd: (-1) FitDoseResponse.Rd:54: Lost braces
-        54 | href{https://onlinelibrary.wiley.com/doi/book/10.1002/0471725315}{Nonlinear
-           |     ^
-    checkRd: (-1) FitDoseResponse.Rd:54-55: Lost braces
-        54 | href{https://onlinelibrary.wiley.com/doi/book/10.1002/0471725315}{Nonlinear
-           |                                                                  ^
-    checkRd: (-1) FitDoseResponse.Rd:55: Escaped LaTeX specials: \&
-    checkRd: (-1) PlotBarometer.Rd:118: Lost braces
-       118 | href{https://www.frontiersin.org/articles/10.3389/fphar.2015.00181/full}{What
-           |     ^
-    checkRd: (-1) PlotBarometer.Rd:118-119: Lost braces
-       118 | href{https://www.frontiersin.org/articles/10.3389/fphar.2015.00181/full}{What
-           |                                                                         ^
-    checkRd: (-1) PlotDoseResponseCurve.Rd:84: Lost braces
-        84 | link[drc]{plot.drc} function. For example, use xlim = c(0.5, 500) or
-           |          ^
-    ```
-
-# tableschema.r
-
-<details>
-
-* Version: 1.1.2
-* GitHub: https://github.com/frictionlessdata/tableschema-r
-* Source code: https://github.com/cran/tableschema.r
-* Date/Publication: 2022-09-29 20:00:03 UTC
-* Number of recursive dependencies: 60
-
-Run `revdepcheck::revdep_details(, "tableschema.r")` for more info
-
-</details>
+Run `revdepcheck::revdep_details(, "qape")` for more info
 
 ## In both
 
 *   checking Rd files ... NOTE
-    ```
-    checkRd: (-1) Field.Rd:69: Lost braces in \itemize; meant \describe ?
-    checkRd: (-1) Field.Rd:70: Lost braces in \itemize; meant \describe ?
-    checkRd: (-1) Field.Rd:71: Lost braces in \itemize; meant \describe ?
-    checkRd: (-1) Field.Rd:72: Lost braces in \itemize; meant \describe ?
-    checkRd: (-1) Field.Rd:77: Lost braces in \itemize; meant \describe ?
-    checkRd: (-1) Field.Rd:78-80: Lost braces in \itemize; meant \describe ?
-    checkRd: (-1) Field.Rd:81: Lost braces in \itemize; meant \describe ?
-    checkRd: (-1) Field.Rd:82: Lost braces in \itemize; meant \describe ?
-    checkRd: (-1) Field.Rd:88: Lost braces in \itemize; meant \describe ?
-    checkRd: (-1) Field.Rd:89: Lost braces in \itemize; meant \describe ?
-    ...
-    checkRd: (-1) Table.Rd:85: Lost braces in \itemize; meant \describe ?
-    checkRd: (-1) tableschema.r-package.Rd:174: Lost braces
-       174 | in the resources array of a href{http://frictionlessdata.io/specs/data-package/}{Data Package}. 
-           |                                 ^
-    checkRd: (-1) tableschema.r-package.Rd:174: Lost braces
-       174 | in the resources array of a href{http://frictionlessdata.io/specs/data-package/}{Data Package}. 
-           |                                                                                 ^
-    checkRd: (-1) types.castDate.Rd:14: Lost braces in \itemize; meant \describe ?
-    checkRd: (-1) types.castDate.Rd:15: Lost braces in \itemize; meant \describe ?
-    checkRd: (-1) types.castDate.Rd:16: Lost braces in \itemize; meant \describe ?
-    ```
+     ```
+     checkRd: (-1) srswrRe.Rd:10: Lost braces
+         10 |   \item{listRanef}{{\emph{ranef(model)}} object where {\emph{model}} is an { \emph{lmer}} object.}
+            |                                                                            ^
+     ```
 
-*   checking Rd cross-references ... NOTE
-    ```
-    Package unavailable to check Rd xrefs: ‘parsedate’
-    ```
+# QDNAseq (1.46.0)
 
-# target
+* GitHub: <https://github.com/ccagc/QDNAseq>
+* Email: <mailto:d.sie@vumc.nl>
 
-<details>
-
-* Version: 1.20.0
-* GitHub: https://github.com/MahShaaban/target
-* Source code: https://github.com/cran/target
-* Date/Publication: 2024-10-29
-* Number of recursive dependencies: 79
-
-Run `revdepcheck::revdep_details(, "target")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  5.8Mb
-      sub-directories of 1Mb or more:
-        data      3.5Mb
-        extdata   1.6Mb
-    ```
-
-# targeted
-
-<details>
-
-* Version: 0.5
-* GitHub: https://github.com/kkholst/targeted
-* Source code: https://github.com/cran/targeted
-* Date/Publication: 2024-02-22 10:00:21 UTC
-* Number of recursive dependencies: 90
-
-Run `revdepcheck::revdep_details(, "targeted")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is 23.2Mb
-      sub-directories of 1Mb or more:
-        doc    1.1Mb
-        libs  21.5Mb
-    ```
-
-# targets
-
-<details>
-
-* Version: 1.11.1
-* GitHub: https://github.com/ropensci/targets
-* Source code: https://github.com/cran/targets
-* Date/Publication: 2025-04-10 21:10:02 UTC
-* Number of recursive dependencies: 156
-
-Run `revdepcheck::revdep_details(, "targets")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... NOTE
-    ```
-    Package suggested but not available for checking: ‘crew’
-    ```
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  5.5Mb
-      sub-directories of 1Mb or more:
-        R      3.5Mb
-        help   1.7Mb
-    ```
-
-*   checking Rd cross-references ... NOTE
-    ```
-    Package unavailable to check Rd xrefs: ‘qs’
-    ```
-
-# teal
-
-<details>
-
-* Version: 0.16.0
-* GitHub: https://github.com/insightsengineering/teal
-* Source code: https://github.com/cran/teal
-* Date/Publication: 2025-02-23 17:00:02 UTC
-* Number of recursive dependencies: 156
-
-Run `revdepcheck::revdep_details(, "teal")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... ERROR
-    ```
-    Packages required but not available:
-      'teal.data', 'teal.slice', 'teal.reporter'
-    
-    Package suggested but not available for checking: ‘roxy.shinylive’
-    
-    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
-    manual.
-    ```
-
-# teal.modules.clinical
-
-<details>
-
-* Version: 0.10.0
-* GitHub: https://github.com/insightsengineering/teal.modules.clinical
-* Source code: https://github.com/cran/teal.modules.clinical
-* Date/Publication: 2025-02-28 15:50:02 UTC
-* Number of recursive dependencies: 204
-
-Run `revdepcheck::revdep_details(, "teal.modules.clinical")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... ERROR
-    ```
-    Packages required but not available:
-      'teal', 'teal.transform', 'teal.data', 'teal.reporter', 'tern.gee'
-    
-    Package suggested but not available for checking: ‘roxy.shinylive’
-    
-    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
-    manual.
-    ```
-
-# teal.modules.general
-
-<details>
-
-* Version: 0.4.1
-* GitHub: https://github.com/insightsengineering/teal.modules.general
-* Source code: https://github.com/cran/teal.modules.general
-* Date/Publication: 2025-04-01 21:20:01 UTC
-* Number of recursive dependencies: 193
-
-Run `revdepcheck::revdep_details(, "teal.modules.general")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... ERROR
-    ```
-    Packages required but not available:
-      'teal', 'teal.transform', 'teal.data', 'teal.reporter'
-    
-    Package suggested but not available for checking: ‘roxy.shinylive’
-    
-    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
-    manual.
-    ```
-
-# tenm
-
-<details>
-
-* Version: 0.5.1
-* GitHub: https://github.com/luismurao/tenm
-* Source code: https://github.com/cran/tenm
-* Date/Publication: 2024-07-23 00:30:01 UTC
-* Number of recursive dependencies: 78
-
-Run `revdepcheck::revdep_details(, "tenm")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  6.0Mb
-      sub-directories of 1Mb or more:
-        extdata   5.0Mb
-    ```
-
-# text
-
-<details>
-
-* Version: 1.5
-* GitHub: https://github.com/OscarKjell/text
-* Source code: https://github.com/cran/text
-* Date/Publication: 2025-05-02 12:00:02 UTC
-* Number of recursive dependencies: 193
-
-Run `revdepcheck::revdep_details(, "text")` for more info
-
-</details>
-
-## In both
-
-*   checking data for non-ASCII characters ... NOTE
-    ```
-      Note: found 3 marked UTF-8 strings
-    ```
-
-# tglkmeans
-
-<details>
-
-* Version: 0.5.5
-* GitHub: https://github.com/tanaylab/tglkmeans
-* Source code: https://github.com/cran/tglkmeans
-* Date/Publication: 2024-05-15 08:40:02 UTC
-* Number of recursive dependencies: 87
-
-Run `revdepcheck::revdep_details(, "tglkmeans")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  5.3Mb
-      sub-directories of 1Mb or more:
-        libs   5.0Mb
-    ```
-
-*   checking dependencies in R code ... NOTE
-    ```
-    Namespace in Imports field not imported from: ‘doRNG’
-      All declared Imports should be used.
-    ```
-
-*   checking for GNU extensions in Makefiles ... NOTE
-    ```
-    GNU make is a SystemRequirements.
-    ```
-
-# tidyAML
-
-<details>
-
-* Version: 0.0.5
-* GitHub: https://github.com/spsanderson/tidyAML
-* Source code: https://github.com/cran/tidyAML
-* Date/Publication: 2024-03-12 14:10:02 UTC
-* Number of recursive dependencies: 236
-
-Run `revdepcheck::revdep_details(, "tidyAML")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... NOTE
-    ```
-    Package suggested but not available for checking: ‘sda’
-    ```
-
-# tidyfinance
-
-<details>
-
-* Version: 0.4.4
-* GitHub: https://github.com/tidy-finance/r-tidyfinance
-* Source code: https://github.com/cran/tidyfinance
-* Date/Publication: 2025-05-07 18:20:02 UTC
-* Number of recursive dependencies: 93
-
-Run `revdepcheck::revdep_details(, "tidyfinance")` for more info
-
-</details>
-
-## In both
-
-*   checking tests ...
-    ```
-      Running ‘testthat.R’
-     ERROR
-    Running the tests in ‘tests/testthat.R’ failed.
-    Complete output:
-      > # This file is part of the standard setup for testthat.
-      > # It is recommended that you do not modify it.
-      > #
-      > # Where should you do additional test configuration?
-      > # Learn more about the roles of various files in:
-      > # * https://r-pkgs.org/testing-design.html#sec-tests-files-overview
-    ...
-        5. │     ├─testthat (local) .capture(...)
-        6. │     │ └─base::withCallingHandlers(...)
-        7. │     └─rlang::eval_bare(quo_get_expr(.quo), quo_get_env(.quo))
-        8. └─tidyfinance::download_data_constituents(index = "SAMPLE_INDEX")
-        9.   └─cli::cli_abort("Failed to download data for index {.arg index}. Please check the index name or try again later.")
-       10.     └─rlang::abort(...)
-      
-      [ FAIL 1 | WARN 0 | SKIP 8 | PASS 88 ]
-      Error: Test failures
-      Execution halted
-    ```
-
-*   checking package dependencies ... NOTE
-    ```
-    Package suggested but not available for checking: ‘RPostgres’
-    ```
-
-*   checking Rd cross-references ... NOTE
-    ```
-    Package unavailable to check Rd xrefs: ‘RPostgres’
-    ```
-
-# timetk
-
-<details>
-
-* Version: 2.9.0
-* GitHub: https://github.com/business-science/timetk
-* Source code: https://github.com/cran/timetk
-* Date/Publication: 2023-10-31 22:30:02 UTC
-* Number of recursive dependencies: 205
-
-Run `revdepcheck::revdep_details(, "timetk")` for more info
-
-</details>
-
-## In both
-
-*   checking data for non-ASCII characters ... NOTE
-    ```
-      Note: found 2750 marked UTF-8 strings
-    ```
-
-# TKCat
-
-<details>
-
-* Version: 1.1.12
-* GitHub: https://github.com/patzaw/TKCat
-* Source code: https://github.com/cran/TKCat
-* Date/Publication: 2025-03-17 14:50:02 UTC
-* Number of recursive dependencies: 122
-
-Run `revdepcheck::revdep_details(, "TKCat")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  5.0Mb
-      sub-directories of 1Mb or more:
-        R     1.5Mb
-        doc   2.7Mb
-    ```
-
-# tramvs
-
-<details>
-
-* Version: 0.0-7
-* GitHub: NA
-* Source code: https://github.com/cran/tramvs
-* Date/Publication: 2025-01-31 10:10:02 UTC
-* Number of recursive dependencies: 103
-
-Run `revdepcheck::revdep_details(, "tramvs")` for more info
-
-</details>
+Run `revdepcheck::revdep_details(, "QDNAseq")` for more info
 
 ## In both
 
 *   checking re-building of vignette outputs ... WARNING
-    ```
-    Error(s) in re-building vignettes:
-      ...
-    --- re-building ‘tramvs.Rnw’ using knitr
-    Warning in texi2dvi(file = file, pdf = TRUE, clean = clean, quiet = quiet,  :
-      texi2dvi script/program not available, using emulation
-    Error: processing vignette 'tramvs.Rnw' failed with diagnostics:
-    unable to run pdflatex on 'tramvs.tex'
-    LaTeX errors:
-    ! LaTeX Error: File `wrapfig.sty' not found.
-    
-    ...
-    l.68 \usepackage
-                    {float}^^M
-    !  ==> Fatal error occurred, no output PDF file produced!
-    --- failed re-building ‘tramvs.Rnw’
-    
-    SUMMARY: processing the following file failed:
-      ‘tramvs.Rnw’
-    
-    Error: Vignette re-building failed.
-    Execution halted
-    ```
+     ```
+     ...
+     Total time:0minutes
+     
+     Warning in texi2dvi(file = file, pdf = TRUE, clean = clean, quiet = quiet,  :
+       texi2dvi script/program not available, using emulation
+     Error: processing vignette 'QDNAseq.Rnw' failed with diagnostics:
+     unable to run pdflatex on 'QDNAseq.tex'
+     LaTeX errors:
+     ! LaTeX Error: File `nowidow.sty' not found.
+     
+     Type X to quit or <RETURN> to proceed,
+     or enter new name. (Default extension: sty)
+     
+     ! Emergency stop.
+     <read *> 
+              
+     l.197 \RequirePackage
+                          {parnotes}^^M
+     !  ==> Fatal error occurred, no output PDF file produced!
+     --- failed re-building ‘QDNAseq.Rnw’
+     
+     SUMMARY: processing the following file failed:
+       ‘QDNAseq.Rnw’
+     
+     Error: Vignette re-building failed.
+     Execution halted
+     ```
 
-# TreeMineR
+# qrlabelr (0.2.0)
 
-<details>
+* GitHub: <https://github.com/awkena/qrlabelr>
+* Email: <mailto:alex.kena24@gmail.com>
+* GitHub mirror: <https://github.com/cran/qrlabelr>
 
-* Version: 1.0.3
-* GitHub: https://github.com/entjos/TreeMineR
-* Source code: https://github.com/cran/TreeMineR
-* Date/Publication: 2025-04-05 13:10:02 UTC
-* Number of recursive dependencies: 65
-
-Run `revdepcheck::revdep_details(, "TreeMineR")` for more info
-
-</details>
-
-## In both
-
-*   checking data for non-ASCII characters ... NOTE
-    ```
-      Note: found 3 marked UTF-8 strings
-    ```
-
-# TreeSearch
-
-<details>
-
-* Version: 1.6.0
-* GitHub: https://github.com/ms609/TreeSearch
-* Source code: https://github.com/cran/TreeSearch
-* Date/Publication: 2025-04-09 23:10:08 UTC
-* Number of recursive dependencies: 123
-
-Run `revdepcheck::revdep_details(, "TreeSearch")` for more info
-
-</details>
+Run `revdepcheck::revdep_details(, "qrlabelr")` for more info
 
 ## In both
 
-*   checking package dependencies ... ERROR
-    ```
-    Package required but not available: ‘TreeTools’
-    
-    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
-    manual.
-    ```
+*   checking whether package ‘qrlabelr’ can be installed ... WARNING
+     ```
+     Found the following significant warnings:
+       Warning: replacing previous import ‘bslib::show_toast’ by ‘shinyWidgets::show_toast’ when loading ‘qrlabelr’
+     See ‘/scratch/henrik/revdep/globals/checks/qrlabelr/new/qrlabelr.Rcheck/00install.out’ for details.
+     ```
 
-# TrialEmulation
+*   checking DESCRIPTION meta-information ... NOTE
+     ```
+       Missing dependency on R >= 4.2.0 because package code uses the pipe
+       placeholder syntax added in R 4.2.0.
+       File(s) using such syntax:
+         ‘all_new_functions.R’
+     ```
 
-<details>
+# receptiviti (0.2.1)
 
-* Version: 0.0.4.2
-* GitHub: https://github.com/Causal-LDA/TrialEmulation
-* Source code: https://github.com/cran/TrialEmulation
-* Date/Publication: 2025-02-21 12:30:18 UTC
-* Number of recursive dependencies: 90
+* GitHub: <https://github.com/Receptiviti/receptiviti-r>
+* Email: <mailto:kenglish@receptiviti.com>
+* GitHub mirror: <https://github.com/cran/receptiviti>
+
+Run `revdepcheck::revdep_details(, "receptiviti")` for more info
+
+## In both
+
+*   checking tests ...
+     ```
+     ...
+       
+       ══ Skipped tests (4) ═══════════════════════════════════════════════════════════
+       • no API key (4): 'test-receptiviti.R:78:1',
+         'test-receptiviti_frameworks.R:1:1', 'test-receptiviti_norming.R:12:1',
+         'test-receptiviti_status.R:13:1'
+       
+       ══ Failed tests ════════════════════════════════════════════════════════════════
+       ── Error ('test-receptiviti.R:9:3'): invalid inputs are caught ─────────────────
+       Error: Invalid header received from client.
+       
+       Backtrace:
+           ▆
+        1. ├─testthat::expect_error(...) at test-receptiviti.R:9:3
+        2. │ └─testthat:::expect_condition_matching_(...)
+        3. │   └─testthat:::quasi_capture(...)
+        4. │     ├─testthat (local) .capture(...)
+        5. │     │ └─base::withCallingHandlers(...)
+        6. │     └─rlang::eval_bare(quo_get_expr(.quo), quo_get_env(.quo))
+        7. └─receptiviti::receptiviti(...)
+        8.   └─receptiviti:::manage_request(...)
+       
+       [ FAIL 1 | WARN 0 | SKIP 4 | PASS 5 ]
+       Error:
+       ! Test failures.
+       Execution halted
+     ```
+
+# regmedint (1.0.1)
+
+* GitHub: <https://github.com/kaz-yos/regmedint>
+* Email: <mailto:yi.li10@mail.mcgill.ca>
+* GitHub mirror: <https://github.com/cran/regmedint>
+
+Run `revdepcheck::revdep_details(, "regmedint")` for more info
+
+## In both
+
+*   checking tests ...
+     ```
+     ...
+       ── Error ('test-05_calc_myreg.R:194:9'): calc_myreg / calls calc_myreg_mreg_logistic_yreg_linear when mreg logistic / yreg linear ──
+       <lifecycle_error_deprecated/defunctError/rlang_error/error/condition>
+       Error: `with_mock()` was deprecated in testthat 3.2.0 and is now defunct.
+       ℹ Please use `with_mocked_bindings()` instead.
+       Backtrace:
+           ▆
+        1. └─testthat::with_mock(...) at test-05_calc_myreg.R:194:9
+        2.   └─lifecycle::deprecate_stop("3.2.0", "with_mock()", "with_mocked_bindings()")
+        3.     └─lifecycle:::deprecate_stop0(msg)
+        4.       └─rlang::cnd_signal(...)
+       ── Error ('test-05_calc_myreg.R:235:9'): calc_myreg / calls calc_myreg_mreg_logistic_yreg_logistic when mreg logistic / yreg logistic ──
+       <lifecycle_error_deprecated/defunctError/rlang_error/error/condition>
+       Error: `with_mock()` was deprecated in testthat 3.2.0 and is now defunct.
+       ℹ Please use `with_mocked_bindings()` instead.
+       Backtrace:
+           ▆
+        1. └─testthat::with_mock(...) at test-05_calc_myreg.R:235:9
+        2.   └─lifecycle::deprecate_stop("3.2.0", "with_mock()", "with_mocked_bindings()")
+        3.     └─lifecycle:::deprecate_stop0(msg)
+        4.       └─rlang::cnd_signal(...)
+       
+       [ FAIL 4 | WARN 0 | SKIP 2 | PASS 4128 ]
+       Error:
+       ! Test failures.
+       Execution halted
+     ```
+
+*   checking dependencies in R code ... NOTE
+     ```
+     Namespace in Imports field not imported from: ‘Deriv’
+       All declared Imports should be used.
+     ```
+
+# RFLOMICS (1.2.0)
+
+* GitHub: <https://github.com/RFLOMICS/RFLOMICS>
+* Email: <mailto:nadia.bessoltane@inrae.fr>
+
+Run `revdepcheck::revdep_details(, "RFLOMICS")` for more info
+
+## In both
+
+*   checking tests ...
+     ```
+     ...
+       
+       > 
+       > test_check("RFLOMICS")
+       Saving _problems/test-6_annotation-429.R
+       [ FAIL 1 | WARN 1 | SKIP 3 | PASS 568 ]
+       
+       ══ Skipped tests (3) ═══════════════════════════════════════════════════════════
+       • Functional test for differential analysis skipped (1): 'test-4_DE.R:190:1'
+       • Functionnal testing for Coseq skipped (1): 'test-5_coseq.R:220:1'
+       • Tests for MOFA integration skipped. (1): 'test-7_MOFA.R:132:1'
+       
+       ══ Failed tests ════════════════════════════════════════════════════════════════
+       ── Failure ('test-6_annotation.R:426:5'): plotClusterPRofiler - GO only ────────
+       Expected `plotClusterProfiler(...)` not to throw any errors.
+       Actually got a <simpleError> with message:
+         unused argument (color.params = list(c(0.300399996066667, 0.301045294633334, 0.264438544366666, -0.200414615933333, -0.3007194991, 0.178315409633333, 0.673515665866667, -0.376568520733334, 0.157759883033333, -0.236249579033334, -0.276641702366667, -0.291926095733333, 0.212942502866667, 0.496659495299999, 0.307222577833334, -0.302097530833333, 0.353649462433333, -0.5909892019, -0.388045443066667, 0.229295718699999, -0.1442581488, -0.777006877033334, -0.2074591879, -0.691895002733333, 0.3407854646, -0.217149637, 
+         0.307201186666666, -0.418465698966667, -0.501175408399999, 0.255176241433334, 0.446902293133333, 0.338214238033332, -0.217080244766667, 0.250611779533334, 0.1845572569, -0.2192945913, -0.405890665066667, 0.156979454333334, 0.505127047300001, -0.3221885657, 0.504598985933333, 0.195820359666666, 0.536327117633334, 0.273841055066666, 0.271927078866666, 0.183922002533333, -0.207328281966667, 0.194461900400001, -0.230959126366666, 0.912593104366668, -0.3266976465, -0.429720156866667, -0.593520664766667, 
+         0.330953947566667, 0.486931707266667, 0.253410547133334, 0.2467424736, 0.157871606566667, 0.204814479066667, -0.3339815318, -0.2533776575, -0.314177966, 0.410912358533334, -0.165349674366667, -0.307108972433334, 0.234900304166667, -0.199921871433333, 0.192957373733334, -0.194109403, -0.3770501065, 0.236607130199999, -0.1988150821, 0.253424834433333, -0.177365903833333, -0.3591419015, 0.474637460166667, 0.156515031566667, -0.144220623466667, 0.185177678933333, 0.179446874866667, 0.331531272733333, 
+         -0.4504685208, -0.166342142966666, -0.313439013766667, 0.309729636033333, -0.216059582266667, -0.200324587333333, 0.262163061933333, -0.1792709633, 0.249115962766667, -0.260620727133333, -0.318724055900001, 0.3480786074, -0.403214862066667, 0.463990265933334, -0.222806446433333, -0.218519887733333, -0.2981448912, 0.463557329333333, -0.719532571233334, -0.257235152466667, -0.2101228905, 0.388242255300001, 0.191443329833333, 0.3549675335, 0.401430903033334, 0.239838099366666, -0.1824585654, 0.251306488066667, 
+         0.2281106187, 0.229249873166667, -0.207186356966667, 0.1867881103, 0.409495102033334, 0.210617230133334, -0.177041792366667, 0.3352274293, -0.245853278266667, -0.841154646433333, -0.281936161766667, 0.2831585312, -0.610432403600001, -0.218978262266667, -0.3496594605, -0.268436096566667, 0.212388397633334, -0.197467209066666, -0.247592469066667, 0.506184985800001, 0.413667750933333, -0.1516626657)))
+       
+       [ FAIL 1 | WARN 1 | SKIP 3 | PASS 568 ]
+       Error:
+       ! Test failures.
+       Execution halted
+     ```
+
+*   checking dependencies in R code ... NOTE
+     ```
+     Namespaces in Imports field not imported from:
+       ‘org.At.tair.db’ ‘reticulate’
+       All declared Imports should be used.
+     ```
+
+*   checking R code for possible problems ... NOTE
+     ```
+     ...
+     runCoExpression,RflomicsSE: no visible global function definition for
+       ‘assay’
+     runNormalization,RflomicsSE: no visible global function definition for
+       ‘assay’
+     runOmicsPCA,RflomicsSE: no visible global function definition for
+       ‘assay’
+     Undefined global functions or variables:
+       % of explained variance -log10pvalue . Adj.pvalue All C Cluster
+       Component Contrast Count Cumulative Explained Variance DEF DataFrame
+       Dataset Description Entity ExperimentList FC GeneRatio SE.name SUMCOL
+       Up_Down across add_tally arrange assay assay<- cluster colData
+       colData<- complete.cases contrast contrastName contrastName3 cor
+       criteria data dataset datasetFill desc distinct does.belong
+       ecoseed.df errors experiments factorType filter fixFactor2 full_join
+       group groupComparison group_by groups if_else intersectColumns
+       left_join log2FC logFC logLike mean.y_profiles mutate mutate_at n
+       observations omicName outsideGroup p.adjust packageVersion percent
+       presence primary prop pvalue relevel relocate right_join sampleMap
+       samples sd select_if sessionInfo status summarise summarize tabel
+       type ungroup value variable y.axis y_profiles
+     Consider adding
+       importFrom("stats", "C", "complete.cases", "cor", "filter", "p.adjust",
+                  "relevel", "sd")
+       importFrom("utils", "data", "packageVersion", "sessionInfo")
+     to your NAMESPACE file.
+     ```
+
+# rsi (0.3.2)
+
+* GitHub: <https://github.com/Permian-Global-Research/rsi>
+* Email: <mailto:mike.mahoney.218@gmail.com>
+* GitHub mirror: <https://github.com/cran/rsi>
+
+Run `revdepcheck::revdep_details(, "rsi")` for more info
+
+## In both
+
+*   checking DESCRIPTION meta-information ... NOTE
+     ```
+       Missing dependency on R >= 4.1.0 because package code uses the pipe
+       |> or function shorthand \(...) syntax added in R 4.1.0.
+       File(s) using such syntax:
+         ‘calculate_indices.Rd’ ‘get_stac_data.R’ ‘get_stac_data.Rd’
+         ‘landsat_mask_function.Rd’
+     ```
+
+# rsparkling (0.2.19)
+
+* GitHub: <https://github.com/h2oai/sparkling-water>
+* Email: <mailto:jakub@h2o.ai>
+* GitHub mirror: <https://github.com/cran/rsparkling>
+
+Run `revdepcheck::revdep_details(, "rsparkling")` for more info
+
+## In both
+
+*   checking dependencies in R code ... NOTE
+     ```
+     Namespace in Imports field not imported from: ‘h2o’
+       All declared Imports should be used.
+     ```
+
+# safetyCharts (0.3.0)
+
+* GitHub: <https://github.com/SafetyGraphics/safetyCharts>
+* Email: <mailto:jwildfire@gmail.com>
+* GitHub mirror: <https://github.com/cran/safetyCharts>
+
+Run `revdepcheck::revdep_details(, "safetyCharts")` for more info
+
+## In both
+
+*   checking Rd files ... NOTE
+     ```
+     ...
+     checkRd: (-1) safety_outlier_explorer.Rd:24: Lost braces in \itemize; meant \describe ?
+     checkRd: (-1) safety_outlier_explorer.Rd:25: Lost braces in \itemize; meant \describe ?
+     checkRd: (-1) safety_outlier_explorer.Rd:26: Lost braces in \itemize; meant \describe ?
+     checkRd: (-1) safety_outlier_explorer.Rd:27: Lost braces in \itemize; meant \describe ?
+     checkRd: (-1) safety_outlier_explorer.Rd:28: Lost braces in \itemize; meant \describe ?
+     checkRd: (-1) safety_results_over_time.Rd:24: Lost braces in \itemize; meant \describe ?
+     checkRd: (-1) safety_results_over_time.Rd:25: Lost braces in \itemize; meant \describe ?
+     checkRd: (-1) safety_results_over_time.Rd:26: Lost braces in \itemize; meant \describe ?
+     checkRd: (-1) safety_results_over_time.Rd:27: Lost braces in \itemize; meant \describe ?
+     checkRd: (-1) safety_results_over_time.Rd:28: Lost braces in \itemize; meant \describe ?
+     checkRd: (-1) safety_results_over_time.Rd:29: Lost braces in \itemize; meant \describe ?
+     checkRd: (-1) safety_results_over_time.Rd:30: Lost braces in \itemize; meant \describe ?
+     checkRd: (-1) safety_results_over_time.Rd:31: Lost braces in \itemize; meant \describe ?
+     checkRd: (-1) safety_results_over_time.Rd:32: Lost braces in \itemize; meant \describe ?
+     checkRd: (-1) safety_results_over_time.Rd:33: Lost braces in \itemize; meant \describe ?
+     checkRd: (-1) tendril_chart.Rd:18: Lost braces
+         18 | Create a plot using the {{Tendril}} package
+            |                         ^
+     checkRd: (-1) tendril_chart.Rd:24: Lost braces in \itemize; meant \describe ?
+     checkRd: (-1) tendril_chart.Rd:25: Lost braces in \itemize; meant \describe ?
+     checkRd: (-1) tendril_chart.Rd:26: Lost braces in \itemize; meant \describe ?
+     checkRd: (-1) tendril_chart.Rd:27: Lost braces in \itemize; meant \describe ?
+     checkRd: (-1) tendril_chart.Rd:28: Lost braces in \itemize; meant \describe ?
+     checkRd: (-1) tendril_chart.Rd:29: Lost braces in \itemize; meant \describe ?
+     checkRd: (-1) tendril_chart.Rd:30: Lost braces in \itemize; meant \describe ?
+     ```
+
+# safetyGraphics (2.1.1)
+
+* GitHub: <https://github.com/SafetyGraphics/safetyGraphics>
+* Email: <mailto:jwildfire@gmail.com>
+* GitHub mirror: <https://github.com/cran/safetyGraphics>
+
+Run `revdepcheck::revdep_details(, "safetyGraphics")` for more info
+
+## In both
+
+*   checking Rd files ... NOTE
+     ```
+     ...
+     checkRd: (-1) app_startup.Rd:38: Lost braces in \itemize; \value handles \item{}{} directly
+     checkRd: (-1) app_startup.Rd:39: Lost braces in \itemize; \value handles \item{}{} directly
+     checkRd: (-1) makeChartConfig.Rd:17: Lost braces; missing escapes or markup?
+         17 | \item{packages}{installed packages names containing yaml config files in the /inst/{packageLocation} folder}
+            |                                                                                    ^
+     checkRd: (-1) makeChartConfig.Rd:26: Lost braces in \itemize; \value handles \item{}{} directly
+     checkRd: (-1) makeChartConfig.Rd:27: Lost braces in \itemize; \value handles \item{}{} directly
+     checkRd: (-1) makeChartConfig.Rd:28: Lost braces in \itemize; \value handles \item{}{} directly
+     checkRd: (-1) makeChartConfig.Rd:29: Lost braces in \itemize; \value handles \item{}{} directly
+     checkRd: (-1) makeChartConfig.Rd:30: Lost braces in \itemize; \value handles \item{}{} directly
+     checkRd: (-1) makeChartConfig.Rd:31: Lost braces in \itemize; \value handles \item{}{} directly
+     checkRd: (-1) makeChartConfig.Rd:32: Lost braces in \itemize; \value handles \item{}{} directly
+     checkRd: (-1) makeChartConfig.Rd:33: Lost braces in \itemize; \value handles \item{}{} directly
+     checkRd: (-1) makeChartConfig.Rd:34: Lost braces in \itemize; \value handles \item{}{} directly
+     checkRd: (-1) makeChartConfig.Rd:35: Lost braces in \itemize; \value handles \item{}{} directly
+     checkRd: (-1) makeChartConfig.Rd:36: Lost braces in \itemize; \value handles \item{}{} directly
+     checkRd: (-1) makeChartConfig.Rd:37: Lost braces in \itemize; \value handles \item{}{} directly
+     checkRd: (-1) makeMapping.Rd:21: Lost braces in \itemize; \value handles \item{}{} directly
+     checkRd: (-1) makeMapping.Rd:22: Lost braces in \itemize; \value handles \item{}{} directly
+     checkRd: (-1) makeMeta.Rd:30: Lost braces; missing escapes or markup?
+         30 | \item Domain-level metadata saved as meta_{chart$name} in the chart$package namespace
+            |                                           ^
+     checkRd: (-1) makeMeta.Rd:31: Lost braces; missing escapes or markup?
+         31 | \item Chart-specific metadata saved as meta_{chart$domain} in the chart$package namespace
+            |                                             ^
+     ```
+
+# scanMiRApp (1.16.0)
+
+* Email: <mailto:pierre-luc.germain@hest.ethz.ch>
+
+Run `revdepcheck::revdep_details(, "scanMiRApp")` for more info
+
+## In both
+
+*   checking dependencies in R code ... NOTE
+     ```
+     ':::' calls which should be '::':
+       'BSgenome.Hsapiens.UCSC.hg38:::BSgenome.Hsapiens.UCSC.hg38'
+       'BSgenome.Mmusculus.UCSC.mm10:::BSgenome.Mmusculus.UCSC.mm10'
+       'BSgenome.Mmusculus.UCSC.mm39:::BSgenome.Mmusculus.UCSC.mm39'
+       'BSgenome.Rnorvegicus.UCSC.rn6:::BSgenome.Rnorvegicus.UCSC.rn6'
+       See the note in ?`:::` about the use of this operator.
+     ```
+
+*   checking R code for possible problems ... NOTE
+     ```
+     .fakeAnno: no visible binding for global variable 'SampleTranscript'
+     .fakeAnno: no visible binding for global variable 'SampleKdModel'
+     plotSitesOnUTR: no visible binding for global variable 'logKd'
+     plotSitesOnUTR: no visible binding for global variable 'note'
+     plotSitesOnUTR: no visible binding for global variable 'type'
+     Undefined global functions or variables:
+       SampleKdModel SampleTranscript logKd note type
+     ```
+
+# SCArray.sat (1.9.0)
+
+* GitHub: <https://github.com/AbbVie-ComputationalGenomics/SCArray>
+* Email: <mailto:xiuwen.zheng@abbvie.com>
+
+Run `revdepcheck::revdep_details(, "SCArray.sat")` for more info
+
+## In both
+
+*   checking examples ... ERROR
+     ```
+     ...
+     > 
+     > d <- scNewSeuratGDS(fn)
+     Input: /scratch/henrik/revdep/globals/library/SCArray.sat/SCArray/extdata/example.gds
+         counts: 1000 x 850
+     Warning: The following arguments are not used: layer
+     Warning: The following arguments are not used: layer
+     > 
+     > d <- NormalizeData(d)
+     Warning: The following arguments are not used: layer
+     Performing log-normalization
+     > d <- FindVariableFeatures(d, nfeatures=250)
+     Warning: The following arguments are not used: layer
+     Calculating gene variances
+     Calculating feature variances of standardized and clipped values
+     
+       |                                                                      
+       |                                                                |   0%
+       |                                                                      
+       |================================================================| 100%
+     > d <- ScaleData(d)
+     Warning: The following arguments are not used: layer
+     Centering and scaling data matrix (SC_GDSMatrix [250x850])
+     Warning: The new data doesn't have the same number of features as the current data
+     Error: Attempting to add a different number of cells or features
+     Execution halted
+     ```
+
+*   checking re-building of vignette outputs ... ERROR
+     ```
+     ...
+     Quitting from SCArray.sat.Rmd:78-101 [unnamed-chunk-2]
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     <error/rlang_error>
+     Error:
+     ! Attempting to add a different number of cells or features
+     ---
+     Backtrace:
+         ▆
+      1. ├─Seurat::ScaleData(d)
+      2. └─Seurat:::ScaleData.Seurat(d)
+      3.   ├─Seurat::ScaleData(...)
+      4.   └─Seurat:::ScaleData.Assay(...)
+      5.     ├─SeuratObject::SetAssayData(...)
+      6.     └─SCArray.sat:::SetAssayData.SCArrayAssay(...)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     
+     Error: processing vignette 'SCArray.sat.Rmd' failed with diagnostics:
+     Attempting to add a different number of cells or features
+     --- failed re-building ‘SCArray.sat.Rmd’
+     
+     SUMMARY: processing the following file failed:
+       ‘SCArray.sat.Rmd’
+     
+     Error: Vignette re-building failed.
+     Execution halted
+     ```
+
+*   checking dependencies in R code ... NOTE
+     ```
+     Unexported objects imported by ':::' calls:
+       ‘Seurat:::DEmethods_counts’ ‘Seurat:::DEmethods_nocorrect’
+       ‘Seurat:::FastExpMean’ ‘Seurat:::FastLogVMR’ ‘Seurat:::NBResiduals’
+       ‘Seurat:::UpdateKey’ ‘Seurat:::ValidateDataForMerge’
+       See the note in ?`:::` about the use of this operator.
+     ```
+
+# scLANE (1.0.0)
+
+* GitHub: <https://github.com/jr-leary7/scLANE>
+* Email: <mailto:j.leary@ufl.edu>
+
+Run `revdepcheck::revdep_details(, "scLANE")` for more info
+
+## In both
+
+*   checking tests ...
+     ```
+     ...
+       scLANE testing in GEE mode completed for 20 genes across 1 lineage in 57.948 secs
+       scLANE testing in GLMM mode completed for 20 genes across 1 lineage in 2.438 mins
+       [ FAIL 1 | WARN 741 | SKIP 0 | PASS 0 ]
+       
+       ══ Failed tests ════════════════════════════════════════════════════════════════
+       ── Error ('test_scLANE.R:328:5'): (code run outside of `test_that()`) ──────────
+       <lifecycle_error_deprecated/defunctError/rlang_error/error/condition>
+       Error: The `slot` argument of `GetAssayData()` was deprecated in SeuratObject 5.0.0 and is now defunct.
+       i Please use the `layer` argument instead.
+       Backtrace:
+           ▆
+        1. ├─withr::with_output_sink(...) at test_scLANE.R:42:1
+        2. │ └─base::force(code)
+        3. └─scLANE::geneProgramScoring(...) at test_scLANE.R:328:5
+        4.   ├─Seurat::GetAssayData(expr.mat, slot = "counts", assay = Seurat::DefaultAssay(expr.mat))
+        5.   └─SeuratObject:::GetAssayData.Seurat(...)
+        6.     └─SeuratObject::.Deprecate(...)
+        7.       └─lifecycle::deprecate_stop(...)
+        8.         └─lifecycle:::deprecate_stop0(msg)
+        9.           └─rlang::cnd_signal(...)
+       
+       [ FAIL 1 | WARN 741 | SKIP 0 | PASS 0 ]
+       Error:
+       ! Test failures.
+       Execution halted
+     ```
+
+# selenider (0.4.1)
+
+* GitHub: <https://github.com/ashbythorpe/selenider>
+* Email: <mailto:ashbythorpe@gmail.com>
+* GitHub mirror: <https://github.com/cran/selenider>
+
+Run `revdepcheck::revdep_details(, "selenider")` for more info
+
+## In both
+
+*   checking DESCRIPTION meta-information ... NOTE
+     ```
+       Missing dependency on R >= 4.1.0 because package code uses the pipe
+       |> or function shorthand \(...) syntax added in R 4.1.0.
+       File(s) using such syntax:
+         ‘as.list.selenider_elements.Rd’ ‘elem_ancestors.Rd’ ‘elem_attr.Rd’
+         ‘elem_cache.Rd’ ‘elem_click.Rd’ ‘elem_css_property.Rd’
+         ‘elem_equal.Rd’ ‘elem_expect.Rd’ ‘elem_expect_all.Rd’
+         ‘elem_filter.Rd’ ‘elem_flatten.Rd’ ‘elem_hover.Rd’ ‘elem_name.Rd’
+         ‘elem_scroll_to.Rd’ ‘elem_select.Rd’ ‘elem_size.Rd’ ‘elem_text.Rd’
+         ‘find_each_element.Rd’ ‘find_element.Rd’ ‘find_elements.Rd’
+         ‘get_actual_element.Rd’ ‘s.Rd’
+     ```
+
+# shiny.destroy (0.1.0)
+
+* Email: <mailto:arbaldry91@gmail.com>
+* GitHub mirror: <https://github.com/cran/shiny.destroy>
+
+Run `revdepcheck::revdep_details(, "shiny.destroy")` for more info
+
+## In both
+
+*   checking DESCRIPTION meta-information ... NOTE
+     ```
+       Missing dependency on R >= 4.1.0 because package code uses the pipe
+       |> or function shorthand \(...) syntax added in R 4.1.0.
+       File(s) using such syntax:
+         ‘destroyModule.R’ ‘makeModule.R’
+     ```
+
+# shiny.reglog (0.5.2)
+
+* Email: <mailto:kosinski.mich@gmail.com>
+* GitHub mirror: <https://github.com/cran/shiny.reglog>
+
+Run `revdepcheck::revdep_details(, "shiny.reglog")` for more info
+
+## In both
+
+*   checking dependencies in R code ... WARNING
+     ```
+     Missing or unexported object: ‘gmailr::send_message’
+     ```
+
+# shinymgr (1.1.0)
+
+* Email: <mailto:laurence.clarfeld@uvm.edu>
+* GitHub mirror: <https://github.com/cran/shinymgr>
+
+Run `revdepcheck::revdep_details(, "shinymgr")` for more info
+
+## In both
+
+*   checking dependencies in R code ... NOTE
+     ```
+     Namespace in Imports field not imported from: ‘shinydashboard’
+       All declared Imports should be used.
+     ```
+
+# shinyMobile (2.0.1)
+
+* GitHub: <https://github.com/RinteRface/shinyMobile>
+* Email: <mailto:dgranjon@ymail.com>
+* GitHub mirror: <https://github.com/cran/shinyMobile>
+
+Run `revdepcheck::revdep_details(, "shinyMobile")` for more info
+
+## In both
+
+*   checking DESCRIPTION meta-information ... NOTE
+     ```
+       Missing dependency on R >= 4.1.0 because package code uses the pipe
+       |> or function shorthand \(...) syntax added in R 4.1.0.
+       File(s) using such syntax:
+         ‘fabs.Rd’
+     ```
+
+# shinyOAuth (0.3.0)
+
+* GitHub: <https://github.com/lukakoning/shinyOAuth>
+* Email: <mailto:koningluka@gmail.com>
+* GitHub mirror: <https://github.com/cran/shinyOAuth>
+
+Run `revdepcheck::revdep_details(, "shinyOAuth")` for more info
+
+## In both
+
+*   checking tests ...
+     ```
+     ...
+         8.       │ │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+         9.       │ │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+        10.       │ └─base::force(expr)
+        11.       └─rlang::abort(...)
+       ── Error ('test-client-bearer-req.R:186:3'): client_bearer_req follows redirects when follow_redirect = TRUE ──
+       <httr2_http_503/httr2_http/httr2_error/rlang_error/rlang_error/error/condition>
+       Error in `httr2::req_perform(req)`: HTTP 503 Service Unavailable.
+       Backtrace:
+            ▆
+         1. └─httr2::req_perform(req) at test-client-bearer-req.R:186:3
+         2.   └─httr2:::handle_resp(req, resp, error_call = error_call)
+         3.     └─httr2:::resp_failure_cnd(req, resp, error_call = error_call)
+         4.       ├─rlang::catch_cnd(...)
+         5.       │ ├─rlang::eval_bare(...)
+         6.       │ ├─base::tryCatch(...)
+         7.       │ │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+         8.       │ │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+         9.       │ │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+        10.       │ └─base::force(expr)
+        11.       └─rlang::abort(...)
+       
+       [ FAIL 13 | WARN 0 | SKIP 47 | PASS 1180 ]
+       Error:
+       ! Test failures.
+       Execution halted
+     ```
+
+# sigminer (2.3.1)
+
+* GitHub: <https://github.com/ShixiangWang/sigminer>
+* Email: <mailto:w_shixiang@163.com>
+* GitHub mirror: <https://github.com/cran/sigminer>
+
+Run `revdepcheck::revdep_details(, "sigminer")` for more info
+
+## In both
+
+*   checking DESCRIPTION meta-information ... NOTE
+     ```
+       Missing dependency on R >= 4.1.0 because package code uses the pipe
+       |> or function shorthand \(...) syntax added in R 4.1.0.
+       File(s) using such syntax:
+         ‘show_group_enrichment.R’
+     ```
+
+# signeR (2.12.0)
+
+* GitHub: <https://github.com/TojalLab/signeR>
+* Email: <mailto:renan.valieris@accamargo.org.br>
+
+Run `revdepcheck::revdep_details(, "signeR")` for more info
+
+## In both
+
+*   checking C++ specification ... NOTE
+     ```
+       Specified C++14: please drop specification unless essential
+     ```
+
+*   checking R code for possible problems ... NOTE
+     ```
+     ...
+       ‘Samples’
+     ExposureClassify,ANY-character: no visible binding for global variable
+       ‘Col’
+     ExposureClassify,ANY-character: no visible binding for global variable
+       ‘Frequency’
+     ExposureClassify,ANY-character: no visible binding for global variable
+       ‘Row’
+     ExposureClassifyCV,ANY-character: no visible binding for global
+       variable ‘Col’
+     ExposureClassifyCV,ANY-character: no visible binding for global
+       variable ‘Frequency’
+     ExposureClassifyCV,ANY-character: no visible binding for global
+       variable ‘Row’
+     ExposureCorrelation,SignExp-numeric: no visible binding for global
+       variable ‘Feature’
+     ExposureCorrelation,SignExp-numeric: no visible binding for global
+       variable ‘exposure’
+     ExposureCorrelation,matrix-numeric: no visible binding for global
+       variable ‘Feature’
+     ExposureCorrelation,matrix-numeric: no visible binding for global
+       variable ‘exposure’
+     Undefined global functions or variables:
+       . Col Feature Frequency Reference_Allele Row Samples Signatures
+       Tumor_Seq_Allele1 Tumor_Seq_Allele2 Variant_Type conf.high conf.low
+       estimate exposure fc p.value project sig sig_test term
+     ```
+
+*   checking Rd files ... NOTE
+     ```
+     prepare_Rd: cosmic_data.Rd:91-93: Dropping empty section \details
+     prepare_Rd: cosmic_data.Rd:98-100: Dropping empty section \references
+     prepare_Rd: cosmic_data.Rd:101-102: Dropping empty section \examples
+     prepare_Rd: tcga_similarities.Rd:96-98: Dropping empty section \details
+     prepare_Rd: tcga_similarities.Rd:99-101: Dropping empty section \source
+     prepare_Rd: tcga_similarities.Rd:102-104: Dropping empty section \references
+     prepare_Rd: tcga_similarities.Rd:105-106: Dropping empty section \examples
+     prepare_Rd: tcga_tumors.Rd:18-20: Dropping empty section \details
+     prepare_Rd: tcga_tumors.Rd:21-23: Dropping empty section \source
+     prepare_Rd: tcga_tumors.Rd:24-26: Dropping empty section \references
+     prepare_Rd: tcga_tumors.Rd:27-28: Dropping empty section \examples
+     ```
+
+# simhelpers (0.3.1)
+
+* GitHub: <https://github.com/meghapsimatrix/simhelpers>
+* Email: <mailto:megha.j456@gmail.com>
+* GitHub mirror: <https://github.com/cran/simhelpers>
+
+Run `revdepcheck::revdep_details(, "simhelpers")` for more info
+
+## In both
+
+*   checking DESCRIPTION meta-information ... NOTE
+     ```
+       Missing dependency on R >= 4.1.0 because package code uses the pipe
+       |> or function shorthand \(...) syntax added in R 4.1.0.
+       File(s) using such syntax:
+         ‘bootstrap-projection.R’ ‘bootstrap_CIs.Rd’ ‘bundle_sim.R’
+         ‘calc_coverage.R’ ‘calc_rejection.R’ ‘extrapolate_coverage.Rd’
+         ‘utilities.R’
+     ```
+
+# solitude (1.1.3)
+
+* GitHub: <https://github.com/talegari/solitude>
+* Email: <mailto:sri.teach@gmail.com>
+* GitHub mirror: <https://github.com/cran/solitude>
+
+Run `revdepcheck::revdep_details(, "solitude")` for more info
+
+## In both
+
+*   checking dependencies in R code ... NOTE
+     ```
+     Namespaces in Imports field not imported from:
+       ‘R6’ ‘lgr’
+       All declared Imports should be used.
+     ```
+
+# SpaDES.core (3.0.4)
+
+* GitHub: <https://github.com/PredictiveEcology/SpaDES.core>
+* Email: <mailto:eliot.mcintire@canada.ca>
+* GitHub mirror: <https://github.com/cran/SpaDES.core>
+
+Run `revdepcheck::revdep_details(, "SpaDES.core")` for more info
+
+## In both
+
+*   checking examples ... ERROR
+     ```
+     Running examples in ‘SpaDES.core-Ex.R’ failed
+     The error most likely occurred in:
+     
+     > ### Name: convertToPackage
+     > ### Title: Convert standard module code into an R package
+     > ### Aliases: convertToPackage
+     > 
+     > ### ** Examples
+     > 
+     > if (requireNamespace("ggplot2") && requireNamespace("pkgload") ) {
+     +   tmpdir <- tempdir2()
+     +   newModule("test", tmpdir, open = FALSE)
+     +   convertToPackage("test", path = tmpdir)
+     + }
+     Loading required namespace: pkgload
+     New module test created at /scratch/henrik/1020049/RtmplTnFJS/reproducible/U3C0xYmG
+     ```
+
+# sparklyr.nested (0.0.4)
+
+* GitHub: <https://github.com/mitre/sparklyr.nested>
+* Email: <mailto:mpollock@mitre.org>
+* GitHub mirror: <https://github.com/cran/sparklyr.nested>
+
+Run `revdepcheck::revdep_details(, "sparklyr.nested")` for more info
+
+## In both
+
+*   checking Rd files ... NOTE
+     ```
+     checkRd: (-1) sdf_unnest.Rd:20: Lost braces
+         20 | \code{a1, a2, a3}, then code{sdf_explode(df, a)} will produce output with each record replicated
+            |                             ^
+     ```
+
+# sparrpowR (0.2.9)
+
+* GitHub: <https://github.com/machiela-lab/sparrpowR>
+* Email: <mailto:ian.buller@alumni.emory.edu>
+* GitHub mirror: <https://github.com/cran/sparrpowR>
+
+Run `revdepcheck::revdep_details(, "sparrpowR")` for more info
+
+## In both
+
+*   checking whether package ‘sparrpowR’ can be installed ... WARNING
+     ```
+     Found the following significant warnings:
+       Warning: no DISPLAY variable so Tk is not available
+     See ‘/scratch/henrik/revdep/globals/checks/sparrpowR/new/sparrpowR.Rcheck/00install.out’ for details.
+     ```
+
+# spdesign (0.0.5)
+
+* GitHub: <https://github.com/edsandorf/spdesign>
+* Email: <mailto:erlend.dancke.sandorf@nmbu.no>
+* GitHub mirror: <https://github.com/cran/spdesign>
+
+Run `revdepcheck::revdep_details(, "spdesign")` for more info
+
+## In both
+
+*   checking DESCRIPTION meta-information ... NOTE
+     ```
+       Missing dependency on R >= 4.1.0 because package code uses the pipe
+       |> or function shorthand \(...) syntax added in R 4.1.0.
+       File(s) using such syntax:
+         ‘federov.R’
+     ```
+
+# sperrorest (3.0.5)
+
+* GitHub: <https://github.com/giscience-fsu/sperrorest>
+* Email: <mailto:alexander.brenning@uni-jena.de>
+* GitHub mirror: <https://github.com/cran/sperrorest>
+
+Run `revdepcheck::revdep_details(, "sperrorest")` for more info
+
+## In both
+
+*   checking Rd files ... NOTE
+     ```
+     ...
+            |                                          ^
+     checkRd: (-1) partition_kmeans.Rd:41: Lost braces; missing escapes or markup?
+         41 | if \code{TRUE} (used internally by other {sperrorest} functions), return a
+            |                                          ^
+     checkRd: (-1) partition_tiles.Rd:78: Lost braces; missing escapes or markup?
+         78 | if \code{TRUE} (used internally by other {sperrorest} functions), return a
+            |                                          ^
+     checkRd: (-1) sperrorest.Rd:55: Lost braces; missing escapes or markup?
+         55 | \code{formula} and \code{data} argument, which are provided by {sperrorest})}
+            |                                                                ^
+     checkRd: (-1) sperrorest.Rd:63: Lost braces; missing escapes or markup?
+         63 | {sperrorest}).}
+            | ^
+     checkRd: (-1) sperrorest.Rd:135: Lost braces; missing escapes or markup?
+        135 | A list (object of class {sperrorest}) with (up to) six components:
+            |                         ^
+     checkRd: (-1) sperrorest.Rd:148: Lost braces; missing escapes or markup?
+        148 | information about the {sperrorest} package version
+            |                       ^
+     checkRd: (-1) summary.sperroresterror.Rd:5: Lost braces; missing escapes or markup?
+          5 | \title{Summarize error statistics obtained by {sperrorest}}
+            |                                               ^
+     checkRd: (-1) summary.sperrorestimportance.Rd:5: Lost braces; missing escapes or markup?
+          5 | \title{Summarize variable importance statistics obtained by {sperrorest}}
+            |                                                             ^
+     ```
+
+# sRACIPE (2.2.0)
+
+* GitHub: <https://github.com/lusystemsbio/sRACIPE>
+* Email: <mailto:m.lu@northeastern.edu>
+
+Run `revdepcheck::revdep_details(, "sRACIPE")` for more info
+
+## In both
+
+*   checking C++ specification ... NOTE
+     ```
+       Specified C++11: please drop specification unless essential
+     ```
+
+*   checking DESCRIPTION meta-information ... NOTE
+     ```
+     License stub is invalid DCF.
+     ```
+
+*   checking R code for possible problems ... NOTE
+     ```
+     sracipeSimulate: no visible binding for global variable
+       ‘configurationTmp’
+     sracipeSimulate: no visible binding for global variable ‘outFileGETmp’
+     sracipeSimulate: no visible binding for global variable
+       ‘outFileParamsTmp’
+     sracipeSimulate: no visible binding for global variable ‘outFileICTmp’
+     sracipeSimulate: no visible binding for global variable
+       ‘outFileConvergeTmp’
+     sracipeConvergeDist,RacipeSE: no visible global function definition for
+       ‘polygon’
+     Undefined global functions or variables:
+       configurationTmp outFileConvergeTmp outFileGETmp outFileICTmp
+       outFileParamsTmp polygon
+     Consider adding
+       importFrom("graphics", "polygon")
+     to your NAMESPACE file.
+     ```
+
+*   checking Rd files ... NOTE
+     ```
+     checkRd: (-1) sracipeHeatmapSimilarity.Rd:31: Lost braces
+         31 | If clusterCut is missing, hierarchical clustering using /code{ward.D2}
+            |                                                              ^
+     checkRd: (-1) sracipeHeatmapSimilarity.Rd:32: Lost braces
+         32 | and /code{distance  = (1-cor(x, method = "spear"))/2} will be used to 
+            |          ^
+     ```
+
+# stppSim (1.3.4)
+
+* GitHub: <https://github.com/Manalytics/stppSim>
+* Email: <mailto:monsuur2010@yahoo.com>
+* GitHub mirror: <https://github.com/cran/stppSim>
+
+Run `revdepcheck::revdep_details(, "stppSim")` for more info
+
+## In both
+
+*   checking whether package ‘stppSim’ can be installed ... WARNING
+     ```
+     Found the following significant warnings:
+       Warning: no DISPLAY variable so Tk is not available
+     See ‘/scratch/henrik/revdep/globals/checks/stppSim/new/stppSim.Rcheck/00install.out’ for details.
+     ```
+
+# survstan (0.0.7.1)
+
+* GitHub: <https://github.com/fndemarqui/survstan>
+* Email: <mailto:fndemarqui@est.ufmg.br>
+* GitHub mirror: <https://github.com/cran/survstan>
+
+Run `revdepcheck::revdep_details(, "survstan")` for more info
+
+## In both
+
+*   checking dependencies in R code ... NOTE
+     ```
+     Namespaces in Imports field not imported from:
+       ‘RcppParallel’ ‘rstantools’
+       All declared Imports should be used.
+     ```
+
+# synergyfinder (3.18.0)
+
+* Email: <mailto:shuyu.zheng@helsinki.fi>
+
+Run `revdepcheck::revdep_details(, "synergyfinder")` for more info
+
+## In both
+
+*   checking dependencies in R code ... WARNING
+     ```
+     '::' or ':::' import not declared from: ‘scales’
+     Namespaces in Imports field not imported from:
+       ‘future’ ‘gstat’ ‘nleqslv’ ‘sp’ ‘tidyverse’
+       All declared Imports should be used.
+     ```
+
+*   checking R code for possible problems ... NOTE
+     ```
+     ...
+       ‘response_origin_mean’
+     ReshapeData: no visible binding for global variable
+       ‘response_origin_CI95’
+     ZIP : <anonymous>: no visible global function definition for ‘predict’
+     ZIP : <anonymous>: no visible binding for global variable ‘data’
+     ZIP : <anonymous>: no visible binding for global variable ‘pred’
+     ZIP : <anonymous>: no visible global function definition for ‘:=’
+     ZIP: no visible binding for global variable ‘.’
+     ZIP: no visible binding for global variable ‘ZIP_fit’
+     ZIP: no visible binding for global variable ‘ZIP_ref’
+     ZIP: no visible binding for global variable ‘ZIP_synergy’
+     Undefined global functions or variables:
+       . := Bliss_ref HSA_ref ZIP_fit ZIP_ref ZIP_synergy adjust angle
+       block_id color conc1 conc2 css data dev.list dev.off end head id
+       input_type label left maxn metric n nn pred predict r response
+       response_CI95 response_mean response_origin response_origin_CI95
+       response_origin_mean response_origin_sd response_origin_sem
+       response_sd response_sem right start synergy t.test text theta value
+       x y
+     Consider adding
+       importFrom("grDevices", "dev.list", "dev.off")
+       importFrom("graphics", "text")
+       importFrom("stats", "end", "predict", "start", "t.test")
+       importFrom("utils", "data", "head")
+     to your NAMESPACE file.
+     ```
+
+*   checking Rd files ... NOTE
+     ```
+     checkRd: (-1) FitDoseResponse.Rd:54: Lost braces
+         54 | href{https://onlinelibrary.wiley.com/doi/book/10.1002/0471725315}{Nonlinear
+            |     ^
+     checkRd: (-1) FitDoseResponse.Rd:54-55: Lost braces
+         54 | href{https://onlinelibrary.wiley.com/doi/book/10.1002/0471725315}{Nonlinear
+            |                                                                  ^
+     checkRd: (-1) FitDoseResponse.Rd:55: Escaped LaTeX specials: \&
+     checkRd: (-1) PlotBarometer.Rd:118: Lost braces
+        118 | href{https://www.frontiersin.org/articles/10.3389/fphar.2015.00181/full}{What
+            |     ^
+     checkRd: (-1) PlotBarometer.Rd:118-119: Lost braces
+        118 | href{https://www.frontiersin.org/articles/10.3389/fphar.2015.00181/full}{What
+            |                                                                         ^
+     checkRd: (-1) PlotDoseResponseCurve.Rd:84: Lost braces
+         84 | link[drc]{plot.drc} function. For example, use xlim = c(0.5, 500) or
+            |          ^
+     ```
+
+# targets (1.11.4)
+
+* GitHub: <https://github.com/ropensci/targets>
+* Email: <mailto:will.landau.oss@gmail.com>
+* GitHub mirror: <https://github.com/cran/targets>
+
+Run `revdepcheck::revdep_details(, "targets")` for more info
+
+## In both
+
+*   checking Rd cross-references ... NOTE
+     ```
+     Unknown package ‘qs’ in Rd xrefs
+     ```
+
+# tfrmtbuilder (0.1.0)
+
+* GitHub: <https://github.com/GSK-Biostatistics/tfrmtbuilder>
+* Email: <mailto:becca.z.krouse@gsk.com>
+* GitHub mirror: <https://github.com/cran/tfrmtbuilder>
+
+Run `revdepcheck::revdep_details(, "tfrmtbuilder")` for more info
+
+## In both
+
+*   checking whether package ‘tfrmtbuilder’ can be installed ... WARNING
+     ```
+     Found the following significant warnings:
+       Warning: replacing previous import ‘bslib::show_toast’ by ‘shinyWidgets::show_toast’ when loading ‘tfrmtbuilder’
+     See ‘/scratch/henrik/revdep/globals/checks/tfrmtbuilder/new/tfrmtbuilder.Rcheck/00install.out’ for details.
+     ```
+
+# tidyfinance (0.4.5)
+
+* GitHub: <https://github.com/tidy-finance/r-tidyfinance>
+* Email: <mailto:christoph@tidy-intelligence.com>
+* GitHub mirror: <https://github.com/cran/tidyfinance>
+
+Run `revdepcheck::revdep_details(, "tidyfinance")` for more info
+
+## In both
+
+*   checking tests ...
+     ```
+     ...
+         'test-create_wrds_dummy_database.R:12:3',
+         'test-download_data_constituents.R:2:3', 'test-download_data_factors.R:2:3',
+         'test-download_data_fred.R:2:3', 'test-download_data_fred.R:14:3',
+         'test-download_data_macro_predictors.R:2:3', 'test-download_data_osap.R:2:3'
+       
+       ══ Failed tests ════════════════════════════════════════════════════════════════
+       ── Error ('test-download_data_constituents.R:28:7'): download_data_constituents handles unavailable resource gracefully ──
+       Error in `download_data_constituents(index = "SAMPLE_INDEX")`: Failed to download data for index `index`. Please check the index name or try again later.
+       Backtrace:
+            ▆
+         1. ├─testthat::with_mocked_bindings(...) at test-download_data_constituents.R:25:3
+         2. ├─testthat::expect_message(...) at test-download_data_constituents.R:28:7
+         3. │ └─testthat:::expect_condition_matching_(...)
+         4. │   └─testthat:::quasi_capture(...)
+         5. │     ├─testthat (local) .capture(...)
+         6. │     │ └─base::withCallingHandlers(...)
+         7. │     └─rlang::eval_bare(quo_get_expr(.quo), quo_get_env(.quo))
+         8. └─tidyfinance::download_data_constituents(index = "SAMPLE_INDEX")
+         9.   └─cli::cli_abort("Failed to download data for index {.arg index}. Please check the index name or try again later.")
+        10.     └─rlang::abort(...)
+       
+       [ FAIL 1 | WARN 0 | SKIP 8 | PASS 88 ]
+       Error:
+       ! Test failures.
+       Execution halted
+     ```
+
+# tramvs (0.0-8)
+
+* Email: <mailto:lucasheinrich.kook@gmail.com>
+* GitHub mirror: <https://github.com/cran/tramvs>
+
+Run `revdepcheck::revdep_details(, "tramvs")` for more info
+
+## In both
+
+*   checking re-building of vignette outputs ... WARNING
+     ```
+     ...
+       ...
+     --- re-building ‘tramvs.Rnw’ using knitr
+     Warning in texi2dvi(file = file, pdf = TRUE, clean = clean, quiet = quiet,  :
+       texi2dvi script/program not available, using emulation
+     Error: processing vignette 'tramvs.Rnw' failed with diagnostics:
+     unable to run pdflatex on 'tramvs.tex'
+     LaTeX errors:
+     ! LaTeX Error: File `wrapfig.sty' not found.
+     
+     Type X to quit or <RETURN> to proceed,
+     or enter new name. (Default extension: sty)
+     
+     ! Emergency stop.
+     <read *> 
+              
+     l.68 \usepackage
+                     {float}^^M
+     !  ==> Fatal error occurred, no output PDF file produced!
+     --- failed re-building ‘tramvs.Rnw’
+     
+     SUMMARY: processing the following file failed:
+       ‘tramvs.Rnw’
+     
+     Error: Vignette re-building failed.
+     Execution halted
+     ```
+
+# TrialEmulation (0.0.4.9)
+
+* GitHub: <https://github.com/Causal-LDA/TrialEmulation>
+* Email: <mailto:isaac.gravestock@roche.com>
+* GitHub mirror: <https://github.com/cran/TrialEmulation>
 
 Run `revdepcheck::revdep_details(, "TrialEmulation")` for more info
 
-</details>
-
 ## In both
 
-*   checking installed package size ... NOTE
-    ```
-      installed size is  5.2Mb
-      sub-directories of 1Mb or more:
-        data   2.5Mb
-        libs   1.5Mb
-    ```
+*   checking Rd cross-references ... NOTE
+     ```
+     Unknown package ‘parglm’ in Rd xrefs
+     ```
 
-# TriDimRegression
+# TriDimRegression (1.0.3)
 
-<details>
-
-* Version: 1.0.2
-* GitHub: https://github.com/alexander-pastukhov/tridim-regression
-* Source code: https://github.com/cran/TriDimRegression
-* Date/Publication: 2023-09-13 14:10:03 UTC
-* Number of recursive dependencies: 96
+* GitHub: <https://github.com/alexander-pastukhov/tridim-regression>
+* Email: <mailto:pastukhov.alexander@gmail.com>
+* GitHub mirror: <https://github.com/cran/TriDimRegression>
 
 Run `revdepcheck::revdep_details(, "TriDimRegression")` for more info
-
-</details>
 
 ## In both
 
 *   checking whether package ‘TriDimRegression’ can be installed ... ERROR
-    ```
-    Installation failed.
-    See ‘/scratch/henrik/revdep/globals/checks/TriDimRegression/new/TriDimRegression.Rcheck/00install.out’ for details.
-    ```
+     ```
+     Installation failed.
+     See ‘/scratch/henrik/revdep/globals/checks/TriDimRegression/new/TriDimRegression.Rcheck/00install.out’ for details.
+     ```
 
 ## Installation
 
@@ -8645,6 +3406,7 @@ Run `revdepcheck::revdep_details(, "TriDimRegression")` for more info
 
 ```
 * installing *source* package ‘TriDimRegression’ ...
+** this is package ‘TriDimRegression’ version ‘1.0.3’
 ** package ‘TriDimRegression’ successfully unpacked and MD5 sums checked
 ** using staged installation
 Error in loadNamespace(x) : there is no package called ‘rstantools’
@@ -8659,6 +3421,7 @@ ERROR: configuration failed for package ‘TriDimRegression’
 
 ```
 * installing *source* package ‘TriDimRegression’ ...
+** this is package ‘TriDimRegression’ version ‘1.0.3’
 ** package ‘TriDimRegression’ successfully unpacked and MD5 sums checked
 ** using staged installation
 Error in loadNamespace(x) : there is no package called ‘rstantools’
@@ -8669,684 +3432,234 @@ ERROR: configuration failed for package ‘TriDimRegression’
 
 
 ```
-# troopdata
+# tsdistributions (1.0.3)
 
-<details>
-
-* Version: 1.0.2
-* GitHub: https://github.com/meflynn/troopdata
-* Source code: https://github.com/cran/troopdata
-* Date/Publication: 2024-09-10 08:00:02 UTC
-* Number of recursive dependencies: 100
-
-Run `revdepcheck::revdep_details(, "troopdata")` for more info
-
-</details>
-
-## In both
-
-*   checking data for non-ASCII characters ... NOTE
-    ```
-      Note: found 192 marked UTF-8 strings
-    ```
-
-# tsdistributions
-
-<details>
-
-* Version: 1.0.3
-* GitHub: https://github.com/tsmodels/tsdistributions
-* Source code: https://github.com/cran/tsdistributions
-* Date/Publication: 2025-04-17 09:50:02 UTC
-* Number of recursive dependencies: 72
+* GitHub: <https://github.com/tsmodels/tsdistributions>
+* Email: <mailto:alexios@4dscape.com>
+* GitHub mirror: <https://github.com/cran/tsdistributions>
 
 Run `revdepcheck::revdep_details(, "tsdistributions")` for more info
 
-</details>
-
 ## In both
 
 *   checking re-building of vignette outputs ... ERROR
-    ```
-    Error(s) in re-building vignettes:
-      ...
-    --- re-building ‘estimation_demo.Rmd’ using rmarkdown
-    --- finished re-building ‘estimation_demo.Rmd’
-    
-    --- re-building ‘location_scale_distributions.Rmd’ using rmarkdown
-    ! Undefined control sequence.
-    l.56 \NewDocumentCommand
-                            \citeproctext{}{} 
-    
-    ...
-    --- finished re-building ‘profile_demo.Rmd’
-    
-    --- re-building ‘spd_demo.Rmd’ using rmarkdown
-    --- finished re-building ‘spd_demo.Rmd’
-    
-    SUMMARY: processing the following file failed:
-      ‘location_scale_distributions.Rmd’
-    
-    Error: Vignette re-building failed.
-    Execution halted
-    ```
+     ```
+     ...
+     --- finished re-building ‘estimation_demo.Rmd’
+     
+     --- re-building ‘location_scale_distributions.Rmd’ using rmarkdown
+     [WARNING] Deprecated: --highlight-style. Use --syntax-highlighting instead.
+     ! Undefined control sequence.
+     l.56 \NewDocumentCommand
+                             \citeproctext{}{} 
+     
+     Error: processing vignette 'location_scale_distributions.Rmd' failed with diagnostics:
+     LaTeX failed to compile /scratch/henrik/revdep/globals/checks/tsdistributions/new/tsdistributions.Rcheck/vign_test/tsdistributions/vignettes/location_scale_distributions.tex. See https://yihui.org/tinytex/r/#debugging for debugging tips. See location_scale_distributions.log for more info.
+     --- failed re-building ‘location_scale_distributions.Rmd’
+     
+     --- re-building ‘profile_demo.Rmd’ using rmarkdown
+     [WARNING] Deprecated: --highlight-style. Use --syntax-highlighting instead.
+     --- finished re-building ‘profile_demo.Rmd’
+     
+     --- re-building ‘spd_demo.Rmd’ using rmarkdown
+     [WARNING] Deprecated: --highlight-style. Use --syntax-highlighting instead.
+     --- finished re-building ‘spd_demo.Rmd’
+     
+     SUMMARY: processing the following file failed:
+       ‘location_scale_distributions.Rmd’
+     
+     Error: Vignette re-building failed.
+     Execution halted
+     ```
 
-*   checking installed package size ... NOTE
-    ```
-      installed size is 42.9Mb
-      sub-directories of 1Mb or more:
-        libs  42.2Mb
-    ```
+# tsgarch (1.0.3)
 
-# tsgarch
-
-<details>
-
-* Version: 1.0.3
-* GitHub: https://github.com/tsmodels/tsgarch
-* Source code: https://github.com/cran/tsgarch
-* Date/Publication: 2024-10-12 00:50:02 UTC
-* Number of recursive dependencies: 94
+* GitHub: <https://github.com/tsmodels/tsgarch>
+* Email: <mailto:alexios@4dscape.com>
+* GitHub mirror: <https://github.com/cran/tsgarch>
 
 Run `revdepcheck::revdep_details(, "tsgarch")` for more info
 
-</details>
-
 ## In both
 
-*   checking installed package size ... NOTE
-    ```
-      installed size is 144.4Mb
-      sub-directories of 1Mb or more:
-        libs  143.3Mb
-    ```
+*   checking DESCRIPTION meta-information ... NOTE
+     ```
+       Missing dependency on R >= 4.1.0 because package code uses the pipe
+       |> or function shorthand \(...) syntax added in R 4.1.0.
+       File(s) using such syntax:
+         ‘benchmark.R’ ‘print.R’
+     ```
 
-# tsissm
+# tsmarch (1.0.0)
 
-<details>
-
-* Version: 1.0.1
-* GitHub: https://github.com/tsmodels/tsissm
-* Source code: https://github.com/cran/tsissm
-* Date/Publication: 2025-04-28 18:30:02 UTC
-* Number of recursive dependencies: 167
-
-Run `revdepcheck::revdep_details(, "tsissm")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is 127.5Mb
-      sub-directories of 1Mb or more:
-        libs  125.7Mb
-    ```
-
-*   checking Rd cross-references ... NOTE
-    ```
-    Package unavailable to check Rd xrefs: ‘EnvStats’
-    ```
-
-# tsmarch
-
-<details>
-
-* Version: 1.0.0
-* GitHub: https://github.com/tsmodels/tsmarch
-* Source code: https://github.com/cran/tsmarch
-* Date/Publication: 2024-11-18 13:30:02 UTC
-* Number of recursive dependencies: 148
+* GitHub: <https://github.com/tsmodels/tsmarch>
+* Email: <mailto:alexios@4dscape.com>
+* GitHub mirror: <https://github.com/cran/tsmarch>
 
 Run `revdepcheck::revdep_details(, "tsmarch")` for more info
-
-</details>
 
 ## In both
 
 *   checking re-building of vignette outputs ... ERROR
-    ```
-    Error(s) in re-building vignettes:
-      ...
-    --- re-building ‘feasible_multivariate_garch.Rmd’ using rmarkdown
-    ! Undefined control sequence.
-    l.97 \NewDocumentCommand
-                            \citeproctext{}{} 
-    
-    Error: processing vignette 'feasible_multivariate_garch.Rmd' failed with diagnostics:
-    LaTeX failed to compile /scratch/henrik/revdep/globals/checks/tsmarch/new/tsmarch.Rcheck/vign_test/tsmarch/vignettes/feasible_multivariate_garch.tex. See https://yihui.org/tinytex/r/#debugging for debugging tips. See feasible_multivariate_garch.log for more info.
-    --- failed re-building ‘feasible_multivariate_garch.Rmd’
-    
-    --- re-building ‘tsmarch_demo.Rmd’ using rmarkdown
-    --- finished re-building ‘tsmarch_demo.Rmd’
-    
-    SUMMARY: processing the following file failed:
-      ‘feasible_multivariate_garch.Rmd’
-    
-    Error: Vignette re-building failed.
-    Execution halted
-    ```
+     ```
+     Error(s) in re-building vignettes:
+       ...
+     --- re-building ‘feasible_multivariate_garch.Rmd’ using rmarkdown
+     [WARNING] Deprecated: --highlight-style. Use --syntax-highlighting instead.
+     ! Undefined control sequence.
+     l.97 \NewDocumentCommand
+                             \citeproctext{}{} 
+     
+     Error: processing vignette 'feasible_multivariate_garch.Rmd' failed with diagnostics:
+     LaTeX failed to compile /scratch/henrik/revdep/globals/checks/tsmarch/new/tsmarch.Rcheck/vign_test/tsmarch/vignettes/feasible_multivariate_garch.tex. See https://yihui.org/tinytex/r/#debugging for debugging tips. See feasible_multivariate_garch.log for more info.
+     --- failed re-building ‘feasible_multivariate_garch.Rmd’
+     
+     --- re-building ‘tsmarch_demo.Rmd’ using rmarkdown
+     [WARNING] Deprecated: --highlight-style. Use --syntax-highlighting instead.
+     --- finished re-building ‘tsmarch_demo.Rmd’
+     
+     SUMMARY: processing the following file failed:
+       ‘feasible_multivariate_garch.Rmd’
+     
+     Error: Vignette re-building failed.
+     Execution halted
+     ```
 
-*   checking installed package size ... NOTE
-    ```
-      installed size is 22.9Mb
-      sub-directories of 1Mb or more:
-        R      1.5Mb
-        doc    1.6Mb
-        libs  18.8Mb
-    ```
+# txshift (0.3.8)
 
-*   checking for GNU extensions in Makefiles ... NOTE
-    ```
-    GNU make is a SystemRequirements.
-    ```
-
-# txshift
-
-<details>
-
-* Version: 0.3.8
-* GitHub: https://github.com/nhejazi/txshift
-* Source code: https://github.com/cran/txshift
-* Date/Publication: 2022-02-09 22:30:02 UTC
-* Number of recursive dependencies: 109
+* GitHub: <https://github.com/nhejazi/txshift>
+* Email: <mailto:nh@nimahejazi.org>
+* GitHub mirror: <https://github.com/cran/txshift>
 
 Run `revdepcheck::revdep_details(, "txshift")` for more info
 
-</details>
-
 ## In both
-
-*   checking package dependencies ... NOTE
-    ```
-    Package which this enhances but not available for checking: ‘sl3’
-    ```
 
 *   checking Rd files ... NOTE
-    ```
-    checkRd: (-1) est_g_exp.Rd:55: Lost braces; missing escapes or markup?
-        55 |  {A - delta}, {A + delta}, and {A + 2 * delta}).
-           |  ^
-    checkRd: (-1) est_g_exp.Rd:55: Lost braces; missing escapes or markup?
-        55 |  {A - delta}, {A + delta}, and {A + 2 * delta}).
-           |               ^
-    checkRd: (-1) est_g_exp.Rd:55: Lost braces; missing escapes or markup?
-        55 |  {A - delta}, {A + delta}, and {A + 2 * delta}).
-           |                                ^
-    ```
+     ```
+     checkRd: (-1) est_g_exp.Rd:55: Lost braces; missing escapes or markup?
+         55 |  {A - delta}, {A + delta}, and {A + 2 * delta}).
+            |  ^
+     checkRd: (-1) est_g_exp.Rd:55: Lost braces; missing escapes or markup?
+         55 |  {A - delta}, {A + delta}, and {A + 2 * delta}).
+            |               ^
+     checkRd: (-1) est_g_exp.Rd:55: Lost braces; missing escapes or markup?
+         55 |  {A - delta}, {A + delta}, and {A + 2 * delta}).
+            |                                ^
+     ```
 
-# UCSCXenaShiny
+# viewpoly (0.4.1)
 
-<details>
+* GitHub: <https://github.com/mmollina/viewpoly>
+* Email: <mailto:chtaniguti@tamu.edu>
+* GitHub mirror: <https://github.com/cran/viewpoly>
 
-* Version: 2.1.0
-* GitHub: https://github.com/openbiox/UCSCXenaShiny
-* Source code: https://github.com/cran/UCSCXenaShiny
-* Date/Publication: 2024-05-15 14:10:06 UTC
-* Number of recursive dependencies: 208
-
-Run `revdepcheck::revdep_details(, "UCSCXenaShiny")` for more info
-
-</details>
+Run `revdepcheck::revdep_details(, "viewpoly")` for more info
 
 ## In both
 
-*   checking installed package size ... NOTE
-    ```
-      installed size is  9.0Mb
-      sub-directories of 1Mb or more:
-        data       2.0Mb
-        doc        1.4Mb
-        shinyapp   4.9Mb
-    ```
+*   checking DESCRIPTION meta-information ... NOTE
+     ```
+       Missing dependency on R >= 4.1.0 because package code uses the pipe
+       |> or function shorthand \(...) syntax added in R 4.1.0.
+       File(s) using such syntax:
+         ‘functions_upload.R’ ‘mod_hidecan.R’
+     ```
 
-# updog
+# VIM (7.0.0)
 
-<details>
+* GitHub: <https://github.com/statistikat/VIM>
+* Email: <mailto:matthias.templ@gmail.com>
+* GitHub mirror: <https://github.com/cran/VIM>
 
-* Version: 2.1.5
-* GitHub: https://github.com/dcgerard/updog
-* Source code: https://github.com/cran/updog
-* Date/Publication: 2023-11-29 15:50:02 UTC
-* Number of recursive dependencies: 135
-
-Run `revdepcheck::revdep_details(, "updog")` for more info
-
-</details>
+Run `revdepcheck::revdep_details(, "VIM")` for more info
 
 ## In both
 
-*   checking installed package size ... NOTE
-    ```
-      installed size is  8.9Mb
-      sub-directories of 1Mb or more:
-        libs   8.1Mb
-    ```
+*   R CMD check timed out
 
-# variantspark
 
-<details>
+# vmeasur (0.1.4)
 
-* Version: 0.1.1
-* GitHub: NA
-* Source code: https://github.com/cran/variantspark
-* Date/Publication: 2019-06-13 16:20:03 UTC
-* Number of recursive dependencies: 55
-
-Run `revdepcheck::revdep_details(, "variantspark")` for more info
-
-</details>
-
-## In both
-
-*   checking LazyData ... NOTE
-    ```
-      'LazyData' is specified without a 'data' directory
-    ```
-
-# vetiver
-
-<details>
-
-* Version: 0.2.5
-* GitHub: https://github.com/rstudio/vetiver-r
-* Source code: https://github.com/cran/vetiver
-* Date/Publication: 2023-11-16 22:50:02 UTC
-* Number of recursive dependencies: 218
-
-Run `revdepcheck::revdep_details(, "vetiver")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... NOTE
-    ```
-    Packages suggested but not available for checking:
-      'paws.machine.learning', 'smdocker'
-    ```
-
-*   checking Rd cross-references ... NOTE
-    ```
-    Package unavailable to check Rd xrefs: ‘paws.machine.learning’
-    ```
-
-# vip
-
-<details>
-
-* Version: 0.4.1
-* GitHub: https://github.com/koalaverse/vip
-* Source code: https://github.com/cran/vip
-* Date/Publication: 2023-08-21 09:20:02 UTC
-* Number of recursive dependencies: 103
-
-Run `revdepcheck::revdep_details(, "vip")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... NOTE
-    ```
-    Package suggested but not available for checking: ‘varImp’
-    
-    Packages which this enhances but not available for checking:
-      'C50', 'caret', 'Cubist', 'earth', 'gbm', 'glmnet', 'h2o',
-      'lightgbm', 'mixOmics', 'mlr', 'mlr3', 'neuralnet', 'parsnip',
-      'partykit', 'pls', 'randomForest', 'ranger', 'rpart', 'RSNNS',
-      'sparklyr', 'tidymodels', 'workflows', 'xgboost'
-    ```
-
-*   checking Rd cross-references ... NOTE
-    ```
-    Packages unavailable to check Rd xrefs: ‘randomForest’, ‘glmnet’, ‘C50’, ‘Cubist’, ‘caret’, ‘partykit’, ‘earth’, ‘gbm’, ‘h2o’, ‘sparklyr’, ‘ranger’, ‘rpart’, ‘xgboost’, ‘lightgbm’
-    ```
-
-# viraldomain
-
-<details>
-
-* Version: 0.0.6
-* GitHub: https://github.com/juanv66x/viraldomain
-* Source code: https://github.com/cran/viraldomain
-* Date/Publication: 2024-10-17 21:50:02 UTC
-* Number of recursive dependencies: 101
-
-Run `revdepcheck::revdep_details(, "viraldomain")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... ERROR
-    ```
-    Package required but not available: ‘applicable’
-    
-    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
-    manual.
-    ```
-
-# viralmodels
-
-<details>
-
-* Version: 1.3.3
-* GitHub: https://github.com/juanv66x/viralmodels
-* Source code: https://github.com/cran/viralmodels
-* Date/Publication: 2025-02-19 14:30:02 UTC
-* Number of recursive dependencies: 184
-
-Run `revdepcheck::revdep_details(, "viralmodels")` for more info
-
-</details>
-
-## In both
-
-*   checking tests ...
-    ```
-      Running ‘testthat.R’
-     ERROR
-    Running the tests in ‘tests/testthat.R’ failed.
-    Last 50 lines of output:
-      Attaching package: 'kernlab'
-      
-      The following object is masked from 'package:purrr':
-      
-          cross
-      
-    ...
-      Error in `library(viraldomain)`: there is no package called 'viraldomain'
-      Backtrace:
-          ▆
-       1. └─base::library(viraldomain) at test-viralvis.R:18:3
-      
-      [ FAIL 4 | WARN 0 | SKIP 0 | PASS 0 ]
-      Deleting unused snapshots:
-      • viralvis/viralvis.svg
-      Error: Test failures
-      Execution halted
-    ```
-
-*   checking package dependencies ... NOTE
-    ```
-    Package suggested but not available for checking: ‘viraldomain’
-    ```
-
-# visvaR
-
-<details>
-
-* Version: 1.0.0
-* GitHub: https://github.com/rameshram96/visvaR
-* Source code: https://github.com/cran/visvaR
-* Date/Publication: 2024-11-14 15:50:02 UTC
-* Number of recursive dependencies: 125
-
-Run `revdepcheck::revdep_details(, "visvaR")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... ERROR
-    ```
-    Package required but not available: ‘agricolae’
-    
-    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
-    manual.
-    ```
-
-# vital
-
-<details>
-
-* Version: 1.1.0
-* GitHub: https://github.com/robjhyndman/vital
-* Source code: https://github.com/cran/vital
-* Date/Publication: 2024-06-21 08:00:02 UTC
-* Number of recursive dependencies: 199
-
-Run `revdepcheck::revdep_details(, "vital")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  9.7Mb
-      sub-directories of 1Mb or more:
-        data   8.0Mb
-        help   1.3Mb
-    ```
-
-# vmeasur
-
-<details>
-
-* Version: 0.1.4
-* GitHub: NA
-* Source code: https://github.com/cran/vmeasur
-* Date/Publication: 2021-11-11 19:00:02 UTC
-* Number of recursive dependencies: 108
+* Email: <mailto:jhuc964@aucklanduni.ac.nz>
+* GitHub mirror: <https://github.com/cran/vmeasur>
 
 Run `revdepcheck::revdep_details(, "vmeasur")` for more info
-
-</details>
 
 ## In both
 
 *   checking whether package ‘vmeasur’ can be installed ... WARNING
-    ```
-    Found the following significant warnings:
-      Warning: no DISPLAY variable so Tk is not available
-    See ‘/scratch/henrik/revdep/globals/checks/vmeasur/new/vmeasur.Rcheck/00install.out’ for details.
-    ```
+     ```
+     Found the following significant warnings:
+       Warning: no DISPLAY variable so Tk is not available
+     See ‘/scratch/henrik/revdep/globals/checks/vmeasur/new/vmeasur.Rcheck/00install.out’ for details.
+     ```
 
-# WeibullR.shiny
+# WeightedCluster (2.0)
 
-<details>
-
-* Version: 0.3
-* GitHub: https://github.com/paulgovan/WeibullR.shiny
-* Source code: https://github.com/cran/WeibullR.shiny
-* Date/Publication: 2024-11-13 13:10:08 UTC
-* Number of recursive dependencies: 110
-
-Run `revdepcheck::revdep_details(, "WeibullR.shiny")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... ERROR
-    ```
-    Package required but not available: ‘WeibullR.plotly’
-    
-    Package suggested but not available for checking: ‘WeibullR.learnr’
-    
-    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
-    manual.
-    ```
-
-# WeightedCluster
-
-<details>
-
-* Version: 1.8-1
-* GitHub: NA
-* Source code: https://github.com/cran/WeightedCluster
-* Date/Publication: 2024-12-10 22:00:02 UTC
-* Number of recursive dependencies: 72
+* Email: <mailto:matthias.studer@unige.ch>
+* GitHub mirror: <https://github.com/cran/WeightedCluster>
 
 Run `revdepcheck::revdep_details(, "WeightedCluster")` for more info
-
-</details>
 
 ## In both
 
 *   checking re-building of vignette outputs ... WARNING
-    ```
-    Error(s) in re-building vignettes:
-    --- re-building ‘BigDataSA.Rmd’ using rmarkdown
-    --- finished re-building ‘BigDataSA.Rmd’
-    
-    --- re-building ‘ClusterExternalValidSA.Rmd’ using rmarkdown
-    --- finished re-building ‘ClusterExternalValidSA.Rmd’
-    
-    --- re-building ‘ClusterValidSA.Rmd’ using rmarkdown
-    --- finished re-building ‘ClusterValidSA.Rmd’
-    
-    ...
-    l.85 \usepackage
-                    {tikz}^^M
-    !  ==> Fatal error occurred, no output PDF file produced!
-    --- failed re-building ‘WeightedClusterPreview.Rnw’
-    
-    SUMMARY: processing the following files failed:
-      ‘WeightedClusterFR.Rnw’ ‘WeightedClusterPreview.Rnw’
-    
-    Error: Vignette re-building failed.
-    Execution halted
-    ```
+     ```
+     ...
+     
+     --- re-building ‘WeightedClusterPreview.Rnw’ using knitr
+     Warning in texi2dvi(file = file, pdf = TRUE, clean = clean, quiet = quiet,  :
+       texi2dvi script/program not available, using emulation
+     Error: processing vignette 'WeightedClusterPreview.Rnw' failed with diagnostics:
+     unable to run pdflatex on 'WeightedClusterPreview.tex'
+     LaTeX errors:
+     ! LaTeX Error: File `textpos.sty' not found.
+     
+     Type X to quit or <RETURN> to proceed,
+     or enter new name. (Default extension: sty)
+     
+     ! Emergency stop.
+     <read *> 
+              
+     l.85 \usepackage
+                     {tikz}^^M
+     !  ==> Fatal error occurred, no output PDF file produced!
+     --- failed re-building ‘WeightedClusterPreview.Rnw’
+     
+     SUMMARY: processing the following files failed:
+       ‘WeightedClusterFR.Rnw’ ‘WeightedClusterPreview.Rnw’
+     
+     Error: Vignette re-building failed.
+     Execution halted
+     ```
 
-# winputall
+# wru (3.0.3)
 
-<details>
-
-* Version: 1.0.1
-* GitHub: NA
-* Source code: https://github.com/cran/winputall
-* Date/Publication: 2024-06-07 14:40:02 UTC
-* Number of recursive dependencies: 100
-
-Run `revdepcheck::revdep_details(, "winputall")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is 103.3Mb
-      sub-directories of 1Mb or more:
-        libs  102.8Mb
-    ```
-
-*   checking for GNU extensions in Makefiles ... NOTE
-    ```
-    GNU make is a SystemRequirements.
-    ```
-
-# workflowsets
-
-<details>
-
-* Version: 1.1.0
-* GitHub: https://github.com/tidymodels/workflowsets
-* Source code: https://github.com/cran/workflowsets
-* Date/Publication: 2024-03-21 14:20:02 UTC
-* Number of recursive dependencies: 137
-
-Run `revdepcheck::revdep_details(, "workflowsets")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  7.1Mb
-      sub-directories of 1Mb or more:
-        data   6.5Mb
-    ```
-
-# wru
-
-<details>
-
-* Version: 3.0.3
-* GitHub: https://github.com/kosukeimai/wru
-* Source code: https://github.com/cran/wru
-* Date/Publication: 2024-05-24 18:00:02 UTC
-* Number of recursive dependencies: 95
+* GitHub: <https://github.com/kosukeimai/wru>
+* Email: <mailto:brandon@bertelsen.ca>
+* GitHub mirror: <https://github.com/cran/wru>
 
 Run `revdepcheck::revdep_details(, "wru")` for more info
 
-</details>
-
 ## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  9.6Mb
-      sub-directories of 1Mb or more:
-        data   5.5Mb
-        help   2.0Mb
-        libs   1.9Mb
-    ```
 
 *   checking dependencies in R code ... NOTE
-    ```
-    Namespaces in Imports field not imported from:
-      ‘future’ ‘tidyr’
-      All declared Imports should be used.
-    ```
+     ```
+     Namespaces in Imports field not imported from:
+       ‘future’ ‘tidyr’
+       All declared Imports should be used.
+     ```
 
-# XNAString
+# xpect (1.0)
 
-<details>
+* Email: <mailto:giancarlo.vercellino@gmail.com>
+* GitHub mirror: <https://github.com/cran/xpect>
 
-* Version: 1.14.0
-* GitHub: NA
-* Source code: https://github.com/cran/XNAString
-* Date/Publication: 2024-10-29
-* Number of recursive dependencies: 107
-
-Run `revdepcheck::revdep_details(, "XNAString")` for more info
-
-</details>
+Run `revdepcheck::revdep_details(, "xpect")` for more info
 
 ## In both
 
-*   checking compiled code ... WARNING
-    ```
-    File ‘XNAString/libs/XNAString.so’:
-      Found ‘rand’, possibly from ‘rand’ (C)
-        Object: ‘./ViennaRNA/utils/utils.o’
-      Found ‘sprintf’, possibly from ‘sprintf’ (C)
-        Objects: ‘./ViennaRNA/part_func_up.o’, ‘./ViennaRNA/RNAstruct.o’,
-          ‘./ViennaRNA/model.o’
-      Found ‘srand’, possibly from ‘srand’ (C)
-        Object: ‘./ViennaRNA/utils/utils.o’
-    
-    Compiled code should not call entry points which might terminate R nor
-    write to stdout/stderr instead of to the console, nor use Fortran I/O
-    nor system RNGs nor [v]sprintf.
-    
-    See ‘Writing portable packages’ in the ‘Writing R Extensions’ manual.
-    ```
+*   R CMD check timed out
 
-*   checking C++ specification ... NOTE
-    ```
-      Specified C++11: please drop specification unless essential
-    ```
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is 12.2Mb
-      sub-directories of 1Mb or more:
-        R      1.5Mb
-        doc    1.0Mb
-        libs   9.5Mb
-    ```
-
-*   checking top-level files ... NOTE
-    ```
-    File
-      LICENSE
-    is not mentioned in the DESCRIPTION file.
-    ```
 
