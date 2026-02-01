@@ -218,7 +218,7 @@
 
  * `cleanup(..., drop = c(..., "base-packages"))` for `Globals` would
    drop base R objects with names not exported by the corresponding
-   base R package.  Similarly, `drop = c(..., "primitive")` would drop
+   base R package.  Similarly, `drop = c(..., "primitives")` would drop
    primitive R objects with names not exported by any base R package.
 
  * `findGlobals()`, `globalsOf()`, and `globalsByName()` did not
@@ -299,7 +299,7 @@
 
  * globals::`findGlobals()` is now significantly faster for elements
    that are long lists with many elements of basic data types.  This
-   is because elements of such basic data type cannot contain globals
+   is because elements of such basic data types cannot contain globals
    and can therefore be skipped early in the search for globals.
     
 
