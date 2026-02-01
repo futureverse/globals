@@ -1,5 +1,10 @@
 # Version (development version)
 
+## Performance
+
+ * `findGlobals()` is now much faster when `expr` contains a list
+   of classed lists, e.g. a list of data frames.
+   
 ## Bug Fixes
 
  * `findGlobals(function(x = a) NULL, method = "dfs")` failed to

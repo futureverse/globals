@@ -37,46 +37,6 @@ Run `revdepcheck::revdep_details(, "adestr")` for more info
          ‘plot.R’ ‘print.R’ ‘reference_implementation.R’
      ```
 
-# arkdb (0.0.18)
-
-* GitHub: <https://github.com/ropensci/arkdb>
-* Email: <mailto:cboettig@gmail.com>
-* GitHub mirror: <https://github.com/cran/arkdb>
-
-Run `revdepcheck::revdep_details(, "arkdb")` for more info
-
-## In both
-
-*   checking tests ...
-     ```
-     ...
-       > 
-       > test_check("arkdb")
-       [1] "Testing using backend duckdb_connection"
-       Saving _problems/test-streamable-44.R
-       [ FAIL 1 | WARN 6 | SKIP 8 | PASS 53 ]
-       
-       ══ Skipped tests (8) ═══════════════════════════════════════════════════════════
-       • On CRAN (6): 'test-arkdb.R:287:3', 'test-bulk-import.R:6:3',
-         'test-bulk-import.R:72:3', 'test-errors.R:12:3', 'test-errors.R:34:3',
-         'test-errors.R:53:3'
-       • {MonetDBLite} is not installed (2): 'test-arkdb.R:132:3',
-         'test-local_db.R:24:3'
-       
-       ══ Failed tests ════════════════════════════════════════════════════════════════
-       ── Error ('test-streamable.R:44:3'): streamable_vroom ──────────────────────────
-       Error in `write_tsv(x = x, path = path, append = omit_header)`: unused argument (path = path)
-       Backtrace:
-           ▆
-        1. └─arkdb (local) test_stream(streamable_vroom()) at test-streamable.R:44:3
-        2.   └─stream$write(data, con, omit_header = FALSE) at test-streamable.R:12:3
-       
-       [ FAIL 1 | WARN 6 | SKIP 8 | PASS 53 ]
-       Error:
-       ! Test failures.
-       Execution halted
-     ```
-
 # bamm (0.5.0)
 
 * GitHub: <https://github.com/luismurao/bamm>
@@ -512,105 +472,6 @@ Run `revdepcheck::revdep_details(, "cuda.ml")` for more info
             | ^
      ```
 
-# dar (1.6.0)
-
-* GitHub: <https://github.com/MicrobialGenomics-IrsicaixaOrg/dar>
-* Email: <mailto:fcatala@irsicaixa.es>
-
-Run `revdepcheck::revdep_details(, "dar")` for more info
-
-## In both
-
-*   checking examples ... ERROR
-     ```
-     ...
-     > 
-     > ## Create a Recipe with steps
-     > rec <- 
-     +   recipe(metaHIV_phy, "RiskGroup2", "Species") |>
-     +   step_subset_taxa(tax_level = "Kingdom", taxa = c("Bacteria", "Archaea")) |>
-     +   step_filter_taxa(.f = "function(x) sum(x > 0) >= (0.3 * length(x))") |>
-     +   step_filter_by_prevalence(0.4) |>
-     +   step_maaslin()
-     ℹ 1 package is needed for step_maaslin() and is not installed: (Maaslin2)
-     • Start a clean R session then run: BiocManager::install(c("Maaslin2"))
-     >  
-     > ## Prep Recipe   
-     > rec <- prep(rec, parallel = TRUE)
-     ℹ 1 package is needed for step_maaslin() and is not installed: (Maaslin2)
-     • Start a clean R session then run: BiocManager::install(c("Maaslin2"))
-     Error in (function (.x, .f, ..., .progress = FALSE)  : ℹ In index: 1.
-     Caused by error in `purrr::map()`:
-     ℹ In index: 1.
-     ℹ With name: RiskGroup2.
-     Caused by error in `map()`:
-     ℹ In index: 1.
-     Caused by error in `loadNamespace()`:
-     ! there is no package called ‘Maaslin2’
-     Calls: prep ... furrr_map_template -> furrr_template -> <Anonymous> -> value.list
-     Execution halted
-     ```
-
-*   checking tests ...
-     ```
-     ...
-        77. ├─purrr::pluck(., "results")
-        78. │ └─purrr:::pluck_raw(.x, list2(...), .default = .default)
-        79. ├─base::loadNamespace(x)
-        80. │ ├─base::withRestarts(stop(cond), retry_loadNamespace = function() NULL)
-        81. │ │ └─base (local) withOneRestart(expr, restarts[[1L]])
-        82. │ │   └─base (local) doWithOneRestart(return(expr), restart)
-        83. │ └─base::stop(cond)
-        84. ├─purrr (local) `<fn>`(`<pckgNtFE>`)
-        85. │ └─cli::cli_abort(...)
-        86. │   └─rlang::abort(...)
-        87. │     └─rlang:::signal_abort(cnd, .file)
-        88. │       └─base::signalCondition(cnd)
-        89. ├─purrr (local) `<fn>`(`<prrr_rr_>`)
-        90. │ └─cli::cli_abort(...)
-        91. │   └─rlang::abort(...)
-        92. │     └─rlang:::signal_abort(cnd, .file)
-        93. │       └─base::signalCondition(cnd)
-        94. └─purrr (local) `<fn>`(`<prrr_rr_>`)
-        95.   └─cli::cli_abort(...)
-        96.     └─rlang::abort(...)
-       
-       [ FAIL 2 | WARN 3 | SKIP 8 | PASS 95 ]
-       Error:
-       ! Test failures.
-       Execution halted
-     ```
-
-*   checking re-building of vignette outputs ... ERROR
-     ```
-     ...
-      59. ├─purrr (local) `<fn>`(`<prrr_rr_>`)
-      60. │ └─cli::cli_abort(...)
-      61. │   └─rlang::abort(...)
-      62. │     └─rlang:::signal_abort(cnd, .file)
-      63. │       └─base::signalCondition(cnd)
-      64. └─base (local) `<fn>`(`<prrr_rr_>`)
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     
-     Error: processing vignette 'import_export_recipes.Rmd' failed with diagnostics:
-     error in evaluating the argument 'rec' in selecting a method for function 'bake': ℹ In index: 1.
-     Caused by error in `purrr::map()`:
-     ℹ In index: 1.
-     ℹ With name: RiskGroup2.
-     Caused by error in `map()`:
-     ℹ In index: 1.
-     Caused by error in `loadNamespace()`:
-     ! there is no package called 'Maaslin2'
-     --- failed re-building ‘import_export_recipes.Rmd’
-     
-     SUMMARY: processing the following files failed:
-       ‘article.Rmd’ ‘bioinformatics_vignette.Rmd’ ‘dar.Rmd’
-       ‘import_export_recipes.Rmd’
-     
-     Error: Vignette re-building failed.
-     Execution halted
-     ```
-
 # designer (0.3.0)
 
 * GitHub: <https://github.com/ashbaldry/designer>
@@ -647,46 +508,6 @@ Run `revdepcheck::revdep_details(, "disk.frame")` for more info
      checkRd: (-1) purrr_as_mapper.Rd:10: Lost braces; missing escapes or markup?
          10 | \item{.f}{a normal function or purrr syntax function i.e. `~{ ...code...}`}
             |                                                             ^
-     ```
-
-# dispositionEffect (1.0.1)
-
-* GitHub: <https://github.com/marcozanotti/dispositionEffect>
-* Email: <mailto:zanottimarco17@gmail.com>
-* GitHub mirror: <https://github.com/cran/dispositionEffect>
-
-Run `revdepcheck::revdep_details(, "dispositionEffect")` for more info
-
-## In both
-
-*   checking tests ...
-     ```
-     ...
-       ── Failure ('test-realized_duration.R:152:2'): realized_duration works (realized_only = TRUE) ──
-       Expected `realized_duration(...)` to equal `c(...)`.
-       Differences:
-       1/4 mismatches
-       [2] 34 - 28 == 6
-       ── Failure ('test-realized_duration.R:155:2'): realized_duration works (realized_only = TRUE) ──
-       Expected `realized_duration(...)` to equal `c(...)`.
-       Differences:
-       1/4 mismatches
-       [1] 34 - 28 == 6
-       ── Failure ('test-realized_duration.R:158:2'): realized_duration works (realized_only = TRUE) ──
-       Expected `realized_duration(...)` to equal `c(...)`.
-       Differences:
-       1/4 mismatches
-       [2] 34 - 28 == 6
-       ── Failure ('test-realized_duration.R:161:2'): realized_duration works (realized_only = TRUE) ──
-       Expected `realized_duration(...)` to equal `c(...)`.
-       Differences:
-       1/4 mismatches
-       [1] 34 - 28 == 6
-       
-       [ FAIL 36 | WARN 0 | SKIP 0 | PASS 331 ]
-       Error:
-       ! Test failures.
-       Execution halted
      ```
 
 # EFAtools (0.6.1)
@@ -823,52 +644,6 @@ Run `revdepcheck::revdep_details(, "fmeffects")` for more info
      
      Error: Vignette re-building failed.
      Execution halted
-     ```
-
-# forecastML (0.9.0)
-
-* GitHub: <https://github.com/nredell/forecastML>
-* Email: <mailto:nickalusredell@gmail.com>
-* GitHub mirror: <https://github.com/cran/forecastML>
-
-Run `revdepcheck::revdep_details(, "forecastML")` for more info
-
-## In both
-
-*   checking re-building of vignette outputs ... ERROR
-     ```
-     ...
-     ---
-     Backtrace:
-         ▆
-      1. ├─base::summary(model_results_cv$horizon_1$window_1$model)
-      2. └─base::summary.default(model_results_cv$horizon_1$window_1$model)
-      3.   └─base::array(...)
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     
-     Error: processing vignette 'grouped_forecast.Rmd' failed with diagnostics:
-     length of 'dimnames' [1] not equal to array extent
-     --- failed re-building ‘grouped_forecast.Rmd’
-     
-     --- re-building ‘lagged_features.Rmd’ using rmarkdown
-     [WARNING] Deprecated: --highlight-style. Use --syntax-highlighting instead.
-     --- finished re-building ‘lagged_features.Rmd’
-     
-     --- re-building ‘package_overview.Rmd’ using rmarkdown
-     [WARNING] Deprecated: --highlight-style. Use --syntax-highlighting instead.
-     --- finished re-building ‘package_overview.Rmd’
-     
-     SUMMARY: processing the following file failed:
-       ‘grouped_forecast.Rmd’
-     
-     Error: Vignette re-building failed.
-     Execution halted
-     ```
-
-*   checking dependencies in R code ... NOTE
-     ```
-     Namespace in Imports field not imported from: ‘dtplyr’
-       All declared Imports should be used.
      ```
 
 # GeDS (0.3.3)
@@ -1146,59 +921,6 @@ Run `revdepcheck::revdep_details(, "InPAS")` for more info
      Extensions’ manual.
      ```
 
-# ISAnalytics (1.20.0)
-
-* GitHub: <https://github.com/calabrialab/ISAnalytics>
-* Email: <mailto:gazzo.francesco@hsr.it>
-
-Run `revdepcheck::revdep_details(, "ISAnalytics")` for more info
-
-## In both
-
-*   checking tests ...
-     ```
-     ...
-       > test_check("ISAnalytics")
-       Loading required namespace: plotly
-       Loading required namespace: rmarkdown
-       [WARNING] Deprecated: --highlight-style. Use --syntax-highlighting instead.
-       Report correctly saved
-       i Report saved to: /scratch/henrik/1020031/RtmplnCRza/file230ccf29f37bad/2026-01-31_collision_removal_report.html
-       Saving _problems/test-population-size-estimate-631.R
-       [WARNING] Deprecated: --highlight-style. Use --syntax-highlighting instead.
-       Report correctly saved
-       i Report saved to: /scratch/henrik/1020031/RtmplnCRza/file230ccf7fce8999/2026-01-31_outlier_test_pool_fragments_report.html
-       [ FAIL 1 | WARN 0 | SKIP 0 | PASS 832 ]
-       
-       ══ Failed tests ════════════════════════════════════════════════════════════════
-       ── Error ('test-population-size-estimate.R:605:5'): .re_agg_and_estimate works as expected - less tps ──
-       Error: Invalid index: out of bounds
-       Backtrace:
-           ▆
-        1. └─ISAnalytics:::.re_agg_and_estimate(...) at test-population-size-estimate.R:605:5
-        2.   ├─groups_dfs[[i]]
-        3.   └─vctrs:::`[[.vctrs_list_of`(groups_dfs, i)
-       
-       [ FAIL 1 | WARN 0 | SKIP 0 | PASS 832 ]
-       Error:
-       ! Test failures.
-       Execution halted
-     ```
-
-*   checking whether package ‘ISAnalytics’ can be installed ... WARNING
-     ```
-     Found the following significant warnings:
-       Warning: replacing previous import ‘bslib::show_toast’ by ‘shinyWidgets::show_toast’ when loading ‘ISAnalytics’
-     See ‘/scratch/henrik/revdep/globals/checks/ISAnalytics/new/ISAnalytics.Rcheck/00install.out’ for details.
-     ```
-
-*   checking Rd files ... NOTE
-     ```
-     checkRd: (-1) refGenes_hg19.Rd:21: Lost braces; missing escapes or markup?
-         21 | \item Download from {http://hgdownload.soe.ucsc.edu/goldenPath/hg19/database/}
-            |                     ^
-     ```
-
 # ivmte (1.4.0)
 
 * Email: <mailto:jkcshea@uchicago.edu>
@@ -1303,6 +1025,46 @@ Run `revdepcheck::revdep_details(, "ldsr")` for more info
        Specified C++11: please drop specification unless essential
      ```
 
+# lidR (4.2.3)
+
+* GitHub: <https://github.com/r-lidar/lidR>
+* Email: <mailto:info@r-lidar.com>
+* GitHub mirror: <https://github.com/cran/lidR>
+
+Run `revdepcheck::revdep_details(, "lidR")` for more info
+
+## In both
+
+*   checking tests ...
+     ```
+     ...
+       
+                                                                                       
+       
+                                                                                       
+       
+                                                                                       
+       
+                                                                                       
+       
+                                                                                       
+       
+                                                                                       
+       Chunk 1 of 1 (100%): state ✓
+       
+                                                                                       
+       
+                                                                                       
+       
+                                                                                       
+       
+                                                                                       
+       
+                                                                                       
+       terminate called after throwing an instance of 'std::length_error'
+         what():  basic_string::_M_create
+     ```
+
 # MAI (1.16.0)
 
 * GitHub: <https://github.com/KechrisLab/MAI>
@@ -1359,46 +1121,6 @@ Run `revdepcheck::revdep_details(, "mapme.biodiversity")` for more info
        Execution halted
      ```
 
-# mbbe (0.1.0)
-
-* GitHub: <https://github.com/certara/mbbe>
-* Email: <mailto:mark.sale@certara.com>
-* GitHub mirror: <https://github.com/cran/mbbe>
-
-Run `revdepcheck::revdep_details(, "mbbe")` for more info
-
-## In both
-
-*   checking tests ...
-     ```
-     ...
-       > # * https://testthat.r-lib.org/articles/special-files.html
-       > 
-       > library(testthat)
-       > library(mbbe)
-       > 
-       > test_check("mbbe")
-       Saving _problems/test-check_requirements-52.R
-       [ FAIL 1 | WARN 0 | SKIP 0 | PASS 11 ]
-       
-       ══ Failed tests ════════════════════════════════════════════════════════════════
-       ── Error ('test-check_requirements.R:39:3'): check_requirements works ──────────
-       <lifecycle_error_deprecated/defunctError/rlang_error/error/condition>
-       Error: `with_mock()` was deprecated in testthat 3.2.0 and is now defunct.
-       ℹ Please use `with_mocked_bindings()` instead.
-       Backtrace:
-           ▆
-        1. └─testthat::with_mock(...) at test-check_requirements.R:39:3
-        2.   └─lifecycle::deprecate_stop("3.2.0", "with_mock()", "with_mocked_bindings()")
-        3.     └─lifecycle:::deprecate_stop0(msg)
-        4.       └─rlang::cnd_signal(...)
-       
-       [ FAIL 1 | WARN 0 | SKIP 0 | PASS 11 ]
-       Error:
-       ! Test failures.
-       Execution halted
-     ```
-
 # mikropml (1.7.0)
 
 * GitHub: <https://github.com/SchlossLab/mikropml>
@@ -1413,191 +1135,6 @@ Run `revdepcheck::revdep_details(, "mikropml")` for more info
      ```
      Namespace in Imports field not imported from: ‘methods’
        All declared Imports should be used.
-     ```
-
-# MineICA (1.49.0)
-
-* Email: <mailto:anne.biton@gmail.com>
-
-Run `revdepcheck::revdep_details(, "MineICA")` for more info
-
-## In both
-
-*   checking examples ... ERROR
-     ```
-     ...
-     > nodeDescr <- nodeAttrs(nbAn = nbAn, nbComp = nbComp, labComp = labComp,
-     +                        labAn = c("toy1","toy2"), file = "nodeInfo.txt")
-     > 
-     > ## Plot correlation graph, slightly move the attached nodes to make the cliques visible
-     > ## use tkplot=TRUE to have an interactive graph
-     > res <- plotCorGraph(title = "Compare toy 1 and 2", dataGraph = dataGraph, nodeName = "indComp", tkplot = FALSE,
-     +                  nodeAttrs = nodeDescr, edgeWeight = "cor", nodeShape = "labAn", reciproCol = "reciprocal")
-     Warning in brewer.pal(nbAn, "Set3") :
-       minimal value for n is 3, returning requested palette with 3 different levels
-     
-     Error:
-     ! The `area` argument of `layout_with_fr()` was deprecated in igraph
-       0.8.0 and is now defunct.
-     Backtrace:
-         ▆
-      1. └─MineICA::plotCorGraph(...)
-      2.   └─igraph::layout.fruchterman.reingold(...)
-      3.     ├─igraph:::do_call(layout_with_fr, .args = c(list(...), params))
-      4.     │ └─base::eval(call, .env)
-      5.     │   └─base::eval(call, .env)
-      6.     └─igraph::layout_with_fr(...)
-      7.       └─lifecycle::deprecate_stop("0.8.0", "layout_with_fr(area = )")
-      8.         └─lifecycle:::deprecate_stop0(msg)
-      9.           └─rlang::cnd_signal(...)
-     Execution halted
-     ```
-
-*   checking dependencies in R code ... WARNING
-     ```
-     Namespace in Imports field not imported from: ‘lumiHumanAll.db’
-       All declared Imports should be used.
-     Packages in Depends field not imported from:
-       ‘GOstats’ ‘Hmisc’ ‘JADE’ ‘RColorBrewer’ ‘Rgraphviz’ ‘annotate’
-       ‘biomaRt’ ‘cluster’ ‘colorspace’ ‘fastICA’ ‘foreach’ ‘ggplot2’
-       ‘graph’ ‘gtools’ ‘igraph’ ‘marray’ ‘mclust’ ‘methods’ ‘plyr’ ‘scales’
-       ‘xtable’
-       These packages need to be imported from (in the NAMESPACE file)
-       for when this namespace is loaded but not attached.
-     Missing or unexported object: ‘GOstats::geneIdsByCategory’
-     ':::' calls which should be '::':
-       ‘Biobase:::annotation<-’ ‘Biobase:::validMsg’ ‘fpc:::pamk’
-       ‘lumi:::getChipInfo’ ‘mclust:::adjustedRandIndex’
-       See the note in ?`:::` about the use of this operator.
-     Unexported object imported by a ':::' call: ‘Biobase:::isValidVersion’
-       See the note in ?`:::` about the use of this operator.
-     ```
-
-*   checking Rd cross-references ... WARNING
-     ```
-     Missing link(s) in Rd file 'Alist.Rd':
-       ‘class-IcaSet’
-     
-     Missing link(s) in Rd file 'Slist.Rd':
-       ‘class-IcaSet’
-     
-     Missing link(s) in Rd file 'class-IcaSet.Rd':
-       ‘class-IcaSet’
-     
-     Missing link(s) in Rd file 'getComp.Rd':
-       ‘class-IcaSet’
-     
-     Missing link(s) in Rd file 'runAn.Rd':
-       ‘[Category:class-GOHyperGParams]{GOHyperGParams}’
-     
-     See section 'Cross-references' in the 'Writing R Extensions' manual.
-     ```
-
-*   checking for missing documentation entries ... WARNING
-     ```
-     Undocumented S4 classes:
-       ‘MineICAParams’
-     All user-level objects in a package (including S4 classes and methods)
-     should have documentation entries.
-     See chapter ‘Writing R documentation files’ in the ‘Writing R
-     Extensions’ manual.
-     ```
-
-*   checking re-building of vignette outputs ... WARNING
-     ```
-     ...
-       The `axis.ticks.margin` theme element is not defined in the element hierarchy.
-     `geom_smooth()` using formula = 'y ~ x'
-     Warning in texi2dvi(file = file, pdf = TRUE, clean = clean, quiet = quiet,  :
-       texi2dvi script/program not available, using emulation
-     Error: processing vignette 'MineICA.Rnw' failed with diagnostics:
-     unable to run pdflatex on 'MineICA.tex'
-     LaTeX errors:
-     ! LaTeX Error: File `appendix.sty' not found.
-     
-     Type X to quit or <RETURN> to proceed,
-     or enter new name. (Default extension: sty)
-     
-     ! Emergency stop.
-     <read *> 
-              
-     l.23 \usepackage
-                     {subfig}^^M
-     !  ==> Fatal error occurred, no output PDF file produced!
-     --- failed re-building ‘MineICA.Rnw’
-     
-     SUMMARY: processing the following file failed:
-       ‘MineICA.Rnw’
-     
-     Error: Vignette re-building failed.
-     Execution halted
-     ```
-
-*   checking DESCRIPTION meta-information ... NOTE
-     ```
-     Packages listed in more than one of Depends, Imports, Suggests, Enhances:
-       ‘biomaRt’ ‘GOstats’ ‘cluster’ ‘mclust’ ‘igraph’
-     A package should be listed in only one of these fields.
-     ```
-
-*   checking R code for possible problems ... NOTE
-     ```
-     ...
-       igraph.from.graphNEL kmeans kruskal.test layout
-       layout.fruchterman.reingold legend listAttributes listFilters llply
-       lm maColorBar maPalette median mtext na.omit new odd order.dendrogram
-       p.adjust pam par pdf plot.new points position_jitter pushViewport
-       quantile rainbow_hcl rcorr read.table reorder scale_colour_gradientn
-       scale_colour_manual scale_fill_manual scale_linetype_manual
-       scale_shape_manual scale_x_continuous scale_x_discrete
-       scale_y_continuous shapiro.test sigCategories terrain_hcl theme
-       theme_bw title tkplot.fit.to.screen unit useMart validObject vcount
-       viewport wilcox.test write.table xlab xtable
-     Consider adding
-       importFrom("grDevices", "cm.colors", "dev.off", "graphics.off",
-                  "heat.colors", "pdf")
-       importFrom("graphics", "abline", "axis", "frame", "hist", "layout",
-                  "legend", "mtext", "par", "plot.new", "points", "title")
-       importFrom("methods", "callNextMethod", "new", "validObject")
-       importFrom("stats", "aggregate", "as.dendrogram", "as.dist",
-                  "as.hclust", "chisq.test", "cor", "cor.test", "cutree",
-                  "dist", "hclust", "kmeans", "kruskal.test", "lm", "median",
-                  "na.omit", "order.dendrogram", "p.adjust", "quantile",
-                  "reorder", "shapiro.test", "wilcox.test")
-       importFrom("utils", "capture.output", "combn", "read.table",
-                  "write.table")
-     to your NAMESPACE file (and ensure that your DESCRIPTION Imports field
-     contains 'methods').
-     ```
-
-*   checking Rd files ... NOTE
-     ```
-     ...
-            |                                            ^
-     checkRd: (-1) clusterFastICARuns.Rd:52: Lost braces
-         52 |   item{W}{the estimated unmixing matrix}, \item{Iq}{Iq
-            |       ^
-     checkRd: (-1) clusterFastICARuns.Rd:52: Lost braces
-         52 |   item{W}{the estimated unmixing matrix}, \item{Iq}{Iq
-            |          ^
-     checkRd: (-1) plotDensOneAnnotInAllComp.Rd:104: Lost braces
-        104 |   code{\link{writeHtmlResTestsByAnnot}},
-            |       ^
-     checkRd: (-1) plotDensOneAnnotInAllComp.Rd:105: Lost braces
-        105 |   code{\link{wilcox.test}}, code{\link{kruskal.test}}
-            |       ^
-     checkRd: (-1) plotDensOneAnnotInAllComp.Rd:105: Lost braces
-        105 |   code{\link{wilcox.test}}, code{\link{kruskal.test}}
-            |                                 ^
-     checkRd: (-1) runICA.Rd:44: Lost braces
-         44 |   item{W}{the estimated unmixing matrix}}
-            |       ^
-     checkRd: (-1) runICA.Rd:44: Lost braces
-         44 |   item{W}{the estimated unmixing matrix}}
-            |          ^
-     checkRd: (-1) writeProjByComp.Rd:38: Lost braces
-         38 | their annotations, please remember to modify code{genesPath(params)}, or
-            |                                                  ^
      ```
 
 # mistyR (1.18.0)
@@ -1703,7 +1240,7 @@ Run `revdepcheck::revdep_details(, "mlr3resampling")` for more info
      1:           all
      2:           all
      > mlr3resampling::proj_compute(1, pkg.proj.dir)
-     [c4-n43:3299822] OPAL ERROR: Not initialized in file ext2x_client.c at line 112
+     [c4-n43:2598365] OPAL ERROR: Not initialized in file ext2x_client.c at line 112
      --------------------------------------------------------------------------
      The application appears to have been direct launched using "srun",
      but OMPI was not built with SLURM's PMI support and therefore cannot
@@ -1728,7 +1265,7 @@ Run `revdepcheck::revdep_details(, "mlr3resampling")` for more info
        > if(require(testthat))test_check("mlr3resampling")
        Loading required package: testthat
        Loading required package: mlr3resampling
-       [c4-n43:3303389] OPAL ERROR: Not initialized in file ext2x_client.c at line 112
+       [c4-n43:2631944] OPAL ERROR: Not initialized in file ext2x_client.c at line 112
        --------------------------------------------------------------------------
        The application appears to have been direct launched using "srun",
        but OMPI was not built with SLURM's PMI support and therefore cannot
@@ -1749,12 +1286,12 @@ Run `revdepcheck::revdep_details(, "mlr3resampling")` for more info
        *** on a NULL communicator
        *** MPI_ERRORS_ARE_FATAL (processes in this communicator will now abort,
        ***    and potentially your MPI job)
-       [c4-n43:3303389] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
+       [c4-n43:2631944] Local abort before MPI_INIT completed completed successfully, but am not able to aggregate error messages, and not able to guarantee that all other processes were killed!
      ```
 
 *   checking dependencies in R code ... NOTE
      ```
-     [c4-n43:3290102] OPAL ERROR: Not initialized in file ext2x_client.c at line 112
+     [c4-n43:2509765] OPAL ERROR: Not initialized in file ext2x_client.c at line 112
      --------------------------------------------------------------------------
      The application appears to have been direct launched using "srun",
      but OMPI was not built with SLURM's PMI support and therefore cannot
@@ -2044,53 +1581,6 @@ Run `revdepcheck::revdep_details(, "pavo")` for more info
      Found the following significant warnings:
        Warning: no DISPLAY variable so Tk is not available
      See ‘/scratch/henrik/revdep/globals/checks/pavo/new/pavo.Rcheck/00install.out’ for details.
-     ```
-
-# pgxRpi (1.6.0)
-
-* GitHub: <https://github.com/progenetix/pgxRpi>
-* Email: <mailto:hangjia.zhao@uzh.ch>
-
-Run `revdepcheck::revdep_details(, "pgxRpi")` for more info
-
-## In both
-
-*   checking re-building of vignette outputs ... ERROR
-     ```
-     ...
-     Backtrace:
-         ▆
-      1. └─pgxRpi::segtoFreq(segdata, cnv_column_idx = 6, cohort_name = "c1")
-      2.   └─base::colSums(bin.dup.data1)
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     
-     Error: processing vignette 'Introduction_3_access_cnv_frequency.Rmd' failed with diagnostics:
-     'x' must be an array of at least two dimensions
-     --- failed re-building ‘Introduction_3_access_cnv_frequency.Rmd’
-     
-     --- re-building ‘Introduction_4_process_pgxseg.Rmd’ using rmarkdown
-     The magick package is required to crop "/scratch/henrik/revdep/globals/checks/pgxRpi/new/pgxRpi.Rcheck/vign_test/pgxRpi/vignettes/Introduction_4_process_pgxseg_files/figure-html/unnamed-chunk-6-1.png" but not available.
-     The magick package is required to crop "/scratch/henrik/revdep/globals/checks/pgxRpi/new/pgxRpi.Rcheck/vign_test/pgxRpi/vignettes/Introduction_4_process_pgxseg_files/figure-html/unnamed-chunk-7-1.png" but not available.
-     The magick package is required to crop "/scratch/henrik/revdep/globals/checks/pgxRpi/new/pgxRpi.Rcheck/vign_test/pgxRpi/vignettes/Introduction_4_process_pgxseg_files/figure-html/unnamed-chunk-8-1.png" but not available.
-     The magick package is required to crop "/scratch/henrik/revdep/globals/checks/pgxRpi/new/pgxRpi.Rcheck/vign_test/pgxRpi/vignettes/Introduction_4_process_pgxseg_files/figure-html/unnamed-chunk-13-1.png" but not available.
-     The magick package is required to crop "/scratch/henrik/revdep/globals/checks/pgxRpi/new/pgxRpi.Rcheck/vign_test/pgxRpi/vignettes/Introduction_4_process_pgxseg_files/figure-html/unnamed-chunk-14-1.png" but not available.
-     The magick package is required to crop "/scratch/henrik/revdep/globals/checks/pgxRpi/new/pgxRpi.Rcheck/vign_test/pgxRpi/vignettes/Introduction_4_process_pgxseg_files/figure-html/unnamed-chunk-15-1.png" but not available.
-     The magick package is required to crop "/scratch/henrik/revdep/globals/checks/pgxRpi/new/pgxRpi.Rcheck/vign_test/pgxRpi/vignettes/Introduction_4_process_pgxseg_files/figure-html/unnamed-chunk-16-1.png" but not available.
-     --- finished re-building ‘Introduction_4_process_pgxseg.Rmd’
-     
-     SUMMARY: processing the following file failed:
-       ‘Introduction_3_access_cnv_frequency.Rmd’
-     
-     Error: Vignette re-building failed.
-     Execution halted
-     ```
-
-*   checking R code for possible problems ... NOTE
-     ```
-     pgxSegprocess: no visible binding for global variable
-       ‘followup_state_id’
-     Undefined global functions or variables:
-       followup_state_id
      ```
 
 # photosynthesis (2.1.5)
@@ -2408,82 +1898,6 @@ Run `revdepcheck::revdep_details(, "regmedint")` for more info
        All declared Imports should be used.
      ```
 
-# RFLOMICS (1.2.0)
-
-* GitHub: <https://github.com/RFLOMICS/RFLOMICS>
-* Email: <mailto:nadia.bessoltane@inrae.fr>
-
-Run `revdepcheck::revdep_details(, "RFLOMICS")` for more info
-
-## In both
-
-*   checking tests ...
-     ```
-     ...
-       
-       > 
-       > test_check("RFLOMICS")
-       Saving _problems/test-6_annotation-429.R
-       [ FAIL 1 | WARN 1 | SKIP 3 | PASS 568 ]
-       
-       ══ Skipped tests (3) ═══════════════════════════════════════════════════════════
-       • Functional test for differential analysis skipped (1): 'test-4_DE.R:190:1'
-       • Functionnal testing for Coseq skipped (1): 'test-5_coseq.R:220:1'
-       • Tests for MOFA integration skipped. (1): 'test-7_MOFA.R:132:1'
-       
-       ══ Failed tests ════════════════════════════════════════════════════════════════
-       ── Failure ('test-6_annotation.R:426:5'): plotClusterPRofiler - GO only ────────
-       Expected `plotClusterProfiler(...)` not to throw any errors.
-       Actually got a <simpleError> with message:
-         unused argument (color.params = list(c(0.300399996066667, 0.301045294633334, 0.264438544366666, -0.200414615933333, -0.3007194991, 0.178315409633333, 0.673515665866667, -0.376568520733334, 0.157759883033333, -0.236249579033334, -0.276641702366667, -0.291926095733333, 0.212942502866667, 0.496659495299999, 0.307222577833334, -0.302097530833333, 0.353649462433333, -0.5909892019, -0.388045443066667, 0.229295718699999, -0.1442581488, -0.777006877033334, -0.2074591879, -0.691895002733333, 0.3407854646, -0.217149637, 
-         0.307201186666666, -0.418465698966667, -0.501175408399999, 0.255176241433334, 0.446902293133333, 0.338214238033332, -0.217080244766667, 0.250611779533334, 0.1845572569, -0.2192945913, -0.405890665066667, 0.156979454333334, 0.505127047300001, -0.3221885657, 0.504598985933333, 0.195820359666666, 0.536327117633334, 0.273841055066666, 0.271927078866666, 0.183922002533333, -0.207328281966667, 0.194461900400001, -0.230959126366666, 0.912593104366668, -0.3266976465, -0.429720156866667, -0.593520664766667, 
-         0.330953947566667, 0.486931707266667, 0.253410547133334, 0.2467424736, 0.157871606566667, 0.204814479066667, -0.3339815318, -0.2533776575, -0.314177966, 0.410912358533334, -0.165349674366667, -0.307108972433334, 0.234900304166667, -0.199921871433333, 0.192957373733334, -0.194109403, -0.3770501065, 0.236607130199999, -0.1988150821, 0.253424834433333, -0.177365903833333, -0.3591419015, 0.474637460166667, 0.156515031566667, -0.144220623466667, 0.185177678933333, 0.179446874866667, 0.331531272733333, 
-         -0.4504685208, -0.166342142966666, -0.313439013766667, 0.309729636033333, -0.216059582266667, -0.200324587333333, 0.262163061933333, -0.1792709633, 0.249115962766667, -0.260620727133333, -0.318724055900001, 0.3480786074, -0.403214862066667, 0.463990265933334, -0.222806446433333, -0.218519887733333, -0.2981448912, 0.463557329333333, -0.719532571233334, -0.257235152466667, -0.2101228905, 0.388242255300001, 0.191443329833333, 0.3549675335, 0.401430903033334, 0.239838099366666, -0.1824585654, 0.251306488066667, 
-         0.2281106187, 0.229249873166667, -0.207186356966667, 0.1867881103, 0.409495102033334, 0.210617230133334, -0.177041792366667, 0.3352274293, -0.245853278266667, -0.841154646433333, -0.281936161766667, 0.2831585312, -0.610432403600001, -0.218978262266667, -0.3496594605, -0.268436096566667, 0.212388397633334, -0.197467209066666, -0.247592469066667, 0.506184985800001, 0.413667750933333, -0.1516626657)))
-       
-       [ FAIL 1 | WARN 1 | SKIP 3 | PASS 568 ]
-       Error:
-       ! Test failures.
-       Execution halted
-     ```
-
-*   checking dependencies in R code ... NOTE
-     ```
-     Namespaces in Imports field not imported from:
-       ‘org.At.tair.db’ ‘reticulate’
-       All declared Imports should be used.
-     ```
-
-*   checking R code for possible problems ... NOTE
-     ```
-     ...
-     runCoExpression,RflomicsSE: no visible global function definition for
-       ‘assay’
-     runNormalization,RflomicsSE: no visible global function definition for
-       ‘assay’
-     runOmicsPCA,RflomicsSE: no visible global function definition for
-       ‘assay’
-     Undefined global functions or variables:
-       % of explained variance -log10pvalue . Adj.pvalue All C Cluster
-       Component Contrast Count Cumulative Explained Variance DEF DataFrame
-       Dataset Description Entity ExperimentList FC GeneRatio SE.name SUMCOL
-       Up_Down across add_tally arrange assay assay<- cluster colData
-       colData<- complete.cases contrast contrastName contrastName3 cor
-       criteria data dataset datasetFill desc distinct does.belong
-       ecoseed.df errors experiments factorType filter fixFactor2 full_join
-       group groupComparison group_by groups if_else intersectColumns
-       left_join log2FC logFC logLike mean.y_profiles mutate mutate_at n
-       observations omicName outsideGroup p.adjust packageVersion percent
-       presence primary prop pvalue relevel relocate right_join sampleMap
-       samples sd select_if sessionInfo status summarise summarize tabel
-       type ungroup value variable y.axis y_profiles
-     Consider adding
-       importFrom("stats", "C", "complete.cases", "cor", "filter", "p.adjust",
-                  "relevel", "sd")
-       importFrom("utils", "data", "packageVersion", "sessionInfo")
-     to your NAMESPACE file.
-     ```
-
 # rsi (0.3.2)
 
 * GitHub: <https://github.com/Permian-Global-Research/rsi>
@@ -2626,123 +2040,6 @@ Run `revdepcheck::revdep_details(, "scanMiRApp")` for more info
      plotSitesOnUTR: no visible binding for global variable 'type'
      Undefined global functions or variables:
        SampleKdModel SampleTranscript logKd note type
-     ```
-
-# SCArray.sat (1.9.0)
-
-* GitHub: <https://github.com/AbbVie-ComputationalGenomics/SCArray>
-* Email: <mailto:xiuwen.zheng@abbvie.com>
-
-Run `revdepcheck::revdep_details(, "SCArray.sat")` for more info
-
-## In both
-
-*   checking examples ... ERROR
-     ```
-     ...
-     > 
-     > d <- scNewSeuratGDS(fn)
-     Input: /scratch/henrik/revdep/globals/library/SCArray.sat/SCArray/extdata/example.gds
-         counts: 1000 x 850
-     Warning: The following arguments are not used: layer
-     Warning: The following arguments are not used: layer
-     > 
-     > d <- NormalizeData(d)
-     Warning: The following arguments are not used: layer
-     Performing log-normalization
-     > d <- FindVariableFeatures(d, nfeatures=250)
-     Warning: The following arguments are not used: layer
-     Calculating gene variances
-     Calculating feature variances of standardized and clipped values
-     
-       |                                                                      
-       |                                                                |   0%
-       |                                                                      
-       |================================================================| 100%
-     > d <- ScaleData(d)
-     Warning: The following arguments are not used: layer
-     Centering and scaling data matrix (SC_GDSMatrix [250x850])
-     Warning: The new data doesn't have the same number of features as the current data
-     Error: Attempting to add a different number of cells or features
-     Execution halted
-     ```
-
-*   checking re-building of vignette outputs ... ERROR
-     ```
-     ...
-     Quitting from SCArray.sat.Rmd:78-101 [unnamed-chunk-2]
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     <error/rlang_error>
-     Error:
-     ! Attempting to add a different number of cells or features
-     ---
-     Backtrace:
-         ▆
-      1. ├─Seurat::ScaleData(d)
-      2. └─Seurat:::ScaleData.Seurat(d)
-      3.   ├─Seurat::ScaleData(...)
-      4.   └─Seurat:::ScaleData.Assay(...)
-      5.     ├─SeuratObject::SetAssayData(...)
-      6.     └─SCArray.sat:::SetAssayData.SCArrayAssay(...)
-     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     
-     Error: processing vignette 'SCArray.sat.Rmd' failed with diagnostics:
-     Attempting to add a different number of cells or features
-     --- failed re-building ‘SCArray.sat.Rmd’
-     
-     SUMMARY: processing the following file failed:
-       ‘SCArray.sat.Rmd’
-     
-     Error: Vignette re-building failed.
-     Execution halted
-     ```
-
-*   checking dependencies in R code ... NOTE
-     ```
-     Unexported objects imported by ':::' calls:
-       ‘Seurat:::DEmethods_counts’ ‘Seurat:::DEmethods_nocorrect’
-       ‘Seurat:::FastExpMean’ ‘Seurat:::FastLogVMR’ ‘Seurat:::NBResiduals’
-       ‘Seurat:::UpdateKey’ ‘Seurat:::ValidateDataForMerge’
-       See the note in ?`:::` about the use of this operator.
-     ```
-
-# scLANE (1.0.0)
-
-* GitHub: <https://github.com/jr-leary7/scLANE>
-* Email: <mailto:j.leary@ufl.edu>
-
-Run `revdepcheck::revdep_details(, "scLANE")` for more info
-
-## In both
-
-*   checking tests ...
-     ```
-     ...
-       scLANE testing in GEE mode completed for 20 genes across 1 lineage in 57.948 secs
-       scLANE testing in GLMM mode completed for 20 genes across 1 lineage in 2.438 mins
-       [ FAIL 1 | WARN 741 | SKIP 0 | PASS 0 ]
-       
-       ══ Failed tests ════════════════════════════════════════════════════════════════
-       ── Error ('test_scLANE.R:328:5'): (code run outside of `test_that()`) ──────────
-       <lifecycle_error_deprecated/defunctError/rlang_error/error/condition>
-       Error: The `slot` argument of `GetAssayData()` was deprecated in SeuratObject 5.0.0 and is now defunct.
-       i Please use the `layer` argument instead.
-       Backtrace:
-           ▆
-        1. ├─withr::with_output_sink(...) at test_scLANE.R:42:1
-        2. │ └─base::force(code)
-        3. └─scLANE::geneProgramScoring(...) at test_scLANE.R:328:5
-        4.   ├─Seurat::GetAssayData(expr.mat, slot = "counts", assay = Seurat::DefaultAssay(expr.mat))
-        5.   └─SeuratObject:::GetAssayData.Seurat(...)
-        6.     └─SeuratObject::.Deprecate(...)
-        7.       └─lifecycle::deprecate_stop(...)
-        8.         └─lifecycle:::deprecate_stop0(msg)
-        9.           └─rlang::cnd_signal(...)
-       
-       [ FAIL 1 | WARN 741 | SKIP 0 | PASS 0 ]
-       Error:
-       ! Test failures.
-       Execution halted
      ```
 
 # selenider (0.4.1)
@@ -3014,7 +2311,7 @@ Run `revdepcheck::revdep_details(, "SpaDES.core")` for more info
      +   convertToPackage("test", path = tmpdir)
      + }
      Loading required namespace: pkgload
-     New module test created at /scratch/henrik/1020049/RtmplTnFJS/reproducible/U3C0xYmG
+     New module test created at /scratch/henrik/1020050/RtmpoGqLsQ/reproducible/U3C0xYmG
      ```
 
 # sparklyr.nested (0.0.4)
