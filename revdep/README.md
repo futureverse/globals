@@ -18,26 +18,26 @@
 
 |package   |old    |new         |Δ  |
 |:---------|:------|:-----------|:--|
-|globals   |0.18.0 |0.18.0-9010 |*  |
+|globals   |0.18.0 |0.18.0-9011 |*  |
 |codetools |0.2-20 |0.2-20      |   |
 
 # Revdeps
 
-## Failed to check (6)
+## Failed to check (5)
 
-|package              |version |error |warning |note |
-|:--------------------|:-------|:-----|:-------|:----|
+|package          |version |error |warning |note |
+|:----------------|:-------|:-----|:-------|:----|
 |[bonsai](failures.md#bonsai)|0.4.0   |1     |        |     |
-|historicalborrowlong |?       |      |        |     |
 |[ldmppr](failures.md#ldmppr)|1.1.1   |1     |        |     |
 |[TriDimRegression](failures.md#tridimregression)|1.0.3   |1     |        |     |
 |[VIM](failures.md#vim)|7.0.0   |1     |        |     |
 |[xpect](failures.md#xpect)|1.0     |1     |        |     |
 
-## All (760)
+## All (752)
 
 |package                      |version      |error |warning |note |
 |:----------------------------|:------------|:-----|:-------|:----|
+|aae.pop                      |0.2.0        |      |        |     |
 |[activAnalyzer](problems.md#activanalyzer)|2.1.2        |      |        |1    |
 |additive                     |1.0.1        |      |        |     |
 |[adestr](problems.md#adestr) |1.0.0        |      |        |1    |
@@ -57,7 +57,6 @@
 |apsimx                       |2.8.235      |      |        |     |
 |ARCHISSUR                    |0.0.1        |      |        |     |
 |arf                          |0.2.4        |      |        |     |
-|[arkdb](problems.md#arkdb)   |0.0.18       |1     |        |     |
 |aroma.affymetrix             |3.2.3        |      |        |     |
 |aroma.cn                     |1.7.1        |      |        |     |
 |aroma.core                   |3.3.2        |      |        |     |
@@ -163,7 +162,6 @@
 |dagHMM                       |0.1.1        |      |        |     |
 |DAISIE                       |4.6.0        |      |        |     |
 |dapper                       |1.0.1        |      |        |     |
-|[dar](problems.md#dar)       |1.6.0        |3     |        |     |
 |dartR.popgen                 |1.0.0        |      |        |     |
 |dataquieR                    |2.8.7        |      |        |     |
 |dataviewR                    |1.0.1        |      |        |     |
@@ -181,7 +179,6 @@
 |disaggR                      |1.0.5.4      |      |        |     |
 |discrim                      |1.1.0        |      |        |     |
 |[disk.frame](problems.md#diskframe)|0.8.3        |      |        |1    |
-|[dispositionEffect](problems.md#dispositioneffect)|1.0.1        |1     |        |     |
 |distantia                    |2.0.2        |      |        |     |
 |dockViewR                    |0.3.0        |      |        |     |
 |doFuture                     |1.2.0        |      |        |     |
@@ -242,7 +239,6 @@
 |flexFitR                     |1.2.2        |      |        |     |
 |[flowGraph](problems.md#flowgraph)|1.18.0       |      |        |2    |
 |[fmeffects](problems.md#fmeffects)|0.1.4        |1     |        |     |
-|[forecastML](problems.md#forecastml)|0.9.0        |1     |        |1    |
 |forestControl                |0.2.2        |      |        |     |
 |FracFixR                     |1.0.0        |      |        |     |
 |fst4pg                       |1.0.0        |      |        |     |
@@ -296,7 +292,7 @@
 |[hero](problems.md#hero)     |0.6          |      |        |1    |
 |heterogen                    |1.2.33       |      |        |     |
 |hgwrr                        |0.6-2        |      |        |     |
-|historicalborrowlong         |?            |      |        |     |
+|historicalborrowlong         |0.1.0        |      |        |     |
 |histoslider                  |0.1.1        |      |        |     |
 |hoopR                        |2.1.0        |      |        |     |
 |howler                       |0.3.0        |      |        |     |
@@ -323,7 +319,6 @@
 |interflex                    |1.2.8        |      |        |     |
 |InterpolateR                 |1.4-3        |      |        |     |
 |ipc                          |0.1.4        |      |        |     |
-|[ISAnalytics](problems.md#isanalytics)|1.20.0       |1     |1       |1    |
 |IsoCor                       |0.2.8        |      |        |     |
 |isopam                       |3.3          |      |        |     |
 |ivd                          |1.0.0        |      |        |     |
@@ -344,6 +339,7 @@
 |kernelshap                   |0.9.1        |      |        |     |
 |kesernetwork                 |0.1.0        |      |        |     |
 |keyATM                       |0.5.5        |      |        |     |
+|kindling                     |0.1.0        |      |        |     |
 |kmeRtone                     |1.0          |      |        |     |
 |LandComp                     |0.0.5        |      |        |     |
 |latentcor                    |2.0.2        |      |        |     |
@@ -359,7 +355,7 @@
 |lemna                        |1.0.2        |      |        |     |
 |LexFindR                     |1.1.0        |      |        |     |
 |lgr                          |0.5.2        |      |        |     |
-|lidR                         |4.2.3        |      |        |     |
+|[lidR](problems.md#lidr)     |4.2.3        |1     |        |     |
 |lightr                       |1.9.0        |      |        |     |
 |LipidMS                      |3.1.2        |      |        |     |
 |LLMAgentR                    |0.3.0        |      |        |     |
@@ -377,7 +373,6 @@
 |[mapme.biodiversity](problems.md#mapmebiodiversity)|0.9.5        |1     |        |     |
 |mapmixture                   |1.2.0        |      |        |     |
 |marginaleffects              |0.31.0       |      |        |     |
-|[mbbe](problems.md#mbbe)     |0.1.0        |1     |        |     |
 |mcmcensemble                 |3.2.0        |      |        |     |
 |McMiso                       |0.1.2        |      |        |     |
 |mcp                          |0.3.4        |      |        |     |
@@ -389,7 +384,6 @@
 |mice                         |3.19.0       |      |        |     |
 |migraph                      |1.5.6        |      |        |     |
 |[mikropml](problems.md#mikropml)|1.7.0        |      |        |1    |
-|[MineICA](problems.md#mineica)|1.49.0       |1     |4       |3    |
 |missSBM                      |1.0.5        |      |        |     |
 |[mistyR](problems.md#mistyr) |1.18.0       |      |        |2    |
 |[MLDataR](problems.md#mldatar)|1.0.1        |      |        |1    |
@@ -404,13 +398,13 @@
 |[mlr3shiny](problems.md#mlr3shiny)|0.5.0        |      |        |1    |
 |mlr3spatial                  |0.6.1        |      |        |     |
 |mlr3summary                  |0.1.1        |      |        |     |
-|mlr3torch                    |0.3.2        |      |        |     |
+|mlr3torch                    |0.3.3        |      |        |     |
 |mlr3tuning                   |1.5.1        |      |        |     |
 |MLwrap                       |0.3.0        |      |        |     |
 |[mmaqshiny](problems.md#mmaqshiny)|1.0.0        |      |        |1    |
 |mmrm                         |0.3.17       |      |        |     |
 |modelsummary                 |2.5.0        |      |        |     |
-|modeltime                    |1.3.3        |      |        |     |
+|modeltime                    |1.3.5        |      |        |     |
 |modeltuning                  |0.1.3        |      |        |     |
 |modernBoot                   |0.1.1        |      |        |     |
 |momentuHMM                   |1.5.8        |      |        |     |
@@ -490,7 +484,6 @@
 |Pedixplorer                  |1.6.0        |      |        |     |
 |penaltyLearning              |2024.9.3     |      |        |     |
 |pGRN                         |0.3.5        |      |        |     |
-|[pgxRpi](problems.md#pgxrpi) |1.6.0        |1     |        |1    |
 |phecodemap                   |0.1.0        |      |        |     |
 |[photosynthesis](problems.md#photosynthesis)|2.1.5        |      |        |1    |
 |phylolm                      |2.6.5        |      |        |     |
@@ -567,7 +560,6 @@
 |restriktor                   |0.6-10       |      |        |     |
 |reval                        |3.1-0        |      |        |     |
 |REXoplanets                  |0.1.2        |      |        |     |
-|[RFLOMICS](problems.md#rflomics)|1.2.0        |1     |        |2    |
 |Rfuzzycoco                   |0.1.0        |      |        |     |
 |rgee                         |1.1.8        |      |        |     |
 |rgeomorphon                  |0.3.0        |      |        |     |
@@ -590,17 +582,16 @@
 |s3fs                         |0.1.7        |      |        |     |
 |S3VS                         |1.0          |      |        |     |
 |saeczi                       |0.2.0        |      |        |     |
+|SafeMapper                   |1.0.0        |      |        |     |
 |[safetyCharts](problems.md#safetycharts)|0.3.0        |      |        |1    |
 |[safetyGraphics](problems.md#safetygraphics)|2.1.1        |      |        |1    |
 |sampcompR                    |0.3.2        |      |        |     |
 |sapfluxnetr                  |0.1.5        |      |        |     |
 |[scanMiRApp](problems.md#scanmirapp)|1.16.0       |      |        |2    |
-|[SCArray.sat](problems.md#scarraysat)|1.9.0        |2     |        |1    |
 |SCdeconR                     |1.0.0        |      |        |     |
 |scdhlm                       |0.7.4        |      |        |     |
 |scDiffCom                    |1.2.0        |      |        |     |
 |SCGLR                        |3.1.0        |      |        |     |
-|[scLANE](problems.md#sclane) |1.0.0        |1     |        |     |
 |scoutbaR                     |0.2.5        |      |        |     |
 |scRNAseqApp                  |1.10.0       |      |        |     |
 |scStability                  |1.0.3        |      |        |     |
@@ -711,7 +702,7 @@
 |svycoxme                     |1.0.0        |      |        |     |
 |svytest                      |1.1.0        |      |        |     |
 |[synergyfinder](problems.md#synergyfinder)|3.18.0       |      |1       |2    |
-|tabnet                       |0.7.0        |      |        |     |
+|tabnet                       |0.8.0        |      |        |     |
 |TAD                          |1.0.0        |      |        |     |
 |target                       |1.24.0       |      |        |     |
 |targeted                     |0.7.1        |      |        |     |
