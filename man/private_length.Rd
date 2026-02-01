@@ -16,8 +16,8 @@ A non-negative integer.
 Gets the length of an object without dispatching
 }
 \details{
-This function returns \code{length(unclass(x))}, but tries to avoid
-calling \code{unclass(x)} unless necessary.
+This function returns \code{length(unclass(x))}, but avoids
+calling \code{unclass(x)} when the object isn't classed.
 }
 \seealso{
 \code{\link{.subset}()} and \code{\link{.subset2}()}.
