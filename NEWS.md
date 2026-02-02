@@ -1,4 +1,20 @@
-# Version 0.18.0 [2025-05-06]
+# Version 0.19.0 [2026-025-01]
+
+## Performance
+
+ * `findGlobals()` is now much faster when `expr` contains a list
+   of classed lists, e.g. a list of data frames.
+   
+## Bug Fixes
+
+ * `findGlobals(function(x = a) NULL, method = "dfs")` failed to
+   identify `a` as global variable.
+
+ * `findGlobals(function(...) ..1, method = "dfs")` incorrectly
+   identified `..1` as a global variable.
+ 
+
+# Version 0.18.0 [2025-05-09]
 
 ## New Features
 
@@ -30,7 +46,7 @@
 
 ## New Features
 
- * `walkAST()` now walks also the body of closures ("functions").
+ * `walkAST()` now also walks the body of closures ("functions").
 
 ## Bug Fixes
 
@@ -112,7 +128,7 @@
    compatibility reasons, the default is `locals = TRUE`, but this
    might become `locals = FALSE` in a later release.
 
- * Any `globals.*` options specific to this packages can now be set
+ * Any `globals.*` options specific to this package can now be set
    via environment variables `R_GLOBALS_*` when the package is loaded.
    For example, `R_GLOBALS_DEBUG=true` sets option `globals.debug =
    TRUE`.
@@ -174,10 +190,10 @@
    if any, should be scanned.  Default is to scan all attributes.
 
  * `findGlobals()`, `globalsOf()`, and `globalsByName()` now
-   recognizes and returns values for `..1`, `..2`, etc. like they do
+   recognize and return values for `..1`, `..2`, etc. like they do
    for `...`.
 
- * `cleanup()` now also drop exported and non-exported
+ * `cleanup()` now also drops exported and non-exported
    `NativeSymbolInfo` objects.
 
 ## New Features
@@ -202,7 +218,7 @@
 
  * `cleanup(..., drop = c(..., "base-packages"))` for `Globals` would
    drop base R objects with names not exported by the corresponding
-   base R package.  Similarly, `drop = c(..., "primitive")` would drop
+   base R package.  Similarly, `drop = c(..., "primitives")` would drop
    primitive R objects with names not exported by any base R package.
 
  * `findGlobals()`, `globalsOf()`, and `globalsByName()` did not
@@ -283,7 +299,7 @@
 
  * globals::`findGlobals()` is now significantly faster for elements
    that are long lists with many elements of basic data types.  This
-   is because elements of such basic data type cannot contain globals
+   is because elements of such basic data types cannot contain globals
    and can therefore be skipped early in the search for globals.
     
 

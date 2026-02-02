@@ -1,6 +1,6 @@
 ## revdepcheck results
 
-We checked 669 reverse dependencies (636 from CRAN + 33 from Bioconductor), comparing R CMD check results across CRAN and dev versions of this package.
+We checked 752 reverse dependencies (725 from CRAN + 27 from Bioconductor), comparing R CMD check results across CRAN and dev versions of this package.
 
  * We saw 0 new problems
  * We failed to check 5 packages
@@ -10,7 +10,7 @@ Issues with CRAN packages are summarised below.
 ### Failed to check
 
 * bonsai           (NA)
-* OutSeekR         (NA)
-* RTransferEntropy (NA)
+* ldmppr           (NA)
 * TriDimRegression (NA)
+* VIM              (NA)
 * xpect            (NA)

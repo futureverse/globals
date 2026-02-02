@@ -35,7 +35,7 @@ tweakCodetoolsBug16 <- function(expr) {
   if (!grepl("^%[^%]*%$", op)) return(expr)
 
   n <- length(expr)
-  if (n != 3) return(expr) ## Can this every happen?
+  if (n != 3) return(expr) ## Can this ever happen?
   rhs <- expr[[3]]
 
   ## Is RHS a call?

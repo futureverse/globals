@@ -17,7 +17,7 @@ walkAST(
 \item{expr}{R \link[base]{expression}.}
 
 \item{atomic, name, call, pairlist}{single-argument function that takes an
-atomic, name, call and pairlist expression, respectively. Have to
+atomic, name, call and pairlist expression, respectively. Must
 return a valid R expression.}
 
 \item{substitute}{If TRUE, \code{expr} is

@@ -12,7 +12,7 @@
   pkgs <- c("base", "compiler", "datasets", "graphics", "grDevices", "grid",
             "methods", "parallel", "splines", "stats", "stats4", "tcltk",
 	    "tools", "utils")
-  ## This package and other packags already loaded (incl. it's dependencies)
+  ## This package and other packages already loaded (incl. its dependencies)
   pkgs <- c(pkgs, pkgname, loadedNamespaces())
   is_base_pkg(pkgs)
 }

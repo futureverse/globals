@@ -113,7 +113,7 @@ assign_Globals <- function(x, name, value) {
     ## Value must be Globals object of length one
     if (inherits(value, "Globals")) {
       if (length(value) != 1) {
-        stopf("Cannot assign Globals object of length different than one: %s",
+        stopf("Cannot assign Globals object of length different from one: %s",
              length(value))
       }
       where[[name]] <- attr(value, "where", exact = TRUE)[[1]]
@@ -125,7 +125,7 @@ assign_Globals <- function(x, name, value) {
 
   attr(x, "where") <- where
 
-  ## Avoid call this function recursively
+  ## Avoid calling this function recursively
   class <- class(x)
   class(x) <- NULL
   x[[name]] <- value

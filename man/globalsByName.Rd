@@ -19,7 +19,7 @@ is not returned.}
 }
 \value{
 A \link{Globals} object of named elements and an attribute
-\code{where} with named elements. Both of sets have names according to
+\code{where} with named elements. Both sets have names according to
 \code{names}.
 }
 \description{
@@ -32,7 +32,7 @@ are interpreted as arguments \code{...}, \code{..1}, \code{..2}, ..., respective
 If specified, then the corresponding elements in the results are
 lists of class \code{DotDotDotList} comprising the value of the latter.
 If the special argument does not exist, then the value is \code{NA}, and
-the corresponding \code{where} attributes is \code{NULL}.
+the corresponding \code{where} attribute is \code{NULL}.
 }
 
 \examples{

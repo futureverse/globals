@@ -4,7 +4,7 @@ as_function <- function(expr, envir = parent.frame(), enclos = baseenv(), ...) {
 }
 
 # Although the set of "base" packages rarely changes, it has happened
-# in R's history.  Beause of this, we avoid hardcoding the set of known
+# in R's history.  Because of this, we avoid hardcoding the set of known
 # "base" packages and instead always look them up by the 'Priority'
 # field in their DESCRIPTION data and cache the results.
 #' @importFrom utils packageDescription
@@ -89,7 +89,7 @@ hpaste <- function(..., sep="", collapse=", ", last_collapse=NULL,
   x <- paste(..., sep = sep)
   n <- length(x)
 
-  # Nothing todo?
+  # Nothing to do?
   if (n == 0) return(x)
   if (is.null(collapse)) return(x)
 
@@ -135,7 +135,7 @@ envname <- function(env) {
   if (!is.environment(env)) return(NA_character_)
   name <- environmentName(env)
   if (name == "") {
-    ## NOTE: I might be that:
+    ## NOTE: It might be that:
     ## 1. 'env' is of a class that extends 'environment', e.g.
     ##    R.oo::Object() or R6::R6Class(), or
     ## 2. another package defines print() for 'environment'
@@ -190,32 +190,21 @@ stop_if_not <- function(...) {
 #' @return A non-negative integer.
 #'
 #' @details
-#' This function returns \code{length(unclass(x))}, but tries to avoid
-#' calling \code{unclass(x)} unless necessary.
+#' This function returns \code{length(unclass(x))}, but avoids
+#' calling \code{unclass(x)} when the object isn't classed.
 #' 
 #' @seealso \code{\link{.subset}()} and \code{\link{.subset2}()}.
 #' 
 #' @keywords internal
 #' @rdname private_length
-#' @importFrom utils getS3method
 .length <- function(x) {
-  nx <- length(x)
-  
   ## Can we trust base::length(x), i.e. is there a risk that there is
   ## a method that overrides with another definition?
-  classes <- class(x)
-  if (length(classes) == 1L && classes == "list") return(nx)
-
-  ## Identify all length() methods for this object
-  for (class in classes) {
-    fun <- getS3method("length", class, optional = TRUE)
-    if (!is.null(fun)) {
-      nx <- length(unclass(x))
-      break
-    }
+  if (is.object(x)) {
+    length(unclass(x))
+  } else {
+    length(x)
   }
-
-  nx
 } ## .length()
 
 

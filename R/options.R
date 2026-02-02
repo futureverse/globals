@@ -94,7 +94,7 @@ update_package_option <- function(name, mode = "character", default = NULL, spli
 ## Set package options based on environment variables
 update_package_options <- function(debug = FALSE) {
   ## WARNING: All but R option 'globals.debug' are internal options
-  ## that may be changed or removed at anytime.
+  ## that may be changed or removed at any time.
   
   update_package_option("globals.globalsOf.locals", mode = "logical", debug = debug)
   update_package_option("globals.selfassign", mode = "logical", debug = debug)

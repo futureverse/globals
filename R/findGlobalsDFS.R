@@ -79,6 +79,7 @@ findGlobals_dfs_pairlist <- function(expr, ..., debug = FALSE) {
   globals <- list()
   for (name in names(expr)) {
     globals[[name]] <- dframe(name = name, type = typeof(expr[[name]]), comment = "pairlist element")
+    globals[[sprintf("%s-formals", name)]] <- findGlobals_dfs(expr[[name]], debug = debug)
   }
   globals <- do.call(rbind, args = globals)
   globals
@@ -400,7 +401,7 @@ findGlobals_dfs_environment <- function(expr, ..., debug = FALSE) {
   }
   
   ## NOTE: Do *not* look for types that we are interested in, but instead
-  ## look for types that we are *not* interested.  The reason for this that
+  ## look for types that we are *not* interested.  The reason for this is that
   ## in future versions of R there might be new types added that may contain
   ## globals and with this approach those types will also be scanned.
   basicTypes <- c("logical", "integer", "double", "complex", "character",
@@ -443,7 +444,7 @@ findGlobals_dfs_expression <- function(expr, ..., debug = FALSE) {
   }
   
   ## NOTE: Do *not* look for types that we are interested in, but instead
-  ## look for types that we are *not* interested.  The reason for this that
+  ## look for types that we are *not* interested.  The reason for this is that
   ## in future versions of R there might be new types added that may contain
   ## globals and with this approach those types will also be scanned.
   basicTypes <- c("logical", "integer", "double", "complex", "character",
@@ -476,27 +477,39 @@ findGlobals_dfs_function <- function(expr, ..., debug = FALSE) {
     })
   }
 
-  arg_names <- names(formals(expr))
+  args <- formals(expr)
+  nargs <- length(args)
+  arg_names <- names(args)
   if (is.null(arg_names)) {
     arg_names <- character(0L)
   }
 
-  globals_args <- dframe(bound = arg_names, type = "environment", comment = "environment")
+  globals_arg_names <- dframe(bound = arg_names, type = "environment", comment = "environment")
+  globals_args <- findGlobals_dfs(args, ..., debug = debug)
   globals_body <- findGlobals_dfs(body(expr), ..., debug = debug)
 
   ## Consolidate
+  bound_arg_names <- unlist(globals_arg_names[["bound"]])
+  unbound_arg_names <- unlist(globals_arg_names[["unbound"]])
+
   bound_args <- unlist(globals_args[["bound"]])
   unbound_args <- unlist(globals_args[["unbound"]])
 
   bound_body <- unlist(globals_body[["bound"]])
   unbound_body <- unlist(globals_body[["unbound"]])
 
-  ## Variables in the body are not unbound, if they are
-  ## arguments of the function
-  unbound_body <- setdiff(unbound_body, bound_args)
+  ## Variables in the formals or the body are not unbound, if
+  ## they are arguments of the function
+  unbound_args <- setdiff(unbound_args, bound_arg_names)
+  unbound_body <- setdiff(unbound_body, bound_arg_names)
+  
+  if ("..." %in% bound_arg_names) {
+    unbound_args <- grep("^[.][.][[:digit:]]+$", unbound_args, invert = TRUE, value = TRUE)
+    unbound_body <- grep("^[.][.][[:digit:]]+$", unbound_body, invert = TRUE, value = TRUE)
+  }
 
-  ## Unbound variables may exist both in the arguments and the body
-  unbound <- unique(c(unbound_args, unbound_body))
+  ## Unbound variables may exist in the formals and the body
+  unbound <- unique(c(unbound_arg_names, unbound_args, unbound_body))
 
   globals <- dframe(unbound = unbound, type = "function", comment = "consolidated")
 
@@ -514,7 +527,7 @@ findGlobals_dfs_object <- function(expr, ..., debug = FALSE) {
       mdebugf_pop("findGlobals_dfs_object() ... done")
     })
   }
-  ## FIXME: Should we search for globals in 'object':s?
+  ## FIXME: Should we search for globals in 'object's?
   globals <- dframe(type = typeof(expr), comment = typeof(expr))
   globals
 }

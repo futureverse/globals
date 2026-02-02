@@ -1,5 +1,5 @@
 Package: globals
-Version: 0.18.0
+Version: 0.19.0
 Depends:
     R (>= 3.1.2)
 Imports:
@@ -22,5 +22,5 @@ Language: en-US
 Encoding: UTF-8
 URL: https://globals.futureverse.org, https://github.com/futureverse/globals
 BugReports: https://github.com/futureverse/globals/issues
-RoxygenNote: 7.3.2
+RoxygenNote: 7.3.3
 Roxygen: list(markdown = TRUE)

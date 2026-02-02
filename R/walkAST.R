@@ -2,7 +2,7 @@
 #'
 #' @param expr R \link[base]{expression}.
 #' @param atomic,name,call,pairlist single-argument function that takes an
-#'        atomic, name, call and pairlist expression, respectively. Have to
+#'        atomic, name, call and pairlist expression, respectively. Must
 #'        return a valid R expression.
 #' @param substitute If TRUE, \code{expr} is
 #'        \code{\link[base]{substitute}()}:ed.
@@ -47,7 +47,7 @@ walkAST <- function(expr, atomic = NULL, name = NULL, call = NULL,
       }
     }
     ## WORKAROUND: Since expr[i] <- list(NULL) turns pairlist 'expr' into
-    ## a list we have to make sure to it is a pairlist also afterward, cf.
+    ## a list we have to make sure it is a pairlist also afterward, cf.
     ## https://stat.ethz.ch/pipermail/r-devel/2016-October/073263.html
     ## /HB 2016-10-12
     expr <- as.pairlist(expr)

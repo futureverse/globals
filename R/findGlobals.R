@@ -1,9 +1,9 @@
 #' @param attributes If TRUE (default), attributes of `expr` are also searched.
 #' If FALSE, they are not.
 #' If a character vector, then attributes with matching names are searched.
-#' Note, the attributes of the attributes elements are not searched, that is,
+#' Note, the attributes of the attributes' elements are not searched, that is,
 #' attributes are not searched recursively.  Also, attributes are searched
-#' with `dotdotdot = "ignore".
+#' with `dotdotdot = "ignore"`.
 #'
 #' @param dotdotdot TBD.
 #'
@@ -57,9 +57,22 @@ findGlobals <- function(expr, envir = parent.frame(), ...,
         unlist = TRUE, trace = trace
       )
     }
-    globals <- unlist(globals, use.names = FALSE)
-    globals <- globals[!duplicated(globals)]
-    return(globals)
+
+    globals_all <- unlist(globals, use.names = FALSE)
+    globals_all <- globals_all[!duplicated(globals_all)]
+
+    if (debug) {
+      mdebug("Globals found by per method:")
+      w <- max(nchar(method)) + 2L
+      for (mtd in method) {
+        names <- globals[[mtd]]
+        delta <- setdiff(globals_all, names)
+        delta <- if (length(delta) == 0) "<none>" else commaq(delta)
+        mdebugf("%*s: %s [delta: %s]", w, sQuote(mtd), commaq(names), delta)
+      }
+    }
+
+    return(globals_all)
   } ## if (length(method) > 1)
 
   if (is.logical(attributes)) {
@@ -73,7 +86,7 @@ findGlobals <- function(expr, envir = parent.frame(), ...,
     if (debug) mdebugf("expr: <a list of length %d>", .length(expr))
 
     ## NOTE: Do *not* look for types that we are interested in, but instead
-    ## look for types that we are *not* interested.  The reason for this that
+    ## look for types that we are *not* interested in.  The reason for this is that
     ## in future versions of R there might be new types added that may contain
     ## globals and with this approach those types will also be scanned.
     basicTypes <- c("logical", "integer", "double", "complex", "character",

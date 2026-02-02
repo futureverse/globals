@@ -21,7 +21,7 @@ packagesOf.Globals <- function(globals, ...) {
     obj <- globals[[kk]]
     env <- environment_of(obj)
     
-    ## If not found, it could be an object in package without a closure
+    ## If not found, it could be an object in a package without a closure
     if (identical(env, emptyenv())) {
       w <- where[[kk]]
       if (is.environment(w)) {

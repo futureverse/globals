@@ -25,7 +25,7 @@ cleanup.Globals <- function(globals, drop = c("missing", "base-packages", "nativ
   ## Drop objects that are primitive functions
   drop_primitives <- "primitives" %in% drop
 
-  ## Drop objects that calls .Internal()
+  ## Drop objects that call .Internal()
   drop_internals <- "internals" %in% drop
 
   ## Drop objects that are of class NativeSymbolInfo used in calls
@@ -84,7 +84,7 @@ cleanup.Globals <- function(globals, drop = c("missing", "base-packages", "nativ
       next
     }
     
-    ## Is the the global a non-exported package object?
+    ## Is the global a non-exported package object?
     is_private <- !is_exported && !is.null(env) && exists(name, envir = env)
 
     ## Example: base::.C_R_addTaskCallback
