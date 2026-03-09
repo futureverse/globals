@@ -176,7 +176,7 @@ find_globals_ordered <- function(expr, envir, dotdotdot, ..., name = character()
         locals <- codetools::findLocals(e)
         if (length(locals) > 0) {
           if (trace) trace_printf("Add %s variable %s\n", sQuote("local"), commaq(locals))
-          class <- c(class, rep("locals", times = length(locals)))
+          class <- c(class, rep("local", times = length(locals)))
           name <- c(name, locals)
         }
       }
