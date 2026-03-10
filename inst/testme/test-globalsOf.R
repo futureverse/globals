@@ -280,5 +280,45 @@ res <- try({
 }, silent = TRUE)
 stopifnot(inherits(res, "try-error"))
 
+rm(list = c("b", "c", "d", "e"), inherits = FALSE)
+res <- try({
+  globals <- globalsOf({ x <- a + b }, substitute = TRUE, mustExist = TRUE)
+}, silent = TRUE)
+stopifnot(inherits(res, "try-error"))
+
 message("*** globalsOf() - exceptions ... DONE")
+
+
+message("*** globalsOf() - locals option via env var ...")
+
+## Test R option 'globals.globalsOf.locals'
+a_opt <- 100
+f_opt <- local({
+  local_var <- 42
+  function() local_var + a_opt
+})
+
+## Test with 'locals = TRUE'
+globals_t <- globalsOf(quote(f_opt), locals = TRUE)
+str(globals_t)
+stopifnot("local_var" %in% names(globals_t))
+
+## Test with 'locals = FALSE'
+globals_f <- globalsOf(quote(f_opt), locals = FALSE)
+str(globals_f)
+stopifnot(!"local_var" %in% names(globals_f))
+
+message("*** globalsOf() - locals option via env var ... DONE")
+
+
+message("*** globalsOf() - unlist = FALSE ...")
+
+a_unl <- 1
+b_unl <- 2
+expr <- quote({ a_unl + b_unl })
+globals_u <- globalsOf(expr, unlist = FALSE, mustExist = FALSE)
+str(globals_u)
+stopifnot(length(globals_u) > 0L)
+
+message("*** globalsOf() - unlist = FALSE ... DONE")
 

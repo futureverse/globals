@@ -186,5 +186,104 @@ options(oopts)
 
 message("* mdebug() ... DONE")
 
+message("* is_native_symbol_info() ...")
+is_native_symbol_info <- globals:::is_native_symbol_info
+
+stopifnot(!is_native_symbol_info(42))
+stopifnot(!is_native_symbol_info(NULL))
+
+## Object that inherits 'NativeSymbolInfo' but wrong type
+mock_bad <- structure("not_a_list", class = "NativeSymbolInfo")
+stopifnot(!is_native_symbol_info(mock_bad))
+
+## Object that inherits 'NativeSymbolInfo', is a list, but lacks
+## 'RegisteredNativeSymbol'
+mock_bad2 <- structure(list(address = "foo"), class = "NativeSymbolInfo")
+stopifnot(!is_native_symbol_info(mock_bad2))
+## Proper mock
+mock_ok <- structure(
+  list(
+    name = "test",
+    address = structure(TRUE, class = "RegisteredNativeSymbol"),
+    numParameters = 1L
+  ),
+  class = "NativeSymbolInfo"
+)
+stopifnot(is_native_symbol_info(mock_ok))
+
+message("* is_native_symbol_info() ... DONE")
+
+
+message("* isPackageNamespace() ...")
+isPackageNamespace <- globals:::isPackageNamespace
+
+stopifnot(!isPackageNamespace(NULL))
+stopifnot(!isPackageNamespace(42))
+stopifnot(isPackageNamespace(baseenv()))
+stopifnot(isPackageNamespace(as.environment("package:base")))
+
+message("* isPackageNamespace() ... DONE")
+
+
+message("* stop_if_not() ...")
+stop_if_not <- globals:::stop_if_not
+
+stop_if_not()
+stop_if_not(TRUE)
+stop_if_not(TRUE, TRUE)
+res <- tryCatch(stop_if_not(FALSE), error = identity)
+stopifnot(inherits(res, "simpleError"))
+res <- tryCatch(stop_if_not(NA), error = identity)
+stopifnot(inherits(res, "simpleError"))
+res <- tryCatch(stop_if_not(c(TRUE, TRUE)), error = identity)
+stopifnot(inherits(res, "simpleError"))
+res <- tryCatch(stop_if_not(identical(1:100, 2:101)), error = identity)
+stopifnot(inherits(res, "simpleError"))
+
+message("* stop_if_not() ... DONE")
+
+
+message("* .length() ...")
+.length <- globals:::.length
+
+stopifnot(.length(1:5) == 5L)
+stopifnot(.length(list(a = 1, b = 2)) == 2L)
+obj <- structure(1:3, class = "myclass")
+stopifnot(.length(obj) == 3L)
+
+message("* .length() ... DONE")
+
+
+message("* list_apply() ...")
+list_apply <- globals:::list_apply
+
+res <- list_apply(list(1, 2, 3), FUN = function(x) x * 2)
+stopifnot(identical(res, list(2, 4, 6)))
+res <- list_apply(list(10, 20, 30), subset = c(1L, 3L), FUN = function(x) x + 1)
+stopifnot(res[[1]] == 11, res[[3]] == 31)
+env <- new.env(parent = emptyenv())
+env$a <- 1
+env$b <- 2
+res <- list_apply(env, FUN = function(x) x * 10)
+stopifnot(res[["a"]] == 10, res[["b"]] == 20)
+
+message("* list_apply() ... DONE")
+
+
+message("* stopf() ...")
+stopf <- globals:::stopf
+res <- tryCatch(stopf("error %d", 42), error = identity)
+stopifnot(inherits(res, "simpleError"))
+stopifnot(grepl("error 42", conditionMessage(res)))
+message("* stopf() ... DONE")
+
+
+message("* is_base_pkg() edge cases ...")
+stopifnot(!is_base_pkg(""))
+stopifnot(is_base_pkg("utils"))
+stopifnot(is_base_pkg("package:base"))
+message("* is_base_pkg() ... DONE")
+
+
 message("*** utils ... DONE")
 

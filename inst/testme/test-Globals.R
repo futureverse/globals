@@ -488,6 +488,24 @@ stopifnot(
 message("*** Globals() - NULL ... DONE")
 
 
+message("*** Globals() - as.Globals.default error ...")
+
+res <- tryCatch({ as.Globals(42) }, error = identity)
+stopifnot(inherits(res, "simpleError"))
+stopifnot(grepl("coerce", conditionMessage(res)))
+
+res <- tryCatch({ as.Globals("hello") }, error = identity)
+stopifnot(inherits(res, "simpleError"))
+
+
+message("*** Globals() - [<-.Globals with unsupported value ...")
+
+globals <- globals0
+res <- tryCatch({ globals[c("a")] <- 42 }, error = identity)
+stopifnot(inherits(res, "simpleError"))
+stopifnot(grepl("Unsupported class", conditionMessage(res)))
+
+
 message("*** Globals() - exceptions ...")
 
 res <- tryCatch({ Globals(NULL) }, error = identity)

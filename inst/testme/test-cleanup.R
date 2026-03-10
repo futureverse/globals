@@ -63,5 +63,34 @@ pruned <- cleanup(globals, drop = "base-packages")
 str(pruned)
 stopifnot(identical(names(pruned), c("b")))
 
+message("- cleanup() dropping primitives")
+stopifnot(is.primitive(base::c))
+globals <- as.Globals(list(my_fcn = function(x) x, c = base::c))
+where <- attr(globals, "where")
+where[["c"]] <- baseenv()
+attr(globals, "where") <- where
+
+pruned <- cleanup(globals, drop = "primitives")
+str(pruned)
+stopifnot(
+  "my_fcn" %in% names(pruned),
+  !"c" %in% names(pruned)
+)
+
+message("- cleanup() dropping internals")
+stopifnot(globals:::is_internal(base::print.default))
+globals <- as.Globals(list(my_fcn = function(x) x, print.default = base::print.default))
+where <- attr(globals, "where")
+where[["print.default"]] <- baseenv()
+attr(globals, "where") <- where
+
+pruned <- cleanup(globals, drop = "internals")
+str(pruned)
+stopifnot(
+  "my_fcn" %in% names(pruned),
+  !"print.default" %in% names(pruned)
+)
+
+
 message("*** cleanup() ... DONE")
 
