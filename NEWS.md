@@ -7,7 +7,7 @@
    an error.
 
 
-# Version 0.19.0 [2026-25-01]
+# Version 0.19.0 [2026-02-02]
 
 ## Performance
 

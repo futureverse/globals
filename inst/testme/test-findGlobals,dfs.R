@@ -253,3 +253,55 @@ for (kk in seq_along(exprs)) {
     }
   }
 } ## for (kk ...)
+
+
+## -------------------------------------------------------------------
+## method = 'dfs' with debug = TRUE
+## -------------------------------------------------------------------
+message("*** method = 'dfs' with debug = TRUE ...")
+oopts <- options(globals.debug = TRUE)
+
+## Exercises: findGlobals_dfs_call (for loop, function def, assignment,
+## replacement, $, ::, consolidation), findGlobals_dfs_environment,
+## findGlobals_dfs_expression, findGlobals_dfs_function,
+## findGlobals_dfs_pairlist, findGlobals_dfs_atomic
+globals <- globals::findGlobals(quote(for (i in x) i + 1), method = "dfs")
+stopifnot("for" %in% globals)
+
+globals <- globals::findGlobals(quote(function(a, b = 1) a + x), method = "dfs")
+stopifnot("x" %in% globals)
+
+globals <- globals::findGlobals(quote(a <- a + 1), method = "dfs")
+stopifnot("a" %in% globals)
+
+globals <- globals::findGlobals(quote(names(a)[1] <- "A"), method = "dfs")
+stopifnot("a" %in% globals)
+
+globals <- globals::findGlobals(quote(base::sum), method = "dfs")
+stopifnot("::" %in% globals)
+
+globals <- globals::findGlobals(quote(x$y), method = "dfs")
+stopifnot("x" %in% globals)
+
+globals <- globals::findGlobals(expression(a + b), method = "dfs")
+stopifnot("a" %in% globals)
+
+env <- new.env(parent = emptyenv())
+globals <- globals::findGlobals(env, method = "dfs")
+stopifnot(identical(globals, character(0L)))
+
+## Function object
+fcn <- function(a) a + x_dfs
+globals <- globals::findGlobals(fcn, method = "dfs")
+stopifnot("x_dfs" %in% globals)
+
+## Unary call (n == 1)
+globals <- globals::findGlobals(quote(!x), method = "dfs")
+
+## f()$g style (call whose function is a call)
+globals <- globals::findGlobals(quote(f()$g), method = "dfs")
+stopifnot("f" %in% globals)
+
+options(oopts)
+
+message("*** method = 'dfs' with debug = TRUE ... DONE")

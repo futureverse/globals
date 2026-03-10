@@ -92,5 +92,39 @@ stopifnot(
 )
 
 
+message("- cleanup() dropping NativeSymbolInfo ...")
+## Use a name that actually exists in the base namespace (private/non-exported)
+## so that is_private becomes TRUE in the cleanup logic
+mock_nsi <- structure(
+  list(
+    name = "test",
+    address = structure(TRUE, class = "RegisteredNativeSymbol"),
+    numParameters = 1L
+  ),
+  class = "NativeSymbolInfo"
+)
+globals <- as.Globals(list(my_fcn = function(x) x, .C_R_addTaskCallback = mock_nsi))
+where <- attr(globals, "where")
+where[[".C_R_addTaskCallback"]] <- baseenv()
+attr(globals, "where") <- where
+
+pruned <- cleanup(globals)
+str(pruned)
+stopifnot(
+  "my_fcn" %in% names(pruned),
+  !".C_R_addTaskCallback" %in% names(pruned)
+)
+
+message("- cleanup() dropping NativeSymbolInfo ... DONE")
+
+
+message("- packagesOf() - non-closure globals (emptyenv path) ...")
+## pi is numeric (not a closure), environment_of => emptyenv()
+globals <- globalsOf(quote(pi))
+pkgs <- packagesOf(globals)
+stopifnot("base" %in% pkgs)
+message("- packagesOf() - non-closure globals ... DONE")
+
+
 message("*** cleanup() ... DONE")
 
