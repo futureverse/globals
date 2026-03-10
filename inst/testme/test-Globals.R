@@ -255,6 +255,60 @@ stopifnot(
 message("*** Globals() - subsetted assignment ... DONE")
 
 
+message("*** Globals() - indexed assignment via [[<- ...")
+
+message("11. Assign by numeric index")
+globals <- globals0
+globals[[1]] <- 42
+str(globals)
+where <- attr(globals, "where")
+stopifnot(
+  assert_attributes(globals),
+  length(globals) == 2L,
+  length(where) == length(globals),
+  all(names(globals) == names(globals0)),
+  all(names(globals) == names(where)),
+  identical(globals$a, 42)
+)
+
+message("12. Assign Globals object by numeric index")
+globals <- globals0
+globals[[2]] <- globals0["a"]
+str(globals)
+where <- attr(globals, "where")
+stopifnot(
+  assert_attributes(globals),
+  length(globals) == 2L,
+  length(where) == length(globals),
+  all(names(globals) == names(globals0)),
+  all(names(globals) == names(where)),
+  identical(globals[["rnorm"]], globals0[["a"]])
+)
+
+message("13. Assign NULL by numeric index (remove element)")
+globals <- globals0
+globals[[1]] <- NULL
+str(globals)
+where <- attr(globals, "where")
+stopifnot(
+  assert_attributes(globals),
+  length(globals) == 1L,
+  length(where) == length(globals),
+  all(names(globals) == names(globals0)[-1]),
+  all(names(globals) == names(where)),
+  is.null(globals$a)
+)
+
+message("14. Indexed assignment out of bounds")
+globals <- globals0
+res <- tryCatch({ globals[[0]] <- 42 }, error = identity)
+stopifnot(inherits(res, "simpleError"))
+res <- tryCatch({ globals[[3]] <- 42 }, error = identity)
+stopifnot(inherits(res, "simpleError"))
+
+message("*** Globals() - indexed assignment via [[<- ... DONE")
+
+
 message("*** Globals() - combining ...")
 
 globals_a <- globals0[1:2]
@@ -457,4 +511,3 @@ stopifnot(inherits(res, "simpleError"))
 message("*** Globals() - exceptions ... DONE")
 
 message("*** Globals() ... DONE")
-

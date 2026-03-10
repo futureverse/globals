@@ -186,6 +186,15 @@ assign_Globals <- function(x, name, value) {
 
 #' @export
 `[[<-.Globals` <- function(x, name, value) {
+  if (is.numeric(name)) {
+    idx <- as.integer(name)
+    names <- names(x)
+    if (idx < 1L || idx > length(names)) {
+      stop(sprintf("subscript out of bounds (index %d, but length is %d)",
+                   idx, length(names)))
+    }
+    name <- names[idx]
+  }
   x <- assign_Globals(x, name = name, value = value)
   invisible(x)
 }
