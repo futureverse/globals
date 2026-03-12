@@ -13,7 +13,7 @@ where <- function(x, where = -1,
   inherits <- as.logical(inherits)
   stop_if_not(inherits %in% c(FALSE, TRUE))
 
-  debug <- isTRUE(getOption("globals.future"))
+  debug <- isTRUE(getOption("globals.debug"))
   if (debug) {
     mdebugf_push("where(%s, where = %d, envir = %s, mode = %s, inherits = %s) ...", sQuote(x), where, sQuote(envname(envir)), sQuote(mode), inherits)
     on.exit(mdebugf_pop("where(%s, where = %d, envir = %s, mode = %s, inherits = %s) ...", sQuote(x), where, sQuote(envname(envir)), sQuote(mode), inherits))

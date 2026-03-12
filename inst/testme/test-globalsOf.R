@@ -280,5 +280,107 @@ res <- try({
 }, silent = TRUE)
 stopifnot(inherits(res, "try-error"))
 
+rm(list = c("b", "c", "d", "e"), inherits = FALSE)
+res <- try({
+  globals <- globalsOf({ x <- a + b }, substitute = TRUE, mustExist = TRUE)
+}, silent = TRUE)
+stopifnot(inherits(res, "try-error"))
+
 message("*** globalsOf() - exceptions ... DONE")
+
+
+message("*** globalsOf() - locals option via env var ...")
+
+## Test R option 'globals.globalsOf.locals'
+a_opt <- 100
+f_opt <- local({
+  local_var <- 42
+  function() local_var + a_opt
+})
+
+## Test with 'locals = TRUE'
+globals_t <- globalsOf(quote(f_opt), locals = TRUE)
+str(globals_t)
+stopifnot("local_var" %in% names(globals_t))
+
+## Test with 'locals = FALSE'
+globals_f <- globalsOf(quote(f_opt), locals = FALSE)
+str(globals_f)
+stopifnot(!"local_var" %in% names(globals_f))
+
+message("*** globalsOf() - locals option via env var ... DONE")
+
+
+message("*** globalsOf() - unlist = FALSE ...")
+
+a_unl <- 1
+b_unl <- 2
+expr <- quote({ a_unl + b_unl })
+globals_u <- globalsOf(expr, unlist = FALSE, mustExist = FALSE)
+str(globals_u)
+stopifnot(length(globals_u) > 0L)
+
+message("*** globalsOf() - unlist = FALSE ... DONE")
+
+
+message("*** globalsOf() - debug mode ...")
+a_dbg <- 1
+oopts <- options(globals.debug = TRUE)
+globals_dbg <- globalsOf(quote(a_dbg + 1), mustExist = FALSE)
+stopifnot("a_dbg" %in% names(globals_dbg))
+
+## debug with multiple methods
+globals_dbg2 <- globalsOf(quote(a_dbg + 1),
+                          method = c("ordered", "dfs"),
+                          mustExist = FALSE)
+stopifnot("a_dbg" %in% names(globals_dbg2))
+options(oopts)
+message("*** globalsOf() - debug mode ... DONE")
+
+
+message("*** globalsOf() - recursive with nested closures ...")
+outer_val <- 100
+inner_helper <- function(x) x + outer_val
+outer_helper <- function(y) inner_helper(y)
+
+globals_rec <- globalsOf(quote(outer_helper(1)),
+                         recursive = TRUE, mustExist = FALSE)
+stopifnot("outer_helper" %in% names(globals_rec))
+stopifnot("inner_helper" %in% names(globals_rec))
+stopifnot("outer_val" %in% names(globals_rec))
+
+## recursive with debug
+oopts <- options(globals.debug = TRUE)
+globals_rec_d <- globalsOf(quote(outer_helper(1)),
+                           recursive = TRUE, mustExist = FALSE)
+stopifnot("outer_helper" %in% names(globals_rec_d))
+options(oopts)
+message("*** globalsOf() - recursive with nested closures ... DONE")
+
+
+message("*** globalsOf() - recursive, namespace closures ...")
+## All closures found are in loaded namespaces,
+## so recursive scan subset should be empty
+globals_ns <- globalsOf(quote(base::sum(1:3)),
+                        recursive = TRUE, mustExist = FALSE)
+message("*** globalsOf() - recursive, namespace closures ... DONE")
+
+
+message("*** globalsOf() - locals = FALSE with function ...")
+outer_val2 <- 200
+f_locals <- local({
+  local_var2 <- 42
+  function() local_var2 + outer_val2
+})
+## locals = TRUE includes local_var2
+globals_lt <- globalsOf(quote(f_locals), locals = TRUE, mustExist = FALSE)
+stopifnot("local_var2" %in% names(globals_lt))
+## locals = FALSE excludes local_var2
+globals_lf <- globalsOf(quote(f_locals), locals = FALSE, mustExist = FALSE)
+stopifnot(!"local_var2" %in% names(globals_lf))
+message("*** globalsOf() - locals = FALSE ... DONE")
+
+
+rm(list = c("a_dbg", "outer_val", "inner_helper", "outer_helper",
+            "outer_val2", "f_locals", "a_unl", "b_unl"))
 

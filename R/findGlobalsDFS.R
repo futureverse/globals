@@ -100,7 +100,7 @@ findGlobals_dfs_call <- function(expr, ..., debug = FALSE) {
   
   op <- expr[[1]]
   typeof <- typeof(op)
-  mstr(list(op = op, typeof = typeof, length = length(op)))
+  if (debug) mstr(list(op = op, typeof = typeof, length = length(op)))
   
   if (typeof %in% c("builtin", "closure")) {
     if (debug) mdebug_push("Function call via %s ...", typeof)
@@ -534,7 +534,6 @@ findGlobals_dfs_object <- function(expr, ..., debug = FALSE) {
 
 
 findGlobals_dfs <- function(expr, ..., debug = FALSE) {
-  debug <- isTRUE(getOption("globals.debug"))
   if (debug) {
     mdebugf_push("findGlobals_dfs() ...")
     mprint(expr)

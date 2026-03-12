@@ -93,5 +93,24 @@ assert_identical_sets(names(globals), c("a", "x", "..."))
 assert_identical_sets(names(globals[["..."]]), c("y", "z"))
 stopifnot(globals[["..."]]$y == 3, globals[["..."]]$z == 4)
 
+message("*** globalsByName() - debug ...")
+a_gbn <- 1
+oopts <- options(globals.debug = TRUE)
+globals_gbn <- globalsByName("a_gbn")
+stopifnot("a_gbn" %in% names(globals_gbn))
+options(oopts)
+message("*** globalsByName() - debug ... DONE")
+
+
+message("*** globalsByName() - dotdotdots with debug ...")
+oopts <- options(globals.debug = TRUE)
+globals_dd_d <- globalsByName(c("a_gbn", "..1"), mustExist = FALSE)
+stopifnot("a_gbn" %in% names(globals_dd_d))
+stopifnot("..1" %in% names(globals_dd_d))
+options(oopts)
+rm(list = "a_gbn")
+message("*** globalsByName() - dotdotdots debug ... DONE")
+
+
 message("*** globalsByName() ... DONE")
 

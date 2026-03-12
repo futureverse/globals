@@ -1,5 +1,14 @@
 # Version (development version)
 
+## Bug Fixes
+
+ * Globals objects could not be sub-assigned by index - only by name,
+   e.g. with `x <- as.Globals(list(a = 1))`, `x[[1]] <- 2` would give
+   an error.
+
+
+# Version 0.19.0 [2026-02-02]
+
 ## Performance
 
  * `findGlobals()` is now much faster when `expr` contains a list
@@ -7,12 +16,12 @@
    
 ## Bug Fixes
 
- * `findGlobals(alist(x = a), method = "dfs")` failed to identify `a`
-   as global variable.
-
  * `findGlobals(function(x = a) NULL, method = "dfs")` failed to
    identify `a` as global variable.
 
+ * `findGlobals(function(...) ..1, method = "dfs")` incorrectly
+   identified `..1` as a global variable.
+ 
 
 # Version 0.18.0 [2025-05-09]
 
@@ -218,7 +227,7 @@
 
  * `cleanup(..., drop = c(..., "base-packages"))` for `Globals` would
    drop base R objects with names not exported by the corresponding
-   base R package.  Similarly, `drop = c(..., "primitive")` would drop
+   base R package.  Similarly, `drop = c(..., "primitives")` would drop
    primitive R objects with names not exported by any base R package.
 
  * `findGlobals()`, `globalsOf()`, and `globalsByName()` did not
@@ -299,7 +308,7 @@
 
  * globals::`findGlobals()` is now significantly faster for elements
    that are long lists with many elements of basic data types.  This
-   is because elements of such basic data type cannot contain globals
+   is because elements of such basic data types cannot contain globals
    and can therefore be skipped early in the search for globals.
     
 
