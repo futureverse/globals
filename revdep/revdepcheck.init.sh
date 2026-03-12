@@ -14,8 +14,14 @@ revdep/run.R --rm arkdb delimtools dispositionEffect BayesPET EpiForsk httpgd
 revdep/run.R --rm dar MineICA pgxRpi
 
 ## Too many cores
-revdep/run.R --rm ale couplr EGAnet FracFixR fmeffects simIDM signeR sovereign xpect simpr teal
-# revdep/run.R --add ale couplr FracFixR fmeffects simIDM signeR sharp tidySEM insight semtree sovereign simpr teal
+pkgs=(ale couplr EGAnet FracFixR fmeffects gtfs2emis gtfs2gps simIDM signeR sovereign simpr teal)
+revdep/run.R --rm "${pkgs[@]}"
+# revdep/run.R --add "${pkgs[@]}"
 # NSLOTS=8 revdep/run.R
-# revdep/run.R --add xpect
+
+## Too many threads
+pkgs=(orbital orbital xpect VIM)
+revdep/run.R --rm "${pkgs[@]}"
+# revdep/run.R --add "${pkgs[@]}"
 # OMP_NUM_THREADS=4 NSLOTS=4 revdep/run.R
+

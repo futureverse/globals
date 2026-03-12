@@ -10,7 +10,7 @@
 |collate  |en_US.UTF-8                                                 |
 |ctype    |en_US.UTF-8                                                 |
 |tz       |America/Los_Angeles                                         |
-|date     |2026-03-11                                                  |
+|date     |2026-03-12                                                  |
 |pandoc   |3.8.3 @ /software/c4/cbi/software/pandoc-3.8.3/bin/pandoc   |
 |quarto   |1.8.26 @ /software/c4/cbi/software/quarto-1.8.26/bin/quarto |
 
@@ -18,23 +18,18 @@
 
 |package   |old    |new         |Δ  |
 |:---------|:------|:-----------|:--|
-|globals   |0.19.0 |0.18.0-9011 |*  |
+|globals   |0.19.0 |0.19.0-9005 |*  |
 |codetools |0.2-20 |0.2-20      |   |
 
 # Revdeps
 
-## Failed to check (6)
+## Failed to check (1)
 
 |package          |version |error |warning |note |
 |:----------------|:-------|:-----|:-------|:----|
-|[BayesPET](failures.md#bayespet)|0.1.0   |1     |        |     |
-|[bonsai](failures.md#bonsai)|0.4.0   |1     |        |     |
-|[orbital](failures.md#orbital)|0.5.0   |1     |        |     |
-|[pgxRpi](failures.md#pgxrpi)|1.6.0   |1     |        |1    |
 |[TriDimRegression](failures.md#tridimregression)|1.0.3   |1     |        |     |
-|[VIM](failures.md#vim)|7.0.0   |1     |        |     |
 
-## All (784)
+## All (761)
 
 |package                      |version      |error |warning |note |
 |:----------------------------|:------------|:-----|:-------|:----|
@@ -49,7 +44,6 @@
 |aifeducation                 |1.1.4        |      |        |     |
 |AIPW                         |0.6.9.2      |      |        |     |
 |AIscreenR                    |0.2.0        |      |        |     |
-|ale                          |0.5.3        |      |        |     |
 |alookr                       |0.5.1        |      |        |     |
 |altdoc                       |0.7.2        |      |        |     |
 |aNCA                         |0.1.0        |      |        |     |
@@ -76,7 +70,6 @@
 |BayesianMCPMod               |1.3.1        |      |        |     |
 |bayesics                     |2.1.1        |      |        |     |
 |bayesmove                    |0.2.4        |      |        |     |
-|[BayesPET](failures.md#bayespet)|0.1.0        |1     |        |     |
 |BayesRegDTR                  |1.1.2        |      |        |     |
 |bayesSSM                     |0.7.1        |      |        |     |
 |bbknnR                       |2.0.2        |      |        |     |
@@ -91,7 +84,6 @@
 |binaryRL                     |0.9.9        |      |        |     |
 |BiocHubsShiny                |1.10.0       |      |        |     |
 |bioLeak                      |0.3.0        |      |        |     |
-|bistablehistory              |1.1.3        |      |        |     |
 |bivarhr                      |0.1.5        |      |        |     |
 |bkmrhat                      |1.1.7        |      |        |     |
 |blavaan                      |0.5-10       |      |        |     |
@@ -101,7 +93,7 @@
 |blockr.dock                  |0.1.0        |      |        |     |
 |blockr.ggplot                |0.1.0        |      |        |     |
 |bolasso                      |0.4.0        |      |        |     |
-|[bonsai](failures.md#bonsai) |0.4.0        |1     |        |     |
+|bonsai                       |0.4.0        |      |        |     |
 |[BPrinStratTTE](problems.md#bprinstrattte)|0.0.7        |      |        |1    |
 |brms                         |2.23.0       |      |        |     |
 |broom.helpers                |1.22.0       |      |        |     |
@@ -155,7 +147,6 @@
 |[ConfusionTableR](problems.md#confusiontabler)|1.0.4        |      |        |1    |
 |[corporaexplorer](problems.md#corporaexplorer)|0.9.0        |      |        |1    |
 |corrr                        |0.4.5        |      |        |     |
-|couplr                       |1.1.0        |      |        |     |
 |Coxmos                       |1.1.5        |      |        |     |
 |cropgrowdays                 |0.2.2        |      |        |     |
 |crossmap                     |0.5.0        |      |        |     |
@@ -180,7 +171,6 @@
 |dci                          |1.0.3        |      |        |     |
 |DeclareDesign                |1.1.0        |      |        |     |
 |delayed                      |0.5.0        |      |        |     |
-|[delimtools](problems.md#delimtools)|0.2.1        |1     |        |     |
 |demulticoder                 |0.1.2        |      |        |     |
 |deseats                      |1.1.1        |      |        |     |
 |[designer](problems.md#designer)|0.3.0        |      |        |1    |
@@ -192,10 +182,8 @@
 |distantia                    |2.0.2        |      |        |     |
 |dockViewR                    |0.3.0        |      |        |     |
 |doFuture                     |1.2.1        |      |        |     |
-|[doublIn](problems.md#doublin)|0.2.0        |      |        |1    |
 |DQAstats                     |0.3.9        |      |        |     |
 |drake                        |7.13.11      |      |        |     |
-|drimmR                       |1.0.1        |      |        |     |
 |DRPT                         |1.1          |      |        |     |
 |drtmle                       |1.1.2        |      |        |     |
 |DrugExposureDiagnostics      |1.1.6        |      |        |     |
@@ -211,11 +199,9 @@
 |eCV                          |0.0.2        |      |        |     |
 |[EFAtools](problems.md#efatools)|0.6.1        |      |        |1    |
 |effectsize                   |1.0.2        |      |        |     |
-|EGAnet                       |2.4.0        |      |        |     |
 |elevatr                      |0.99.1       |      |        |     |
 |[envi](problems.md#envi)     |1.0.1        |      |1       |     |
 |epe4md                       |0.1.4        |      |        |     |
-|[EpiForsk](problems.md#epiforsk)|0.2.0        |1     |1       |     |
 |EpiNow2                      |1.8.0        |      |        |     |
 |epoxy                        |1.0.0        |      |        |     |
 |EQRN                         |0.1.2        |      |        |     |
@@ -248,10 +234,7 @@
 |flassomsm                    |0.1.0        |      |        |     |
 |flexFitR                     |1.2.2        |      |        |     |
 |[flowGraph](problems.md#flowgraph)|1.18.0       |      |        |2    |
-|[fmeffects](problems.md#fmeffects)|0.1.4        |1     |        |     |
-|[forecastML](problems.md#forecastml)|0.9.0        |1     |        |1    |
 |forestControl                |0.2.2        |      |        |     |
-|[FracFixR](problems.md#fracfixr)|1.0.0        |1     |        |     |
 |fst4pg                       |1.0.0        |      |        |     |
 |fundiversity                 |1.1.1        |      |        |     |
 |funGp                        |1.0.0        |      |        |     |
@@ -309,7 +292,6 @@
 |histoslider                  |0.1.1        |      |        |     |
 |hoopR                        |2.1.0        |      |        |     |
 |howler                       |0.3.0        |      |        |     |
-|[httpgd](problems.md#httpgd) |2.1.4        |1     |        |     |
 |HVT                          |26.1.2       |      |        |     |
 |hwep                         |2.0.3        |      |        |     |
 |hydroloom                    |1.1.3        |      |        |     |
@@ -362,7 +344,6 @@
 |lavaangui                    |0.3.2        |      |        |     |
 |[lavDiag](problems.md#lavdiag)|0.1.0        |1     |        |     |
 |layer                        |0.0.4        |      |        |     |
-|ldaPrototype                 |0.3.1        |      |        |     |
 |ldmppr                       |1.1.3        |      |        |     |
 |[ldsr](problems.md#ldsr)     |0.0.2        |      |        |1    |
 |leafdown                     |1.2.0        |      |        |     |
@@ -370,7 +351,7 @@
 |lemna                        |1.0.2        |      |        |     |
 |LexFindR                     |1.1.0        |      |        |     |
 |lgr                          |0.5.2        |      |        |     |
-|lidR                         |4.2.3        |      |        |     |
+|[lidR](problems.md#lidr)     |4.2.3        |1     |        |     |
 |lightr                       |1.9.0        |      |        |     |
 |LipidMS                      |3.1.2        |      |        |     |
 |LLMAgentR                    |0.3.2        |      |        |     |
@@ -388,7 +369,6 @@
 |[mapme.biodiversity](problems.md#mapmebiodiversity)|0.9.5        |1     |        |     |
 |mapmixture                   |1.2.0        |      |        |     |
 |marginaleffects              |0.32.0       |      |        |     |
-|[mbbe](problems.md#mbbe)     |0.1.0        |1     |        |     |
 |mcmcensemble                 |3.2.0        |      |        |     |
 |McMiso                       |0.1.2        |      |        |     |
 |mcp                          |0.3.4        |      |        |     |
@@ -472,7 +452,6 @@
 |offsetreg                    |1.1.1        |      |        |     |
 |omicsTools                   |1.1.7        |      |        |     |
 |OmopOnSpark                  |0.1.0        |      |        |     |
-|[oncomsm](problems.md#oncomsm)|0.1.4        |1     |        |     |
 |onemapsgapi                  |2.0.0        |      |        |     |
 |oolong                       |0.6.1        |      |        |     |
 |opImputation                 |0.6          |      |        |     |
@@ -480,7 +459,7 @@
 |OptimalBinningWoE            |1.0.8        |      |        |     |
 |optimall                     |1.3.1        |      |        |     |
 |optimLanduse                 |1.2.1        |      |        |     |
-|[orbital](failures.md#orbital)|0.5.0        |1     |        |     |
+|orbital                      |0.5.0        |      |        |     |
 |origami                      |1.0.7        |      |        |     |
 |outliers.ts.oga              |1.1.2        |      |        |     |
 |[OutSeekR](problems.md#outseekr)|1.1.0        |      |        |1    |
@@ -503,7 +482,6 @@
 |Pedixplorer                  |1.6.0        |      |        |     |
 |penaltyLearning              |2024.9.3     |      |        |     |
 |pGRN                         |0.3.5        |      |        |     |
-|[pgxRpi](failures.md#pgxrpi) |1.6.0        |1     |        |1    |
 |phecodemap                   |0.1.0        |      |        |     |
 |[photosynthesis](problems.md#photosynthesis)|2.1.5        |      |        |1    |
 |phylolm                      |2.6.5        |      |        |     |
@@ -672,14 +650,11 @@
 |ShinyWizard                  |1.1.3.11     |      |        |     |
 |[sigminer](problems.md#sigminer)|2.3.1        |      |        |1    |
 |Signac                       |1.16.0       |      |        |     |
-|[signeR](problems.md#signer) |2.12.0       |      |        |3    |
 |simaerep                     |1.0.0        |      |        |     |
 |SimDesign                    |2.24         |      |        |     |
 |simglm                       |0.8.9        |      |        |     |
 |[simhelpers](problems.md#simhelpers)|0.3.1        |      |        |1    |
-|simIDM                       |0.1.0        |      |        |     |
 |simlandr                     |0.4.0        |      |        |     |
-|[simpr](problems.md#simpr)   |0.2.6        |      |1       |     |
 |sims                         |0.0.4        |      |        |     |
 |simtrial                     |1.0.2        |      |        |     |
 |simulateDCE                  |0.3.1        |      |        |     |
@@ -690,7 +665,6 @@
 |socialSim                    |0.1.8        |      |        |     |
 |[solitude](problems.md#solitude)|1.1.3        |      |        |1    |
 |sortable                     |0.6.0        |      |        |     |
-|sovereign                    |1.2.1        |      |        |     |
 |[SpaDES.core](problems.md#spadescore)|3.0.4        |1     |        |     |
 |spaMM                        |4.6.1        |      |        |     |
 |spanishoddata                |0.2.2        |      |        |     |
@@ -738,7 +712,6 @@
 |targeted                     |0.7.1        |      |        |     |
 |[targets](problems.md#targets)|1.12.0       |1     |        |     |
 |TaxaNorm                     |2.4          |      |        |     |
-|teal                         |1.1.0        |      |        |     |
 |teal.modules.clinical        |0.12.0       |      |        |     |
 |teal.modules.general         |0.6.0        |      |        |     |
 |teal.reporter                |0.6.1        |      |        |     |
@@ -794,7 +767,7 @@
 |vetiver                      |0.2.7        |      |        |     |
 |video                        |0.1.1        |      |        |     |
 |[viewpoly](problems.md#viewpoly)|0.4.1        |      |        |1    |
-|[VIM](failures.md#vim)       |7.0.0        |1     |        |     |
+|VIM                          |7.0.0        |      |        |     |
 |vip                          |0.4.5        |      |        |     |
 |viraldomain                  |0.0.7        |      |        |     |
 |viralmodels                  |1.3.4        |      |        |     |
@@ -817,7 +790,6 @@
 |wqspt                        |1.0.2        |      |        |     |
 |[wru](problems.md#wru)       |3.0.3        |      |        |1    |
 |xegaPopulation               |1.0.0.12     |      |        |     |
-|xpect                        |1.1          |      |        |     |
 |xplainfi                     |1.1.0        |      |        |     |
 |ycevo                        |0.3.0        |      |        |     |
 |yfR                          |1.1.3        |      |        |     |
