@@ -1,4 +1,13 @@
-# Version 0.19.0 [2026-025-01]
+# Version 0.19.1 [2026-03-12]
+
+## Bug Fixes
+
+ * Globals objects could not be sub-assigned by index - only by name,
+   e.g. with `x <- as.Globals(list(a = 1))`, `x[[1]] <- 2` would give
+   an error.
+
+
+# Version 0.19.0 [2026-02-02]
 
 ## Performance
 

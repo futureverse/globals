@@ -212,4 +212,22 @@ aux(x = 3:4, y = 1, z = 42L, 3.14, exprs = exprs)
 message("*** function(x, ...) globalsOf() ... DONE")
 
 
+message("*** findGlobals() - dotdotdot = 'error' with method = 'ordered' ...")
+## Function using ..1 and ..2 outside of ... context
+fcn_dd <- function() list(..1, ..2)
+res <- tryCatch(
+  findGlobals(fcn_dd, method = "ordered", dotdotdot = "error"),
+  error = identity
+)
+stopifnot(inherits(res, "simpleError"))
+message("*** findGlobals() - dotdotdot = 'error' ... DONE")
+
+
+message("*** findGlobals() - dotdotdot = 'return' with method = 'ordered' ...")
+globals_ret <- findGlobals(fcn_dd, method = "ordered", dotdotdot = "return")
+stopifnot("..1" %in% globals_ret)
+stopifnot("..2" %in% globals_ret)
+message("*** findGlobals() - dotdotdot = 'return' ... DONE")
+
+
 ## Cleanup

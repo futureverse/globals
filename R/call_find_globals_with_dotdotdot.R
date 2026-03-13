@@ -46,7 +46,7 @@ call_find_globals_with_dotdotdot <- function(FUN, expr, envir, dotdotdot = "erro
   if (length(dotdotdots) > 0L) {
     dotdotdots <- unique(dotdotdots)
     if (trace) {
-      trace_printf("dotdotdots: [n=%d] %s\n", length(dotdotdot), commaq(dotdotdots))
+      trace_printf("dotdotdots: [n=%d] %s\n", length(dotdotdots), commaq(dotdotdots))
     }
     globals <- c(globals, dotdotdots)
   }

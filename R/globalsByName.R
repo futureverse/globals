@@ -3,7 +3,7 @@
 #' @param names A character vector of global variable names.
 #'
 #' @param envir The environment from where to search for globals.
-#"
+#'
 #' @param mustExist If TRUE, an error is thrown if the object of the
 #'        identified global cannot be located.  Otherwise, the global
 #'        is not returned.

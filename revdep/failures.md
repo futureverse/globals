@@ -1,29 +1,3 @@
-# bonsai (0.4.0)
-
-* GitHub: <https://github.com/tidymodels/bonsai>
-* Email: <mailto:emil.hvitfeldt@posit.co>
-* GitHub mirror: <https://github.com/cran/bonsai>
-
-Run `revdepcheck::revdep_details(, "bonsai")` for more info
-
-## In both
-
-*   R CMD check timed out
-
-
-# ldmppr (1.1.1)
-
-* GitHub: <https://github.com/lanedrew/ldmppr>
-* Email: <mailto:lanetdrew@gmail.com>
-* GitHub mirror: <https://github.com/cran/ldmppr>
-
-Run `revdepcheck::revdep_details(, "ldmppr")` for more info
-
-## In both
-
-*   R CMD check timed out
-
-
 # TriDimRegression (1.0.3)
 
 * GitHub: <https://github.com/alexander-pastukhov/tridim-regression>
@@ -72,28 +46,3 @@ ERROR: configuration failed for package ‘TriDimRegression’
 
 
 ```
-# VIM (7.0.0)
-
-* GitHub: <https://github.com/statistikat/VIM>
-* Email: <mailto:matthias.templ@gmail.com>
-* GitHub mirror: <https://github.com/cran/VIM>
-
-Run `revdepcheck::revdep_details(, "VIM")` for more info
-
-## In both
-
-*   R CMD check timed out
-
-
-# xpect (1.0)
-
-* Email: <mailto:giancarlo.vercellino@gmail.com>
-* GitHub mirror: <https://github.com/cran/xpect>
-
-Run `revdepcheck::revdep_details(, "xpect")` for more info
-
-## In both
-
-*   R CMD check timed out
-
-
