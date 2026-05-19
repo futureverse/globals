@@ -3,6 +3,7 @@
 ## Authors
 
 - **Henrik Bengtsson**. Author, maintainer, copyright holder.
+  [](https://orcid.org/0000-0002-7579-5165)
 
 - **Davis Vaughan**. Contributor.
 
@@ -12,12 +13,12 @@ Source:
 [`DESCRIPTION`](https://github.com/futureverse/globals/blob/HEAD/DESCRIPTION)
 
 Bengtsson H (2026). *globals: Identify Global Objects in R Expressions*.
-R package version 0.19.1-9000, <https://globals.futureverse.org>.
+R package version 0.19.1-9001, <https://globals.futureverse.org>.
 
     @Manual{,
       title = {globals: Identify Global Objects in R Expressions},
       author = {Henrik Bengtsson},
       year = {2026},
-      note = {R package version 0.19.1-9000},
+      note = {R package version 0.19.1-9001},
       url = {https://globals.futureverse.org},
     }
