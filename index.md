@@ -22,3 +22,8 @@ remotes::install_github("futureverse/globals", ref="develop")
 ```
 
 This will install the package from source.
+
+## Contributing
+
+To contribute to this package, please see
+[CONTRIBUTING.md](https://globals.futureverse.org/CONTRIBUTING.md).
