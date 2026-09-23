@@ -1,6 +1,10 @@
 # Version (development version)
 
- * ...
+## Bug Fixes
+
+ * `globalsByName(names)` would silently drop values and locations of
+   any duplicated name, e.g. `globalsByName(c("a", "b", "a"))` would
+   give `NULL` for the second `"a"`.
 
 
 # Version 0.19.1 [2026-03-12]

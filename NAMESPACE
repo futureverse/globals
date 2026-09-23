@@ -20,9 +20,13 @@ export(globalsByName)
 export(globalsOf)
 export(packagesOf)
 export(walkAST)
-importFrom(codetools,findLocalsList)
-importFrom(codetools,makeUsageCollector)
-importFrom(codetools,walkCode)
-importFrom(utils,capture.output)
-importFrom(utils,packageDescription)
-importFrom(utils,str)
+importFrom(codetools,
+  findLocalsList,
+  makeUsageCollector,
+  walkCode
+)
+importFrom(utils,
+  capture.output,
+  packageDescription,
+  str
+)

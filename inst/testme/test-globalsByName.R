@@ -112,5 +112,36 @@ rm(list = "a_gbn")
 message("*** globalsByName() - dotdotdots debug ... DONE")
 
 
+message("*** globalsByName() - duplicated names ...")
+a_gbn <- 1
+b_gbn <- 2
+globals_dup <- globalsByName(c("a_gbn", "b_gbn", "a_gbn"))
+stopifnot(
+  identical(names(globals_dup), c("a_gbn", "b_gbn", "a_gbn")),
+  identical(globals_dup[[1]], 1),
+  identical(globals_dup[[2]], 2),
+  identical(globals_dup[[3]], 1)
+)
+where_dup <- attr(globals_dup, "where")
+stopifnot(
+  length(where_dup) == length(globals_dup),
+  identical(where_dup[[1]], globalenv()),
+  identical(where_dup[[3]], globalenv())
+)
+
+## Also for duplicated '...' entries
+myGlobals <- function(x, ...) {
+  globalsByName(c("...", "x", "..."))
+}
+globals_dup_dd <- myGlobals(x = 2, y = 3)
+stopifnot(identical(names(globals_dup_dd), c("...", "x", "...")))
+stopifnot(
+  identical(names(globals_dup_dd[[1]]), "y"),
+  identical(names(globals_dup_dd[[3]]), "y")
+)
+rm(list = c("a_gbn", "b_gbn"))
+message("*** globalsByName() - duplicated names ... DONE")
+
+
 message("*** globalsByName() ... DONE")
 
