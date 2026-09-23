@@ -230,4 +230,17 @@ stopifnot("..2" %in% globals_ret)
 message("*** findGlobals() - dotdotdot = 'return' ... DONE")
 
 
+message("*** findGlobals() - debug output when a dotdotdot warning is detected ...")
+oopts <- options(globals.debug = TRUE)
+msgs <- capture.output({
+  findGlobals(quote(sum(x, ...)), dotdotdot = "warning")
+}, type = "message")
+options(oopts)
+hits <- grep("Warning message detected", msgs, value = TRUE)
+stopifnot(length(hits) > 0)
+stopifnot(!any(grepl("%s", hits, fixed = TRUE)))
+stopifnot(any(grepl("may be used in an incorrect context", hits, fixed = TRUE)))
+message("*** findGlobals() - debug output when a dotdotdot warning is detected ... DONE")
+
+
 ## Cleanup

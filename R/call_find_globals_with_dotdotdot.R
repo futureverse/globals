@@ -23,7 +23,7 @@ call_find_globals_with_dotdotdot <- function(FUN, expr, envir, dotdotdot = "erro
     msg <- w$message
     pattern <- ".* ([.][.]([.]|[0-9]+)) may be used in an incorrect context.*"
     if (grepl(pattern, msg, fixed = FALSE)) {
-      if (debug) mdebug("Warning message detected: %s", dQuote(trim(msg)))
+      if (debug) mdebugf("Warning message detected: %s", dQuote(trim(msg)))
       if (dotdotdot %in% c("ignore", "return", "warning")) {
         if (dotdotdot != "ignore") {
           dotdotdots <<- c(dotdotdots, gsub(pattern, "\\1", msg))
