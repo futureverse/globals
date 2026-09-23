@@ -373,6 +373,15 @@ str(globals_2)
 
 stopifnot(identical(globals_2, globals_1))
 
+## Make sure c() for Globals handles NULLs
+globals_a <- globals0[1:2]
+globals <- c(globals_a, NULL)
+stopifnot(
+  assert_attributes(globals),
+  identical(globals, globals_a)
+)
+stopifnot(!inherits(c(NULL, globals_a), "Globals"))
+
 
 message("*** Globals() - combining ... DONE")
 

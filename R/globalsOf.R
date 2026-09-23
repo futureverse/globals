@@ -169,7 +169,9 @@ globalsOf <- function(expr, envir = parent.frame(), ...,
       names_t <- names(globals_t)
 
       ## Avoid recursive scanning of already scanned ("known") globals
-      skip_t <- c(skip, globals_t)
+      ## NOTE: 'globals_t' should be first in c() to make sure we dispatch
+      ## to c() for Globals in all cases.
+      skip_t <- c(globals_t, skip)
       
       for (gg in seq_along(globals_t)) {
         if (debug) mdebugf("+ scanning global #%d (%s) ...",
