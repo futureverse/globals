@@ -13,12 +13,12 @@ Source:
 [`DESCRIPTION`](https://github.com/futureverse/globals/blob/develop/DESCRIPTION)
 
 Bengtsson H (2026). *globals: Identify Global Objects in R Expressions*.
-R package version 0.19.1-9005, <https://globals.futureverse.org>.
+R package version 0.19.1-9006, <https://globals.futureverse.org>.
 
     @Manual{,
       title = {globals: Identify Global Objects in R Expressions},
       author = {Henrik Bengtsson},
       year = {2026},
-      note = {R package version 0.19.1-9005},
+      note = {R package version 0.19.1-9006},
       url = {https://globals.futureverse.org},
     }
