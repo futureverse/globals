@@ -7,6 +7,9 @@ cleanup <- function(...) UseMethod("cleanup")
 #' @param drop A character vector specifying what type of globals to drop.
 #' @param \ldots Not used
 #'
+#' @return
+#' Return A Globals object.
+#'
 #' @aliases cleanup
 #' @export
 cleanup.Globals <- function(globals, drop = c("missing", "base-packages", "nativesymbolinfo"), ...) {

@@ -14,6 +14,9 @@
 
 \item{\ldots}{Not used}
 }
+\value{
+Return A Globals object.
+}
 \description{
 Drop certain types of globals
 }
