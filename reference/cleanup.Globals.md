@@ -22,3 +22,7 @@ cleanup(globals, drop = c("missing", "base-packages", "nativesymbolinfo"), ...)
 - ...:
 
   Not used
+
+## Value
+
+Return A Globals object.
