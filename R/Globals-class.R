@@ -166,7 +166,7 @@ assign_Globals <- function(x, name, value) {
     } else {
       x[[name]] <- value_kk
     }
-    x_where[[name]] <- where[[kk]]
+    x_where[name] <- list(where[[kk]])
   }
 
   stop_if_not(length(x_where) == length(x))

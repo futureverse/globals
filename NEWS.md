@@ -6,6 +6,10 @@
    any duplicated name, e.g. `globalsByName(c("a", "b", "a"))` would
    give `NULL` for the second `"a"`.
 
+ * Sub-assigning a missing global to a Globals object, e.g.
+   `x["a"] <- globalsByName("a", mustExist = FALSE)`, produced
+   an error on `length(x_where) == length(x)` not being TRUE.
+
 
 # Version 0.19.1 [2026-03-12]
 

@@ -515,6 +515,38 @@ stopifnot(inherits(res, "simpleError"))
 stopifnot(grepl("Unsupported class", conditionMessage(res)))
 
 
+message("*** Globals() - [<-.Globals with missing global ...")
+
+## A missing global has value NULL and 'where' NULL
+missing <- globalsByName("a_missing_global", mustExist = FALSE)
+stopifnot(is.null(attr(missing, "where")[["a_missing_global"]]))
+
+globals <- globals0
+globals["a_missing_global"] <- missing
+where <- attr(globals, "where", exact = TRUE)
+stopifnot(
+  length(where) == length(globals),
+  all(names(where) == names(globals)),
+  "a_missing_global" %in% names(globals),
+  is.null(globals[["a_missing_global"]]),
+  is.null(where[["a_missing_global"]])
+)
+
+## Overwriting an existing global with a missing one
+globals <- globals0
+globals["a"] <- structure(missing, names = "a",
+                          where = list(a = NULL))
+where <- attr(globals, "where", exact = TRUE)
+stopifnot(
+  length(globals) == length(globals0),
+  all(names(where) == names(globals)),
+  is.null(globals[["a"]]),
+  is.null(where[["a"]])
+)
+
+message("*** Globals() - [<-.Globals with missing global ... DONE")
+
+
 message("*** Globals() - exceptions ...")
 
 res <- tryCatch({ Globals(NULL) }, error = identity)
