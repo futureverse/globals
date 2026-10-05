@@ -8,6 +8,10 @@
   duplicated name, e.g. `globalsByName(c("a", "b", "a"))` would give
   `NULL` for the second `"a"`.
 
+- Sub-assigning a missing global to a Globals object, e.g.
+  `x["a"] <- globalsByName("a", mustExist = FALSE)`, produced an error
+  on `length(x_where) == length(x)` not being TRUE.
+
 ## Version 0.19.1 \[2026-03-12\]
 
 CRAN release: 2026-03-13
@@ -128,7 +132,7 @@ CRAN release: 2022-08-28
   for `Globals` failed to return the package of the globals if the
   global doesn’t have a closure,
   e.g. [`base::pi`](https://rdrr.io/r/base/Constants.html) and
-  `data.table::.N`.
+  [`data.table::.N`](https://rdrr.io/pkg/data.table/man/special-symbols.html).
 
 ## Version 0.16.0 \[2022-08-05\]
 
