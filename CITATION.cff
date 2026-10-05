@@ -1,0 +1,30 @@
+# ------------------------------------------------
+# CITATION.cff file created with {cffr} R package
+# See also: https://docs.ropensci.org/cffr/
+# ------------------------------------------------
+ 
+cff-version: 1.2.0
+message: 'To cite package "globals" in publications use:'
+type: software
+license: LGPL-2.0-or-later
+title: 'globals: Identify Global Objects in R Expressions'
+doi: 10.32614/CRAN.package.globals
+abstract: Identifies global ("unknown" or "free") objects in R expressions by code
+  inspection using various strategies (ordered, liberal, conservative, or deep-first
+  search). The objective of this package is to make it as simple as possible to identify
+  global objects for the purpose of exporting them in parallel, distributed compute
+  environments.
+authors:
+- family-names: Bengtsson
+  given-names: Henrik
+  email: henrikb@braju.com
+  orcid: https://orcid.org/0000-0002-7579-5165
+repository: https://CRAN.R-project.org/package=globals
+repository-code: https://github.com/futureverse/globals
+url: https://globals.futureverse.org
+contact:
+- family-names: Bengtsson
+  given-names: Henrik
+  email: henrikb@braju.com
+  orcid: https://orcid.org/0000-0002-7579-5165
+

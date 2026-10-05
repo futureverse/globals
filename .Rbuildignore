@@ -1,6 +1,5 @@
 #----------------------------
 # Git and SVN related
-#----------------------------
 ^.svn
 ^.git
 ^.github
@@ -12,15 +11,9 @@ README[.]md
 ^docs
 ^pkgdown
 
-
-#----------------------------
 # devtools
-#----------------------------
 ^revdep
-
-#----------------------------
 # Travis-CI et al.
-#----------------------------
 ^[.]travis[.]yml$
 ^travis-tool[.]sh$
 ^pkg-build[.]sh$
@@ -28,10 +21,7 @@ README[.]md
 ^covr-utils.R$
 ^[.]covr[.]R$
 ^[.]covr[.]rds$
-
-#----------------------------
 # R related
-#----------------------------
 Rplots.pdf$
 ^cran-comments[.].*$
 ^vignettes/.*[.](pdf|PDF)$
@@ -47,11 +37,8 @@ Rplots.pdf$
 ^[.]test
 ^[.]check
 ^.*[.]tar[.]gz$
-
-#----------------------------
 # Package specific
-#----------------------------
 ^[.]BatchJobs[.]R$
 [.]future
 ^last.dump_.*
-
+^CITATION\.cff$
