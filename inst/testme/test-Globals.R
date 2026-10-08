@@ -547,6 +547,47 @@ stopifnot(
 message("*** Globals() - [<-.Globals with missing global ... DONE")
 
 
+message("*** Globals() - $<- and [[<- with missing or NULL global ...")
+
+for (op in c("$<-", "[[<-")) {
+  ## A missing global has value NULL and 'where' NULL
+  globals <- globals0
+  globals <- do.call(op, args = list(globals, "a_missing_global", missing))
+  where <- attr(globals, "where", exact = TRUE)
+  stopifnot(
+    length(where) == length(globals),
+    all(names(where) == names(globals)),
+    "a_missing_global" %in% names(globals),
+    is.null(globals[["a_missing_global"]]),
+    is.null(where[["a_missing_global"]])
+  )
+
+  ## A Globals object with a NULL value, but a non-NULL 'where'
+  value <- as.Globals(list(b_null = NULL))
+  globals <- globals0
+  globals <- do.call(op, args = list(globals, "b_null", value))
+  where <- attr(globals, "where", exact = TRUE)
+  stopifnot(
+    length(where) == length(globals),
+    all(names(where) == names(globals)),
+    "b_null" %in% names(globals),
+    is.null(globals[["b_null"]]),
+    identical(where[["b_null"]], attr(value, "where")[["b_null"]])
+  )
+
+  ## Assigning plain NULL still removes the element
+  globals <- do.call(op, args = list(globals, "b_null", NULL))
+  where <- attr(globals, "where", exact = TRUE)
+  stopifnot(
+    !("b_null" %in% names(globals)),
+    length(where) == length(globals),
+    all(names(where) == names(globals))
+  )
+}
+
+message("*** Globals() - $<- and [[<- with missing or NULL global ... DONE")
+
+
 message("*** Globals() - exceptions ...")
 
 res <- tryCatch({ Globals(NULL) }, error = identity)

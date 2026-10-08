@@ -10,6 +10,9 @@
    `x["a"] <- globalsByName("a", mustExist = FALSE)`, produced
    an error on `length(x_where) == length(x)` not being TRUE.
 
+ * Assigning a Globals object could either drop or corrupt the target
+   global if the assigned value comprised `NULL`.
+
 
 # Version 0.19.1 [2026-03-12]
 

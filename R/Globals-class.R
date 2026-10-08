@@ -107,7 +107,8 @@ assign_Globals <- function(x, name, value) {
   stop_if_not(!is.null(where))
   
   ## Remove an element?
-  if (is.null(value)) {
+  remove <- is.null(value)
+  if (remove) {
     where[[name]] <- NULL
   } else {
     ## Value must be Globals object of length one
@@ -116,7 +117,7 @@ assign_Globals <- function(x, name, value) {
         stopf("Cannot assign Globals object of length different from one: %s",
              length(value))
       }
-      where[[name]] <- attr(value, "where", exact = TRUE)[[1]]
+      where[name] <- list(attr(value, "where", exact = TRUE)[[1]])
       value <- value[[1]]
     } else {
       where[[name]] <- environment_of(value)
@@ -128,7 +129,11 @@ assign_Globals <- function(x, name, value) {
   ## Avoid calling this function recursively
   class <- class(x)
   class(x) <- NULL
-  x[[name]] <- value
+  if (remove) {
+    x[[name]] <- NULL
+  } else {
+    x[name] <- list(value)
+  }
   class(x) <- class
 
   invisible(x)
