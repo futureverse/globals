@@ -217,6 +217,11 @@ c.Globals <- function(x, ...) {
     g <- args[[kk]]
     name <- names(args)[kk]
 
+    ## Nothing to do? E.g. c(globals, NULL).
+    ## This is handled automatically in newer versions of R, but
+    ## not in older (such as R 3.6.3).
+    if (is.null(g)) next
+
     if (inherits(g, "Globals")) {
       w <- attr(g, "where", exact = TRUE)
     } else if (is.list(g)) {

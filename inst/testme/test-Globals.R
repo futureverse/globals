@@ -382,6 +382,14 @@ stopifnot(
 )
 stopifnot(!inherits(c(NULL, globals_a), "Globals"))
 
+## Make sure c.Globals() itself handles NULLs, because older versions of
+## R does not do it for us (e.g. R 3.6.3)
+globals_b <- globals:::c.Globals(globals_a, NULL)
+stopifnot(
+  assert_attributes(globals_b),
+  identical(globals_b, globals_a)
+)
+
 
 message("*** Globals() - combining ... DONE")
 
