@@ -256,12 +256,6 @@ trace_print <- function(..., envir = parent.frame(), indent = .trace$indent, col
   trace_printf(bfr, indent = indent, collapse = collapse, appendLF = appendLF)
 }
 
-#' @importFrom utils capture.output str
-trace_str <- function(..., envir = parent.frame(), indent = .trace$indent, collapse = "\n", appendLF = TRUE) {
-  bfr <- eval(capture.output(str(...)), envir = envir)
-  trace_printf(bfr, indent = indent, collapse = collapse, appendLF = appendLF)
-}
-
 trace_enter <- function(..., appendLF = TRUE) {
   msg <- trace_printf(..., appendLF = FALSE)
   message(" ...", appendLF = appendLF)

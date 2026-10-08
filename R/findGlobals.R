@@ -260,51 +260,6 @@ collect_usage_function <- function(fun, name, w, trace = FALSE) {
 }
 
 
-inject_tracer_to_function <- function(fcn, name) {
-  b <- body(fcn)
-  f <- formals(fcn)
-  args <- setdiff(names(f), c("w", "..."))
-  if (length(args) > 0L) {
-    args <- grep("^[.][.][0-9]+$", args, invert = TRUE, value = TRUE)
-  }
-  title <- sprintf("%s()", name)
-  b <- bquote({
-    ## Import private functions
-    ns <- getNamespace("globals")
-    trace_str <- get("trace_str", envir = ns, mode = "function")
-    trace_exit <- get("trace_exit", envir = ns, mode = "function")
-    trace_printf <- get("trace_printf", envir = ns, mode = "function")
-    trace_print <- get("trace_print", envir = ns, mode = "function")
-    
-    trace_msg <- trace_enter("%s", .(title))
-    trace_indent <- attr(trace_msg, "indent")
-    if (length(.(args)) > 0) trace_str(mget(.(args)), indent = trace_indent)
-    if (!exists("w", mode = "list")) {
-      trace_exit(trace_msg)
-      return()
-    }
-    env <- environment(w$enterLocal)
-    n <- length(env$name)
-    value <- .(b)
-    nnew <- (length(env$name) - n)
-    if (nnew) {
-      trace_printf("variables:\n", indent = trace_indent)
-      trace_print(data.frame(
-        name  = env$name,
-        class = env$class,
-        added = c(rep(FALSE, times = n), rep(TRUE, times = nnew)),
-        stringsAsFactors = FALSE
-      ), indent = trace_indent)
-    }
-    trace_printf("result: ", indent = trace_indent)
-    trace_str(value, indent = trace_indent)
-    trace_exit(trace_msg)
-    value
-  })
-  body(fcn) <- b
-  fcn
-}
-
 inject_tracer_to_walker <- function(w) {
   if (is.null(w$startCollectLocals)) {
     w$startCollectLocals <- function(parnames, locals, ...) { NULL }
@@ -315,14 +270,7 @@ inject_tracer_to_walker <- function(w) {
   if (is.null(w$enterInternal)) {
     w$enterInternal <- function(type, v, e, ...) { NULL }
   }
-  
-  for (key in names(w)) {
-    fcn <- w[[key]] 
-    if (!is.function(fcn)) next
-#    fcn <- inject_tracer_to_function(fcn, key)
-    w[[key]] <- fcn
-  }
-  
+
   w
 }
 
