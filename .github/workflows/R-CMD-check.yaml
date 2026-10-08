@@ -51,11 +51,6 @@ jobs:
 
       - uses: r-lib/actions/setup-tinytex@v2
 
-      - name: Install additional LaTeX packages
-        if: runner.os != 'Windows'
-        run: tinytex::tlmgr_install(c("courier", "helvetic"))
-        shell: Rscript {0}
-
       - name: Install system dependencies (Linux)
         if: runner.os == 'Linux'
         run: sudo apt-get install -y tidy
@@ -70,6 +65,11 @@ jobs:
         with:
           extra-packages: any::rcmdcheck
           needs: check
+
+      - name: Install additional LaTeX packages
+        if: runner.os != 'Windows'
+        run: tinytex::tlmgr_install(c("courier", "helvetic"))
+        shell: Rscript {0}
 
       - name: Install itself (to build vignettes)
         run: |
