@@ -10,9 +10,13 @@
 \title{A representation of a set of globals}
 \usage{
 Globals(object, ...)
+
+as.Globals(x, ...)
 }
 \arguments{
 \item{object}{A named list.}
+
+\item{x}{An object to be coerced to a \link{Globals} object.}
 
 \item{\ldots}{Not used.}
 }

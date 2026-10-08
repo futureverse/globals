@@ -1,8 +1,13 @@
 #' A representation of a set of globals
 #'
-#' @usage Globals(object, ...)
+#' @usage
+#' Globals(object, ...)
+#'
+#' as.Globals(x, ...)
 #'
 #' @param object A named list.
+#'
+#' @param x An object to be coerced to a \link{Globals} object.
 #'
 #' @param \ldots Not used.
 #'

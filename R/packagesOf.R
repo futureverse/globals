@@ -1,3 +1,4 @@
+#' @rdname packagesOf.Globals
 #' @export
 packagesOf <- function(...) UseMethod("packagesOf")
 
@@ -8,7 +9,6 @@ packagesOf <- function(...) UseMethod("packagesOf")
 #'
 #' @return Returns a character vector of package names.
 #'
-#' @aliases packagesOf
 #' @export
 packagesOf.Globals <- function(globals, ...) {
   ## Scan 'globals' for which packages they are from.  This information is

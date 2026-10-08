@@ -1,3 +1,4 @@
+#' @rdname cleanup.Globals
 #' @export
 cleanup <- function(...) UseMethod("cleanup")
 
@@ -10,7 +11,6 @@ cleanup <- function(...) UseMethod("cleanup")
 #' @return
 #' Return A Globals object.
 #'
-#' @aliases cleanup
 #' @export
 cleanup.Globals <- function(globals, drop = c("missing", "base-packages", "nativesymbolinfo"), ...) {
   where <- attr(globals, "where", exact = TRUE)
