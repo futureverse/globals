@@ -5,6 +5,8 @@ Identify the packages of the globals
 ## Usage
 
 ``` r
+packagesOf(...)
+
 # S3 method for class 'Globals'
 packagesOf(globals, ...)
 ```

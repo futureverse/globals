@@ -6,6 +6,8 @@ A representation of a set of globals
 
 ``` r
 Globals(object, ...)
+
+as.Globals(x, ...)
 ```
 
 ## Arguments
@@ -13,6 +15,10 @@ Globals(object, ...)
 - object:
 
   A named list.
+
+- x:
+
+  An object to be coerced to a Globals object.
 
 - ...:
 

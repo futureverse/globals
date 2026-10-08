@@ -5,6 +5,8 @@ Drop certain types of globals
 ## Usage
 
 ``` r
+cleanup(...)
+
 # S3 method for class 'Globals'
 cleanup(globals, drop = c("missing", "base-packages", "nativesymbolinfo"), ...)
 ```
