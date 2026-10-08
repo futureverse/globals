@@ -62,6 +62,21 @@ message("*** findGlobals_dfs(..., debug = TRUE) ... DONE")
 
 
 ## -------------------------------------------------------------------
+## findGlobals(..., method = "dfs") should forward 'debug' to the
+## internal findGlobalsDFS()/findGlobals_dfs() machinery, the same way
+## options(globals.debug = TRUE) already affects the other methods.
+## -------------------------------------------------------------------
+message("*** findGlobals(..., method = 'dfs') forwards debug ...")
+out <- capture.output(
+  globals <- findGlobals(quote(a_debug_dfs + b_debug_dfs), method = "dfs"),
+  type = "message"
+)
+stopifnot(identical(sort(globals), c("+", "a_debug_dfs", "b_debug_dfs")))
+stopifnot(any(grepl("findGlobals_dfs", out, fixed = TRUE)))
+message("*** findGlobals(..., method = 'dfs') forwards debug ... DONE")
+
+
+## -------------------------------------------------------------------
 ## findGlobals() - trace = TRUE with more than one 'method'
 ## -------------------------------------------------------------------
 message("*** findGlobals(..., method = c(...), trace = TRUE) ...")

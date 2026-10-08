@@ -133,7 +133,7 @@ findGlobals <- function(expr, envir = parent.frame(), ...,
   }
 
   if (method == "dfs") {
-    globals <- findGlobalsDFS(expr)
+    globals <- findGlobalsDFS(expr, debug = debug)
   } else {
     if (hasCodetoolsBug16()) {
       if (debug) mdebug("workaround 'codetools' bug #16")
