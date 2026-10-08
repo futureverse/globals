@@ -68,8 +68,10 @@ jobs:
 
       - name: Install additional LaTeX packages
         if: runner.os != 'Windows'
-        run: tinytex::tlmgr_install(c("courier", "helvetic"))
-        shell: Rscript {0}
+        run: |
+          tlmgr update --self
+          tlmgr install courier helvetic
+        shell: bash
 
       - name: Install itself (to build vignettes)
         run: |
