@@ -33,6 +33,10 @@
 #' @param skip (internal) A list of globals not to be searched for
 #'        additional globals.  Ignored unless \code{recursive} is TRUE.
 #'
+#' @param ignore An optional character vector of names of globals to
+#'        drop. These are excluded before they are searched for and the do
+#'        not need to exist.
+#'
 #' @return \code{globalsOf()} returns a \link{Globals} object.
 #'
 #' @details
@@ -75,15 +79,17 @@ globalsOf <- function(expr, envir = parent.frame(), ...,
                       tweak = NULL,
                       locals = NA,
                       substitute = FALSE, mustExist = TRUE,
-                      unlist = TRUE, recursive = TRUE, skip = NULL) {
-  if (missing(method)) method <- method[1]                        
+                      unlist = TRUE, recursive = TRUE,
+                      skip = NULL, ignore = NULL) {
+  if (missing(method)) method <- method[1]
   method <- match.arg(method, choices = c("ordered", "conservative", "liberal", "dfs"), several.ok = TRUE)
 
   if (is.na(locals)) locals <- getOption("globals.globalsOf.locals", TRUE)
   stop_if_not(is.logical(locals), length(locals) == 1L, !is.na(locals))
-  
+
   if (substitute) expr <- substitute(expr)
   stop_if_not(is.null(skip) || is.list(skip))
+  stop_if_not(is.null(ignore) || is.character(ignore))
 
   debug <- isTRUE(getOption("globals.debug"))
   if (debug) {
@@ -98,6 +104,14 @@ globalsOf <- function(expr, envir = parent.frame(), ...,
                        tweak = tweak, substitute = FALSE, unlist = unlist)
   if (debug) mdebugf("preliminary globals (by name): [%d] %s",
                      length(names), hpaste(sQuote(names)))
+
+  ## Drop any globals to be ignored, e.g. because they are already known
+  ## to exist in the environment where the expression will be evaluated
+  if (!is.null(ignore) && length(names) > 0) {
+    names <- setdiff(names, ignore)
+    if (debug) mdebugf("globals (by name) after dropping ignored: [%d] %s",
+                       length(names), hpaste(sQuote(names)))
+  }
 
   ## 2. Locate them (run time)
   globals <- tryCatch({
@@ -190,7 +204,8 @@ globalsOf <- function(expr, envir = parent.frame(), ...,
                                 substitute = FALSE,
                                 mustExist = mustExist, unlist = unlist,
                                 recursive = recursive,
-                                skip = skip_t)
+                                skip = skip_t,
+                                ignore = ignore)
         if (length(globals_gg) > 0) {
           globals <- c(globals, globals_gg)
 

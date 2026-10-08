@@ -1,5 +1,11 @@
 # Version (development version)
 
+## New Features
+
+ * `globalsOf()` gained argument `ignore` for dropping specified
+   globals by name. Ignored globals are dropped before they are
+   searched for and do not have to exist.
+
 ## Bug Fixes
 
  * `globalsByName(names)` would silently drop values and locations of

@@ -29,7 +29,8 @@ globalsOf(
   mustExist = TRUE,
   unlist = TRUE,
   recursive = TRUE,
-  skip = NULL
+  skip = NULL,
+  ignore = NULL
 )
 }
 \arguments{
@@ -74,6 +75,10 @@ may depend on globals.}
 
 \item{skip}{(internal) A list of globals not to be searched for
 additional globals.  Ignored unless \code{recursive} is TRUE.}
+
+\item{ignore}{An optional character vector of names of globals to
+drop. These are excluded before they are searched for and the do
+not need to exist.}
 
 \item{\ldots}{Not used.}
 }
