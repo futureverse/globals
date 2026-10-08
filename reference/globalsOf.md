@@ -29,7 +29,8 @@ globalsOf(
   mustExist = TRUE,
   unlist = TRUE,
   recursive = TRUE,
-  skip = NULL
+  skip = NULL,
+  ignore = NULL
 )
 ```
 
@@ -100,6 +101,11 @@ globalsOf(
 
   (internal) A list of globals not to be searched for additional
   globals. Ignored unless `recursive` is TRUE.
+
+- ignore:
+
+  An optional character vector of names of globals to drop. These are
+  excluded before they are searched for and the do not need to exist.
 
 - ...:
 

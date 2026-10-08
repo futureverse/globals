@@ -13,7 +13,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">globals</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.19.1-9008</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.19.1-9010</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -98,7 +98,8 @@
 <span>  mustExist <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  unlist <span class="op">=</span> <span class="cn">TRUE</span>,</span>
 <span>  recursive <span class="op">=</span> <span class="cn">TRUE</span>,</span>
-<span>  skip <span class="op">=</span> <span class="cn">NULL</span></span>
+<span>  skip <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  ignore <span class="op">=</span> <span class="cn">NULL</span></span>
 <span><span class="op">)</span></span></code></pre></div>
     </div>
 
@@ -172,6 +173,12 @@ may depend on globals.</p></dd>
 <dt id="arg-skip">skip<a class="anchor" aria-label="anchor" href="#arg-skip"></a></dt>
 <dd><p>(internal) A list of globals not to be searched for
 additional globals.  Ignored unless <code>recursive</code> is TRUE.</p></dd>
+
+
+<dt id="arg-ignore">ignore<a class="anchor" aria-label="anchor" href="#arg-ignore"></a></dt>
+<dd><p>An optional character vector of names of globals to
+drop. These are excluded before they are searched for and the do
+not need to exist.</p></dd>
 
 
 <dt id="arg--">...<a class="anchor" aria-label="anchor" href="#arg--"></a></dt>
