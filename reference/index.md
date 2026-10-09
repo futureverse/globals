@@ -14,3 +14,5 @@
   : Get all global objects of an expression
 - [`packagesOf()`](https://globals.futureverse.org/reference/packagesOf.Globals.md)
   : Identify the packages of the globals
+- [`print(`*`<Globals>`*`)`](https://globals.futureverse.org/reference/print.Globals.md)
+  : Print a Globals Object
