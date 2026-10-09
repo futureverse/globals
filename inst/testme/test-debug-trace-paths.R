@@ -122,8 +122,8 @@ message("*** method = 'conservative'/'liberal' with trace = TRUE ... DONE")
 ## (assignment) and as a global (plain reference)
 ## -------------------------------------------------------------------
 message("*** method = 'ordered' with trace = TRUE, re-entered formals ...")
-globals <- sort(findGlobals(function(p_dup) { p_dup <- p_dup + 1; p_dup }, method = "ordered", trace = TRUE))
-stopifnot(identical(globals, c("{", "+", "<-")))
+globals <- findGlobals(function(p_dup) { p_dup <- p_dup + 1; p_dup }, method = "ordered", trace = TRUE)
+assert_identical_sets(globals, c("{", "+", "<-"))
 
 globals <- findGlobals(function(p_ref) p_ref, method = "ordered", trace = TRUE)
 stopifnot(identical(globals, character(0L)))
