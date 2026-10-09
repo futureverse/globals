@@ -232,7 +232,7 @@ message("*** findGlobals() - dotdotdot = 'return' ... DONE")
 
 message("*** findGlobals() - debug output when a dotdotdot warning is detected ...")
 oopts <- options(globals.debug = TRUE)
-msgs <- capture.output({
+msgs <- utils::capture.output({
   findGlobals(quote(sum(x, ...)), dotdotdot = "warning")
 }, type = "message")
 options(oopts)

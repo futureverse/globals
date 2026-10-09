@@ -6,6 +6,8 @@
    globals by name. Ignored globals are dropped before they are
    searched for and do not have to exist.
 
+ * Added `print()` for Globals object.
+
 ## Bug Fixes
 
  * `globalsByName(names)` would silently drop values and locations of

@@ -67,7 +67,7 @@ message("*** findGlobals_dfs(..., debug = TRUE) ... DONE")
 ## options(globals.debug = TRUE) already affects the other methods.
 ## -------------------------------------------------------------------
 message("*** findGlobals(..., method = 'dfs') forwards debug ...")
-out <- capture.output(
+out <- utils::capture.output(
   globals <- findGlobals(quote(a_debug_dfs + b_debug_dfs), method = "dfs"),
   type = "message"
 )

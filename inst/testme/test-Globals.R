@@ -596,6 +596,30 @@ for (op in c("$<-", "[[<-")) {
 message("*** Globals() - $<- and [[<- with missing or NULL global ... DONE")
 
 
+message("*** Globals() - print() ...")
+
+globals <- globals0
+res <- utils::capture.output(print(globals))
+stopifnot(
+  length(res) == 1L + length(globals),
+  grepl("^Globals \\[2\\]$", res[1]),
+  grepl("a", res[2], fixed = TRUE),
+  grepl("rnorm", res[3], fixed = TRUE)
+)
+
+res <- utils::capture.output(print(Globals()))
+stopifnot(identical(res, "Globals [0]"))
+
+## A missing global should be printed without erroring
+res <- utils::capture.output(print(missing))
+stopifnot(
+  length(res) == 2L,
+  grepl("<not found>", res[2])
+)
+
+message("*** Globals() - print() ... DONE")
+
+
 message("*** Globals() - exceptions ...")
 
 res <- tryCatch({ Globals(NULL) }, error = identity)

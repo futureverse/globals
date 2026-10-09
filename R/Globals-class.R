@@ -79,6 +79,35 @@ as.Globals.list <- function(x, ...) {
   Globals(x, ...)
 }
 
+#' Print a Globals Object
+#'
+#' @param x A \link{Globals} object.
+#'
+#' @param \ldots Not used.
+#'
+#' @return (invisibly) the Globals object itself.
+#'
+#' @export
+print.Globals <- function(x, ...) {
+  ng <- length(x)
+  cat(sprintf("Globals [%d]\n", ng))
+  if (ng == 0) return(invisible(x))
+
+  types <- vapply(x, FUN.VALUE = NA_character_, FUN = function(value) {
+    if (is.null(value)) return("NULL")
+    class(value)[1]
+  })
+
+  where <- attr(x, "where", exact = TRUE)
+  locations <- vapply(where, FUN.VALUE = NA_character_, FUN = envname)
+  locations[is.na(locations)] <- "<not found>"
+
+  info <- sprintf(" - %s: <%s> [%s]", sQuote(names(x)), types, locations)
+  cat(info, sep = "\n")
+
+  invisible(x)
+}
+
 #' @export
 `names<-.Globals` <- function(x, value) {
   x <- NextMethod()
