@@ -76,7 +76,5 @@ if (testme[["debug"]]) {
 }
 
 ## Undo variables
-if (!covr) {
-  rm(list = c(setdiff(ls(envir = globalenv()), ovars)), envir = globalenv())
-}
+rm(list = c(setdiff(ls(envir = globalenv()), ovars)), envir = globalenv())
 

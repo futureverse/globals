@@ -21,7 +21,7 @@ str(globals)
 assert_identical_sets(names(globals), c("{", "foo", "list"))
 where <- attr(globals, "where")
 stopifnot(length(where) == length(globals))
-if (!covr) stopifnot(
+if (!covr_testing) stopifnot(
   identical(where$`{`, baseenv()),
   identical(where$foo, globalenv()),
   identical(where$list, baseenv())

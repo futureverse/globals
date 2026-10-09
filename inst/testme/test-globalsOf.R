@@ -228,7 +228,7 @@ str(globals)
 assert_identical_sets(names(globals), c("{", "foo", "list"))
 where <- attr(globals, "where")
 stopifnot(length(where) == length(globals))
-if (!covr) stopifnot(
+if (!covr_testing) stopifnot(
   identical(where$`{`, baseenv()),
   identical(where$foo, globalenv()),
   identical(where$list, baseenv())
@@ -250,7 +250,7 @@ str(globals)
 assert_identical_sets(names(globals), c("{", "<-", "sample", "sample2", "sessionInfo", "sum", "sum2", "isNamespaceLoaded"))
 where <- attr(globals, "where")
 stopifnot(length(where) == length(globals))
-if (!covr) stopifnot(
+if (!covr_testing) stopifnot(
   identical(where$`<-`, baseenv()),
   identical(where$sample, baseenv()),
   identical(where$sample2, globalenv())
@@ -269,7 +269,7 @@ str(globals)
 assert_identical_sets(names(globals), c("sample2", "sum2"))
 where <- attr(globals, "where")
 stopifnot(length(where) == length(globals))
-if (!covr) stopifnot(identical(where$sample2, globalenv()))
+if (!covr_testing) stopifnot(identical(where$sample2, globalenv()))
 
 
 message("*** globalsOf() - exceptions ...")
