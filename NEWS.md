@@ -2,6 +2,8 @@
 
 ## Significant Changes
 
+ * Now `packagesOf()` identifies the package of an S4 generic function.
+
  * Now `packagesOf()` identifies the package of an S4 object.
 
 ## New Features
@@ -13,6 +15,8 @@
  * Added `print()` for Globals object.
 
 ## Bug Fixes
+
+ * `packagesOf()` did not identify packages of S4 generic functions.
 
  * `packagesOf()` did not identify packages of S4 objects.
 

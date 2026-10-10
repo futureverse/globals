@@ -20,6 +20,16 @@ packagesOf.Globals <- function(globals, ...) {
   extra_pkgs <- character(0L)
   for (kk in seq_along(globals)) {
     obj <- globals[[kk]]
+
+    ## S4 generic functions record their origin in the 'package' attribute
+    if (is.function(obj) && !is.null(attr(obj, "generic", exact = TRUE))) {
+      pkg <- attr(obj, "package", exact = TRUE)
+      if (!is.null(pkg) && nzchar(pkg)) {
+        pkgs[kk] <- pkg
+        next
+      }
+    }
+
     env <- environment_of(obj)
 
     ## If not found, it could be an object in a package without a closure
