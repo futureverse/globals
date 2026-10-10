@@ -193,8 +193,9 @@ findGlobals_dfs_call <- function(expr, ..., debug = FALSE) {
         globals[[1]] <- findGlobals_dfs_call(op, debug = debug)
         if (debug) mdebug_pop("Function call whose function is a call ... done")
       } else {
-        if (is.na(name)) name <- character(0L)
-        globals[[1]] <- dframe(name = "function", unbound = c(name, op_name), type = "function", comment = "function call")
+        unbound <- op_name
+        if (!is.na(name)) unbound <- c(name, unbound)
+        globals[[1]] <- dframe(name = "function", unbound = unbound, type = "function", comment = "function call")
       }
       if (debug) {
         mdebug("---------------------------------")

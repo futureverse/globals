@@ -28,6 +28,9 @@
    `x["a"] <- globalsByName("a", mustExist = FALSE)`, produced
    an error on `length(x_where) == length(x)` not being TRUE.
 
+ * `findGlobals(..., method = "dfs")` failed for some corner-case
+   calls, e.g. `findGlobals(quote(NA(a, b)), method = "dfs")`.
+
  * Assigning a Globals object could either drop or corrupt the target
    global if the assigned value comprised `NULL`.
 
