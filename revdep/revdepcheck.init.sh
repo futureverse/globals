@@ -1,18 +1,19 @@
 #! /usr/bin/env bash
 
 
+grandchildren=false
+
 ## ---------------------------------------------------------------------
 ## Phase 1
 ## ---------------------------------------------------------------------
 
 ## Add packages to check
 revdep/run.R --add-children
-revdep/run.R --add-grandchildren
+${grandchildren} && revdep/run.R --add-grandchildren
 
-## Drop packages failing on CRAN (2026-03-11)
-## None of these depend on 'globals' directly - all are grandchildren,
-## reached via one of its children (future, future.apply, furrr, ...)
-pkgs_failing_cran=(
+## Drop packages failing on CRAN (2026-10-10)
+pkgs=()
+${grandchildren} && pkgs+=(
   arkdb              # via future.apply
   delimtools         # via future, furrr
   dispositionEffect  # via future, furrr
@@ -20,43 +21,42 @@ pkgs_failing_cran=(
   EpiForsk           # via future, furrr
   httpgd             # via future
 )
-revdep/run.R --rm "${pkgs_failing_cran[@]}"
+[ ${#pkgs[@]} -gt 0 ] && revdep/run.R --rm "${pkgs[@]}"
 
-## Drop packages failing on Bioconductor (2026-01-31)
-## Grandchildren only, same as above
-pkgs_failing_bioc=(
+## Drop packages failing on Bioconductor (2026-10-10)
+pkgs=()
+${grandchildren} && pkgs+=(
   dar     # via future, furrr
   pgxRpi  # via future, future.apply
 )
-revdep/run.R --rm "${pkgs_failing_bioc[@]}"
+[ ${#pkgs[@]} -gt 0 ] && revdep/run.R --rm "${pkgs[@]}"
 
-## Drop packages no longer on CRAN (2026-03-11)
+## Drop packages no longer on CRAN (2026-10-10)
+pkgs=(fmeffects)
+${grandchildren} && pkgs+=(
+)
+[ ${#pkgs[@]} -gt 0 ] && revdep/run.R --rm "${pkgs[@]}"
+
+## Drop packages no longer on Bioconductor (2026-10-10)
 #revdep/run.R --rm ...
-
-## Drop packages no longer on Bioconductor (2026-03-11)
-#revdep/run.R --rm ...
-
-## Too many cores due to detectCores()
-pkgs_detectCores=()
-#revdep/run.R --rm "${pkgs_detectCores[@]}"
 
 ## Requires sequential processing due to clashes, e.g. port and cache
 pkgs_seq=()
-#revdep/run.R --rm "${pkgs_seq[@]}"
+[ ${#pkgs_seq[@]} -gt 0 ] && revdep/run.R --rm "${pkgs_seq[@]}"
 
 ## Too many threads
-## Grandchildren only, same as above
-pkgs_threads=(
-  orbital  # via parsnip, sparklyr
+pkgs_threads=()
+${grandchildren} && pkgs_threads+=(
   orbital  # via parsnip, sparklyr
   xpect    # via future, furrr
   VIM      # via future
 )
-revdep/run.R --rm "${pkgs_threads[@]}"
+[ ${#pkgs_threads[@]} -gt 0 ] && revdep/run.R --rm "${pkgs_threads[@]}"
 
 ## Too many cores
 ## Grandchildren only, same as above
-pkgs_cores=(
+pkgs_cores=()
+${grandchildren} && pkgs_cores+=(
   ale        # via future, furrr
   couplr     # via future, future.apply
   EGAnet     # via future, future.apply
@@ -68,7 +68,7 @@ pkgs_cores=(
   signeR     # via future, future.apply
   teal       # via shinytest2
 )
-revdep/run.R --rm "${pkgs_cores[@]}"
+[ ${#pkgs_cores[@]} -gt 0 ] && revdep/run.R --rm "${pkgs_cores[@]}"
 
 ## Run revdep check
 revdep/run.R
@@ -78,13 +78,19 @@ revdep/run.R
 ## Phase 2
 ## ---------------------------------------------------------------------
 ## Set: Too many threads
-revdep/run.R --add "${pkgs_threads[@]}"
-OMP_NUM_THREADS=4 revdep/run.R
+if [ ${#pkgs_threads[@]} -gt 0 ]; then
+    revdep/run.R --add "${pkgs_threads[@]}"
+    OMP_NUM_THREADS=4 revdep/run.R
+fi
 
 ## Set: Too many cores
-revdep/run.R --add "${pkgs_cores[@]}"
-OMP_NUM_THREADS=4 NSLOTS=4 revdep/run.R
+if [ ${#pkgs_cores[@]} -gt 0 ]; then
+    revdep/run.R --add "${pkgs_cores[@]}"
+    OMP_NUM_THREADS=4 NSLOTS=4 revdep/run.R
+fi
 
 ## Sequential
-revdep/run.R --add "${pkgs_seq[@]}"
-NSLOTS=1 revdep/run.R
+if [ ${#pkgs_seq[@]} -gt 0 ]; then
+    revdep/run.R --add "${pkgs_seq[@]}"
+    NSLOTS=1 revdep/run.R
+fi
