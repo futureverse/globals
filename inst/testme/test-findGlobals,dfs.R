@@ -197,6 +197,9 @@ append_expr(expr, substitute = FALSE, truth = c("+", "x", "y"))
 expr <- asS3(methods::getClass("S4")@prototype, complete = FALSE)
 append_expr(expr, substitute = FALSE, truth = character(0L))
 
+expr <- quote(NA(a, b))
+append_expr(expr, substitute = FALSE, truth = c("a", "b"))
+
 con <- rawConnection(raw())
 append_expr(con, substitute = FALSE, truth = character(0L))
 close(con)
