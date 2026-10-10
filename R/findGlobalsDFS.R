@@ -400,36 +400,11 @@ findGlobals_dfs_environment <- function(expr, ..., debug = FALSE) {
     })
   }
   
-  ## NOTE: Do *not* look for types that we are interested in, but instead
-  ## look for types that we are *not* interested.  The reason for this is that
-  ## in future versions of R there might be new types added that may contain
-  ## globals and with this approach those types will also be scanned.
-  basicTypes <- c("logical", "integer", "double", "complex", "character",
-                  "raw", "NULL")
-
-  ## Skip elements in 'expr' of basic types that cannot contain globals
-
-  ## FIXME: The below can lead to infinite, recursive calls /HB 2025-04-27
+  ## FIXME: Environments are not scanned for globals, because doing so
+  ## can lead to infinite, recursive calls /HB 2025-04-27
   globals <- dframe(type = "environment", comment = "environment")
-  return(globals)
-  
-  types <- unlist(list_apply(expr, FUN = typeof), use.names = TRUE)
-  keep <- names(types)[!(types %in% basicTypes)]
-
-  ## Early stopping?
-  if (length(keep) == 0) {
-    if (debug) mdebug("globals found: [0] <none>")
-    globals <- dframe(type = "environment", comment = "environment")
-  } else {
-    ## FIXME: This can lead to infinite recursive calls /HB 2025-04-27
-    if (FALSE) {
-      globals <- list_apply(expr, subset = keep, FUN = findGlobals_dfs, ..., debug = debug)
-      globals <- do.call(rbind, args = globals)
-    }
-    globals <- dframe(type = "environment", comment = "environment")
-  }
   globals
-} 
+}
 
 
 findGlobals_dfs_expression <- function(expr, ..., debug = FALSE) {
