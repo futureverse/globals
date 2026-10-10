@@ -1,5 +1,9 @@
 # Version (development version)
 
+## Significant Changes
+
+ * Now `packagesOf()` identifies the package of an S4 object.
+
 ## New Features
 
  * `globalsOf()` gained argument `ignore` for dropping specified
@@ -9,6 +13,8 @@
  * Added `print()` for Globals object.
 
 ## Bug Fixes
+
+ * `packagesOf()` did not identify packages of S4 objects.
 
  * `globalsByName(names)` would silently drop values and locations of
    any duplicated name, e.g. `globalsByName(c("a", "b", "a"))` would
