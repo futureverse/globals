@@ -44,7 +44,7 @@
 - Assigning a Globals object could either drop or corrupt the target
   global if the assigned value comprised `NULL`.
 
-## Version 0.19.1 \[2026-03-12\]
+## Version 0.19.1
 
 CRAN release: 2026-03-13
 
@@ -54,7 +54,7 @@ CRAN release: 2026-03-13
   e.g. with `x <- as.Globals(list(a = 1))`, `x[[1]] <- 2` would give an
   error.
 
-## Version 0.19.0 \[2026-02-02\]
+## Version 0.19.0
 
 CRAN release: 2026-02-02
 
@@ -72,7 +72,7 @@ CRAN release: 2026-02-02
 - `findGlobals(function(...) ..1, method = "dfs")` incorrectly
   identified `..1` as a global variable.
 
-## Version 0.18.0 \[2025-05-09\]
+## Version 0.18.0
 
 CRAN release: 2025-05-08
 
@@ -105,7 +105,7 @@ CRAN release: 2025-05-08
   did not recognize objects of type `externalptr`, leading to an error
   on `Cannot walk expression. Unknown object type 'externalptr'`.
 
-## Version 0.17.0 \[2025-04-15\]
+## Version 0.17.0
 
 CRAN release: 2025-04-16
 
@@ -129,7 +129,7 @@ CRAN release: 2025-04-16
   [`findGlobals()`](https://globals.futureverse.org/reference/globalsOf.md)
   now works around internally.
 
-## Version 0.16.3 \[2024-03-07\]
+## Version 0.16.3
 
 CRAN release: 2024-03-07
 
@@ -145,7 +145,7 @@ CRAN release: 2024-03-07
   `Error in exists(name, envir = env) : use of NULL environment is defunct`.
   Now the non-existing (“missing”) globals are preserved.
 
-## Version 0.16.2 \[2022-11-21\]
+## Version 0.16.2
 
 CRAN release: 2022-11-21
 
@@ -154,7 +154,7 @@ CRAN release: 2022-11-21
 - Drop duplicated arguments from
   [`help("walkAST")`](https://globals.futureverse.org/reference/walkAST.md).
 
-## Version 0.16.1 \[2022-08-28\]
+## Version 0.16.1
 
 CRAN release: 2022-08-28
 
@@ -166,7 +166,7 @@ CRAN release: 2022-08-28
   e.g. [`base::pi`](https://rdrr.io/r/base/Constants.html) and
   [`data.table::.N`](https://rdrr.io/pkg/data.table/man/special-symbols.html).
 
-## Version 0.16.0 \[2022-08-05\]
+## Version 0.16.0
 
 CRAN release: 2022-08-05
 
@@ -185,7 +185,7 @@ CRAN release: 2022-08-05
 - [`c()`](https://rdrr.io/r/base/c.html) for `Globals` would lose the
   `where` environment for any functions appended.
 
-## Version 0.15.1 \[2022-06-24\]
+## Version 0.15.1
 
 CRAN release: 2022-06-24
 
@@ -196,7 +196,7 @@ CRAN release: 2022-06-24
   environment, but that might not be true. A classed environment could
   be such that `$()` gives an error, rather than returning something.
 
-## Version 0.15.0 \[2022-05-08\]
+## Version 0.15.0
 
 CRAN release: 2022-05-09
 
@@ -220,7 +220,7 @@ CRAN release: 2022-05-09
   include the calling environment instead of an empty environment as
   part of the `where` attribute.
 
-## Version 0.14.0 \[2020-11-22\]
+## Version 0.14.0
 
 CRAN release: 2020-11-22
 
@@ -239,7 +239,7 @@ CRAN release: 2020-11-22
   a global variable. Previously, the `x` of the function would hide the
   global `x`.
 
-## Version 0.13.1 \[2020-10-11\]
+## Version 0.13.1
 
 CRAN release: 2020-10-11
 
@@ -265,7 +265,7 @@ CRAN release: 2020-10-11
   accordingly, otherwise formulas will be parsed using
   `dotdotdot = "return"`.
 
-## Version 0.13.0 \[2020-09-16\]
+## Version 0.13.0
 
 CRAN release: 2020-09-17
 
@@ -329,7 +329,7 @@ CRAN release: 2020-09-17
 - `findGlobals(function() NULL, substitute = TRUE, trace = TRUE)` would
   throw “Error in environment(w\$enterLocal) : object ‘w’ not found”.
 
-## Version 0.12.5 \[2019-12-07\]
+## Version 0.12.5
 
 CRAN release: 2019-12-07
 
@@ -339,7 +339,7 @@ CRAN release: 2019-12-07
   as a global variable whereas it was properly identified with
   `{ a <- a + 1; a }`.
 
-## Version 0.12.4 \[2018-10-11\]
+## Version 0.12.4
 
 CRAN release: 2018-10-11
 
@@ -352,7 +352,7 @@ CRAN release: 2018-10-11
   `envname(env)` did not always handle when
   `class(env) != "environment"`.
 
-## Version 0.12.3 \[2018-09-16\]
+## Version 0.12.3
 
 CRAN release: 2018-09-17
 
@@ -371,7 +371,7 @@ CRAN release: 2018-09-17
   and `names(a) = ...` although it did for `a[1] <- ...` and
   `names(a) <- ...`.
 
-## Version 0.12.2 \[2018-08-25\]
+## Version 0.12.2
 
 CRAN release: 2018-08-25
 
@@ -400,7 +400,7 @@ CRAN release: 2018-08-25
   could produce a “Warning in is.na(x): is.na() applied to non-(list or
   vector) of type ‘NULL’” in R (\< 3.5.0).
 
-## Version 0.12.1 \[2018-06-24\]
+## Version 0.12.1
 
 CRAN release: 2018-06-25
 
@@ -412,7 +412,7 @@ CRAN release: 2018-06-25
   data types cannot contain globals and can therefore be skipped early
   in the search for globals.
 
-## Version 0.12.0 \[2018-06-12\]
+## Version 0.12.0
 
 CRAN release: 2018-06-12
 
@@ -432,7 +432,7 @@ CRAN release: 2018-06-12
 - If `...` was passed to `globalsByName(names)`, an error would be
   produced unless it was the last entry in `names`.
 
-## Version 0.11.0 \[2018-01-09\]
+## Version 0.11.0
 
 CRAN release: 2018-01-10
 
@@ -449,7 +449,7 @@ CRAN release: 2018-01-10
 - `findGlobals(..., trace = TRUE)` now outputs only to standard error.
   Previously, some of the output went to standard output.
 
-## Version 0.10.3 \[2017-10-12\]
+## Version 0.10.3
 
 CRAN release: 2017-10-13
 
@@ -460,7 +460,7 @@ CRAN release: 2017-10-13
   was a function that called itself recursively (either directly or
   indirectly).
 
-## Version 0.10.2 \[2017-08-08\]
+## Version 0.10.2
 
 CRAN release: 2017-08-08
 
@@ -470,7 +470,7 @@ CRAN release: 2017-08-08
   could produce error “Cannot walk expression. Unknown object type ‘…’”
   for objects of type `environment`.
 
-## Version 0.10.1 \[2017-07-01\]
+## Version 0.10.1
 
 CRAN release: 2017-07-02
 
@@ -480,7 +480,7 @@ CRAN release: 2017-07-02
   could produce error “Cannot walk expression. Unknown object type ‘…’”
   for objects of type `list`, `expression` and `S4`.
 
-## Version 0.10.0 \[2017-04-16\]
+## Version 0.10.0
 
 CRAN release: 2017-04-17
 
@@ -501,7 +501,7 @@ SOFTWARE QUALITY:
   could produce error “Cannot walk expression. Unknown object type
   ‘nnn’” for expressions of type `builtin`, `closure` and `special`.
 
-## Version 0.9.0 \[2017-03-09\]
+## Version 0.9.0
 
 CRAN release: 2017-03-10
 
@@ -519,7 +519,7 @@ CRAN release: 2017-03-10
   package namespaces that where defined via a
   [`local()`](https://rdrr.io/r/base/eval.html) statement.
 
-## Version 0.8.0 \[2017-01-14\]
+## Version 0.8.0
 
 CRAN release: 2017-01-16
 
@@ -532,7 +532,7 @@ CRAN release: 2017-01-16
 - [`findGlobals()`](https://globals.futureverse.org/reference/globalsOf.md)
   now takes both closures (functions) and expressions.
 
-## Version 0.7.2 \[2016-12-28\]
+## Version 0.7.2
 
 CRAN release: 2017-01-09
 
@@ -541,7 +541,7 @@ CRAN release: 2017-01-09
 - `c(x, list())` where `x` is a `Globals` object would give an error
   reporting that the list does not have named elements.
 
-## Version 0.7.1 \[2016-10-13\]
+## Version 0.7.1
 
 CRAN release: 2016-10-14
 
@@ -558,7 +558,7 @@ CRAN release: 2016-10-14
   due to the NULL argument. Thank you GitHub user ‘billy34’ for
   reporting on this.
 
-## Version 0.7.0 \[2016-09-08\]
+## Version 0.7.0
 
 CRAN release: 2016-09-09
 
@@ -581,7 +581,7 @@ CRAN release: 2016-09-09
   [`as.Globals()`](https://globals.futureverse.org/reference/Globals.md)
   for lists.
 
-## Version 0.6.1 \[2016-01-31\]
+## Version 0.6.1
 
 CRAN release: 2016-02-03
 
@@ -597,7 +597,7 @@ CRAN release: 2016-02-03
   for `Globals` did not cleanup functions in core package environments
   named `package:<name>`.
 
-## Version 0.6.0 \[2015-12-12\]
+## Version 0.6.0
 
 CRAN release: 2015-12-12
 
@@ -610,7 +610,7 @@ CRAN release: 2015-12-12
   missed. For backward compatibility, the previous behavior can be
   obtained using argument `method = "conservative"`.
 
-## Version 0.5.0 \[2015-10-13\]
+## Version 0.5.0
 
 CRAN release: 2015-10-14
 
@@ -627,7 +627,7 @@ CRAN release: 2015-10-14
   packages; previously it would also drop copies of such objects,
   e.g. `FUN <- base::sample`.
 
-## Version 0.4.1 \[2015-10-05\]
+## Version 0.4.1
 
 CRAN release: 2015-10-06
 
@@ -637,7 +637,7 @@ CRAN release: 2015-10-06
   failed to return global variables with value NULL. They were
   identified but silently dropped.
 
-## Version 0.4.0 \[2015-09-12\]
+## Version 0.4.0
 
 CRAN release: 2015-09-18
 
@@ -648,20 +648,20 @@ CRAN release: 2015-09-18
   [`globalsOf()`](https://globals.futureverse.org/reference/globalsOf.md)
   gained argument `dotdotdot`.
 
-## Version 0.3.1 \[2015-06-10\]
+## Version 0.3.1
 
 CRAN release: 2015-06-11
 
 - More test coverage.
 
-## Version 0.3.0 \[2015-06-08\]
+## Version 0.3.0
 
 ### New Features
 
 - Renamed `getGlobals()` to
   [`globalsOf()`](https://globals.futureverse.org/reference/globalsOf.md).
 
-## Version 0.2.3 \[2015-06-08\]
+## Version 0.2.3
 
 ### New Features
 
@@ -672,7 +672,7 @@ CRAN release: 2015-06-11
 
 - Added `cleanup(..., method = "internals")`.
 
-## Version 0.2.2 \[2015-05-20\]
+## Version 0.2.2
 
 ### New Features
 
@@ -685,7 +685,7 @@ CRAN release: 2015-06-11
   [`as.Globals()`](https://globals.futureverse.org/reference/Globals.md)
   to coerce lists to `Globals` objects.
 
-## Version 0.2.1 \[2015-05-20\]
+## Version 0.2.1
 
 ### New Features
 
@@ -698,10 +698,10 @@ CRAN release: 2015-06-11
   `"conservative"` or a `"liberal"` algorithm for identifying true
   globals should be used.
 
-## Version 0.2.0 \[2015-05-19\]
+## Version 0.2.0
 
 - Moved “globals” functions from an in-house package to this package.
 
-## Version 0.1.0 \[2015-02-07\]
+## Version 0.1.0
 
 - Created.
