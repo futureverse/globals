@@ -6,6 +6,10 @@
 
 - Now
   [`packagesOf()`](https://globals.futureverse.org/reference/packagesOf.Globals.md)
+  identifies the package of an S4 generic function.
+
+- Now
+  [`packagesOf()`](https://globals.futureverse.org/reference/packagesOf.Globals.md)
   identifies the package of an S4 object.
 
 ### New Features
@@ -19,6 +23,9 @@
   object.
 
 ### Bug Fixes
+
+- [`packagesOf()`](https://globals.futureverse.org/reference/packagesOf.Globals.md)
+  did not identify packages of S4 generic functions.
 
 - [`packagesOf()`](https://globals.futureverse.org/reference/packagesOf.Globals.md)
   did not identify packages of S4 objects.

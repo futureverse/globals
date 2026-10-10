@@ -13,7 +13,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">globals</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.19.1-9018</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.19.1-9019</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -71,7 +71,8 @@
 <h2 class="pkg-version" data-toc-text="development version" id="version-development-version">Version (development version)<a class="anchor" aria-label="anchor" href="#version-development-version"></a></h2>
 <div class="section level3">
 <h3 id="significant-changes-development-version">Significant Changes<a class="anchor" aria-label="anchor" href="#significant-changes-development-version"></a></h3>
-<ul><li>Now <code><a href="../reference/packagesOf.Globals.html">packagesOf()</a></code> identifies the package of an S4 object.</li>
+<ul><li><p>Now <code><a href="../reference/packagesOf.Globals.html">packagesOf()</a></code> identifies the package of an S4 generic function.</p></li>
+<li><p>Now <code><a href="../reference/packagesOf.Globals.html">packagesOf()</a></code> identifies the package of an S4 object.</p></li>
 </ul></div>
 <div class="section level3">
 <h3 id="new-features-development-version">New Features<a class="anchor" aria-label="anchor" href="#new-features-development-version"></a></h3>
@@ -80,7 +81,8 @@
 </ul></div>
 <div class="section level3">
 <h3 id="bug-fixes-development-version">Bug Fixes<a class="anchor" aria-label="anchor" href="#bug-fixes-development-version"></a></h3>
-<ul><li><p><code><a href="../reference/packagesOf.Globals.html">packagesOf()</a></code> did not identify packages of S4 objects.</p></li>
+<ul><li><p><code><a href="../reference/packagesOf.Globals.html">packagesOf()</a></code> did not identify packages of S4 generic functions.</p></li>
+<li><p><code><a href="../reference/packagesOf.Globals.html">packagesOf()</a></code> did not identify packages of S4 objects.</p></li>
 <li><p><code>globalsByName(names)</code> would silently drop values and locations of any duplicated name, e.g. <code>globalsByName(c("a", "b", "a"))</code> would give <code>NULL</code> for the second <code>"a"</code>.</p></li>
 <li><p>Sub-assigning a missing global to a Globals object, e.g. <code>x["a"] &lt;- globalsByName("a", mustExist = FALSE)</code>, produced an error on <code>length(x_where) == length(x)</code> not being TRUE.</p></li>
 <li><p>Assigning a Globals object could either drop or corrupt the target global if the assigned value comprised <code>NULL</code>.</p></li>
