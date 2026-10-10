@@ -305,3 +305,16 @@ stopifnot("f" %in% globals)
 options(oopts)
 
 message("*** method = 'dfs' with debug = TRUE ... DONE")
+
+
+## -------------------------------------------------------------------
+## findGlobals_dfs_*() helpers
+## -------------------------------------------------------------------
+message("*** Internal findGlobals_dfs_*() helpers ...")
+
+g <- globals:::findGlobals_dfs_atomic(quote(x))
+stopifnot(identical(unlist(g[["unbound"]]), "x"))
+
+stopifnot(is.null(globals:::findGlobals_dfs_pairlist(NULL)))
+
+message("*** Internal findGlobals_dfs_*() helpers ... DONE")
