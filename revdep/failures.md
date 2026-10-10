@@ -1,17 +1,17 @@
-# TriDimRegression (1.0.3)
+# activAnalyzer (2.1.2)
 
-* GitHub: <https://github.com/alexander-pastukhov/tridim-regression>
-* Email: <mailto:pastukhov.alexander@gmail.com>
-* GitHub mirror: <https://github.com/cran/TriDimRegression>
+* GitHub: <https://github.com/pydemull/activAnalyzer>
+* Email: <mailto:pydemull@uco.fr>
+* GitHub mirror: <https://github.com/cran/activAnalyzer>
 
-Run `revdepcheck::revdep_details(, "TriDimRegression")` for more info
+Run `revdepcheck::revdep_details(, "activAnalyzer")` for more info
 
 ## In both
 
-*   checking whether package ‘TriDimRegression’ can be installed ... ERROR
+*   checking whether package ‘activAnalyzer’ can be installed ... ERROR
      ```
      Installation failed.
-     See ‘/scratch/henrik/revdep/globals/checks/TriDimRegression/new/TriDimRegression.Rcheck/00install.out’ for details.
+     See ‘/scratch/hb/revdepcheck.extras/globals/revdep/checks/activAnalyzer/new/activAnalyzer.Rcheck/00install.out’ for details.
      ```
 
 ## Installation
@@ -19,30 +19,46 @@ Run `revdepcheck::revdep_details(, "TriDimRegression")` for more info
 ### Devel
 
 ```
-* installing *source* package ‘TriDimRegression’ ...
-** this is package ‘TriDimRegression’ version ‘1.0.3’
-** package ‘TriDimRegression’ successfully unpacked and MD5 sums checked
+* installing *source* package ‘activAnalyzer’ ...
+** this is package ‘activAnalyzer’ version ‘2.1.2’
+** package ‘activAnalyzer’ successfully unpacked and MD5 sums checked
 ** using staged installation
-Error in loadNamespace(x) : there is no package called ‘rstantools’
-Calls: loadNamespace -> withRestarts -> withOneRestart -> doWithOneRestart
-Execution halted
-ERROR: configuration failed for package ‘TriDimRegression’
-* removing ‘/scratch/henrik/revdep/globals/checks/TriDimRegression/new/TriDimRegression.Rcheck/TriDimRegression’
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+ERROR: hard-coded installation path: please report to the package maintainer and use ‘--no-staged-install’
+* removing ‘/scratch/hb/revdepcheck.extras/globals/revdep/checks/activAnalyzer/new/activAnalyzer.Rcheck/activAnalyzer’
 
 
 ```
 ### CRAN
 
 ```
-* installing *source* package ‘TriDimRegression’ ...
-** this is package ‘TriDimRegression’ version ‘1.0.3’
-** package ‘TriDimRegression’ successfully unpacked and MD5 sums checked
+* installing *source* package ‘activAnalyzer’ ...
+** this is package ‘activAnalyzer’ version ‘2.1.2’
+** package ‘activAnalyzer’ successfully unpacked and MD5 sums checked
 ** using staged installation
-Error in loadNamespace(x) : there is no package called ‘rstantools’
-Calls: loadNamespace -> withRestarts -> withOneRestart -> doWithOneRestart
-Execution halted
-ERROR: configuration failed for package ‘TriDimRegression’
-* removing ‘/scratch/henrik/revdep/globals/checks/TriDimRegression/old/TriDimRegression.Rcheck/TriDimRegression’
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+ERROR: hard-coded installation path: please report to the package maintainer and use ‘--no-staged-install’
+* removing ‘/scratch/hb/revdepcheck.extras/globals/revdep/checks/activAnalyzer/old/activAnalyzer.Rcheck/activAnalyzer’
 
 
 ```
