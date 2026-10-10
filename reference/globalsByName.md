@@ -54,7 +54,7 @@ str(globals)
 #> List of 1
 #>  $ x: num 42
 #>  - attr(*, "where")=List of 1
-#>   ..$ x:<environment: 0x55d3e8152e60> 
+#>   ..$ x:<environment: 0x5555a3d4cbf8> 
 #>  - attr(*, "class")= chr [1:2] "Globals" "list"
 
 globals <- f(3.14)
@@ -62,7 +62,7 @@ str(globals)
 #> List of 1
 #>  $ x: num 3.14
 #>  - attr(*, "where")=List of 1
-#>   ..$ x:<environment: 0x55d3e707f460> 
+#>   ..$ x:<environment: 0x5555a2c792d8> 
 #>  - attr(*, "class")= chr [1:2] "Globals" "list"
 
 
@@ -76,7 +76,7 @@ str(globals)
 #>  $ ...: list()
 #>   ..- attr(*, "class")= chr [1:2] "DotDotDotList" "list"
 #>  - attr(*, "where")=List of 1
-#>   ..$ ...:<environment: 0x55d3e9c243e8> 
+#>   ..$ ...:<environment: 0x5555a581e500> 
 #>  - attr(*, "class")= chr [1:2] "Globals" "list"
 
 globals <- g(3.14)
@@ -85,7 +85,7 @@ str(globals)
 #>  $ ...: list()
 #>   ..- attr(*, "class")= chr [1:2] "DotDotDotList" "list"
 #>  - attr(*, "where")=List of 1
-#>   ..$ ...:<environment: 0x55d3e9d74dd8> 
+#>   ..$ ...:<environment: 0x5555a596eef0> 
 #>  - attr(*, "class")= chr [1:2] "Globals" "list"
 
 globals <- g(3.14, 1L, b = 2L, c = 3L)
@@ -97,7 +97,7 @@ str(globals)
 #>   ..$ c: int 3
 #>   ..- attr(*, "class")= chr [1:2] "DotDotDotList" "list"
 #>  - attr(*, "where")=List of 1
-#>   ..$ ...:<environment: 0x55d3e9ef35e0> 
+#>   ..$ ...:<environment: 0x5555a5aed6f8> 
 #>  - attr(*, "class")= chr [1:2] "Globals" "list"
 
 
@@ -112,7 +112,7 @@ str(globals)
 #>   ..$ : num 2
 #>   ..- attr(*, "class")= chr [1:2] "DotDotDotList" "list"
 #>  - attr(*, "where")=List of 1
-#>   ..$ ..2:<environment: 0x55d3ea1c7900> 
+#>   ..$ ..2:<environment: 0x5555a5dc1a18> 
 #>  - attr(*, "class")= chr [1:2] "Globals" "list"
 
 globals <- g(3.14)
@@ -121,7 +121,7 @@ str(globals)
 #>  $ ...: list()
 #>   ..- attr(*, "class")= chr [1:2] "DotDotDotList" "list"
 #>  - attr(*, "where")=List of 1
-#>   ..$ ...:<environment: 0x55d3ea3c7a58> 
+#>   ..$ ...:<environment: 0x5555a5fc1b70> 
 #>  - attr(*, "class")= chr [1:2] "Globals" "list"
 
 globals <- g(3.14, 1L, b = 2L, c = 3L)
@@ -133,6 +133,6 @@ str(globals)
 #>   ..$ c: int 3
 #>   ..- attr(*, "class")= chr [1:2] "DotDotDotList" "list"
 #>  - attr(*, "where")=List of 1
-#>   ..$ ...:<environment: 0x55d3ea5a45e8> 
+#>   ..$ ...:<environment: 0x5555a619e7a8> 
 #>  - attr(*, "class")= chr [1:2] "Globals" "list"
 ```

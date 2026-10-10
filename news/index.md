@@ -2,6 +2,12 @@
 
 ## Version (development version)
 
+### Significant Changes
+
+- Now
+  [`packagesOf()`](https://globals.futureverse.org/reference/packagesOf.Globals.md)
+  identifies the package of an S4 object.
+
 ### New Features
 
 - [`globalsOf()`](https://globals.futureverse.org/reference/globalsOf.md)
@@ -13,6 +19,9 @@
   object.
 
 ### Bug Fixes
+
+- [`packagesOf()`](https://globals.futureverse.org/reference/packagesOf.Globals.md)
+  did not identify packages of S4 objects.
 
 - `globalsByName(names)` would silently drop values and locations of any
   duplicated name, e.g. `globalsByName(c("a", "b", "a"))` would give
