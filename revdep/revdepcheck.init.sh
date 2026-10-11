@@ -1,7 +1,25 @@
 #! /usr/bin/env bash
 
+## ---------------------------------------------------------------------
+## Missing or outdated LaTeX packages
+## ---------------------------------------------------------------------
+false && R --quiet --no-save <<EOF
+    tinytex::install_tinytex(force = TRUE)
+    message("TeX root: ", tinytex::tinytex_root())
+    tinytex::tlmgr_update()
+    tinytex::tlmgr_install(c(
+      "apacite",   # ctsem
+      "blkarray",  # lme4
+      "lineno",    # lme4
+      "nowidow",   # QDNAseq
+      "wrapfig",   # tramvs
+      "thumbpdf"   # lme4
+    ))
+EOF
 
-grandchildren=false
+
+## Should second-generation reverse depdendencies be checked?
+grandchildren=true
 
 ## ---------------------------------------------------------------------
 ## Phase 1
@@ -11,15 +29,29 @@ grandchildren=false
 revdep/run.R --add-children
 ${grandchildren} && revdep/run.R --add-grandchildren
 
+
+## Packages failing to install on the local system
+pkgs=()
+${grandchildren} && pkgs+=(
+  bnns             ## package 'OpenCL' fails to install
+  metR             ## package 'proj4' fails to install
+  TriDimRegression ## package 'rstantools' fails to install
+)	
+[ ${#pkgs[@]} -gt 0 ] && revdep/run.R --rm "${pkgs[@]}"
+
+
+
 ## Drop packages failing on CRAN (2026-10-10)
 pkgs=()
 ${grandchildren} && pkgs+=(
   arkdb              # via future.apply
+  BayesPET           # via future, furrr
+  datacaged
   delimtools         # via future, furrr
   dispositionEffect  # via future, furrr
-  BayesPET           # via future, furrr
   EpiForsk           # via future, furrr
   httpgd             # via future
+  tidymedia
 )
 [ ${#pkgs[@]} -gt 0 ] && revdep/run.R --rm "${pkgs[@]}"
 
@@ -28,6 +60,8 @@ pkgs=()
 ${grandchildren} && pkgs+=(
   dar     # via future, furrr
   pgxRpi  # via future, future.apply
+  scLANE
+  synergyfinder
 )
 [ ${#pkgs[@]} -gt 0 ] && revdep/run.R --rm "${pkgs[@]}"
 
@@ -40,8 +74,12 @@ ${grandchildren} && pkgs+=(
 ## Drop packages no longer on Bioconductor (2026-10-10)
 #revdep/run.R --rm ...
 
+
 ## Requires sequential processing due to clashes, e.g. port and cache
 pkgs_seq=()
+${grandchildren} && pkgs+=(
+  fiery
+)	
 [ ${#pkgs_seq[@]} -gt 0 ] && revdep/run.R --rm "${pkgs_seq[@]}"
 
 ## Too many threads
@@ -57,18 +95,10 @@ ${grandchildren} && pkgs_threads+=(
 ## Grandchildren only, same as above
 pkgs_cores=()
 ${grandchildren} && pkgs_cores+=(
-  ale        # via future, furrr
-  couplr     # via future, future.apply
-  EGAnet     # via future, future.apply
-  FracFixR   # via future, future.apply
-  fmeffects  # via future, furrr
-  gtfs2emis  # via future, furrr
-  gtfs2gps   # via future, furrr
-  simIDM     # via future, furrr
-  signeR     # via future, future.apply
-  teal       # via shinytest2
+  STARRS
 )
 [ ${#pkgs_cores[@]} -gt 0 ] && revdep/run.R --rm "${pkgs_cores[@]}"
+
 
 ## Run revdep check
 revdep/run.R
