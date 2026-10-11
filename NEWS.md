@@ -1,4 +1,4 @@
-# Version (development version)
+# Version 0.20.0 [2026-10-11]
 
 ## Significant Changes
 
