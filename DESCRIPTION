@@ -1,5 +1,5 @@
 Package: globals
-Version: 0.19.1-9022
+Version: 0.20.0
 Depends:
     R (>= 3.1.2)
 Imports:
@@ -10,7 +10,8 @@ Authors@R: c(
            email="henrikb@braju.com",
            comment = c(ORCID = "0000-0002-7579-5165")),
     person("Davis","Vaughan", role="ctb",
-           email="davis@posit.co"))
+           email="davis@posit.co",
+           comment = c(ORCID = "0000-0003-4777-038X")))
 Description: Identifies global ("unknown" or "free") objects in R expressions
     by code inspection using various strategies (ordered, liberal,
     conservative, or deep-first search). The objective of this package is to
