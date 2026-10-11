@@ -46,32 +46,31 @@ globalsByName <- function(names, envir = parent.frame(), mustExist = TRUE,
   idxs <- grep("^[.][.]([.]|[0-9]+)$", names)
   if (length(idxs) > 0L) {
     dotdotdots <- unique(names[idxs])
-    names <- names[-idxs]
-    idxs <- NULL
     if (debug) mdebugf("dotdotdots: %s", commaq(dotdotdots))
   } else {
     dotdotdots <- NULL
     if (debug) mdebug("dotdotdots: <none>")
   }
+  regular_idxs <- setdiff(seq_along(names), idxs)
 
   globals <- structure(vector("list", length = nnames), names = namesOrg)
   where <- structure(vector("list", length = nnames), names = namesOrg)
-  for (kk in seq_along(names)) {
+  for (kk in regular_idxs) {
     name <- names[kk]
     if (debug) mdebugf("locating #%d (%s)", kk, sQuote(name))
     env <- where(name, envir = envir, inherits = TRUE)
     if (debug) mdebugf("+ found in environment: %s", sQuote(envname(env)))
     if (!is.null(env)) {
-      where[[name]] <- env
+      where[[kk]] <- env
       value <- get(name, envir = env, inherits = FALSE)
       if (is.null(value)) {
-        globals[name] <- list(NULL)
+        globals[kk] <- list(NULL)
       } else {
-        globals[[name]] <- value
+        globals[[kk]] <- value
       }
     } else {
-      globals[name] <- list(NULL)
-      where[name] <- list(NULL)
+      globals[kk] <- list(NULL)
+      where[kk] <- list(NULL)
       if (mustExist) {
         stop(sprintf("Failed to locate global object in the relevant environments: %s", sQuote(name))) #nolint
       }
@@ -84,9 +83,10 @@ globalsByName <- function(names, envir = parent.frame(), mustExist = TRUE,
     if (has...) {
         where... <- where("...", envir = envir, inherits = TRUE)
     }
-    
-    for (name in dotdotdots) {
-      where[name] <- list(where...)
+
+    for (kk in idxs) {
+      name <- names[kk]
+      where[kk] <- list(where...)
 
       ## FIXME: If '...' in environment 'envir' specifies non-existing
       ## symbols, then we must not call list(...), list(..1), etc.,
@@ -98,9 +98,9 @@ globalsByName <- function(names, envir = parent.frame(), mustExist = TRUE,
       } else {
         ddd <- NA
       }
-    
+
       class(ddd) <- c("DotDotDotList", class(ddd))
-      globals[[name]] <- ddd
+      globals[[kk]] <- ddd
     }
   }
   stop_if_not(

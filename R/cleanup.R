@@ -1,3 +1,4 @@
+#' @rdname cleanup.Globals
 #' @export
 cleanup <- function(...) UseMethod("cleanup")
 
@@ -7,7 +8,9 @@ cleanup <- function(...) UseMethod("cleanup")
 #' @param drop A character vector specifying what type of globals to drop.
 #' @param \ldots Not used
 #'
-#' @aliases cleanup
+#' @return
+#' Return A Globals object.
+#'
 #' @export
 cleanup.Globals <- function(globals, drop = c("missing", "base-packages", "nativesymbolinfo"), ...) {
   where <- attr(globals, "where", exact = TRUE)

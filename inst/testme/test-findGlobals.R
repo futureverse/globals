@@ -509,4 +509,18 @@ options(oopts)
 message("*** findGlobals() - tweak with multi-method ... DONE")
 
 
+message("*** findGlobals() - all methods on NA(a, b) ...")
+
+expr <- quote(NA(a, b))
+
+for (method in c("conservative", "liberal", "ordered", "dfs")) {
+  message(sprintf("- method = %s", sQuote(method)))
+  globals <- findGlobals(expr, method = method)
+  print(globals)
+  assert_identical_sets(globals, c("a", "b"))
+}
+
+message("*** findGlobals() - all methods on NA(a, b) ... DONE")
+
+
 message("*** findGlobals() ... DONE")

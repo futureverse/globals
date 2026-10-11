@@ -23,9 +23,3 @@ remotes::install_github("futureverse/globals", ref="develop")
 This will install the package from source.  
 
 <!-- pkgdown-drop-below -->
-
-
-## Contributing
-
-To contribute to this package, please see [CONTRIBUTING.md](CONTRIBUTING.md).
-

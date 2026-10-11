@@ -1,8 +1,13 @@
 #' A representation of a set of globals
 #'
-#' @usage Globals(object, ...)
+#' @usage
+#' Globals(object, ...)
+#'
+#' as.Globals(x, ...)
 #'
 #' @param object A named list.
+#'
+#' @param x An object to be coerced to a \link{Globals} object.
 #'
 #' @param \ldots Not used.
 #'
@@ -74,6 +79,35 @@ as.Globals.list <- function(x, ...) {
   Globals(x, ...)
 }
 
+#' Print a Globals Object
+#'
+#' @param x A \link{Globals} object.
+#'
+#' @param \ldots Not used.
+#'
+#' @return (invisibly) the Globals object itself.
+#'
+#' @export
+print.Globals <- function(x, ...) {
+  ng <- length(x)
+  cat(sprintf("Globals [%d]\n", ng))
+  if (ng == 0) return(invisible(x))
+
+  types <- vapply(x, FUN.VALUE = NA_character_, FUN = function(value) {
+    if (is.null(value)) return("NULL")
+    class(value)[1]
+  })
+
+  where <- attr(x, "where", exact = TRUE)
+  locations <- vapply(where, FUN.VALUE = NA_character_, FUN = envname)
+  locations[is.na(locations)] <- "<not found>"
+
+  info <- sprintf(" - %s: <%s> [%s]", sQuote(names(x)), types, locations)
+  cat(info, sep = "\n")
+
+  invisible(x)
+}
+
 #' @export
 `names<-.Globals` <- function(x, value) {
   x <- NextMethod()
@@ -107,7 +141,8 @@ assign_Globals <- function(x, name, value) {
   stop_if_not(!is.null(where))
   
   ## Remove an element?
-  if (is.null(value)) {
+  remove <- is.null(value)
+  if (remove) {
     where[[name]] <- NULL
   } else {
     ## Value must be Globals object of length one
@@ -116,7 +151,7 @@ assign_Globals <- function(x, name, value) {
         stopf("Cannot assign Globals object of length different from one: %s",
              length(value))
       }
-      where[[name]] <- attr(value, "where", exact = TRUE)[[1]]
+      where[name] <- list(attr(value, "where", exact = TRUE)[[1]])
       value <- value[[1]]
     } else {
       where[[name]] <- environment_of(value)
@@ -128,7 +163,11 @@ assign_Globals <- function(x, name, value) {
   ## Avoid calling this function recursively
   class <- class(x)
   class(x) <- NULL
-  x[[name]] <- value
+  if (remove) {
+    x[[name]] <- NULL
+  } else {
+    x[name] <- list(value)
+  }
   class(x) <- class
 
   invisible(x)
@@ -166,7 +205,7 @@ assign_Globals <- function(x, name, value) {
     } else {
       x[[name]] <- value_kk
     }
-    x_where[[name]] <- where[[kk]]
+    x_where[name] <- list(where[[kk]])
   }
 
   stop_if_not(length(x_where) == length(x))
@@ -211,6 +250,11 @@ c.Globals <- function(x, ...) {
   for (kk in seq_along(args)) {
     g <- args[[kk]]
     name <- names(args)[kk]
+
+    ## Nothing to do? E.g. c(globals, NULL).
+    ## This is handled automatically in newer versions of R, but
+    ## not in older (such as R 3.6.3).
+    if (is.null(g)) next
 
     if (inherits(g, "Globals")) {
       w <- attr(g, "where", exact = TRUE)

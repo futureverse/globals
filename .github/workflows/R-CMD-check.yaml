@@ -50,7 +50,7 @@ jobs:
       - uses: r-lib/actions/setup-pandoc@v2
 
       - uses: r-lib/actions/setup-tinytex@v2
-      
+
       - name: Install system dependencies (Linux)
         if: runner.os == 'Linux'
         run: sudo apt-get install -y tidy
@@ -65,6 +65,13 @@ jobs:
         with:
           extra-packages: any::rcmdcheck
           needs: check
+
+      - name: Install additional LaTeX packages
+        if: runner.os != 'Windows'
+        run: |
+          tlmgr update --self
+          tlmgr install courier
+        shell: bash
 
       - name: Install itself (to build vignettes)
         run: |
@@ -84,9 +91,14 @@ jobs:
         shell: Rscript {0}
 
       - name: Check
+        env:
+          ## Skip PDF manual: avoids a texi2dvi/rerunfilecheck false-positive
+          ## "LaTeX errors" WARNING seen with TinyTeX on ubuntu-latest (devel);
+          ## see https://github.com/futureverse/globals/actions/runs/37864807138/job/113608885407
+          NO_MANUAL: ${{ (matrix.config.os == 'windows-latest') || (matrix.config.os == 'ubuntu-latest' && matrix.config.r == 'devel') }}
         run: |
           rcmdcheck::rcmdcheck(
-            args = c("--as-cran", if (.Platform$OS.type == "windows") "--no-manual"),
+            args = c("--as-cran", if (as.logical(Sys.getenv("NO_MANUAL"))) "--no-manual"),
             error_on = "note",
             check_dir = "check"
           )

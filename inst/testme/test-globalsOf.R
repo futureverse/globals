@@ -228,7 +228,7 @@ str(globals)
 assert_identical_sets(names(globals), c("{", "foo", "list"))
 where <- attr(globals, "where")
 stopifnot(length(where) == length(globals))
-if (!covr) stopifnot(
+if (!covr_testing) stopifnot(
   identical(where$`{`, baseenv()),
   identical(where$foo, globalenv()),
   identical(where$list, baseenv())
@@ -250,7 +250,7 @@ str(globals)
 assert_identical_sets(names(globals), c("{", "<-", "sample", "sample2", "sessionInfo", "sum", "sum2", "isNamespaceLoaded"))
 where <- attr(globals, "where")
 stopifnot(length(where) == length(globals))
-if (!covr) stopifnot(
+if (!covr_testing) stopifnot(
   identical(where$`<-`, baseenv()),
   identical(where$sample, baseenv()),
   identical(where$sample2, globalenv())
@@ -269,7 +269,7 @@ str(globals)
 assert_identical_sets(names(globals), c("sample2", "sum2"))
 where <- attr(globals, "where")
 stopifnot(length(where) == length(globals))
-if (!covr) stopifnot(identical(where$sample2, globalenv()))
+if (!covr_testing) stopifnot(identical(where$sample2, globalenv()))
 
 
 message("*** globalsOf() - exceptions ...")
@@ -379,6 +379,51 @@ stopifnot("local_var2" %in% names(globals_lt))
 globals_lf <- globalsOf(quote(f_locals), locals = FALSE, mustExist = FALSE)
 stopifnot(!"local_var2" %in% names(globals_lf))
 message("*** globalsOf() - locals = FALSE ... DONE")
+
+
+message("*** globalsOf() - ignore ...")
+
+a_ign <- 1
+b_ign <- 2
+globals_ign <- globalsOf(quote(a_ign + b_ign), ignore = "b_ign")
+stopifnot(
+  "a_ign" %in% names(globals_ign),
+  !("b_ign" %in% names(globals_ign))
+)
+
+## Ignored globals are not required to exist, regardless of 'mustExist'
+rm(list = "b_ign")
+globals_ign2 <- globalsOf(quote(a_ign + b_ign), ignore = "b_ign",
+                           mustExist = TRUE)
+stopifnot(
+  "a_ign" %in% names(globals_ign2),
+  !("b_ign" %in% names(globals_ign2))
+)
+
+## Ignoring everything referenced gives an empty Globals object
+globals_ign3 <- globalsOf(quote(a_ign + b_ign),
+                           ignore = c("a_ign", "b_ign", "+"),
+                           mustExist = TRUE)
+stopifnot(length(globals_ign3) == 0L)
+
+## Ignored globals are also dropped from recursive scans and are not
+## entered to search for additional globals
+outer_val_ign <- 100
+inner_helper_ign <- function(x) x + outer_val_ign
+outer_helper_ign <- function(y) inner_helper_ign(y)
+
+globals_ign_rec <- globalsOf(quote(outer_helper_ign(1)),
+                              recursive = TRUE, mustExist = FALSE,
+                              ignore = "inner_helper_ign")
+stopifnot(
+  "outer_helper_ign" %in% names(globals_ign_rec),
+  !("inner_helper_ign" %in% names(globals_ign_rec)),
+  !("outer_val_ign" %in% names(globals_ign_rec))
+)
+
+rm(list = c("a_ign", "outer_val_ign", "inner_helper_ign", "outer_helper_ign"))
+
+message("*** globalsOf() - ignore ... DONE")
 
 
 rm(list = c("a_dbg", "outer_val", "inner_helper", "outer_helper",

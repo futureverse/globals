@@ -1,3 +1,40 @@
+# Version 0.20.0 [2026-10-11]
+
+## Significant Changes
+
+ * Now `packagesOf()` identifies the package of an S4 generic function.
+
+ * Now `packagesOf()` identifies the package of an S4 object.
+
+## New Features
+
+ * `globalsOf()` gained argument `ignore` for dropping specified
+   globals by name. Ignored globals are dropped before they are
+   searched for and do not have to exist.
+
+ * Added `print()` for Globals object.
+
+## Bug Fixes
+
+ * `packagesOf()` did not identify packages of S4 generic functions.
+
+ * `packagesOf()` did not identify packages of S4 objects.
+
+ * `globalsByName(names)` would silently drop values and locations of
+   any duplicated name, e.g. `globalsByName(c("a", "b", "a"))` would
+   give `NULL` for the second `"a"`.
+
+ * Sub-assigning a missing global to a Globals object, e.g.
+   `x["a"] <- globalsByName("a", mustExist = FALSE)`, produced
+   an error on `length(x_where) == length(x)` not being TRUE.
+
+ * `findGlobals(..., method = "dfs")` failed for some corner-case
+   calls, e.g. `findGlobals(quote(NA(a, b)), method = "dfs")`.
+
+ * Assigning a Globals object could either drop or corrupt the target
+   global if the assigned value comprised `NULL`.
+
+
 # Version 0.19.1 [2026-03-12]
 
 ## Bug Fixes

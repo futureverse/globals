@@ -8,12 +8,79 @@ Run `revdepcheck::revdep_details(, "activAnalyzer")` for more info
 
 ## In both
 
-*   checking DESCRIPTION meta-information ... NOTE
+*   checking whether package ‘activAnalyzer’ can be installed ... ERROR
      ```
-       Missing dependency on R >= 4.1.0 because package code uses the pipe
-       |> or function shorthand \(...) syntax added in R 4.1.0.
-       File(s) using such syntax:
-         ‘compute_accumulation_metrics.R’
+     Installation failed.
+     See ‘/scratch/hb/revdepcheck.extras/globals/revdep/checks/activAnalyzer/new/activAnalyzer.Rcheck/00install.out’ for details.
+     ```
+
+## Installation
+
+### Devel
+
+```
+* installing *source* package ‘activAnalyzer’ ...
+** this is package ‘activAnalyzer’ version ‘2.1.2’
+** package ‘activAnalyzer’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+ERROR: hard-coded installation path: please report to the package maintainer and use ‘--no-staged-install’
+* removing ‘/scratch/hb/revdepcheck.extras/globals/revdep/checks/activAnalyzer/new/activAnalyzer.Rcheck/activAnalyzer’
+
+
+```
+### CRAN
+
+```
+* installing *source* package ‘activAnalyzer’ ...
+** this is package ‘activAnalyzer’ version ‘2.1.2’
+** package ‘activAnalyzer’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+ERROR: hard-coded installation path: please report to the package maintainer and use ‘--no-staged-install’
+* removing ‘/scratch/hb/revdepcheck.extras/globals/revdep/checks/activAnalyzer/old/activAnalyzer.Rcheck/activAnalyzer’
+
+
+```
+# additive (1.0.1)
+
+* GitHub: <https://github.com/hsbadr/additive>
+* Email: <mailto:badr@jhu.edu>
+* GitHub mirror: <https://github.com/cran/additive>
+
+Run `revdepcheck::revdep_details(, "additive")` for more info
+
+## In both
+
+*   checking S3 generic/method consistency ... NOTE
+     ```
+     Mismatches for apparent methods not registered:
+     check_args:
+       function(object, call)
+     check_args.additive:
+       function(object)
+     See section ‘Registering S3 methods’ in the ‘Writing R Extensions’
+     manual.
      ```
 
 # adestr (1.0.0)
@@ -37,6 +104,22 @@ Run `revdepcheck::revdep_details(, "adestr")` for more info
          ‘plot.R’ ‘print.R’ ‘reference_implementation.R’
      ```
 
+# altdoc (0.7.3)
+
+* GitHub: <https://github.com/etiennebacher/altdoc>
+* Email: <mailto:etienne.bacher@protonmail.com>
+* GitHub mirror: <https://github.com/cran/altdoc>
+
+Run `revdepcheck::revdep_details(, "altdoc")` for more info
+
+## In both
+
+*   checking for non-standard things in the check directory ... NOTE
+     ```
+     Found the following files/directories:
+       ‘testpkg1505fed3a10d5’
+     ```
+
 # autostats (0.4.2)
 
 * GitHub: <https://github.com/Harrison4192/autostats>
@@ -54,24 +137,6 @@ Run `revdepcheck::revdep_details(, "autostats")` for more info
        All declared Imports should be used.
      ```
 
-# baseballr (1.6.0)
-
-* GitHub: <https://github.com/BillPetti/baseballr>
-* Email: <mailto:saiem.gilani@gmail.com>
-* GitHub mirror: <https://github.com/cran/baseballr>
-
-Run `revdepcheck::revdep_details(, "baseballr")` for more info
-
-## In both
-
-*   checking DESCRIPTION meta-information ... NOTE
-     ```
-       Missing dependency on R >= 4.1.0 because package code uses the pipe
-       |> or function shorthand \(...) syntax added in R 4.1.0.
-       File(s) using such syntax:
-         ‘chadwick_installation.R’
-     ```
-
 # baskexact (1.0.1)
 
 * GitHub: <https://github.com/lbau7/baskexact>
@@ -86,6 +151,73 @@ Run `revdepcheck::revdep_details(, "baskexact")` for more info
      ```
      Namespace in Imports field not imported from: ‘ggplot2’
        All declared Imports should be used.
+     ```
+
+# batchtools (0.9.18)
+
+* GitHub: <https://github.com/mlr-org/batchtools>
+* Email: <mailto:michellang@gmail.com>
+* GitHub mirror: <https://github.com/cran/batchtools>
+
+Run `revdepcheck::revdep_details(, "batchtools")` for more info
+
+## In both
+
+*   checking dependencies in R code ... NOTE
+     ```
+     ...
+     dev3.wynton.ucsf.edu:pid1442689.R: Unable to initialize verbs NIC /sys/class/infiniband/mlx5_0 (unit 0:0)
+     dev3.wynton.ucsf.edu:pid1442689: PSM3 can't open nic unit: 0 (err=23)
+     dev3.wynton.ucsf.edu:pid1442689.R: Unable to create send CQ of size 5080 on mlx5_0: Cannot allocate memory
+     dev3.wynton.ucsf.edu:pid1442689.R: Unable to initialize verbs NIC /sys/class/infiniband/mlx5_0 (unit 0:0)
+     --------------------------------------------------------------------------
+     No OpenFabrics connection schemes reported that they were able to be
+     used on a specific port.  As such, the openib BTL (OpenFabrics
+     support) will be disabled for this port.
+     
+       Local host:           dev3
+       Local device:         mlx5_0
+       Local port:           1
+       CPCs attempted:       rdmacm, udcm
+     --------------------------------------------------------------------------
+     dev3.wynton.ucsf.edu:pid1442689: PSM3 can't open nic unit: 0 (err=23)
+     dev3.wynton.ucsf.edu:pid1442689.R: Unable to create send CQ of size 5080 on mlx5_0: Cannot allocate memory
+     dev3.wynton.ucsf.edu:pid1442689.R: Unable to initialize verbs NIC /sys/class/infiniband/mlx5_0 (unit 0:0)
+     --------------------------------------------------------------------------
+     Open MPI failed an OFI Libfabric library call (fi_endpoint).  This is highly
+     unusual; your job may behave unpredictably (and/or abort) after this.
+     
+       Local host: dev3
+       Location: mtl_ofi_component.c:513
+       Error: Invalid argument (22)
+     --------------------------------------------------------------------------
+     ```
+
+*   checking for detritus in the temp directory ... NOTE
+     ```
+     Found the following files/directories:
+       ‘ompi.dev3.34002’
+     ```
+
+# bayesian (1.0.1)
+
+* GitHub: <https://github.com/hsbadr/bayesian>
+* Email: <mailto:badr@jhu.edu>
+* GitHub mirror: <https://github.com/cran/bayesian>
+
+Run `revdepcheck::revdep_details(, "bayesian")` for more info
+
+## In both
+
+*   checking S3 generic/method consistency ... NOTE
+     ```
+     Mismatches for apparent methods not registered:
+     check_args:
+       function(object, call)
+     check_args.bayesian:
+       function(object)
+     See section ‘Registering S3 methods’ in the ‘Writing R Extensions’
+     manual.
      ```
 
 # BPrinStratTTE (0.0.7)
@@ -124,7 +256,7 @@ Run `revdepcheck::revdep_details(, "card")` for more info
          ‘cosinor-constructor.R’
      ```
 
-# ceRNAnetsim (1.22.0)
+# ceRNAnetsim (1.24.0)
 
 * GitHub: <https://github.com/selcenari/ceRNAnetsim>
 * Email: <mailto:selcenarii@gmail.com>
@@ -137,33 +269,32 @@ Run `revdepcheck::revdep_details(, "ceRNAnetsim")` for more info
      ```
      find_node_perturbation: no visible binding for global variable
        ‘perturbation_efficiency’
+       (/scratch/hb/revdepcheck.extras/globals/revdep/checks/ceRNAnetsim/new/ceRNAnetsim.Rcheck/00_pkg_src/ceRNAnetsim/R/find_node_perturbation.R:80-85)
      find_node_perturbation: no visible binding for global variable
        ‘perturbed_count’
+       (/scratch/hb/revdepcheck.extras/globals/revdep/checks/ceRNAnetsim/new/ceRNAnetsim.Rcheck/00_pkg_src/ceRNAnetsim/R/find_node_perturbation.R:80-85)
      simulate: no visible binding for global variable ‘avg_count_current’
+       (/scratch/hb/revdepcheck.extras/globals/revdep/checks/ceRNAnetsim/new/ceRNAnetsim.Rcheck/00_pkg_src/ceRNAnetsim/R/simulate.R:53-78)
      simulate: no visible binding for global variable ‘avg_count_pre’
+       (/scratch/hb/revdepcheck.extras/globals/revdep/checks/ceRNAnetsim/new/ceRNAnetsim.Rcheck/00_pkg_src/ceRNAnetsim/R/simulate.R:53-78)
+     simulate: no visible binding for global variable ‘avg_count_current’
+       (/scratch/hb/revdepcheck.extras/globals/revdep/checks/ceRNAnetsim/new/ceRNAnetsim.Rcheck/00_pkg_src/ceRNAnetsim/R/simulate.R:80)
+     simulate: no visible binding for global variable ‘avg_count_pre’
+       (/scratch/hb/revdepcheck.extras/globals/revdep/checks/ceRNAnetsim/new/ceRNAnetsim.Rcheck/00_pkg_src/ceRNAnetsim/R/simulate.R:80)
+     simulate: no visible binding for global variable ‘avg_count_current’
+       (/scratch/hb/revdepcheck.extras/globals/revdep/checks/ceRNAnetsim/new/ceRNAnetsim.Rcheck/00_pkg_src/ceRNAnetsim/R/simulate.R:86-110)
+     simulate: no visible binding for global variable ‘avg_count_pre’
+       (/scratch/hb/revdepcheck.extras/globals/revdep/checks/ceRNAnetsim/new/ceRNAnetsim.Rcheck/00_pkg_src/ceRNAnetsim/R/simulate.R:86-110)
+     simulate: no visible binding for global variable ‘avg_count_current’
+       (/scratch/hb/revdepcheck.extras/globals/revdep/checks/ceRNAnetsim/new/ceRNAnetsim.Rcheck/00_pkg_src/ceRNAnetsim/R/simulate.R:112)
+     simulate: no visible binding for global variable ‘avg_count_pre’
+       (/scratch/hb/revdepcheck.extras/globals/revdep/checks/ceRNAnetsim/new/ceRNAnetsim.Rcheck/00_pkg_src/ceRNAnetsim/R/simulate.R:112)
      Undefined global functions or variables:
        avg_count_current avg_count_pre perturbation_efficiency
        perturbed_count
      ```
 
-# Certara.RsNLME.ModelExecutor (3.0.2)
-
-* Email: <mailto:james.craig@certara.com>
-* GitHub mirror: <https://github.com/cran/Certara.RsNLME.ModelExecutor>
-
-Run `revdepcheck::revdep_details(, "Certara.RsNLME.ModelExecutor")` for more info
-
-## In both
-
-*   checking R code for possible problems ... NOTE
-     ```
-     .run_shiny_RsNLME : server: no visible global function definition for
-       ‘addTablesToColumnMapping’
-     Undefined global functions or variables:
-       addTablesToColumnMapping
-     ```
-
-# chevreulShiny (1.2.0)
+# chevreulShiny (1.4.0)
 
 * GitHub: <https://github.com/cobriniklab/chevreulShiny>
 * Email: <mailto:kevin.stachelek@gmail.com>
@@ -177,7 +308,7 @@ Run `revdepcheck::revdep_details(, "chevreulShiny")` for more info
      License stub is invalid DCF.
      ```
 
-# ChromSCape (1.20.0)
+# ChromSCape (1.22.0)
 
 * GitHub: <https://github.com/vallotlab/ChromSCape>
 * Email: <mailto:pacome.pr@gmail.com>
@@ -185,11 +316,6 @@ Run `revdepcheck::revdep_details(, "chevreulShiny")` for more info
 Run `revdepcheck::revdep_details(, "ChromSCape")` for more info
 
 ## In both
-
-*   checking dependencies in R code ... WARNING
-     ```
-     'loadNamespace' or 'requireNamespace' call not declared from: ‘flexdashboard’
-     ```
 
 *   checking for hidden files and directories ... NOTE
      ```
@@ -202,23 +328,23 @@ Run `revdepcheck::revdep_details(, "ChromSCape")` for more info
 *   checking R code for possible problems ... NOTE
      ```
      ...
-       ‘genes’
-     plot_percent_active_feature_scExp: no visible binding for global
-       variable ‘group’
-     plot_percent_active_feature_scExp: no visible binding for global
-       variable ‘percent_active’
-     plot_pie_most_contributing_chr: no visible binding for global variable
-       ‘absolute_value’
-     plot_reduced_dim_scExp: no visible binding for global variable ‘V1’
-     plot_reduced_dim_scExp: no visible binding for global variable ‘V2’
-     plot_reduced_dim_scExp: no visible binding for global variable
-       ‘cluster’
      plot_top_TF_scExp: no visible binding for global variable ‘TF’
+       (/scratch/hb/revdepcheck.extras/globals/revdep/checks/ChromSCape/new/ChromSCape.Rcheck/00_pkg_src/ChromSCape/R/plotting_functions.R:1212-1215)
+     plot_top_TF_scExp: no visible binding for global variable ‘TF’
+       (/scratch/hb/revdepcheck.extras/globals/revdep/checks/ChromSCape/new/ChromSCape.Rcheck/00_pkg_src/ChromSCape/R/plotting_functions.R:1216-1222)
+     plot_top_TF_scExp: no visible binding for global variable ‘TF’
+       (/scratch/hb/revdepcheck.extras/globals/revdep/checks/ChromSCape/new/ChromSCape.Rcheck/00_pkg_src/ChromSCape/R/plotting_functions.R:1225-1228)
+     plot_top_TF_scExp: no visible binding for global variable ‘TF’
+       (/scratch/hb/revdepcheck.extras/globals/revdep/checks/ChromSCape/new/ChromSCape.Rcheck/00_pkg_src/ChromSCape/R/plotting_functions.R:1229-1235)
      rebin_helper: no visible binding for global variable ‘new_row’
+       (/scratch/hb/revdepcheck.extras/globals/revdep/checks/ChromSCape/new/ChromSCape.Rcheck/00_pkg_src/ChromSCape/R/preprocessing_filtering_reduction.R:869-870)
      rebin_helper: no visible binding for global variable ‘origin_value’
+       (/scratch/hb/revdepcheck.extras/globals/revdep/checks/ChromSCape/new/ChromSCape.Rcheck/00_pkg_src/ChromSCape/R/preprocessing_filtering_reduction.R:869-870)
      rebin_matrix: no visible binding for global variable ‘group’
+       (/scratch/hb/revdepcheck.extras/globals/revdep/checks/ChromSCape/new/ChromSCape.Rcheck/00_pkg_src/ChromSCape/R/preprocessing_filtering_reduction.R:1007)
      subset_bam_call_peaks: no visible binding for global variable
        ‘merged_bam’
+       (/scratch/hb/revdepcheck.extras/globals/revdep/checks/ChromSCape/new/ChromSCape.Rcheck/00_pkg_src/ChromSCape/R/peak_calling.R:118-119)
      Undefined global functions or variables:
        CheA3_TF_nTargets Component Fri_cyto Gain_or_Loss Gene TF V1 V2
        absolute_value cluster clusterConsensus cytoBand files_dir_list genes
@@ -229,7 +355,7 @@ Run `revdepcheck::revdep_details(, "ChromSCape")` for more info
      to your NAMESPACE file.
      ```
 
-# clustermq (0.9.9)
+# clustermq (0.10.1)
 
 * GitHub: <https://github.com/mschubert/clustermq>
 * Email: <mailto:mschu.dev@gmail.com>
@@ -264,39 +390,48 @@ Run `revdepcheck::revdep_details(, "clustermq")` for more info
        All declared Imports should be used.
      ```
 
-# ClustIRR (1.8.0)
+# condvis2 (0.1.2)
 
-* GitHub: <https://github.com/snaketron/ClustIRR>
-* Email: <mailto:simokitanovski@gmail.com>
+* GitHub: <https://github.com/cbhurley/condvis2>
+* Email: <mailto:catherine.hurley@mu.ie>
+* GitHub mirror: <https://github.com/cran/condvis2>
 
-Run `revdepcheck::revdep_details(, "ClustIRR")` for more info
+Run `revdepcheck::revdep_details(, "condvis2")` for more info
 
 ## In both
 
-*   checking DESCRIPTION meta-information ... NOTE
+*   checking S3 generic/method consistency ... NOTE
      ```
-     Package listed in more than one of Depends, Imports, Suggests, Enhances:
-       ‘ggplot2’
-     A package should be listed in only one of these fields.
+     Apparent methods for exported generics not registered:
+       pathInterpolate.character
+     See section ‘Registering S3 methods’ in the ‘Writing R Extensions’
+     manual.
      ```
 
-*   checking R code for possible problems ... NOTE
+# conformalInference.fd (1.1.1)
+
+* GitHub: <https://github.com/ryantibs/conformal>
+* Email: <mailto:paolo.vergottini@gmail.com>
+* GitHub mirror: <https://github.com/cran/conformalInference.fd>
+
+Run `revdepcheck::revdep_details(, "conformalInference.fd")` for more info
+
+## In both
+
+*   checking S3 generic/method consistency ... NOTE
      ```
-     get_ag_gene_hits: no visible binding for global variable ‘cells’
-     get_ag_gene_hits: no visible binding for global variable ‘clones’
-     get_ag_gene_hits: no visible binding for global variable ‘community’
-     get_ag_gene_hits: no visible binding for global variable ‘ag’
-     get_ag_species_hits: no visible binding for global variable ‘cells’
-     get_ag_species_hits: no visible binding for global variable ‘clones’
-     get_ag_species_hits: no visible binding for global variable ‘community’
-     get_ag_species_hits: no visible binding for global variable ‘ag’
-     get_beta_violin: no visible binding for global variable ‘spec’
-     get_beta_violin: no visible binding for global variable ‘size’
-     get_honeycombs: no visible binding for global variable ‘x_adj’
-     get_honeycombs: no visible binding for global variable ‘y_adj’
-     get_honeycombs: no visible binding for global variable ‘..count..’
-     Undefined global functions or variables:
-       ..count.. ag cells clones community size spec x_adj y_adj
+     Mismatches for apparent methods not registered:
+     max:
+       function(..., na.rm)
+     max.lol:
+       function(l)
+     
+     min:
+       function(..., na.rm)
+     min.lol:
+       function(l)
+     See section ‘Registering S3 methods’ in the ‘Writing R Extensions’
+     manual.
      ```
 
 # ConfusionTableR (1.0.4)
@@ -338,7 +473,22 @@ Run `revdepcheck::revdep_details(, "corporaexplorer")` for more info
        All declared Imports should be used.
      ```
 
-# cSEM (0.6.1)
+# CrcBiomeScreen (1.0.0)
+
+* GitHub: <https://github.com/omicsForestry/CrcBiomeScreen>
+* Email: <mailto:ngzh5554@leeds.ac.uk>
+
+Run `revdepcheck::revdep_details(, "CrcBiomeScreen")` for more info
+
+## In both
+
+*   checking for non-standard things in the check directory ... NOTE
+     ```
+     Found the following files/directories:
+       ‘roc.curve.rf.RF_TSS_toydata_Validation.pdf’
+     ```
+
+# cSEM (0.7.1)
 
 * GitHub: <https://github.com/FloSchuberth/cSEM>
 * Email: <mailto:f.schuberth@utwente.nl>
@@ -354,91 +504,84 @@ Run `revdepcheck::revdep_details(, "cSEM")` for more info
        All declared Imports should be used.
      ```
 
-# ctsem (3.10.6)
+# datacaged (0.2.1)
 
-* GitHub: <https://github.com/cdriveraus/ctsem>
-* Email: <mailto:charles.driver2@uzh.ch>
-* GitHub mirror: <https://github.com/cran/ctsem>
+* GitHub: <https://github.com/gecomt/datacaged>
+* Email: <mailto:alexsandro.prado@ufersa.edu.br>
+* GitHub mirror: <https://github.com/cran/datacaged>
 
-Run `revdepcheck::revdep_details(, "ctsem")` for more info
-
-## In both
-
-*   checking whether package ‘ctsem’ can be installed ... WARNING
-     ```
-     Found the following significant warnings:
-       Warning: namespace ‘colorspace’ is not available and has been replaced
-     See ‘/scratch/henrik/revdep/globals/checks/ctsem/new/ctsem.Rcheck/00install.out’ for details.
-     ```
-
-*   checking re-building of vignette outputs ... WARNING
-     ```
-     ...
-       ...
-     --- re-building ‘hierarchicalmanual.rnw’ using knitr_notangle
-     Warning in texi2dvi(file = file, pdf = TRUE, clean = clean, quiet = quiet,  :
-       texi2dvi script/program not available, using emulation
-     Error: processing vignette 'hierarchicalmanual.rnw' failed with diagnostics:
-     unable to run pdflatex on 'hierarchicalmanual.tex'
-     LaTeX errors:
-     ! LaTeX Error: File `apacite.sty' not found.
-     
-     Type X to quit or <RETURN> to proceed,
-     or enter new name. (Default extension: sty)
-     
-     ! Emergency stop.
-     <read *> 
-              
-     l.62 \bibliographystyle
-                            {apacite}     % Set bibliography style^^M
-     !  ==> Fatal error occurred, no output PDF file produced!
-     --- failed re-building ‘hierarchicalmanual.rnw’
-     
-     SUMMARY: processing the following file failed:
-       ‘hierarchicalmanual.rnw’
-     
-     Error: Vignette re-building failed.
-     Execution halted
-     ```
-
-# cuda.ml (0.3.2)
-
-* GitHub: <https://github.com/mlverse/cuda.ml>
-* Email: <mailto:daniel@rstudio.com>
-* GitHub mirror: <https://github.com/cran/cuda.ml>
-
-Run `revdepcheck::revdep_details(, "cuda.ml")` for more info
+Run `revdepcheck::revdep_details(, "datacaged")` for more info
 
 ## In both
 
-*   checking Rd files ... NOTE
+*   checking tests ...
      ```
      ...
-            | ^
-     checkRd: (-1) cuda_ml_tsvd.Rd:40: Lost braces; missing escapes or markup?
-         40 | {"off", "critical", "error", "warn", "info", "debug", "trace"}.
-            | ^
-     checkRd: (-1) cuda_ml_umap.Rd:51: Lost braces; missing escapes or markup?
-         51 | one of {"spectral", "random"}. Default: "spectral".}
-            |        ^
-     checkRd: (-1) cuda_ml_umap.Rd:91: Lost braces; missing escapes or markup?
-         91 | Must be one of {"categorical", "euclidean"}. Default: "categorical".}
-            |                ^
-     checkRd: (-1) cuda_ml_umap.Rd:109: Lost braces; missing escapes or markup?
-        109 | {"off", "critical", "error", "warn", "info", "debug", "trace"}.
-            | ^
-     checkRd: (-1) has_cuML.Rd:5: Lost braces; missing escapes or markup?
-          5 | \title{Determine whether {cuda.ml} was linked to a valid version of the RAPIDS cuML
-            |                          ^
-     checkRd: (-1) has_cuML.Rd:15: Lost braces; missing escapes or markup?
-         15 | Determine whether {cuda.ml} was linked to a valid version of the RAPIDS cuML
-            |                   ^
-     checkRd: (-1) has_cuML.Rd:11: Lost braces; missing escapes or markup?
-         11 | A logical value indicating whether the current installation {cuda.ml}
-            |                                                             ^
-     checkRd: (-1) predict.cuda_ml_rand_forest.Rd:30: Lost braces; missing escapes or markup?
-         30 | {"off", "critical", "error", "warn", "info", "debug", "trace"}.
-            | ^
+        3. └─datacaged::caged_load(...)
+        4.   └─datacaged::caged_info(db_path) at datacaged/R/database.R:418:3
+        5.     └─datacaged::caged_connect(db_path, read_only = TRUE, quiet = TRUE) at datacaged/R/database.R:205:3
+        6.       └─duckdb::duckdb(dbdir = db_path, read_only = read_only) at datacaged/R/database.R:34:3
+        7.         └─duckdb:::warn_instance_settings_ignored(...)
+        8.           └─rlang::abort(...)
+       ── Error ('test-pipelines.R:216:3'): caged_adjustments_load() cria banco com tabela caged_ajustes ──
+       Error in `duckdb::duckdb(dbdir = db_path, read_only = read_only)`: `read_only` can't be applied to the database instance for `/scratch/hb/RtmpN9Kht7/working_dir/Rtmpvvoan6/caged_adj_mock_14929f2b90cee2.duckdb`, which already exists.
+       * These settings take effect only when the instance is created.
+       * Release it with `duckdb_shutdown()` first, or pass them to the `duckdb()` call that creates it.
+       Backtrace:
+           ▆
+        1. ├─base::suppressMessages(...) at test-pipelines.R:216:3
+        2. │ └─base::withCallingHandlers(...)
+        3. └─datacaged::caged_adjustments_load(...)
+        4.   └─datacaged::caged_info(db_path) at datacaged/R/adjustments.R:176:3
+        5.     └─datacaged::caged_connect(db_path, read_only = TRUE, quiet = TRUE) at datacaged/R/database.R:205:3
+        6.       └─duckdb::duckdb(dbdir = db_path, read_only = read_only) at datacaged/R/database.R:34:3
+        7.         └─duckdb:::warn_instance_settings_ignored(...)
+        8.           └─rlang::abort(...)
+       
+       [ FAIL 2 | WARN 0 | SKIP 5 | PASS 187 ]
+       Error:
+       ! Test failures.
+       Execution halted
+     ```
+
+# demulticoder (0.1.2)
+
+* GitHub: <https://github.com/grunwaldlab/demulticoder>
+* Email: <mailto:sudermam@oregonstate.edu>
+* GitHub mirror: <https://github.com/cran/demulticoder>
+
+Run `revdepcheck::revdep_details(, "demulticoder")` for more info
+
+## In both
+
+*   checking tests ...
+     ```
+     ...
+           ▆
+        1. └─demulticoder::cut_trim(...) at test_cut_trim.R:5:5
+        2.   └─demulticoder:::run_cutadapt(...) at demulticoder/R/cut_primers_trim_reads.R:540:9
+        3.     ├─base::tryCatch(...) at demulticoder/R/cut_primers_trim_reads.R:30:3
+        4.     │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+        5.     │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+        6.     │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+        7.     └─base::system2(cutadapt, args = "--version", stdout = TRUE, stderr = TRUE) at demulticoder/R/cut_primers_trim_reads.R:31:5
+       ── Error ('test_make_matrix.R:5:5'): make_asv_abund_matrix works correctly ─────
+       <cmdError/error/condition>
+       Error in `system2(cutadapt, args = "--version", stdout = TRUE, stderr = TRUE)`: error in running command
+       Backtrace:
+           ▆
+        1. └─demulticoder::cut_trim(...) at test_make_matrix.R:5:5
+        2.   └─demulticoder:::run_cutadapt(...) at demulticoder/R/cut_primers_trim_reads.R:540:9
+        3.     ├─base::tryCatch(...) at demulticoder/R/cut_primers_trim_reads.R:30:3
+        4.     │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+        5.     │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+        6.     │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+        7.     └─base::system2(cutadapt, args = "--version", stdout = TRUE, stderr = TRUE) at demulticoder/R/cut_primers_trim_reads.R:31:5
+       
+       [ FAIL 4 | WARN 0 | SKIP 0 | PASS 2 ]
+       Error:
+       ! Test failures.
+       Execution halted
      ```
 
 # designer (0.3.0)
@@ -459,42 +602,6 @@ Run `revdepcheck::revdep_details(, "designer")` for more info
          ‘mod_template_srv.R’
      ```
 
-# disk.frame (0.8.3)
-
-* GitHub: <https://github.com/DiskFrame/disk.frame>
-* Email: <mailto:zhuojia.dai@gmail.com>
-* GitHub mirror: <https://github.com/cran/disk.frame>
-
-Run `revdepcheck::revdep_details(, "disk.frame")` for more info
-
-## In both
-
-*   checking Rd files ... NOTE
-     ```
-     checkRd: (-1) csv_to_disk.frame.Rd:56: Lost braces; missing escapes or markup?
-         56 | strings, and you are encouraged to use {fasttime} to convert the strings to
-            |                                        ^
-     checkRd: (-1) purrr_as_mapper.Rd:10: Lost braces; missing escapes or markup?
-         10 | \item{.f}{a normal function or purrr syntax function i.e. `~{ ...code...}`}
-            |                                                             ^
-     ```
-
-# EFAtools (0.6.1)
-
-* GitHub: <https://github.com/mdsteiner/EFAtools>
-* Email: <mailto:markus.d.steiner@gmail.com>
-* GitHub mirror: <https://github.com/cran/EFAtools>
-
-Run `revdepcheck::revdep_details(, "EFAtools")` for more info
-
-## In both
-
-*   checking dependencies in R code ... NOTE
-     ```
-     Namespace in Imports field not imported from: ‘progress’
-       All declared Imports should be used.
-     ```
-
 # envi (1.0.1)
 
 * GitHub: <https://github.com/lance-waller-lab/envi>
@@ -509,45 +616,10 @@ Run `revdepcheck::revdep_details(, "envi")` for more info
      ```
      Found the following significant warnings:
        Warning: no DISPLAY variable so Tk is not available
-     See ‘/scratch/henrik/revdep/globals/checks/envi/new/envi.Rcheck/00install.out’ for details.
+     See ‘/scratch/hb/revdepcheck.extras/globals/revdep/checks/envi/new/envi.Rcheck/00install.out’ for details.
      ```
 
-# evalITR (1.0.0)
-
-* GitHub: <https://github.com/MichaelLLi/evalITR>
-* Email: <mailto:mili@hbs.edu>
-* GitHub mirror: <https://github.com/cran/evalITR>
-
-Run `revdepcheck::revdep_details(, "evalITR")` for more info
-
-## In both
-
-*   checking dependencies in R code ... NOTE
-     ```
-     Namespaces in Imports field not imported from:
-       ‘forcats’ ‘rqPen’ ‘utils’
-       All declared Imports should be used.
-     ```
-
-# fastRhockey (0.4.0)
-
-* GitHub: <https://github.com/sportsdataverse/fastRhockey>
-* Email: <mailto:saiem.gilani@gmail.com>
-* GitHub mirror: <https://github.com/cran/fastRhockey>
-
-Run `revdepcheck::revdep_details(, "fastRhockey")` for more info
-
-## In both
-
-*   checking Rd files ... NOTE
-     ```
-     checkRd: (-1) update_nhl_db.Rd:51-53: Lost braces in \itemize; meant \describe ?
-     checkRd: (-1) update_nhl_db.Rd:54-57: Lost braces in \itemize; meant \describe ?
-     checkRd: (-1) update_phf_db.Rd:51-53: Lost braces in \itemize; meant \describe ?
-     checkRd: (-1) update_phf_db.Rd:54-57: Lost braces in \itemize; meant \describe ?
-     ```
-
-# flowGraph (1.18.0)
+# flowGraph (1.20.0)
 
 * GitHub: <https://github.com/aya49/flowGraph>
 * Email: <mailto:aya43@sfu.ca>
@@ -559,8 +631,11 @@ Run `revdepcheck::revdep_details(, "flowGraph")` for more info
 *   checking R code for possible problems ... NOTE
      ```
      get_child: no visible binding for global variable ‘no_cores’
+       (/scratch/hb/revdepcheck.extras/globals/revdep/checks/flowGraph/new/flowGraph.Rcheck/00_pkg_src/flowGraph/R/00_flowGraphSubset_constructor.R:181-187)
      get_paren: no visible binding for global variable ‘no_cores’
+       (/scratch/hb/revdepcheck.extras/globals/revdep/checks/flowGraph/new/flowGraph.Rcheck/00_pkg_src/flowGraph/R/00_flowGraphSubset_constructor.R:222-229)
      ms_psig: no visible binding for global variable ‘meta’
+       (/scratch/hb/revdepcheck.extras/globals/revdep/checks/flowGraph/new/flowGraph.Rcheck/00_pkg_src/flowGraph/R/00_flowGraphSubset_constructor.R:296)
      Undefined global functions or variables:
        meta no_cores
      ```
@@ -575,21 +650,26 @@ Run `revdepcheck::revdep_details(, "flowGraph")` for more info
             |     ^
      ```
 
-# GeDS (0.3.3)
+*   checking for non-standard things in the check directory ... NOTE
+     ```
+     Found the following files/directories:
+       ‘temp’ ‘tmp’
+     ```
 
-* GitHub: <https://github.com/emilioluissaenzguillen/GeDS>
-* Email: <mailto:Emilio.Saenz-Guillen@citystgeorges.ac.uk>
-* GitHub mirror: <https://github.com/cran/GeDS>
+# future.batchtools (0.22.0)
 
-Run `revdepcheck::revdep_details(, "GeDS")` for more info
+* GitHub: <https://github.com/futureverse/future.batchtools>
+* Email: <mailto:henrikb@braju.com>
+* GitHub mirror: <https://github.com/cran/future.batchtools>
+
+Run `revdepcheck::revdep_details(, "future.batchtools")` for more info
 
 ## In both
 
-*   checking whether package ‘GeDS’ can be installed ... WARNING
+*   checking for non-standard things in the check directory ... NOTE
      ```
-     Found the following significant warnings:
-       Warning: no DISPLAY variable so Tk is not available
-     See ‘/scratch/henrik/revdep/globals/checks/GeDS/new/GeDS.Rcheck/00install.out’ for details.
+     Found the following files/directories:
+       ‘.future-set-during-startup’
      ```
 
 # geospark (0.3.1)
@@ -634,36 +714,6 @@ Run `revdepcheck::revdep_details(, "gptstudio")` for more info
 
 ## In both
 
-*   checking examples ... ERROR
-     ```
-     ...
-     20. cli::cli_alert_danger(cnd)
-     21. cli:::cli__message("alert_danger", list(text = glue_cmd(text, .envir = .envir, …
-     22. "id" %in% names(args)
-     23. cli:::glue_cmd(text, .envir = .envir, .call = sys.call())
-     24. cli:::glue(str, .envir = .envir, .transformer = transformer, .cli = TRUE, …
-     25. (function (expr) …
-     26. .transformer(expr, .envir) %||% character()
-     27. local .transformer(expr, .envir)
-     28. eval(expr, envir = envir) %??% cli_error(call. = caller, "Could not evalua…
-     29. cli:::chain_error(expr, err, srcref = utils::getSrcref(sys.call()))
-     30. | base::withCallingHandlers({ …
-     31. base::eval(expr, envir = envir)
-     32. base::eval(expr, envir = envir)
-     33. req_perform(request) %>% resp_body_string()
-     34. httr2::resp_body_string(.)
-     35. httr2:::check_response(resp)
-     36. httr2:::is_response(resp)
-     37. httr2::req_perform(request)
-     38. httr2:::handle_resp(req, resp, error_call = error_call)
-     39. rlang::cnd_signal(cnd)
-     40. rlang:::signal_abort(cnd)
-     41. base::signalCondition(cnd)
-     42. | (function (e) …
-     43. | cli:::throw_error(err, parent = e)
-     Execution halted
-     ```
-
 *   checking DESCRIPTION meta-information ... NOTE
      ```
        Missing dependency on R >= 4.1.0 because package code uses the pipe
@@ -692,56 +742,6 @@ Run `revdepcheck::revdep_details(, "grapesAgri1")` for more info
        All declared Imports should be used.
      ```
 
-*   checking Rd files ... NOTE
-     ```
-     checkRd: (-1) corrApp.Rd:40: Escaped LaTeX specials: \&
-     checkRd: (-1) crdApp.Rd:46: Escaped LaTeX specials: \&
-     checkRd: (-1) descApp.Rd:55: Escaped LaTeX specials: \&
-     checkRd: (-1) layoutApp.Rd:50: Escaped LaTeX specials: \&
-     checkRd: (-1) rbdApp.Rd:46: Escaped LaTeX specials: \&
-     checkRd: (-1) ttApp.Rd:43: Escaped LaTeX specials: \&
-     ```
-
-# greenSD (0.1.1)
-
-* GitHub: <https://github.com/billbillbilly/greenSD>
-* Email: <mailto:xiaohaoy111@gmail.com>
-* GitHub mirror: <https://github.com/cran/greenSD>
-
-Run `revdepcheck::revdep_details(, "greenSD")` for more info
-
-## In both
-
-*   checking examples ... ERROR
-     ```
-     ...
-     1008                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Boca del R\x92o, La Antigua, Manlio Fabio Altamirano, Medell\x92n, Veracruz
-     1009                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Matamoros, Cameron
-     1010                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       Amozoc, Atlixco, Coronango, Cuautinch\x87n, Cuautlancingo, Juan C. Bonilla, Nealtican, Ocoyucan, Puebla, San Andr\x8es Cholula, San Gregorio Atzompa, San Jer\x97nimo Tecuanipan, San Miguel Xoxtla, San Pedro Cholula, Santa Isabel Cholula, Tianguismanalco, Tlaltenango, Nat\x92vitas, Tepetitla de Lardiz\x87bal, Zacatelco
-     1011                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        R\x92o Bravo, Reynosa, Hidalgo
-     1012                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              Pachuca de Soto, San Agust\x92n Tlaxiaca
-     1013                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Alvaro Obreg\x97n, Azcapotzalco, Benito Ju\x87rez, Coyoac\x87n, Cuajimalpa de Morelos, Cuauht\x8emoc, Gustavo A. Madero, Iztacalco, Iztapalapa, Magdalena Contreras, Miguel Hidalgo, Tl\x87huac, Tlalpan, Venustiano Carranza, Xochimilco, Acolman, Atenco, Atizap\x87n de Zaragoza, Chalco, Chicoloapan, Chimalhuac\x87n, Coacalco de Berrioz\x87bal, Coyotepec, Cuautitl\x87n Izcalli, Cuautitl\x87n, Ecatepec de Morelos, Huehuetoca, Huixquilucan, Isidro Fabela, Ixtapaluca, Jaltenco, Jilotzingo, La Paz, Melchor Ocampo, Naucalpan de Ju\x87rez, Nextlalpan, Nezahualc\x97yotl, Nicol\x87s Romero, Tec\x87mac, Teoloyuc\x87n, Teotihuac\x87n, Tepotzotl\x87n, Texcoco, Timilpan, Tlalnepantla, Tultepec, Tultitl\x87n, Zumpango
-     1014                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Cuernavaca, Huitzilac, Jiutepec, Miacatl\x87n, Temixco, Xochitepec
-     1015                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Almoloya de Ju\x87rez, Lerma, Otzolotepec, Temoaya, Toluca, Xonacatl\x87n, Zinacatepec
-     1016                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         Apodaca, Carmen, Garc\x92a, General Escobedo, Guadalupe, Ju\x87rez, Monterrey, Pesquer\x92a, San Nicol\x87s de los Garza, San Pedro Garza Garc\x92a, Santa Catarina, Santiago
-     1017                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              Corregidora, El Marqu\x8es, Quer\x8etaro
-     1018                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       Arteaga, Ramos Arizpe, Saltillo
-     1019                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Mexquitic de Carmona, San Luis Potos\x92, Soledad de Graciano S\x87nchez, Villa de Reyes, Zaragoza
-     1020                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               Le\x97n
-     1021                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     Aguascalientes, Jes\x9cs Mar\x92a
-     1022                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            El Salto, Guadalajara, Ixtlahuac\x87n del R\x92o, Tlajomulco de Z\x9c\x96iga, Tlaquepaque, Tonal\x87, Zapopan, Zapotlanejo
-     1023                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Matamoros, Torre\x97n, Viesca, G\x97mez Palacio, Lerdo
-     1024                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          Aquiles Serd\x87n, Chihuahua
-     1025                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Ju\x87rez, El Paso
-     1026                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Hermosillo
-     1027                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Mexicali, Imperial
-     1028                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Tijuana, San Diego
-     > boundary <- check_urban_boundary(uid = 11)
-     Warning: GDAL/OGR not compiled with libcurl support, remote requests not supported. (GDAL error 6)
-     Error: Cannot open "https://raw.githubusercontent.com/billbillbilly/greenSD/main/scripts/city_urban_boundaries.geojson"; The file doesn't seem to exist.
-     Execution halted
-     ```
-
 # hero (0.6)
 
 * Email: <mailto:joshua.french@ucdenver.edu>
@@ -750,6 +750,36 @@ Run `revdepcheck::revdep_details(, "greenSD")` for more info
 Run `revdepcheck::revdep_details(, "hero")` for more info
 
 ## In both
+
+*   checking dependencies in R code ... NOTE
+     ```
+     ...
+     dev3.wynton.ucsf.edu:pid218664.R: Unable to initialize verbs NIC /sys/class/infiniband/mlx5_0 (unit 0:0)
+     dev3.wynton.ucsf.edu:pid218664: PSM3 can't open nic unit: 0 (err=23)
+     dev3.wynton.ucsf.edu:pid218664.R: Unable to create send CQ of size 5080 on mlx5_0: Cannot allocate memory
+     dev3.wynton.ucsf.edu:pid218664.R: Unable to initialize verbs NIC /sys/class/infiniband/mlx5_0 (unit 0:0)
+     --------------------------------------------------------------------------
+     No OpenFabrics connection schemes reported that they were able to be
+     used on a specific port.  As such, the openib BTL (OpenFabrics
+     support) will be disabled for this port.
+     
+       Local host:           dev3
+       Local device:         mlx5_0
+       Local port:           1
+       CPCs attempted:       rdmacm, udcm
+     --------------------------------------------------------------------------
+     dev3.wynton.ucsf.edu:pid218664: PSM3 can't open nic unit: 0 (err=23)
+     dev3.wynton.ucsf.edu:pid218664.R: Unable to create send CQ of size 5080 on mlx5_0: Cannot allocate memory
+     dev3.wynton.ucsf.edu:pid218664.R: Unable to initialize verbs NIC /sys/class/infiniband/mlx5_0 (unit 0:0)
+     --------------------------------------------------------------------------
+     Open MPI failed an OFI Libfabric library call (fi_endpoint).  This is highly
+     unusual; your job may behave unpredictably (and/or abort) after this.
+     
+       Local host: dev3
+       Location: mtl_ofi_component.c:513
+       Error: Invalid argument (22)
+     --------------------------------------------------------------------------
+     ```
 
 *   checking Rd files ... NOTE
      ```
@@ -761,19 +791,10 @@ Run `revdepcheck::revdep_details(, "hero")` for more info
             |     ^
      ```
 
-# igvShiny (1.6.0)
-
-* GitHub: <https://github.com/gladkia/igvShiny>
-* Email: <mailto:gladki.arkadiusz@gmail.com>
-
-Run `revdepcheck::revdep_details(, "igvShiny")` for more info
-
-## In both
-
-*   checking dependencies in R code ... NOTE
+*   checking for detritus in the temp directory ... NOTE
      ```
-     Unexported object imported by a ':::' call: ‘BiocGenerics:::testPackage’
-       See the note in ?`:::` about the use of this operator.
+     Found the following files/directories:
+       ‘ompi.dev3.34002’
      ```
 
 # infer (1.1.0)
@@ -792,7 +813,7 @@ Run `revdepcheck::revdep_details(, "infer")` for more info
        All declared Imports should be used.
      ```
 
-# infercnv (1.26.0)
+# infercnv (1.28.0)
 
 * GitHub: <https://github.com/broadinstitute/inferCNV>
 * Email: <mailto:cgeorges@broadinstitute.org>
@@ -812,42 +833,6 @@ Run `revdepcheck::revdep_details(, "infercnv")` for more info
      checkRd: (-1) run.Rd:268: Lost braces; missing escapes or markup?
         268 | \item{require_DE_all_normals}{If mask_nonDE_genes is set, those genes will be masked only if they are are found as DE according to test.use and mask_nonDE_pval in each of the comparisons to normal cells options: {"any", "most", "all"} (default: "any")
             |                                                                                                                                                                                                                     ^
-     ```
-
-# InPAS (2.18.1)
-
-* Email: <mailto:jou@morgridge.org>
-
-Run `revdepcheck::revdep_details(, "InPAS")` for more info
-
-## In both
-
-*   checking dependencies in R code ... NOTE
-     ```
-     There are ::: calls to the package's namespace in its code. A package
-       almost never needs to use ::: for its own objects:
-       ‘adjust_distalCPs’ ‘adjust_proximalCPs’ ‘adjust_proximalCPsByNBC’
-       ‘adjust_proximalCPsByPWM’ ‘calculate_mse’ ‘find_valleyBySpline’
-       ‘get_PAscore’ ‘get_PAscore2’ ‘remove_convergentUTR3s’
-       ‘search_distalCPs’ ‘search_proximalCPs’
-     ```
-
-*   checking Rd metadata ... NOTE
-     ```
-     Invalid package aliases in Rd file 'InPAS.Rd':
-       ‘-package’
-     ```
-
-*   checking Rd \usage sections ... NOTE
-     ```
-     Documented arguments not in \usage in Rd file 'get_UTR3TotalCov.Rd':
-       ‘gcCompensationensation’
-     
-     Functions with \usage entries need to have the appropriate \alias
-     entries, and all their arguments documented.
-     The \usage entries must correspond to syntactically valid R code.
-     See chapter ‘Writing R documentation files’ in the ‘Writing R
-     Extensions’ manual.
      ```
 
 # ivmte (1.4.0)
@@ -886,102 +871,7 @@ Run `revdepcheck::revdep_details(, "kappaGold")` for more info
          ‘kappa_inference.R’
      ```
 
-# lavDiag (0.1.0)
-
-* GitHub: <https://github.com/reckak/lavDiag>
-* Email: <mailto:reckak@mail.muni.cz>
-* GitHub mirror: <https://github.com/cran/lavDiag>
-
-Run `revdepcheck::revdep_details(, "lavDiag")` for more info
-
-## In both
-
-*   checking tests ...
-     ```
-     ...
-         6. │     └─furrr:::furrr_template(...)
-         7. │       ├─future::nbrOfWorkers()
-         8. │       └─future:::nbrOfWorkers.NULL()
-         9. │         └─future::plan("backend")
-        10. │           └─future:::plan_init(strategy, debug = debug)
-        11. │             └─future:::makeFutureBackend(evaluator, debug = debug)
-        12. │               └─base::do.call(factory, args = args, envir = envir)
-        13. └─future (local) `<fn>`(workers = 255L)
-        14.   └─future::ClusterFutureBackend(...)
-        15.     └─clusterRegistry$startCluster(...)
-        16.       └─future (local) makeCluster(workers, ...)
-        17.         ├─base::do.call(makeClusterPSOCK, args = args, quote = TRUE)
-        18.         └─parallelly (local) `<fn>`(base::quote(255L), rscript_libs = base::quote(`<chr>`))
-        19.           └─parallelly:::stopf(msg)
-       ── Error ('test-prepare.R:12:3'): prepare merges branches for mixed model ──────
-       Error in `prepare(fit, length.out = 15)`: Neither continuous nor ordinal branch succeeded - check model/functions.
-       Backtrace:
-           ▆
-        1. └─lavDiag::prepare(fit, length.out = 15) at test-prepare.R:12:3
-        2.   └─rlang::abort("Neither continuous nor ordinal branch succeeded - check model/functions.")
-       
-       [ FAIL 3 | WARN 26 | SKIP 1 | PASS 28 ]
-       Error:
-       ! Test failures.
-       Execution halted
-     ```
-
-# ldsr (0.0.2)
-
-* GitHub: <https://github.com/ntthung/ldsr>
-* Email: <mailto:ntthung@gmail.com>
-* GitHub mirror: <https://github.com/cran/ldsr>
-
-Run `revdepcheck::revdep_details(, "ldsr")` for more info
-
-## In both
-
-*   checking C++ specification ... NOTE
-     ```
-       Specified C++11: please drop specification unless essential
-     ```
-
-# lidR (4.2.3)
-
-* GitHub: <https://github.com/r-lidar/lidR>
-* Email: <mailto:info@r-lidar.com>
-* GitHub mirror: <https://github.com/cran/lidR>
-
-Run `revdepcheck::revdep_details(, "lidR")` for more info
-
-## In both
-
-*   checking tests ...
-     ```
-     ...
-       
-                                                                                       
-       
-                                                                                       
-       
-                                                                                       
-       
-                                                                                       
-       
-                                                                                       
-       
-                                                                                       
-       Chunk 1 of 1 (100%): state ✓
-       
-                                                                                       
-       
-                                                                                       
-       
-                                                                                       
-       
-                                                                                       
-       
-                                                                                       
-       terminate called after throwing an instance of 'std::length_error'
-         what():  basic_string::_M_create
-     ```
-
-# MAI (1.16.0)
+# MAI (1.18.0)
 
 * GitHub: <https://github.com/KechrisLab/MAI>
 * Email: <mailto:Jonathan.Dekermanjian@CUAnschutz.edu>
@@ -997,63 +887,79 @@ Run `revdepcheck::revdep_details(, "MAI")` for more info
      is not mentioned in the DESCRIPTION file.
      ```
 
-# mapme.biodiversity (0.9.5)
+# marcxmlr (0.3.1)
 
-* GitHub: <https://github.com/mapme-initiative/mapme.biodiversity>
-* Email: <mailto:sven.bergtold@gmail.com>
-* GitHub mirror: <https://github.com/cran/mapme.biodiversity>
+* GitHub: <https://github.com/larry77/marcxmlr>
+* Email: <mailto:lorenzo.isella@gmail.com>
+* GitHub mirror: <https://github.com/cran/marcxmlr>
 
-Run `revdepcheck::revdep_details(, "mapme.biodiversity")` for more info
-
-## In both
-
-*   checking tests ...
-     ```
-     ...
-         'test-get_carbon.R:2:3', 'test-get_carbon.R:29:3', 'test-get_chelsa.R:2:3',
-         'test-get_esalandcover.R:2:3', 'test-get_fritz_et_al.R:2:3',
-         'test-get_gfw_emissions.R:2:3', 'test-get_gfw_lossyear.R:2:3',
-         'test-get_gfw_treecover.R:7:3', 'test-get_gmw.R:2:3', 'test-get_gsw.R:2:3',
-         'test-get_hfp.R:10:3', 'test-get_mcd64A1.R:2:3', 'test-get_nasa_grace.R:2:3',
-         'test-get_nasa_srtm.R:2:3', 'test-get_nelson_et_al.R:2:3',
-         'test-get_resources.R:2:3', 'test-get_soilgrids.R:2:3',
-         'test-get_teow.R:2:3', 'test-get_ucdp_ged.R:3:3', 'test-get_worldpop.R:2:3',
-         'test-ipbes.R:2:3', 'test-ipbes.R:11:3'
-       
-       ══ Failed tests ════════════════════════════════════════════════════════════════
-       ── Failure ('test-chunking.R:7:3'): .crosses_dateline and .split_dateline works ──
-       Expected `x2 <- .split_dateline(x)` to run silently.
-       Actual noise: warnings.
-       ── Failure ('test-chunking.R:8:3'): .crosses_dateline and .split_dateline works ──
-       Expected `nrow(x2)` to equal 2.
-       Differences:
-         `actual`: 1.0
-       `expected`: 2.0
-       
-       
-       [ FAIL 2 | WARN 0 | SKIP 43 | PASS 543 ]
-       Error:
-       ! Test failures.
-       Execution halted
-     ```
-
-# mikropml (1.7.0)
-
-* GitHub: <https://github.com/SchlossLab/mikropml>
-* Email: <mailto:sovacool@umich.edu>
-* GitHub mirror: <https://github.com/cran/mikropml>
-
-Run `revdepcheck::revdep_details(, "mikropml")` for more info
+Run `revdepcheck::revdep_details(, "marcxmlr")` for more info
 
 ## In both
 
-*   checking dependencies in R code ... NOTE
+*   checking whether package ‘marcxmlr’ can be installed ... ERROR
      ```
-     Namespace in Imports field not imported from: ‘methods’
-       All declared Imports should be used.
+     Installation failed.
+     See ‘/scratch/hb/revdepcheck.extras/globals/revdep/checks/marcxmlr/new/marcxmlr.Rcheck/00install.out’ for details.
      ```
 
-# mistyR (1.18.0)
+## Installation
+
+### Devel
+
+```
+* installing *source* package ‘marcxmlr’ ...
+** this is package ‘marcxmlr’ version ‘0.3.1’
+** package ‘marcxmlr’ successfully unpacked and MD5 sums checked
+** using staged installation
+Using PKG_CFLAGS=-I/usr/include/libxml2
+Using PKG_LIBS=-lxml2 -lz -llzma -lm -ldl
+** libs
+using C compiler: ‘gcc (GCC) 13.3.1 20240611 (Red Hat 13.3.1-2)’
+gcc -std=gnu2x -I"/wynton/home/cbi/shared/software/CBI/_rocky8/R-4.6.1-gcc13/lib64/R/include" -DNDEBUG -I/usr/include/libxml2  -I/usr/local/include    -fpic  -g -O2  -c marcxml-native.c -o marcxml-native.o
+marcxml-native.c:72:23: error: conflicting types for ‘attribute’; have ‘const xmlChar *(xmlNode *, const char *)’ {aka ‘const unsigned char *(struct _xmlNode *, const char *)’}
+...
+In file included from /usr/include/libxml2/libxml/globals.h:20,
+                 from /usr/include/libxml2/libxml/xmlIO.h:117,
+                 from /usr/include/libxml2/libxml/parser.h:811,
+                 from marcxml-native.c:5:
+/usr/include/libxml2/libxml/SAX.h:104:17: note: previous declaration of ‘attribute’ with type ‘void(void *, const xmlChar *, const xmlChar *)’ {aka ‘void(void *, const unsigned char *, const unsigned char *)’}
+  104 |                 attribute                       (void *ctx,
+      |                 ^~~~~~~~~
+make: *** [/wynton/home/cbi/shared/software/CBI/_rocky8/R-4.6.1-gcc13/lib64/R/etc/Makeconf:190: marcxml-native.o] Error 1
+ERROR: compilation failed for package ‘marcxmlr’
+* removing ‘/scratch/hb/revdepcheck.extras/globals/revdep/checks/marcxmlr/new/marcxmlr.Rcheck/marcxmlr’
+
+
+```
+### CRAN
+
+```
+* installing *source* package ‘marcxmlr’ ...
+** this is package ‘marcxmlr’ version ‘0.3.1’
+** package ‘marcxmlr’ successfully unpacked and MD5 sums checked
+** using staged installation
+Using PKG_CFLAGS=-I/usr/include/libxml2
+Using PKG_LIBS=-lxml2 -lz -llzma -lm -ldl
+** libs
+using C compiler: ‘gcc (GCC) 13.3.1 20240611 (Red Hat 13.3.1-2)’
+gcc -std=gnu2x -I"/wynton/home/cbi/shared/software/CBI/_rocky8/R-4.6.1-gcc13/lib64/R/include" -DNDEBUG -I/usr/include/libxml2  -I/usr/local/include    -fpic  -g -O2  -c marcxml-native.c -o marcxml-native.o
+marcxml-native.c:72:23: error: conflicting types for ‘attribute’; have ‘const xmlChar *(xmlNode *, const char *)’ {aka ‘const unsigned char *(struct _xmlNode *, const char *)’}
+...
+In file included from /usr/include/libxml2/libxml/globals.h:20,
+                 from /usr/include/libxml2/libxml/xmlIO.h:117,
+                 from /usr/include/libxml2/libxml/parser.h:811,
+                 from marcxml-native.c:5:
+/usr/include/libxml2/libxml/SAX.h:104:17: note: previous declaration of ‘attribute’ with type ‘void(void *, const xmlChar *, const xmlChar *)’ {aka ‘void(void *, const unsigned char *, const unsigned char *)’}
+  104 |                 attribute                       (void *ctx,
+      |                 ^~~~~~~~~
+make: *** [/wynton/home/cbi/shared/software/CBI/_rocky8/R-4.6.1-gcc13/lib64/R/etc/Makeconf:190: marcxml-native.o] Error 1
+ERROR: compilation failed for package ‘marcxmlr’
+* removing ‘/scratch/hb/revdepcheck.extras/globals/revdep/checks/marcxmlr/old/marcxmlr.Rcheck/marcxmlr’
+
+
+```
+# mistyR (1.20.0)
 
 * GitHub: <https://github.com/saezlab/mistyR>
 * Email: <mailto:jovan.tanevski@uni-heidelberg.de>
@@ -1065,24 +971,24 @@ Run `revdepcheck::revdep_details(, "mistyR")` for more info
 *   checking R code for possible problems ... NOTE
      ```
      ...
-       ‘total’
-     plot_view_contributions: no visible binding for global variable
-       ‘measure’
-     plot_view_contributions: no visible binding for global variable
-       ‘target’
-     plot_view_contributions: no visible binding for global variable
-       ‘fraction’
      plot_view_contributions: no visible binding for global variable ‘view’
+       (/scratch/hb/revdepcheck.extras/globals/revdep/checks/mistyR/new/mistyR.Rcheck/00_pkg_src/mistyR/R/plots.R:131-137)
      run_misty : <anonymous>: no visible binding for global variable ‘p’
+       (/scratch/hb/revdepcheck.extras/globals/revdep/checks/mistyR/new/mistyR.Rcheck/00_pkg_src/mistyR/R/misty.R:256-264)
      run_misty : <anonymous>: no visible binding for global variable
        ‘intra.RMSE’
+       (/scratch/hb/revdepcheck.extras/globals/revdep/checks/mistyR/new/mistyR.Rcheck/00_pkg_src/mistyR/R/misty.R:328-356)
      run_misty : <anonymous>: no visible binding for global variable
        ‘multi.RMSE’
+       (/scratch/hb/revdepcheck.extras/globals/revdep/checks/mistyR/new/mistyR.Rcheck/00_pkg_src/mistyR/R/misty.R:328-356)
      run_misty : <anonymous>: no visible binding for global variable
        ‘intra.R2’
+       (/scratch/hb/revdepcheck.extras/globals/revdep/checks/mistyR/new/mistyR.Rcheck/00_pkg_src/mistyR/R/misty.R:328-356)
      run_misty : <anonymous>: no visible binding for global variable
        ‘multi.R2’
+       (/scratch/hb/revdepcheck.extras/globals/revdep/checks/mistyR/new/mistyR.Rcheck/00_pkg_src/mistyR/R/misty.R:328-356)
      svm_model: no visible binding for global variable ‘index’
+       (/scratch/hb/revdepcheck.extras/globals/revdep/checks/mistyR/new/mistyR.Rcheck/00_pkg_src/mistyR/R/model-functions.R:422-446)
      Undefined global functions or variables:
        .PT Importance Predictor Target fraction index intra.R2 intra.RMSE
        measure multi.R2 multi.RMSE nsamples p prediction sd target total ts
@@ -1097,6 +1003,12 @@ Run `revdepcheck::revdep_details(, "mistyR")` for more info
      checkRd: (-1) collect_results.Rd:32: Lost braces; missing escapes or markup?
          32 |             for all performance measures for each {target} over all samples.}
             |                                                   ^
+     ```
+
+*   checking for non-standard things in the check directory ... NOTE
+     ```
+     Found the following files/directories:
+       ‘results’
      ```
 
 # MLDataR (1.0.1)
@@ -1117,25 +1029,7 @@ Run `revdepcheck::revdep_details(, "MLDataR")` for more info
        All declared Imports should be used.
      ```
 
-# mlflow (3.9.0)
-
-* GitHub: <https://github.com/mlflow/mlflow>
-* Email: <mailto:benjamin.wilson@databricks.com>
-* GitHub mirror: <https://github.com/cran/mlflow>
-
-Run `revdepcheck::revdep_details(, "mlflow")` for more info
-
-## In both
-
-*   checking package dependencies ... ERROR
-     ```
-     Package required but not available: ‘git2r’
-     
-     See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
-     manual.
-     ```
-
-# mlr3resampling (2026.2.24)
+# mlr3resampling (2026.9.24)
 
 * GitHub: <https://github.com/tdhock/mlr3resampling>
 * Email: <mailto:toby.hocking@r-project.org>
@@ -1147,22 +1041,31 @@ Run `revdepcheck::revdep_details(, "mlr3resampling")` for more info
 
 *   checking dependencies in R code ... NOTE
      ```
-     [c4-n43:3995459] OPAL ERROR: Not initialized in file ext2x_client.c at line 112
+     ...
+     dev3.wynton.ucsf.edu:pid2626158.R: Unable to initialize verbs NIC /sys/class/infiniband/mlx5_0 (unit 0:0)
+     dev3.wynton.ucsf.edu:pid2626158: PSM3 can't open nic unit: 0 (err=23)
+     dev3.wynton.ucsf.edu:pid2626158.R: Unable to create send CQ of size 5080 on mlx5_0: Cannot allocate memory
+     dev3.wynton.ucsf.edu:pid2626158.R: Unable to initialize verbs NIC /sys/class/infiniband/mlx5_0 (unit 0:0)
      --------------------------------------------------------------------------
-     The application appears to have been direct launched using "srun",
-     but OMPI was not built with SLURM's PMI support and therefore cannot
-     execute. There are several options for building PMI support under
-     SLURM, depending upon the SLURM version you are using:
+     No OpenFabrics connection schemes reported that they were able to be
+     used on a specific port.  As such, the openib BTL (OpenFabrics
+     support) will be disabled for this port.
      
-       version 16.05 or later: you can use SLURM's PMIx support. This
-       requires that you configure and build SLURM --with-pmix.
+       Local host:           dev3
+       Local device:         mlx5_0
+       Local port:           1
+       CPCs attempted:       rdmacm, udcm
+     --------------------------------------------------------------------------
+     dev3.wynton.ucsf.edu:pid2626158: PSM3 can't open nic unit: 0 (err=23)
+     dev3.wynton.ucsf.edu:pid2626158.R: Unable to create send CQ of size 5080 on mlx5_0: Cannot allocate memory
+     dev3.wynton.ucsf.edu:pid2626158.R: Unable to initialize verbs NIC /sys/class/infiniband/mlx5_0 (unit 0:0)
+     --------------------------------------------------------------------------
+     Open MPI failed an OFI Libfabric library call (fi_endpoint).  This is highly
+     unusual; your job may behave unpredictably (and/or abort) after this.
      
-       Versions earlier than 16.05: you must use either SLURM's PMI-1 or
-       PMI-2 support. SLURM builds PMI-1 by default, or you can manually
-       install PMI-2. You must then build Open MPI using --with-pmi pointing
-       to the SLURM PMI library location.
-     
-     Please configure as appropriate and try again.
+       Local host: dev3
+       Location: mtl_ofi_component.c:513
+       Error: Invalid argument (22)
      --------------------------------------------------------------------------
      ```
 
@@ -1185,6 +1088,21 @@ Run `revdepcheck::revdep_details(, "mlr3shiny")` for more info
        All declared Imports should be used.
      ```
 
+# mlr3summary (0.1.2)
+
+* GitHub: <https://github.com/mlr-org/mlr3summary>
+* Email: <mailto:dandls.datascience@gmail.com>
+* GitHub mirror: <https://github.com/cran/mlr3summary>
+
+Run `revdepcheck::revdep_details(, "mlr3summary")` for more info
+
+## In both
+
+*   checking Rd cross-references ... NOTE
+     ```
+     Unknown package ‘fastshap’ in Rd xrefs
+     ```
+
 # mmaqshiny (1.0.0)
 
 * GitHub: <https://github.com/meenakshi-kushwaha/mmaqshiny>
@@ -1204,9 +1122,9 @@ Run `revdepcheck::revdep_details(, "mmaqshiny")` for more info
        All declared Imports should be used.
      ```
 
-# MSstatsBig (1.8.1)
+# MSstatsBig (1.10.0)
 
-* Email: <mailto:mtst@mstaniak.pl>
+* Email: <mailto:wu.anthon@northeastern.edu>
 
 Run `revdepcheck::revdep_details(, "MSstatsBig")` for more info
 
@@ -1215,21 +1133,21 @@ Run `revdepcheck::revdep_details(, "MSstatsBig")` for more info
 *   checking R code for possible problems ... NOTE
      ```
      ...
-     cleanSpectronautChunk: no visible binding for global variable
-       ‘Identified’
-     cleanSpectronautChunk: no visible binding for global variable
-       ‘EGQvalue’
-     cleanSpectronautChunk: no visible binding for global variable
-       ‘PGQvalue’
+       (/scratch/hb/revdepcheck.extras/globals/revdep/checks/MSstatsBig/new/MSstatsBig.Rcheck/00_pkg_src/MSstatsBig/R/clean_spectronaut.R:98-100)
      cleanSpectronautChunk: no visible binding for global variable
        ‘FFrgLossType’
+       (/scratch/hb/revdepcheck.extras/globals/revdep/checks/MSstatsBig/new/MSstatsBig.Rcheck/00_pkg_src/MSstatsBig/R/clean_spectronaut.R:103)
      cleanSpectronautChunk: no visible binding for global variable
        ‘LabeledSequence’
+       (/scratch/hb/revdepcheck.extras/globals/revdep/checks/MSstatsBig/new/MSstatsBig.Rcheck/00_pkg_src/MSstatsBig/R/clean_spectronaut.R:105)
      cleanSpectronautChunk: no visible global function definition for ‘:=’
+       (/scratch/hb/revdepcheck.extras/globals/revdep/checks/MSstatsBig/new/MSstatsBig.Rcheck/00_pkg_src/MSstatsBig/R/clean_spectronaut.R:106)
      cleanSpectronautChunk: no visible binding for global variable
        ‘IsotopeLabelType’
+       (/scratch/hb/revdepcheck.extras/globals/revdep/checks/MSstatsBig/new/MSstatsBig.Rcheck/00_pkg_src/MSstatsBig/R/clean_spectronaut.R:106)
      cleanSpectronautChunk: no visible binding for global variable
        ‘IsLabeled’
+       (/scratch/hb/revdepcheck.extras/globals/revdep/checks/MSstatsBig/new/MSstatsBig.Rcheck/00_pkg_src/MSstatsBig/R/clean_spectronaut.R:106)
      Undefined global functions or variables:
        %>% := BioReplicate Condition EGQvalue Excluded FFrgLossType Feature
        FragmentIon Identified Intensity IsLabeled IsotopeLabelType
@@ -1242,7 +1160,15 @@ Run `revdepcheck::revdep_details(, "MSstatsBig")` for more info
      to your NAMESPACE file.
      ```
 
-# MSstatsShiny (1.12.1)
+*   checking for non-standard things in the check directory ... NOTE
+     ```
+     Found the following files/directories:
+       ‘output_file.csv’ ‘proc_out.csv’ ‘reduce_output_output_file.csv’
+       ‘tencol_format.csv’ ‘topN_output_file.csv’ ‘topN_proc_out.csv’
+       ‘topN_tencol_format.csv’
+     ```
+
+# MSstatsShiny (1.14.0)
 
 * GitHub: <https://github.com/Vitek-Lab/MSstatsShiny>
 * Email: <mailto:wu.anthon@northeastern.edu>
@@ -1251,9 +1177,37 @@ Run `revdepcheck::revdep_details(, "MSstatsShiny")` for more info
 
 ## In both
 
-*   checking dependencies in R code ... WARNING
+*   checking whether package ‘MSstatsShiny’ can be installed ... WARNING
      ```
-     '::' or ':::' import not declared from: ‘httr’
+     Found the following significant warnings:
+       Warning: replacing previous import ‘MSstatsConvert::OpenMStoMSstatsTMTFormat’ by ‘MSstatsTMT::OpenMStoMSstatsTMTFormat’ when loading ‘MSstatsShiny’
+       Warning: replacing previous import ‘MSstatsConvert::MaxQtoMSstatsTMTFormat’ by ‘MSstatsTMT::MaxQtoMSstatsTMTFormat’ when loading ‘MSstatsShiny’
+       Warning: replacing previous import ‘MSstatsConvert::PDtoMSstatsTMTFormat’ by ‘MSstatsTMT::PDtoMSstatsTMTFormat’ when loading ‘MSstatsShiny’
+       Warning: replacing previous import ‘MSstatsConvert::PhilosophertoMSstatsTMTFormat’ by ‘MSstatsTMT::PhilosophertoMSstatsTMTFormat’ when loading ‘MSstatsShiny’
+       Warning: replacing previous import ‘MSstatsConvert::SpectroMinetoMSstatsTMTFormat’ by ‘MSstatsTMT::SpectroMinetoMSstatsTMTFormat’ when loading ‘MSstatsShiny’
+     See ‘/scratch/hb/revdepcheck.extras/globals/revdep/checks/MSstatsShiny/new/MSstatsShiny.Rcheck/00install.out’ for details.
+     ```
+
+*   checking Rd \usage sections ... WARNING
+     ```
+     Undocumented arguments in Rd file 'loadpageServer.Rd'
+       ‘app_template’
+     
+     Undocumented arguments in Rd file 'qcServer.Rd'
+       ‘app_template’ ‘get_condition_metadata’
+     
+     Undocumented arguments in Rd file 'statmodelServer.Rd'
+       ‘turnover_ratios’ ‘condition_metadata’
+     
+     Functions with \usage entries need to have the appropriate \alias
+     entries, and all their arguments documented.
+     The \usage entries must correspond to syntactically valid R code.
+     See chapter ‘Writing R documentation files’ in the ‘Writing R
+     Extensions’ manual.
+     ```
+
+*   checking dependencies in R code ... NOTE
+     ```
      Unexported objects imported by ':::' calls:
        ‘MSstatsTMT:::.logSum’ ‘MSstatsTMT:::.summarizeSimpleStat’
        ‘MSstatsTMT:::.summarizeTMP’
@@ -1273,29 +1227,29 @@ Run `revdepcheck::revdep_details(, "MSstatsShiny")` for more info
 *   checking R code for possible problems ... NOTE
      ```
      ...
-       ‘Peptides_Proteins_min’
-     getSummary2: no visible binding for global variable
-       ‘Peptides_Proteins_max’
-     loadpageServer: no visible global function definition for
-       ‘moduleServer’
-     server: no visible global function definition for ‘callModule’
-     statmodelServer: no visible global function definition for
-       ‘moduleServer’
-     update_matrix_from_edit: no visible global function definition for ‘as’
-     visualizeNetworkServer: no visible global function definition for
-       ‘reactiveVal’
-     visualizeNetworkServer: no visible global function definition for
-       ‘updateTextInput’
+       (/scratch/hb/revdepcheck.extras/globals/revdep/checks/MSstatsShiny/new/MSstatsShiny.Rcheck/00_pkg_src/MSstatsShiny/R/module-visualize-network-server.R:302)
+     visualizeNetworkServer : <anonymous>: no visible global function
+       definition for ‘reactiveVal’
+       (/scratch/hb/revdepcheck.extras/globals/revdep/checks/MSstatsShiny/new/MSstatsShiny.Rcheck/00_pkg_src/MSstatsShiny/R/module-visualize-network-server.R:305)
+     visualizeNetworkServer : <anonymous>: no visible global function
+       definition for ‘reactiveVal’
+       (/scratch/hb/revdepcheck.extras/globals/revdep/checks/MSstatsShiny/new/MSstatsShiny.Rcheck/00_pkg_src/MSstatsShiny/R/module-visualize-network-server.R:308)
+     visualizeNetworkServer : <anonymous>: no visible global function
+       definition for ‘updateTextInput’
+       (/scratch/hb/revdepcheck.extras/globals/revdep/checks/MSstatsShiny/new/MSstatsShiny.Rcheck/00_pkg_src/MSstatsShiny/R/module-visualize-network-server.R:470)
      Undefined global functions or variables:
        BioReplicate BioReplicate_Run Charge Condition Condition_Run FEATURES
        Features_Peptides_max Features_Peptides_min Fraction FragmentIon
        Intensity Max_Intensity Min_Intensity Mixture Number of Fractions
        PeptideSequence Peptides_Proteins_max Peptides_Proteins_min
        PrecursorCharge ProductCharge ProteinName Run TechRepMixture
-       annotation.pd as callModule moduleServer nfea npep reactiveVal
+       annotation.pd as callModule nfea npep reactiveVal setNames strong
+       text turnover_ratios updateCheckboxInput updateRadioButtons
        updateTextInput
      Consider adding
+       importFrom("graphics", "text")
        importFrom("methods", "as")
+       importFrom("stats", "setNames")
      to your NAMESPACE file (and ensure that your DESCRIPTION Imports field
      contains 'methods').
      ```
@@ -1318,6 +1272,21 @@ Run `revdepcheck::revdep_details(, "multiverse")` for more info
          ‘accessors.R’ ‘export_json.R’ ‘extract.R’
      ```
 
+# nestedcv (0.9.0)
+
+* GitHub: <https://github.com/myles-lewis/nestedcv>
+* Email: <mailto:myles.lewis@qmul.ac.uk>
+* GitHub mirror: <https://github.com/cran/nestedcv>
+
+Run `revdepcheck::revdep_details(, "nestedcv")` for more info
+
+## In both
+
+*   checking Rd cross-references ... NOTE
+     ```
+     Unknown package ‘CORElearn’ in Rd xrefs
+     ```
+
 # nevada (0.2.0)
 
 * GitHub: <https://github.com/astamm/nevada>
@@ -1336,26 +1305,22 @@ Run `revdepcheck::revdep_details(, "nevada")` for more info
          ‘visualizations.R’
      ```
 
-# nixtlar (0.6.2)
+# nfl4th (1.0.7)
 
-* GitHub: <https://github.com/Nixtla/nixtlar>
-* Email: <mailto:mariana@nixtla.io>
-* GitHub mirror: <https://github.com/cran/nixtlar>
+* GitHub: <https://github.com/nflverse/nfl4th>
+* Email: <mailto:bbaldwin206@gmail.com>
+* GitHub mirror: <https://github.com/cran/nfl4th>
 
-Run `revdepcheck::revdep_details(, "nixtlar")` for more info
+Run `revdepcheck::revdep_details(, "nfl4th")` for more info
 
 ## In both
 
-*   checking DESCRIPTION meta-information ... NOTE
+*   checking whether startup messages can be suppressed ... NOTE
      ```
-       Missing dependency on R >= 4.1.0 because package code uses the pipe
-       |> or function shorthand \(...) syntax added in R 4.1.0.
-       File(s) using such syntax:
-         ‘get_model_params.R’ ‘level_from_quantiles.R’ ‘make_request.R’
-         ‘nixtla_client_cross_validation.R’ ‘nixtla_client_detect_anomalies.R’
-         ‘nixtla_client_forecast.R’ ‘nixtla_client_historic.R’
-         ‘nixtla_client_plot.R’ ‘nixtla_validate_api_key.R’
-         ‘validate_exogenous.R’
+     ! GitHub.com seems offline, and `options(nfl4th.keep_games)` is not set to TRUE. Deleting the games cache, and predictions may not be available without an internet connection.
+     
+     It looks like this package (or a package it requires) has a startup
+     message which cannot be suppressed: see ?packageStartupMessage.
      ```
 
 # OutSeekR (1.1.0)
@@ -1374,7 +1339,7 @@ Run `revdepcheck::revdep_details(, "OutSeekR")` for more info
        All declared Imports should be used.
      ```
 
-# PAMpal (1.5.2)
+# PAMpal (1.6.1)
 
 * Email: <mailto:taiki.sakai@noaa.gov>
 * GitHub mirror: <https://github.com/cran/PAMpal>
@@ -1387,10 +1352,10 @@ Run `revdepcheck::revdep_details(, "PAMpal")` for more info
      ```
      Found the following significant warnings:
        Warning: no DISPLAY variable so Tk is not available
-     See ‘/scratch/henrik/revdep/globals/checks/PAMpal/new/PAMpal.Rcheck/00install.out’ for details.
+     See ‘/scratch/hb/revdepcheck.extras/globals/revdep/checks/PAMpal/new/PAMpal.Rcheck/00install.out’ for details.
      ```
 
-# PAMscapes (0.15.0)
+# PAMscapes (0.17.2)
 
 * Email: <mailto:taiki.sakai@noaa.gov>
 * GitHub mirror: <https://github.com/cran/PAMscapes>
@@ -1403,7 +1368,7 @@ Run `revdepcheck::revdep_details(, "PAMscapes")` for more info
      ```
      Found the following significant warnings:
        Warning: no DISPLAY variable so Tk is not available
-     See ‘/scratch/henrik/revdep/globals/checks/PAMscapes/new/PAMscapes.Rcheck/00install.out’ for details.
+     See ‘/scratch/hb/revdepcheck.extras/globals/revdep/checks/PAMscapes/new/PAMscapes.Rcheck/00install.out’ for details.
      ```
 
 # partR2 (0.9.2)
@@ -1422,7 +1387,7 @@ Run `revdepcheck::revdep_details(, "partR2")` for more info
        All declared Imports should be used.
      ```
 
-# pavo (2.9.0)
+# pavo (2.10.0)
 
 * GitHub: <https://github.com/rmaia/pavo>
 * Email: <mailto:thomas.white026@gmail.com>
@@ -1436,7 +1401,7 @@ Run `revdepcheck::revdep_details(, "pavo")` for more info
      ```
      Found the following significant warnings:
        Warning: no DISPLAY variable so Tk is not available
-     See ‘/scratch/henrik/revdep/globals/checks/pavo/new/pavo.Rcheck/00install.out’ for details.
+     See ‘/scratch/hb/revdepcheck.extras/globals/revdep/checks/pavo/new/pavo.Rcheck/00install.out’ for details.
      ```
 
 # photosynthesis (2.1.5)
@@ -1496,7 +1461,7 @@ Run `revdepcheck::revdep_details(, "ppsr")` for more info
        All declared Imports should be used.
      ```
 
-# Prostar (1.42.0)
+# Prostar (1.44.0)
 
 * GitHub: <https://github.com/edyp-lab/Prostar>
 * Email: <mailto:samuel.wieczorek@cea.fr>
@@ -1504,13 +1469,6 @@ Run `revdepcheck::revdep_details(, "ppsr")` for more info
 Run `revdepcheck::revdep_details(, "Prostar")` for more info
 
 ## In both
-
-*   checking whether package ‘Prostar’ can be installed ... WARNING
-     ```
-     Found the following significant warnings:
-       Warning: replacing previous import ‘future::reset’ by ‘shinyjs::reset’ when loading ‘Prostar’
-     See ‘/scratch/henrik/revdep/globals/checks/Prostar/new/Prostar.Rcheck/00install.out’ for details.
-     ```
 
 *   checking for hidden files and directories ... NOTE
      ```
@@ -1523,8 +1481,8 @@ Run `revdepcheck::revdep_details(, "Prostar")` for more info
 *   checking dependencies in R code ... NOTE
      ```
      Namespaces in Imports field not imported from:
-       ‘DT’ ‘R.utils’ ‘RColorBrewer’ ‘XML’ ‘colourpicker’ ‘gtools’
-       ‘markdown’ ‘rclipboard’ ‘sass’ ‘shinyTree’ ‘shinyWidgets’
+       ‘DT’ ‘R.utils’ ‘RColorBrewer’ ‘XML’ ‘colourpicker’ ‘future’ ‘ggplot2’
+       ‘gtools’ ‘markdown’ ‘rclipboard’ ‘sass’ ‘shinyTree’ ‘shinyWidgets’
        All declared Imports should be used.
      ```
 
@@ -1573,21 +1531,6 @@ Run `revdepcheck::revdep_details(, "pvLRT")` for more info
             |                                ^
      ```
 
-# pysparklyr (0.2.0)
-
-* GitHub: <https://github.com/mlverse/pysparklyr>
-* Email: <mailto:edgar@posit.co>
-* GitHub mirror: <https://github.com/cran/pysparklyr>
-
-Run `revdepcheck::revdep_details(, "pysparklyr")` for more info
-
-## In both
-
-*   checking dependencies in R code ... WARNING
-     ```
-     '::' or ':::' import not declared from: ‘jsonlite’
-     ```
-
 # qape (2.1)
 
 * Email: <mailto:alicja.wolny-dominiak@ue.katowice.pl>
@@ -1604,86 +1547,28 @@ Run `revdepcheck::revdep_details(, "qape")` for more info
             |                                                                            ^
      ```
 
-# QDNAseq (1.46.0)
+# remiod (1.0.2)
 
-* GitHub: <https://github.com/ccagc/QDNAseq>
-* Email: <mailto:d.sie@vumc.nl>
+* GitHub: <https://github.com/xsswang/remiod>
+* Email: <mailto:xwang@imedacs.com>
+* GitHub mirror: <https://github.com/cran/remiod>
 
-Run `revdepcheck::revdep_details(, "QDNAseq")` for more info
-
-## In both
-
-*   checking re-building of vignette outputs ... WARNING
-     ```
-     ...
-     Total time:0minutes
-     
-     Warning in texi2dvi(file = file, pdf = TRUE, clean = clean, quiet = quiet,  :
-       texi2dvi script/program not available, using emulation
-     Error: processing vignette 'QDNAseq.Rnw' failed with diagnostics:
-     unable to run pdflatex on 'QDNAseq.tex'
-     LaTeX errors:
-     ! LaTeX Error: File `nowidow.sty' not found.
-     
-     Type X to quit or <RETURN> to proceed,
-     or enter new name. (Default extension: sty)
-     
-     ! Emergency stop.
-     <read *> 
-              
-     l.197 \RequirePackage
-                          {parnotes}^^M
-     !  ==> Fatal error occurred, no output PDF file produced!
-     --- failed re-building ‘QDNAseq.Rnw’
-     
-     SUMMARY: processing the following file failed:
-       ‘QDNAseq.Rnw’
-     
-     Error: Vignette re-building failed.
-     Execution halted
-     ```
-
-# receptiviti (0.2.1)
-
-* GitHub: <https://github.com/Receptiviti/receptiviti-r>
-* Email: <mailto:kenglish@receptiviti.com>
-* GitHub mirror: <https://github.com/cran/receptiviti>
-
-Run `revdepcheck::revdep_details(, "receptiviti")` for more info
+Run `revdepcheck::revdep_details(, "remiod")` for more info
 
 ## In both
 
-*   checking tests ...
+*   checking S3 generic/method consistency ... NOTE
      ```
-     ...
-       
-       ══ Skipped tests (4) ═══════════════════════════════════════════════════════════
-       • no API key (4): 'test-receptiviti.R:78:1',
-         'test-receptiviti_frameworks.R:1:1', 'test-receptiviti_norming.R:12:1',
-         'test-receptiviti_status.R:13:1'
-       
-       ══ Failed tests ════════════════════════════════════════════════════════════════
-       ── Error ('test-receptiviti.R:9:3'): invalid inputs are caught ─────────────────
-       Error: Invalid header received from client.
-       
-       Backtrace:
-           ▆
-        1. ├─testthat::expect_error(...) at test-receptiviti.R:9:3
-        2. │ └─testthat:::expect_condition_matching_(...)
-        3. │   └─testthat:::quasi_capture(...)
-        4. │     ├─testthat (local) .capture(...)
-        5. │     │ └─base::withCallingHandlers(...)
-        6. │     └─rlang::eval_bare(quo_get_expr(.quo), quo_get_env(.quo))
-        7. └─receptiviti::receptiviti(...)
-        8.   └─receptiviti:::manage_request(...)
-       
-       [ FAIL 1 | WARN 0 | SKIP 4 | PASS 5 ]
-       Error:
-       ! Test failures.
-       Execution halted
+     Mismatches for apparent methods not registered:
+     rep:
+       function(x, ...)
+     rep.data.frame:
+       function(x, times)
+     See section ‘Registering S3 methods’ in the ‘Writing R Extensions’
+     manual.
      ```
 
-# RFLOMICS (1.2.1)
+# RFLOMICS (1.4.2)
 
 * GitHub: <https://github.com/RFLOMICS/RFLOMICS>
 * Email: <mailto:nadia.bessoltane@inrae.fr>
@@ -1702,50 +1587,31 @@ Run `revdepcheck::revdep_details(, "RFLOMICS")` for more info
 *   checking R code for possible problems ... NOTE
      ```
      ...
-     runCoExpression,RflomicsSE: no visible global function definition for
-       ‘assay’
-     runNormalization,RflomicsSE: no visible global function definition for
-       ‘assay’
+       (/scratch/hb/revdepcheck.extras/globals/revdep/checks/RFLOMICS/new/RFLOMICS.Rcheck/00_pkg_src/RFLOMICS/R/RFLOMICS-Methods_03_data_explor.R:911-917)
      runOmicsPCA,RflomicsSE: no visible global function definition for
        ‘assay’
+       (/scratch/hb/revdepcheck.extras/globals/revdep/checks/RFLOMICS/new/RFLOMICS.Rcheck/00_pkg_src/RFLOMICS/R/RFLOMICS-Methods_03_data_explor.R:1100)
      Undefined global functions or variables:
        % of explained variance -log10pvalue . Adj.pvalue All C Category
        Cluster Component Contrast Count Cumulative Explained Variance DEF
        DataFrame Dataset Description Entity ExperimentList FC Gene GeneRatio
-       SE.name SUMCOL Up_Down across add_tally arrange assay assay<- cluster
-       colData colData<- complete.cases contrast contrastName contrastName3
-       cor criteria data dataset datasetFill desc distinct does.belong
-       ecoseed.df errors experiments factorType filter fixFactor2 full_join
-       group groupComparison group_by groups if_else intersectColumns label
-       left_join log2FC logFC logLike mean.y_profiles mutate mutate_at n
-       observations omicName outsideGroup p.adjust packageVersion percent
-       presence primary prop pvalue relevel relocate right_join sampleMap
-       samples sd select_if sessionInfo status summarise summarize tabel
-       type ungroup value variable x xend y y.axis y_profiles yend
+       N SE.name SUMCOL Up_Down Var2 across add_tally arrange assay assay<-
+       cluster colData colData<- complete.cases contrast contrastName
+       contrastName3 cor criteria data dataName dataset datasetFill desc
+       distinct does.belong ecoseed.df errors experiments factorType filter
+       fixFactor2 full_join group groupComparison group_by groups head
+       if_else intersectColumns label left_join log2FC logFC logLike
+       mean.y_profiles missed_p missed_value mtext mutate mutate_at n
+       nb_missed observations omicName outsideGroup p.adjust packageVersion
+       par percent presence primary prop pvalue relevel relocate right_join
+       sampleMap samples sd select_if sessionInfo status summarise summarize
+       tabel type ungroup value variable x xend y y.axis y_profiles yend
      Consider adding
+       importFrom("graphics", "mtext", "par")
        importFrom("stats", "C", "complete.cases", "cor", "filter", "p.adjust",
                   "relevel", "sd")
-       importFrom("utils", "data", "packageVersion", "sessionInfo")
+       importFrom("utils", "data", "head", "packageVersion", "sessionInfo")
      to your NAMESPACE file.
-     ```
-
-# rsi (0.3.2)
-
-* GitHub: <https://github.com/Permian-Global-Research/rsi>
-* Email: <mailto:mike.mahoney.218@gmail.com>
-* GitHub mirror: <https://github.com/cran/rsi>
-
-Run `revdepcheck::revdep_details(, "rsi")` for more info
-
-## In both
-
-*   checking DESCRIPTION meta-information ... NOTE
-     ```
-       Missing dependency on R >= 4.1.0 because package code uses the pipe
-       |> or function shorthand \(...) syntax added in R 4.1.0.
-       File(s) using such syntax:
-         ‘calculate_indices.Rd’ ‘get_stac_data.R’ ‘get_stac_data.Rd’
-         ‘landsat_mask_function.Rd’
      ```
 
 # rsparkling (0.2.19)
@@ -1764,87 +1630,47 @@ Run `revdepcheck::revdep_details(, "rsparkling")` for more info
        All declared Imports should be used.
      ```
 
-# safetyCharts (0.3.0)
+# rtemis (1.2.7)
 
-* GitHub: <https://github.com/SafetyGraphics/safetyCharts>
-* Email: <mailto:jwildfire@gmail.com>
-* GitHub mirror: <https://github.com/cran/safetyCharts>
+* GitHub: <https://github.com/rtemis-org/rtemis>
+* Email: <mailto:gennatas@gmail.com>
+* GitHub mirror: <https://github.com/cran/rtemis>
 
-Run `revdepcheck::revdep_details(, "safetyCharts")` for more info
-
-## In both
-
-*   checking Rd files ... NOTE
-     ```
-     ...
-     checkRd: (-1) safety_outlier_explorer.Rd:24: Lost braces in \itemize; meant \describe ?
-     checkRd: (-1) safety_outlier_explorer.Rd:25: Lost braces in \itemize; meant \describe ?
-     checkRd: (-1) safety_outlier_explorer.Rd:26: Lost braces in \itemize; meant \describe ?
-     checkRd: (-1) safety_outlier_explorer.Rd:27: Lost braces in \itemize; meant \describe ?
-     checkRd: (-1) safety_outlier_explorer.Rd:28: Lost braces in \itemize; meant \describe ?
-     checkRd: (-1) safety_results_over_time.Rd:24: Lost braces in \itemize; meant \describe ?
-     checkRd: (-1) safety_results_over_time.Rd:25: Lost braces in \itemize; meant \describe ?
-     checkRd: (-1) safety_results_over_time.Rd:26: Lost braces in \itemize; meant \describe ?
-     checkRd: (-1) safety_results_over_time.Rd:27: Lost braces in \itemize; meant \describe ?
-     checkRd: (-1) safety_results_over_time.Rd:28: Lost braces in \itemize; meant \describe ?
-     checkRd: (-1) safety_results_over_time.Rd:29: Lost braces in \itemize; meant \describe ?
-     checkRd: (-1) safety_results_over_time.Rd:30: Lost braces in \itemize; meant \describe ?
-     checkRd: (-1) safety_results_over_time.Rd:31: Lost braces in \itemize; meant \describe ?
-     checkRd: (-1) safety_results_over_time.Rd:32: Lost braces in \itemize; meant \describe ?
-     checkRd: (-1) safety_results_over_time.Rd:33: Lost braces in \itemize; meant \describe ?
-     checkRd: (-1) tendril_chart.Rd:18: Lost braces
-         18 | Create a plot using the {{Tendril}} package
-            |                         ^
-     checkRd: (-1) tendril_chart.Rd:24: Lost braces in \itemize; meant \describe ?
-     checkRd: (-1) tendril_chart.Rd:25: Lost braces in \itemize; meant \describe ?
-     checkRd: (-1) tendril_chart.Rd:26: Lost braces in \itemize; meant \describe ?
-     checkRd: (-1) tendril_chart.Rd:27: Lost braces in \itemize; meant \describe ?
-     checkRd: (-1) tendril_chart.Rd:28: Lost braces in \itemize; meant \describe ?
-     checkRd: (-1) tendril_chart.Rd:29: Lost braces in \itemize; meant \describe ?
-     checkRd: (-1) tendril_chart.Rd:30: Lost braces in \itemize; meant \describe ?
-     ```
-
-# safetyGraphics (2.1.1)
-
-* GitHub: <https://github.com/SafetyGraphics/safetyGraphics>
-* Email: <mailto:jwildfire@gmail.com>
-* GitHub mirror: <https://github.com/cran/safetyGraphics>
-
-Run `revdepcheck::revdep_details(, "safetyGraphics")` for more info
+Run `revdepcheck::revdep_details(, "rtemis")` for more info
 
 ## In both
 
-*   checking Rd files ... NOTE
+*   checking tests ...
      ```
      ...
-     checkRd: (-1) app_startup.Rd:38: Lost braces in \itemize; \value handles \item{}{} directly
-     checkRd: (-1) app_startup.Rd:39: Lost braces in \itemize; \value handles \item{}{} directly
-     checkRd: (-1) makeChartConfig.Rd:17: Lost braces; missing escapes or markup?
-         17 | \item{packages}{installed packages names containing yaml config files in the /inst/{packageLocation} folder}
-            |                                                                                    ^
-     checkRd: (-1) makeChartConfig.Rd:26: Lost braces in \itemize; \value handles \item{}{} directly
-     checkRd: (-1) makeChartConfig.Rd:27: Lost braces in \itemize; \value handles \item{}{} directly
-     checkRd: (-1) makeChartConfig.Rd:28: Lost braces in \itemize; \value handles \item{}{} directly
-     checkRd: (-1) makeChartConfig.Rd:29: Lost braces in \itemize; \value handles \item{}{} directly
-     checkRd: (-1) makeChartConfig.Rd:30: Lost braces in \itemize; \value handles \item{}{} directly
-     checkRd: (-1) makeChartConfig.Rd:31: Lost braces in \itemize; \value handles \item{}{} directly
-     checkRd: (-1) makeChartConfig.Rd:32: Lost braces in \itemize; \value handles \item{}{} directly
-     checkRd: (-1) makeChartConfig.Rd:33: Lost braces in \itemize; \value handles \item{}{} directly
-     checkRd: (-1) makeChartConfig.Rd:34: Lost braces in \itemize; \value handles \item{}{} directly
-     checkRd: (-1) makeChartConfig.Rd:35: Lost braces in \itemize; \value handles \item{}{} directly
-     checkRd: (-1) makeChartConfig.Rd:36: Lost braces in \itemize; \value handles \item{}{} directly
-     checkRd: (-1) makeChartConfig.Rd:37: Lost braces in \itemize; \value handles \item{}{} directly
-     checkRd: (-1) makeMapping.Rd:21: Lost braces in \itemize; \value handles \item{}{} directly
-     checkRd: (-1) makeMapping.Rd:22: Lost braces in \itemize; \value handles \item{}{} directly
-     checkRd: (-1) makeMeta.Rd:30: Lost braces; missing escapes or markup?
-         30 | \item Domain-level metadata saved as meta_{chart$name} in the chart$package namespace
-            |                                           ^
-     checkRd: (-1) makeMeta.Rd:31: Lost braces; missing escapes or markup?
-         31 | \item Chart-specific metadata saved as meta_{chart$domain} in the chart$package namespace
-            |                                             ^
+       
+       2026-10-11 11:36:54 [0m[1;38;2;15;106;102m✓[0m Done in 0.51 seconds.[0m [train]
+       [ FAIL 1 | WARN 4 | SKIP 4 | PASS 356 ]
+       
+       ══ Skipped tests (4) ═══════════════════════════════════════════════════════════
+       • For local testing only; requires CSV file (3): 'test_ClusterConfig.R:19:3',
+         'test_DecomposeConfig.R:19:3', 'test_SuperConfig.R:48:3'
+       • empty test (1):
+       
+       ══ Failed tests ════════════════════════════════════════════════════════════════
+       ── Error ('test_Clustering.R:96:3'): cluster_DBSCAN() succeeds ─────────────────
+       Error: approx must be a single, finite, nonnegative number.
+       Backtrace:
+           ▆
+        1. └─rtemis::cluster(...) at test_Clustering.R:96:3
+        2.   └─rtemis:::cluster_(config = config, x = x, verbosity = verbosity) at rtemis/R/cluster.R:86:3
+        3.     ├─S7::S7_dispatch() at rtemis/R/00_init.R:268:5
+        4.     └─rtemis (local) `method(cluster_, rtemis::DBSCANConfig)`(...)
+        5.       └─dbscan::dbscan(...) at rtemis/R/cluster_DBSCAN.R:22:3
+        6.         └─dbscan:::.validate_nonnegative_scalar(extra$approx %||% 0, "approx")
+       
+       [ FAIL 1 | WARN 4 | SKIP 4 | PASS 356 ]
+       Error:
+       ! Test failures.
+       Execution halted
      ```
 
-# scanMiRApp (1.16.1)
+# scanMiRApp (1.18.0)
 
 * Email: <mailto:pierre-luc.germain@hest.ethz.ch>
 
@@ -1865,15 +1691,26 @@ Run `revdepcheck::revdep_details(, "scanMiRApp")` for more info
 *   checking R code for possible problems ... NOTE
      ```
      .fakeAnno: no visible binding for global variable 'SampleTranscript'
+       (/scratch/hb/revdepcheck.extras/globals/revdep/checks/scanMiRApp/new/scanMiRApp.Rcheck/00_pkg_src/scanMiRApp/R/scanMiRAnno.R:165)
      .fakeAnno: no visible binding for global variable 'SampleKdModel'
+       (/scratch/hb/revdepcheck.extras/globals/revdep/checks/scanMiRApp/new/scanMiRApp.Rcheck/00_pkg_src/scanMiRApp/R/scanMiRAnno.R:175)
      plotSitesOnUTR: no visible binding for global variable 'logKd'
+       (/scratch/hb/revdepcheck.extras/globals/revdep/checks/scanMiRApp/new/scanMiRApp.Rcheck/00_pkg_src/scanMiRApp/R/getTranscriptSequence.R:215-222)
      plotSitesOnUTR: no visible binding for global variable 'note'
+       (/scratch/hb/revdepcheck.extras/globals/revdep/checks/scanMiRApp/new/scanMiRApp.Rcheck/00_pkg_src/scanMiRApp/R/getTranscriptSequence.R:228-229)
      plotSitesOnUTR: no visible binding for global variable 'type'
+       (/scratch/hb/revdepcheck.extras/globals/revdep/checks/scanMiRApp/new/scanMiRApp.Rcheck/00_pkg_src/scanMiRApp/R/getTranscriptSequence.R:233-236)
      Undefined global functions or variables:
        SampleKdModel SampleTranscript logKd note type
      ```
 
-# SCArray.sat (1.10.1)
+*   checking for non-standard things in the check directory ... NOTE
+     ```
+     Found the following files/directories:
+       ‘.fst’ ‘.idx.rds’
+     ```
+
+# SCArray.sat (1.12.0)
 
 * GitHub: <https://github.com/AbbVie-ComputationalGenomics/SCArray>
 * Email: <mailto:xiuwen.zheng@abbvie.com>
@@ -1881,6 +1718,36 @@ Run `revdepcheck::revdep_details(, "scanMiRApp")` for more info
 Run `revdepcheck::revdep_details(, "SCArray.sat")` for more info
 
 ## In both
+
+*   checking examples ... ERROR
+     ```
+     ...
+       |================================================================| 100%
+     
+       |                                                                      
+       |                                                                |   0%
+       |                                                                      
+       |================================================================| 100%
+     > 
+     > d <- NormalizeData(d)
+     Normalizing layer: counts
+     Performing log-normalization
+     > d <- FindVariableFeatures(d, nfeatures=250)
+     Finding variable features for layer counts
+     Calculating gene variances
+     Calculating feature variances of standardized and clipped values
+     
+       |                                                                      
+       |                                                                |   0%
+       |                                                                      
+       |================================================================| 100%
+     > d <- ScaleData(d)
+     Centering and scaling data matrix (SC_GDSMatrix [250x850])
+     > 
+     > d <- RunPCA(d, ndims.print=1:2)
+     Error: Not compatible with requested type: [type=S4; target=double].
+     Execution halted
+     ```
 
 *   checking dependencies in R code ... NOTE
      ```
@@ -1895,8 +1762,48 @@ Run `revdepcheck::revdep_details(, "SCArray.sat")` for more info
      ```
      CreateAssayObject2: no visible global function definition for
        ‘CreateAssay5Object’
+       (/scratch/hb/revdepcheck.extras/globals/revdep/checks/SCArray.sat/new/SCArray.sat.Rcheck/00_pkg_src/SCArray.sat/R/Methods.R:182)
      Undefined global functions or variables:
        CreateAssay5Object
+     ```
+
+# scLANE (1.2.0)
+
+* GitHub: <https://github.com/jr-leary7/scLANE>
+* Email: <mailto:j.leary@ufl.edu>
+
+Run `revdepcheck::revdep_details(, "scLANE")` for more info
+
+## In both
+
+*   checking re-building of vignette outputs ... ERROR
+     ```
+     ...
+     --- re-building ‘scLANE.Rmd’ using rmarkdown
+     
+     Quitting from scLANE.Rmd:264-279 [unnamed-chunk-14]
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     <error/rlang_error>
+     Error:
+     ! object 'dv' not found
+     ---
+     Backtrace:
+         ▆
+      1. └─scLANE::embedGenes(expm1(smoothed_counts$Lineage_A))
+      2.   └─irlba::prcomp_irlba(...) at scLANE/R/embedGenes.R:78:5
+      3.     ├─base::do.call(irlba, args = args)
+      4.     └─irlba (local) `<fn>`(A = `<dbl[,1198]>`, nv = 4, center = `<dbl>`, scale = `<dbl>`)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     
+     Error: processing vignette 'scLANE.Rmd' failed with diagnostics:
+     object 'dv' not found
+     --- failed re-building ‘scLANE.Rmd’
+     
+     SUMMARY: processing the following file failed:
+       ‘scLANE.Rmd’
+     
+     Error: Vignette re-building failed.
+     Execution halted
      ```
 
 # selenider (0.4.1)
@@ -1923,6 +1830,82 @@ Run `revdepcheck::revdep_details(, "selenider")` for more info
          ‘get_actual_element.Rd’ ‘s.Rd’
      ```
 
+# Seqtometry (1.0.1)
+
+* GitHub: <https://github.com/HawigerLab/Seqtometry>
+* Email: <mailto:robert.kousnetsov@health.slu.edu>
+
+Run `revdepcheck::revdep_details(, "Seqtometry")` for more info
+
+## In both
+
+*   checking examples ... WARNING
+     ```
+     Found the following significant warnings:
+     
+       Warning in .local(x, ...) : 'quickPerCellQC' is deprecated.
+       Warning in .local(x, ...) : 'normalizeCounts' is deprecated.
+       Warning in .local(x, ...) : 'quickPerCellQC' is deprecated.
+       Warning in .local(x, ...) : 'normalizeCounts' is deprecated.
+     Deprecated functions may be defunct as soon as of the next release of
+     R.
+     See ?Deprecated.
+     ```
+
+*   checking dependencies in R code ... NOTE
+     ```
+     Namespaces in Imports field not imported from:
+       ‘DelayedMatrixStats’ ‘sparseMatrixStats’
+       All declared Imports should be used.
+     ```
+
+*   checking R code for possible problems ... NOTE
+     ```
+     score: warning in assert_list(signatures, type = "character"): partial
+       argument match of 'type' to 'types'
+       (/scratch/hb/revdepcheck.extras/globals/revdep/checks/Seqtometry/new/Seqtometry.Rcheck/00_pkg_src/Seqtometry/R/score.R:58)
+     ```
+
+# shiny (1.14.0)
+
+* GitHub: <https://github.com/rstudio/shiny>
+* Email: <mailto:carson@posit.co>
+* GitHub mirror: <https://github.com/cran/shiny>
+
+Run `revdepcheck::revdep_details(, "shiny")` for more info
+
+## In both
+
+*   checking tests ...
+     ```
+     ...
+         'test-stacks.R:249:3', 'test-stacks.R:267:3', 'test-stacks.R:288:3',
+         'test-stacks.R:309:3', 'test-stacks.R:329:3', 'test-tabPanel.R:46:1',
+         'test-tabPanel.R:66:1', 'test-tabPanel.R:73:1', 'test-tabPanel.R:83:1',
+         'test-test-server.R:292:3', 'test-timer.R:4:1', 'test-utils.R:210:3',
+         'test-zzz-st2-download.R:1:1'
+       • Refactor test for next release (1): 'test-test-shinyAppTemplate.R:3:1'
+       
+       ══ Failed tests ════════════════════════════════════════════════════════════════
+       ── Failure ('test-otel-label.R:33:3'): otel_span_label_reactive generates correct labels ──
+       Expected `result` to equal "reactive event <anonymous>".
+       Differences:
+       `actual`:   "reactive event fn_name"    
+       `expected`: "reactive event <anonymous>"
+       
+       ── Failure ('test-otel-label.R:150:3'): otel_span_label_observer generates correct labels ──
+       Expected `result` to equal "observe event <anonymous>".
+       Differences:
+       `actual`:   "observe event fn_name"    
+       `expected`: "observe event <anonymous>"
+       
+       
+       [ FAIL 2 | WARN 2 | SKIP 40 | PASS 2313 ]
+       Error:
+       ! Test failures.
+       Execution halted
+     ```
+
 # shiny.destroy (0.1.0)
 
 * Email: <mailto:arbaldry91@gmail.com>
@@ -1938,20 +1921,6 @@ Run `revdepcheck::revdep_details(, "shiny.destroy")` for more info
        |> or function shorthand \(...) syntax added in R 4.1.0.
        File(s) using such syntax:
          ‘destroyModule.R’ ‘makeModule.R’
-     ```
-
-# shiny.reglog (0.5.2)
-
-* Email: <mailto:kosinski.mich@gmail.com>
-* GitHub mirror: <https://github.com/cran/shiny.reglog>
-
-Run `revdepcheck::revdep_details(, "shiny.reglog")` for more info
-
-## In both
-
-*   checking dependencies in R code ... WARNING
-     ```
-     Missing or unexported object: ‘gmailr::send_message’
      ```
 
 # shinymgr (1.1.0)
@@ -1985,64 +1954,6 @@ Run `revdepcheck::revdep_details(, "shinyMobile")` for more info
        |> or function shorthand \(...) syntax added in R 4.1.0.
        File(s) using such syntax:
          ‘fabs.Rd’
-     ```
-
-# shinyOAuth (0.4.0)
-
-* GitHub: <https://github.com/lukakoning/shinyOAuth>
-* Email: <mailto:koningluka@gmail.com>
-* GitHub mirror: <https://github.com/cran/shinyOAuth>
-
-Run `revdepcheck::revdep_details(, "shinyOAuth")` for more info
-
-## In both
-
-*   checking tests ...
-     ```
-     ...
-         8.       │ │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
-         9.       │ │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
-        10.       │ └─base::force(expr)
-        11.       └─rlang::abort(...)
-       ── Error ('test-client-bearer-req.R:186:3'): client_bearer_req follows redirects when follow_redirect = TRUE ──
-       <httr2_http_503/httr2_http/httr2_error/rlang_error/rlang_error/error/condition>
-       Error in `httr2::req_perform(req)`: HTTP 503 Service Unavailable.
-       Backtrace:
-            ▆
-         1. └─httr2::req_perform(req) at test-client-bearer-req.R:186:3
-         2.   └─httr2:::handle_resp(req, resp, error_call = error_call)
-         3.     └─httr2:::resp_failure_cnd(req, resp, error_call = error_call)
-         4.       ├─rlang::catch_cnd(...)
-         5.       │ ├─rlang::eval_bare(...)
-         6.       │ ├─base::tryCatch(...)
-         7.       │ │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
-         8.       │ │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
-         9.       │ │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
-        10.       │ └─base::force(expr)
-        11.       └─rlang::abort(...)
-       
-       [ FAIL 13 | WARN 0 | SKIP 83 | PASS 1977 ]
-       Error:
-       ! Test failures.
-       Execution halted
-     ```
-
-# sigminer (2.3.1)
-
-* GitHub: <https://github.com/ShixiangWang/sigminer>
-* Email: <mailto:w_shixiang@163.com>
-* GitHub mirror: <https://github.com/cran/sigminer>
-
-Run `revdepcheck::revdep_details(, "sigminer")` for more info
-
-## In both
-
-*   checking DESCRIPTION meta-information ... NOTE
-     ```
-       Missing dependency on R >= 4.1.0 because package code uses the pipe
-       |> or function shorthand \(...) syntax added in R 4.1.0.
-       File(s) using such syntax:
-         ‘show_group_enrichment.R’
      ```
 
 # simhelpers (0.3.1)
@@ -2082,7 +1993,7 @@ Run `revdepcheck::revdep_details(, "solitude")` for more info
        All declared Imports should be used.
      ```
 
-# SpaDES.core (3.0.4)
+# SpaDES.core (3.2.1)
 
 * GitHub: <https://github.com/PredictiveEcology/SpaDES.core>
 * Email: <mailto:eliot.mcintire@canada.ca>
@@ -2109,7 +2020,7 @@ Run `revdepcheck::revdep_details(, "SpaDES.core")` for more info
      +   convertToPackage("test", path = tmpdir)
      + }
      Loading required namespace: pkgload
-     New module test created at /scratch/henrik/1074990/Rtmp0bpGgv/reproducible/U3C0xYmG
+     New module test created at /scratch/hb/RtmpKgiyz4/working_dir/RtmpyZUszE/reproducible/U3C0xYmG
      ```
 
 # sparklyr.nested (0.0.4)
@@ -2143,25 +2054,7 @@ Run `revdepcheck::revdep_details(, "sparrpowR")` for more info
      ```
      Found the following significant warnings:
        Warning: no DISPLAY variable so Tk is not available
-     See ‘/scratch/henrik/revdep/globals/checks/sparrpowR/new/sparrpowR.Rcheck/00install.out’ for details.
-     ```
-
-# spdesign (0.0.5)
-
-* GitHub: <https://github.com/edsandorf/spdesign>
-* Email: <mailto:erlend.dancke.sandorf@nmbu.no>
-* GitHub mirror: <https://github.com/cran/spdesign>
-
-Run `revdepcheck::revdep_details(, "spdesign")` for more info
-
-## In both
-
-*   checking DESCRIPTION meta-information ... NOTE
-     ```
-       Missing dependency on R >= 4.1.0 because package code uses the pipe
-       |> or function shorthand \(...) syntax added in R 4.1.0.
-       File(s) using such syntax:
-         ‘federov.R’
+     See ‘/scratch/hb/revdepcheck.extras/globals/revdep/checks/sparrpowR/new/sparrpowR.Rcheck/00install.out’ for details.
      ```
 
 # sperrorest (3.0.5)
@@ -2204,7 +2097,47 @@ Run `revdepcheck::revdep_details(, "sperrorest")` for more info
             |                                                             ^
      ```
 
-# sRACIPE (2.2.0)
+# spsurv (1.1.0)
+
+* GitHub: <https://github.com/rvpanaro/spsurv>
+* Email: <mailto:rvpanaro@gmail.com>
+* GitHub mirror: <https://github.com/cran/spsurv>
+
+Run `revdepcheck::revdep_details(, "spsurv")` for more info
+
+## In both
+
+*   checking tests ...
+     ```
+     ...
+       
+       Exponentiated coefficients:
+                                 Estimate  2.5% 97.5%
+       karno                        1.025 1.025   1.0
+       factor(celltype)smallcell    0.542 0.542   0.5
+       factor(celltype)adeno        0.018 0.018   0.0
+       factor(celltype)large        0.097 0.097   0.1
+       
+       --- 
+       DIC = 2885   WAIC = -1443 
+       [ FAIL 1 | WARN 46 | SKIP 1 | PASS 685 ]
+       
+       ══ Skipped tests (1) ═══════════════════════════════════════════════════════════
+       • Set SPSURV_RUN_COVERAGE=true to run coverage check (1): 'test-coverage.R:6:3'
+       
+       ══ Failed tests ════════════════════════════════════════════════════════════════
+       ── Failure ('test-vcov.R:113:3'): survfit std.err matches delta method with vcov for PH ──
+       Expected `se_manual/H` < 1.
+       Actual comparison: 2.3 >= 1.0
+       Difference: 1.3 >= 0
+       
+       [ FAIL 1 | WARN 46 | SKIP 1 | PASS 685 ]
+       Error:
+       ! Test failures.
+       Execution halted
+     ```
+
+# sRACIPE (2.4.0)
 
 * GitHub: <https://github.com/lusystemsbio/sRACIPE>
 * Email: <mailto:m.lu@northeastern.edu>
@@ -2215,7 +2148,7 @@ Run `revdepcheck::revdep_details(, "sRACIPE")` for more info
 
 *   checking C++ specification ... NOTE
      ```
-       Specified C++11: please drop specification unless essential
+       Obsolete C++11 standard request will be ignored
      ```
 
 *   checking DESCRIPTION meta-information ... NOTE
@@ -2225,19 +2158,11 @@ Run `revdepcheck::revdep_details(, "sRACIPE")` for more info
 
 *   checking R code for possible problems ... NOTE
      ```
-     sracipeSimulate: no visible binding for global variable
-       ‘configurationTmp’
-     sracipeSimulate: no visible binding for global variable ‘outFileGETmp’
-     sracipeSimulate: no visible binding for global variable
-       ‘outFileParamsTmp’
-     sracipeSimulate: no visible binding for global variable ‘outFileICTmp’
-     sracipeSimulate: no visible binding for global variable
-       ‘outFileConvergeTmp’
      sracipeConvergeDist,RacipeSE: no visible global function definition for
        ‘polygon’
+       (/scratch/hb/revdepcheck.extras/globals/revdep/checks/sRACIPE/new/sRACIPE.Rcheck/00_pkg_src/sRACIPE/R/methods.R:1085-1087)
      Undefined global functions or variables:
-       configurationTmp outFileConvergeTmp outFileGETmp outFileICTmp
-       outFileParamsTmp polygon
+       polygon
      Consider adding
        importFrom("graphics", "polygon")
      to your NAMESPACE file.
@@ -2251,6 +2176,45 @@ Run `revdepcheck::revdep_details(, "sRACIPE")` for more info
      checkRd: (-1) sracipeHeatmapSimilarity.Rd:32: Lost braces
          32 | and /code{distance  = (1-cor(x, method = "spear"))/2} will be used to 
             |          ^
+     ```
+
+# STARRS (1.0)
+
+* Email: <mailto:daphne.giorgi@sorbonne-universite.fr>
+* GitHub mirror: <https://github.com/cran/STARRS>
+
+Run `revdepcheck::revdep_details(, "STARRS")` for more info
+
+## In both
+
+*   checking re-building of vignette outputs ... ERROR
+     ```
+     ...
+     Error: processing vignette 'STARRS-clustering.Rmd' failed with diagnostics:
+     Attempting to set up 48 localhost parallel workers with only 2 CPU cores available for this R process (per 'fallback'), which could result in a 2400% load. The hard limit is set to 300%. Overusing the CPUs has negative impact on the current R process, but also on all other processes of yours and others running on the same machine. See help("parallelly.maxWorkers.localhost", package = "parallelly") for further explanations and how to override the hard limit that triggered this error. By the way, was parallel::detectCores() used, because the number of workers (48) equals detectCores()? If so, please use parallelly::availableCores() instead
+     --- failed re-building ‘STARRS-clustering.Rmd’
+     
+     --- re-building ‘STARRS-intro.Rmd’ using rmarkdown
+     [WARNING] Deprecated: --mathjax. Use --math-method=mathjax[:URL] instead.
+     --- finished re-building ‘STARRS-intro.Rmd’
+     
+     --- re-building ‘STARRS-median-mcm.Rmd’ using rmarkdown
+     [WARNING] Deprecated: --mathjax. Use --math-method=mathjax[:URL] instead.
+     --- finished re-building ‘STARRS-median-mcm.Rmd’
+     
+     --- re-building ‘STARRS-regression.Rmd’ using rmarkdown
+     [WARNING] Deprecated: --mathjax. Use --math-method=mathjax[:URL] instead.
+     --- finished re-building ‘STARRS-regression.Rmd’
+     
+     --- re-building ‘STARRS-robust-variance.Rmd’ using rmarkdown
+     [WARNING] Deprecated: --mathjax. Use --math-method=mathjax[:URL] instead.
+     --- finished re-building ‘STARRS-robust-variance.Rmd’
+     
+     SUMMARY: processing the following file failed:
+       ‘STARRS-clustering.Rmd’
+     
+     Error: Vignette re-building failed.
+     Execution halted
      ```
 
 # stppSim (1.3.4)
@@ -2267,7 +2231,7 @@ Run `revdepcheck::revdep_details(, "stppSim")` for more info
      ```
      Found the following significant warnings:
        Warning: no DISPLAY variable so Tk is not available
-     See ‘/scratch/henrik/revdep/globals/checks/stppSim/new/stppSim.Rcheck/00install.out’ for details.
+     See ‘/scratch/hb/revdepcheck.extras/globals/revdep/checks/stppSim/new/stppSim.Rcheck/00install.out’ for details.
      ```
 
 # survstan (0.0.7.1)
@@ -2287,13 +2251,40 @@ Run `revdepcheck::revdep_details(, "survstan")` for more info
        All declared Imports should be used.
      ```
 
-# synergyfinder (3.18.0)
+# synergyfinder (3.20.0)
 
 * Email: <mailto:shuyu.zheng@helsinki.fi>
 
 Run `revdepcheck::revdep_details(, "synergyfinder")` for more info
 
 ## In both
+
+*   checking examples ... ERROR
+     ```
+     Running examples in ‘synergyfinder-Ex.R’ failed
+     The error most likely occurred in:
+     
+     > ### Name: PlotMultiDrugSurface
+     > ### Title: 3D Plot for Multi-drug Combination Dose-Response/Synergy Scores
+     > ### Aliases: PlotMultiDrugSurface
+     > 
+     > ### ** Examples
+     > 
+     > data("NCATS_screening_data")
+     > data <- ReshapeData(NCATS_screening_data)
+     > p <- PlotMultiDrugSurface(
+     +   data,
+     +   plot_block = 1,
+     +   plot_value = "response",
+     +   show_data_points = TRUE,
+     +   distance_method = "mahalanobis",
+     +   summary_statistic = "mean"
+     + )
+     Error in `stats::na.omit`(list(`W[, 3]` = c(1184.26006356869, 1369.42709773729 : 
+       could not find function "stats::na.omit"
+     Calls: PlotMultiDrugSurface ... lm -> eval -> eval -> <Anonymous> -> model.frame.default
+     Execution halted
+     ```
 
 *   checking dependencies in R code ... WARNING
      ```
@@ -2306,17 +2297,17 @@ Run `revdepcheck::revdep_details(, "synergyfinder")` for more info
 *   checking R code for possible problems ... NOTE
      ```
      ...
-       ‘response_origin_mean’
-     ReshapeData: no visible binding for global variable
-       ‘response_origin_CI95’
-     ZIP : <anonymous>: no visible global function definition for ‘predict’
-     ZIP : <anonymous>: no visible binding for global variable ‘data’
-     ZIP : <anonymous>: no visible binding for global variable ‘pred’
+       (/scratch/hb/revdepcheck.extras/globals/revdep/checks/synergyfinder/new/synergyfinder.Rcheck/00_pkg_src/synergyfinder/R/calculate_synergy_score.R:371-389)
      ZIP : <anonymous>: no visible global function definition for ‘:=’
+       (/scratch/hb/revdepcheck.extras/globals/revdep/checks/synergyfinder/new/synergyfinder.Rcheck/00_pkg_src/synergyfinder/R/calculate_synergy_score.R:371-389)
      ZIP: no visible binding for global variable ‘.’
+       (/scratch/hb/revdepcheck.extras/globals/revdep/checks/synergyfinder/new/synergyfinder.Rcheck/00_pkg_src/synergyfinder/R/calculate_synergy_score.R:393-395)
      ZIP: no visible binding for global variable ‘ZIP_fit’
+       (/scratch/hb/revdepcheck.extras/globals/revdep/checks/synergyfinder/new/synergyfinder.Rcheck/00_pkg_src/synergyfinder/R/calculate_synergy_score.R:411-413)
      ZIP: no visible binding for global variable ‘ZIP_ref’
+       (/scratch/hb/revdepcheck.extras/globals/revdep/checks/synergyfinder/new/synergyfinder.Rcheck/00_pkg_src/synergyfinder/R/calculate_synergy_score.R:411-413)
      ZIP: no visible binding for global variable ‘ZIP_synergy’
+       (/scratch/hb/revdepcheck.extras/globals/revdep/checks/synergyfinder/new/synergyfinder.Rcheck/00_pkg_src/synergyfinder/R/calculate_synergy_score.R:411-413)
      Undefined global functions or variables:
        . := Bliss_ref HSA_ref ZIP_fit ZIP_ref ZIP_synergy adjust angle
        block_id color conc1 conc2 css data dev.list dev.off end head id
@@ -2353,136 +2344,44 @@ Run `revdepcheck::revdep_details(, "synergyfinder")` for more info
             |          ^
      ```
 
-# targets (1.12.0)
+# tidypredict (1.2.1)
 
-* GitHub: <https://github.com/ropensci/targets>
-* Email: <mailto:will.landau.oss@gmail.com>
-* GitHub mirror: <https://github.com/cran/targets>
+* GitHub: <https://github.com/tidymodels/tidypredict>
+* Email: <mailto:emil.hvitfeldt@posit.co>
+* GitHub mirror: <https://github.com/cran/tidypredict>
 
-Run `revdepcheck::revdep_details(, "targets")` for more info
-
-## In both
-
-*   checking examples ... ERROR
-     ```
-     Running examples in ‘targets-Ex.R’ failed
-     The error most likely occurred in:
-     
-     > ### Name: tar_renv
-     > ### Title: Set up package dependencies for compatibility with 'renv'
-     > ### Aliases: tar_renv
-     > 
-     > ### ** Examples
-     > 
-     > tar_dir({ # tar_dir() runs code from a temp dir for CRAN.
-     +   tar_script({
-     +     library(targets)
-     +     library(tarchetypes)
-     +     tar_option_set(packages = c("tibble", "qs"))
-     +     list()
-     +   }, ask = FALSE)
-     +   tar_renv()
-     +   writeLines(readLines("_targets_packages.R"))
-     + })
-     Error:
-     ! Error in tar_renv():
-       there is no package called ‘tarchetypes’
-       See https://books.ropensci.org/targets/debugging.html
-     Execution halted
-     ```
-
-# tidyfinance (0.4.5)
-
-* GitHub: <https://github.com/tidy-finance/r-tidyfinance>
-* Email: <mailto:christoph@tidy-intelligence.com>
-* GitHub mirror: <https://github.com/cran/tidyfinance>
-
-Run `revdepcheck::revdep_details(, "tidyfinance")` for more info
+Run `revdepcheck::revdep_details(, "tidypredict")` for more info
 
 ## In both
 
-*   checking tests ...
+*   checking re-building of vignette outputs ... ERROR
      ```
      ...
-         'test-create_wrds_dummy_database.R:12:3',
-         'test-download_data_constituents.R:2:3', 'test-download_data_factors.R:2:3',
-         'test-download_data_fred.R:2:3', 'test-download_data_fred.R:14:3',
-         'test-download_data_macro_predictors.R:2:3', 'test-download_data_osap.R:2:3'
-       
-       ══ Failed tests ════════════════════════════════════════════════════════════════
-       ── Error ('test-download_data_constituents.R:28:7'): download_data_constituents handles unavailable resource gracefully ──
-       Error in `download_data_constituents(index = "SAMPLE_INDEX")`: Failed to download data for index `index`. Please check the index name or try again later.
-       Backtrace:
-            ▆
-         1. ├─testthat::with_mocked_bindings(...) at test-download_data_constituents.R:25:3
-         2. ├─testthat::expect_message(...) at test-download_data_constituents.R:28:7
-         3. │ └─testthat:::expect_condition_matching_(...)
-         4. │   └─testthat:::quasi_capture(...)
-         5. │     ├─testthat (local) .capture(...)
-         6. │     │ └─base::withCallingHandlers(...)
-         7. │     └─rlang::eval_bare(quo_get_expr(.quo), quo_get_env(.quo))
-         8. └─tidyfinance::download_data_constituents(index = "SAMPLE_INDEX")
-         9.   └─cli::cli_abort("Failed to download data for index {.arg index}. Please check the index name or try again later.")
-        10.     └─rlang::abort(...)
-       
-       [ FAIL 1 | WARN 3 | SKIP 8 | PASS 88 ]
-       Error:
-       ! Test failures.
-       Execution halted
-     ```
-
-# tramvs (0.0-9)
-
-* Email: <mailto:lucasheinrich.kook@gmail.com>
-* GitHub mirror: <https://github.com/cran/tramvs>
-
-Run `revdepcheck::revdep_details(, "tramvs")` for more info
-
-## In both
-
-*   checking re-building of vignette outputs ... WARNING
-     ```
-     ...
-       ...
-     --- re-building ‘tramvs.Rnw’ using knitr
-     Warning in texi2dvi(file = file, pdf = TRUE, clean = clean, quiet = quiet,  :
-       texi2dvi script/program not available, using emulation
-     Error: processing vignette 'tramvs.Rnw' failed with diagnostics:
-     unable to run pdflatex on 'tramvs.tex'
-     LaTeX errors:
-     ! LaTeX Error: File `wrapfig.sty' not found.
+     --- re-building ‘sql.Rmd’ using rmarkdown
+     [WARNING] Deprecated: --mathjax. Use --math-method=mathjax[:URL] instead.
+     --- finished re-building ‘sql.Rmd’
      
-     Type X to quit or <RETURN> to proceed,
-     or enter new name. (Default extension: sty)
+     --- re-building ‘tree-internals.Rmd’ using rmarkdown
+     [WARNING] Deprecated: --mathjax. Use --math-method=mathjax[:URL] instead.
+     --- finished re-building ‘tree-internals.Rmd’
      
-     ! Emergency stop.
-     <read *> 
-              
-     l.68 \usepackage
-                     {float}^^M
-     !  ==> Fatal error occurred, no output PDF file produced!
-     --- failed re-building ‘tramvs.Rnw’
+     --- re-building ‘tree.Rmd’ using rmarkdown
+     [WARNING] Deprecated: --mathjax. Use --math-method=mathjax[:URL] instead.
+     --- finished re-building ‘tree.Rmd’
      
-     SUMMARY: processing the following file failed:
-       ‘tramvs.Rnw’
+     --- re-building ‘xgboost.Rmd’ using rmarkdown
+     [WARNING] Deprecated: --mathjax. Use --math-method=mathjax[:URL] instead.
+     --- finished re-building ‘xgboost.Rmd’
+     
+     --- re-building ‘xrf.Rmd’ using rmarkdown
+     [WARNING] Deprecated: --mathjax. Use --math-method=mathjax[:URL] instead.
+     --- finished re-building ‘xrf.Rmd’
+     
+     SUMMARY: processing the following files failed:
+       ‘h2o.Rmd’ ‘lm.Rmd’
      
      Error: Vignette re-building failed.
      Execution halted
-     ```
-
-# TrialEmulation (0.0.4.9)
-
-* GitHub: <https://github.com/Causal-LDA/TrialEmulation>
-* Email: <mailto:isaac.gravestock@roche.com>
-* GitHub mirror: <https://github.com/cran/TrialEmulation>
-
-Run `revdepcheck::revdep_details(, "TrialEmulation")` for more info
-
-## In both
-
-*   checking Rd cross-references ... NOTE
-     ```
-     Unknown package ‘parglm’ in Rd xrefs
      ```
 
 # TriDimRegression (1.0.3)
@@ -2498,7 +2397,7 @@ Run `revdepcheck::revdep_details(, "TriDimRegression")` for more info
 *   checking whether package ‘TriDimRegression’ can be installed ... ERROR
      ```
      Installation failed.
-     See ‘/scratch/henrik/revdep/globals/checks/TriDimRegression/new/TriDimRegression.Rcheck/00install.out’ for details.
+     See ‘/scratch/hb/revdepcheck.extras/globals/revdep/checks/TriDimRegression/new/TriDimRegression.Rcheck/00install.out’ for details.
      ```
 
 ## Installation
@@ -2514,7 +2413,7 @@ Error in loadNamespace(x) : there is no package called ‘rstantools’
 Calls: loadNamespace -> withRestarts -> withOneRestart -> doWithOneRestart
 Execution halted
 ERROR: configuration failed for package ‘TriDimRegression’
-* removing ‘/scratch/henrik/revdep/globals/checks/TriDimRegression/new/TriDimRegression.Rcheck/TriDimRegression’
+* removing ‘/scratch/hb/revdepcheck.extras/globals/revdep/checks/TriDimRegression/new/TriDimRegression.Rcheck/TriDimRegression’
 
 
 ```
@@ -2529,28 +2428,10 @@ Error in loadNamespace(x) : there is no package called ‘rstantools’
 Calls: loadNamespace -> withRestarts -> withOneRestart -> doWithOneRestart
 Execution halted
 ERROR: configuration failed for package ‘TriDimRegression’
-* removing ‘/scratch/henrik/revdep/globals/checks/TriDimRegression/old/TriDimRegression.Rcheck/TriDimRegression’
+* removing ‘/scratch/hb/revdepcheck.extras/globals/revdep/checks/TriDimRegression/old/TriDimRegression.Rcheck/TriDimRegression’
 
 
 ```
-# tsgarch (1.0.3)
-
-* GitHub: <https://github.com/tsmodels/tsgarch>
-* Email: <mailto:alexios@4dscape.com>
-* GitHub mirror: <https://github.com/cran/tsgarch>
-
-Run `revdepcheck::revdep_details(, "tsgarch")` for more info
-
-## In both
-
-*   checking DESCRIPTION meta-information ... NOTE
-     ```
-       Missing dependency on R >= 4.1.0 because package code uses the pipe
-       |> or function shorthand \(...) syntax added in R 4.1.0.
-       File(s) using such syntax:
-         ‘benchmark.R’ ‘print.R’
-     ```
-
 # txshift (0.3.8)
 
 * GitHub: <https://github.com/nhejazi/txshift>
@@ -2574,22 +2455,20 @@ Run `revdepcheck::revdep_details(, "txshift")` for more info
             |                                ^
      ```
 
-# viewpoly (0.4.1)
+# UniCensorEM (0.1.0)
 
-* GitHub: <https://github.com/mmollina/viewpoly>
-* Email: <mailto:chtaniguti@tamu.edu>
-* GitHub mirror: <https://github.com/cran/viewpoly>
+* Email: <mailto:shikhar1093tyagi@gmail.com>
+* GitHub mirror: <https://github.com/cran/UniCensorEM>
 
-Run `revdepcheck::revdep_details(, "viewpoly")` for more info
+Run `revdepcheck::revdep_details(, "UniCensorEM")` for more info
 
 ## In both
 
-*   checking DESCRIPTION meta-information ... NOTE
+*   checking dependencies in R code ... NOTE
      ```
-       Missing dependency on R >= 4.1.0 because package code uses the pipe
-       |> or function shorthand \(...) syntax added in R 4.1.0.
-       File(s) using such syntax:
-         ‘functions_upload.R’ ‘mod_hidecan.R’
+     Namespaces in Imports field not imported from:
+       ‘grDevices’ ‘methods’ ‘utils’
+       All declared Imports should be used.
      ```
 
 # vmeasur (0.1.4)
@@ -2605,62 +2484,6 @@ Run `revdepcheck::revdep_details(, "vmeasur")` for more info
      ```
      Found the following significant warnings:
        Warning: no DISPLAY variable so Tk is not available
-     See ‘/scratch/henrik/revdep/globals/checks/vmeasur/new/vmeasur.Rcheck/00install.out’ for details.
-     ```
-
-# WeightedCluster (2.0)
-
-* Email: <mailto:matthias.studer@unige.ch>
-* GitHub mirror: <https://github.com/cran/WeightedCluster>
-
-Run `revdepcheck::revdep_details(, "WeightedCluster")` for more info
-
-## In both
-
-*   checking re-building of vignette outputs ... WARNING
-     ```
-     ...
-     
-     --- re-building ‘WeightedClusterPreview.Rnw’ using knitr
-     Warning in texi2dvi(file = file, pdf = TRUE, clean = clean, quiet = quiet,  :
-       texi2dvi script/program not available, using emulation
-     Error: processing vignette 'WeightedClusterPreview.Rnw' failed with diagnostics:
-     unable to run pdflatex on 'WeightedClusterPreview.tex'
-     LaTeX errors:
-     ! LaTeX Error: File `textpos.sty' not found.
-     
-     Type X to quit or <RETURN> to proceed,
-     or enter new name. (Default extension: sty)
-     
-     ! Emergency stop.
-     <read *> 
-              
-     l.85 \usepackage
-                     {tikz}^^M
-     !  ==> Fatal error occurred, no output PDF file produced!
-     --- failed re-building ‘WeightedClusterPreview.Rnw’
-     
-     SUMMARY: processing the following files failed:
-       ‘WeightedClusterFR.Rnw’ ‘WeightedClusterPreview.Rnw’
-     
-     Error: Vignette re-building failed.
-     Execution halted
-     ```
-
-# wru (3.0.3)
-
-* GitHub: <https://github.com/kosukeimai/wru>
-* Email: <mailto:brandon@bertelsen.ca>
-* GitHub mirror: <https://github.com/cran/wru>
-
-Run `revdepcheck::revdep_details(, "wru")` for more info
-
-## In both
-
-*   checking dependencies in R code ... NOTE
-     ```
-     Namespaces in Imports field not imported from:
-       ‘future’ ‘tidyr’
-       All declared Imports should be used.
+     See ‘/scratch/hb/revdepcheck.extras/globals/revdep/checks/vmeasur/new/vmeasur.Rcheck/00install.out’ for details.
      ```
 

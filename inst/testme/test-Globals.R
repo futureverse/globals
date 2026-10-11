@@ -373,6 +373,23 @@ str(globals_2)
 
 stopifnot(identical(globals_2, globals_1))
 
+## Make sure c() for Globals handles NULLs
+globals_a <- globals0[1:2]
+globals <- c(globals_a, NULL)
+stopifnot(
+  assert_attributes(globals),
+  identical(globals, globals_a)
+)
+stopifnot(!inherits(c(NULL, globals_a), "Globals"))
+
+## Make sure c.Globals() itself handles NULLs, because older versions of
+## R does not do it for us (e.g. R 3.6.3)
+globals_b <- globals:::c.Globals(globals_a, NULL)
+stopifnot(
+  assert_attributes(globals_b),
+  identical(globals_b, globals_a)
+)
+
 
 message("*** Globals() - combining ... DONE")
 
@@ -504,6 +521,103 @@ globals <- globals0
 res <- tryCatch({ globals[c("a")] <- 42 }, error = identity)
 stopifnot(inherits(res, "simpleError"))
 stopifnot(grepl("Unsupported class", conditionMessage(res)))
+
+
+message("*** Globals() - [<-.Globals with missing global ...")
+
+## A missing global has value NULL and 'where' NULL
+missing <- globalsByName("a_missing_global", mustExist = FALSE)
+stopifnot(is.null(attr(missing, "where")[["a_missing_global"]]))
+
+globals <- globals0
+globals["a_missing_global"] <- missing
+where <- attr(globals, "where", exact = TRUE)
+stopifnot(
+  length(where) == length(globals),
+  all(names(where) == names(globals)),
+  "a_missing_global" %in% names(globals),
+  is.null(globals[["a_missing_global"]]),
+  is.null(where[["a_missing_global"]])
+)
+
+## Overwriting an existing global with a missing one
+globals <- globals0
+globals["a"] <- structure(missing, names = "a",
+                          where = list(a = NULL))
+where <- attr(globals, "where", exact = TRUE)
+stopifnot(
+  length(globals) == length(globals0),
+  all(names(where) == names(globals)),
+  is.null(globals[["a"]]),
+  is.null(where[["a"]])
+)
+
+message("*** Globals() - [<-.Globals with missing global ... DONE")
+
+
+message("*** Globals() - $<- and [[<- with missing or NULL global ...")
+
+for (op in c("$<-", "[[<-")) {
+  ## A missing global has value NULL and 'where' NULL
+  globals <- globals0
+  globals <- do.call(op, args = list(globals, "a_missing_global", missing))
+  where <- attr(globals, "where", exact = TRUE)
+  stopifnot(
+    length(where) == length(globals),
+    all(names(where) == names(globals)),
+    "a_missing_global" %in% names(globals),
+    is.null(globals[["a_missing_global"]]),
+    is.null(where[["a_missing_global"]])
+  )
+
+  ## A Globals object with a NULL value, but a non-NULL 'where'
+  value <- as.Globals(list(b_null = NULL))
+  globals <- globals0
+  globals <- do.call(op, args = list(globals, "b_null", value))
+  where <- attr(globals, "where", exact = TRUE)
+  stopifnot(
+    length(where) == length(globals),
+    all(names(where) == names(globals)),
+    "b_null" %in% names(globals),
+    is.null(globals[["b_null"]]),
+    identical(where[["b_null"]], attr(value, "where")[["b_null"]])
+  )
+
+  ## Assigning plain NULL still removes the element
+  globals <- do.call(op, args = list(globals, "b_null", NULL))
+  where <- attr(globals, "where", exact = TRUE)
+  stopifnot(
+    !("b_null" %in% names(globals)),
+    length(where) == length(globals),
+    all(names(where) == names(globals))
+  )
+}
+
+message("*** Globals() - $<- and [[<- with missing or NULL global ... DONE")
+
+
+message("*** Globals() - print() ...")
+
+globals <- globals0
+res <- utils::capture.output(print(globals))
+stopifnot(
+  length(res) == 1L + length(globals),
+  grepl("^Globals \\[2\\]$", res[1]),
+  grepl("a", res[2], fixed = TRUE),
+  grepl("rnorm", res[3], fixed = TRUE)
+)
+
+res <- utils::capture.output(print(Globals()))
+stopifnot(identical(res, "Globals [0]"))
+
+## A missing global should be printed without erroring
+res <- utils::capture.output(print(missing))
+stopifnot(
+  length(res) == 2L,
+  grepl("<not found>", res[2])
+)
+
+message("*** Globals() - print() ... DONE")
 
 
 message("*** Globals() - exceptions ...")
