@@ -1,6 +1,12 @@
 # Changelog
 
+## Version (development version)
+
+- …
+
 ## Version 0.20.0 \[2026-10-11\]
+
+CRAN release: 2026-10-11
 
 ### Significant Changes
 
@@ -164,7 +170,7 @@ CRAN release: 2022-08-28
   for `Globals` failed to return the package of the globals if the
   global doesn’t have a closure,
   e.g. [`base::pi`](https://rdrr.io/r/base/Constants.html) and
-  [`data.table::.N`](https://rdrr.io/pkg/data.table/man/special-symbols.html).
+  `data.table::.N`.
 
 ## Version 0.16.0 \[2022-08-05\]
 
